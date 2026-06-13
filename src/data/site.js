@@ -1,6 +1,6 @@
 // Single source of truth for practice details.
-// Contact info, clinic details and hours are loaded from src/content/settings.json
-// which can be edited via the CMS at /admin without touching code.
+// Contact info and clinic locations are loaded from src/content/settings.json
+// which can be edited via the CMS at /admin — add as many clinic locations as needed.
 
 import settings from '../content/settings.json';
 
@@ -15,13 +15,24 @@ export const SITE = {
   whatsapp: `https://wa.me/${settings.phone_raw}`,
 };
 
-export const CLINIC = {
-  name: settings.clinic_name,
-  shortLocation: 'Khopat, Thane West',
-  address: settings.clinic_address,
-  mapUrl: settings.clinic_map_url,
-  landmark: settings.clinic_landmark,
-  hours: settings.hours,
+// All clinic locations — editable from the CMS admin panel
+export const CLINICS = (settings.clinics || []).map((c) => ({
+  name: c.name,
+  shortLocation: c.short_location,
+  address: c.address,
+  mapUrl: c.map_url,
+  landmark: c.landmark,
+  hours: c.hours || [],
+}));
+
+// Primary clinic — used where only one is needed (Procedure pages, schema, etc.)
+export const CLINIC = CLINICS[0] || {
+  name: '',
+  shortLocation: '',
+  address: '',
+  mapUrl: '',
+  landmark: '',
+  hours: [],
 };
 
 export const SPECIALTIES = [

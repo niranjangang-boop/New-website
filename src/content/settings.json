@@ -2,12 +2,17 @@
   "phone_display": "+91 90760 79000",
   "phone_raw": "919076079000",
   "email": "Drortho101@gmail.com",
-  "clinic_name": "Joshi's Neurotrauma Centre",
-  "clinic_address": "Z5, Flower Valley Complex, Commercial Complex, E.E, Service Rd, opp. Viviana Mall, Khopat, Runwal Nagar, Thane West, Thane, Maharashtra 400601",
-  "clinic_map_url": "https://maps.app.goo.gl/ZwSs24See2xtcHXR7",
-  "clinic_landmark": "Opposite Viviana Mall, next to Bank of Baroda",
-  "hours": [
-    { "days": "Monday – Saturday", "time": "5:00 PM – 10:00 PM" },
-    { "days": "Sunday", "time": "9:00 AM – 5:00 PM" }
+  "clinics": [
+    {
+      "name": "Joshi's Neurotrauma Centre",
+      "short_location": "Khopat, Thane West",
+      "address": "Z5, Flower Valley Complex, Commercial Complex, E.E, Service Rd, opp. Viviana Mall, Khopat, Runwal Nagar, Thane West, Thane, Maharashtra 400601",
+      "map_url": "https://maps.app.goo.gl/ZwSs24See2xtcHXR7",
+      "landmark": "Opposite Viviana Mall, next to Bank of Baroda",
+      "hours": [
+        { "days": "Monday – Saturday", "time": "5:00 PM – 10:00 PM" },
+        { "days": "Sunday", "time": "9:00 AM – 5:00 PM" }
+      ]
+    }
   ]
 }

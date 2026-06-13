@@ -40,39 +40,53 @@ collections:
             name: "email"
             widget: "string"
 
-          - label: "Clinic Name"
-            name: "clinic_name"
-            widget: "string"
-
-          - label: "Full Clinic Address"
-            name: "clinic_address"
-            widget: "text"
-            hint: "Full postal address as it should appear on the website and in Google search."
-
-          - label: "Google Maps URL"
-            name: "clinic_map_url"
-            widget: "string"
-            hint: "The short maps.app.goo.gl link. Open Google Maps, search your clinic, click Share → Copy link."
-
-          - label: "Clinic Landmark"
-            name: "clinic_landmark"
-            widget: "string"
-            hint: "Short landmark shown below the address. E.g. Opposite Viviana Mall, next to Bank of Baroda"
-
-          - label: "Clinic Hours"
-            name: "hours"
+          - label: "Clinic Locations"
+            name: "clinics"
             widget: "list"
-            label_singular: "Time Slot"
-            hint: "Add one row per time slot. E.g. Monday – Saturday and Sunday separately."
+            label_singular: "Clinic"
+            hint: "Add as many clinic locations as needed. The first one is used as the primary location on Google and procedure pages."
             fields:
-              - label: "Days"
-                name: "days"
+
+              - label: "Clinic Name"
+                name: "name"
                 widget: "string"
-                hint: "E.g. Monday – Saturday"
-              - label: "Time"
-                name: "time"
+                hint: "E.g. Joshi's Neurotrauma Centre"
+
+              - label: "Short Location"
+                name: "short_location"
                 widget: "string"
-                hint: "E.g. 5:00 PM – 10:00 PM"
+                hint: "Brief area shown under the clinic name. E.g. Khopat, Thane West"
+
+              - label: "Full Address"
+                name: "address"
+                widget: "text"
+                hint: "Full postal address as it should appear on the website."
+
+              - label: "Google Maps URL"
+                name: "map_url"
+                widget: "string"
+                hint: "Short link from Google Maps. Open Maps → search clinic → Share → Copy link. Looks like: https://maps.app.goo.gl/XXXXX"
+
+              - label: "Landmark"
+                name: "landmark"
+                widget: "string"
+                required: false
+                hint: "Optional. Short landmark to help patients find you. E.g. Opposite Viviana Mall"
+
+              - label: "OPD Hours"
+                name: "hours"
+                widget: "list"
+                label_singular: "Time Slot"
+                hint: "Add one row per time slot."
+                fields:
+                  - label: "Days"
+                    name: "days"
+                    widget: "string"
+                    hint: "E.g. Monday – Saturday"
+                  - label: "Time"
+                    name: "time"
+                    widget: "string"
+                    hint: "E.g. 5:00 PM – 10:00 PM"
 
 
   # ── Patient Education Articles ──────────────────────────────────────────────

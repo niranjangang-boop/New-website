@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { SITE, CLINIC, SPECIALTIES } from '../data/site.js';
+import { SITE, CLINICS, SPECIALTIES } from '../data/site.js';
 import { PROCEDURES } from '../data/procedures.js';
 
 const featuredProcedures = PROCEDURES.filter((p) => p.featured);
@@ -32,7 +32,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Procedures (featured only, with View All link) */}
+        {/* Procedures (featured only) */}
         <div>
           <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-brand-gold">
             Procedures
@@ -48,21 +48,31 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Clinic + Contact */}
+        {/* Clinic Locations + Contact */}
         <div>
           <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-brand-gold">
-            Clinic &amp; Contact
+            {CLINICS.length > 1 ? 'Locations & Contact' : 'Clinic & Contact'}
           </p>
-          <p className="text-sm font-medium text-white">{CLINIC.name}</p>
-          <p className="mt-1 text-sm leading-relaxed">{CLINIC.address}</p>
-          <a
-            href={CLINIC.mapUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-2 inline-block text-sm text-brand-gold hover:underline"
-          >
-            Get Directions →
-          </a>
+
+          {/* All clinic locations */}
+          <div className="space-y-4">
+            {CLINICS.map((clinic, i) => (
+              <div key={i} className={i > 0 ? 'border-t border-slate-700 pt-4' : ''}>
+                <p className="text-sm font-medium text-white">{clinic.name}</p>
+                <p className="mt-1 text-sm leading-relaxed">{clinic.address}</p>
+                <a
+                  href={clinic.mapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-1 inline-block text-sm text-brand-gold hover:underline"
+                >
+                  Get Directions →
+                </a>
+              </div>
+            ))}
+          </div>
+
+          {/* Contact details */}
           <ul className="mt-4 space-y-2 text-sm">
             <li>
               <a href={`tel:+${SITE.phoneRaw}`} className="hover:text-white">

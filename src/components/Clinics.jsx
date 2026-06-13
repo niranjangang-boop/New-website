@@ -1,15 +1,17 @@
 import { useMemo, useState } from 'react';
-import { SITE, CLINIC } from '../data/site.js';
+import { SITE, CLINICS } from '../data/site.js';
 
 /**
- * Featured consulting location with interactive WhatsApp booking.
- * Picks a day → generates real slots (Sun 9 AM–5 PM, Mon–Sat 5–10 PM)
- * → opens WhatsApp with a pre-filled booking message.
+ * Consulting locations with interactive WhatsApp booking.
+ * Supports multiple clinic locations — add more via the CMS admin at /admin.
  */
 export default function Clinics() {
+  const [selectedClinic, setSelectedClinic] = useState(0);
   const [date, setDate] = useState('');
   const [slot, setSlot] = useState('');
   const [name, setName] = useState('');
+
+  const clinic = CLINICS[selectedClinic] || CLINICS[0];
 
   const slots = useMemo(() => {
     if (!date) return [];
@@ -35,21 +37,43 @@ export default function Clinics() {
       name && `Name: ${name}`,
       date && `Preferred date: ${date}`,
       slot && `Preferred time: ${slot}`,
-      `Location: ${CLINIC.name}, ${CLINIC.shortLocation}`,
+      clinic && `Location: ${clinic.name}, ${clinic.shortLocation}`,
     ]
       .filter(Boolean)
       .join('\n');
     return `${SITE.whatsapp}?text=${encodeURIComponent(msg)}`;
-  }, [name, date, slot]);
+  }, [name, date, slot, clinic]);
+
+  if (!CLINICS.length) return null;
 
   return (
     <section aria-labelledby="clinic-heading" className="mx-auto max-w-6xl px-4 py-16">
       <p className="text-center text-sm font-semibold uppercase tracking-widest text-brand-gold">
-        Consulting Location
+        {CLINICS.length > 1 ? 'Consulting Locations' : 'Consulting Location'}
       </p>
       <h2 id="clinic-heading" className="mt-2 text-center font-serif text-3xl font-bold text-slate-900">
         Visit the Clinic
       </h2>
+
+      {/* Location tabs — shown only when multiple clinics exist */}
+      {CLINICS.length > 1 && (
+        <div className="mt-8 flex flex-wrap justify-center gap-2">
+          {CLINICS.map((c, i) => (
+            <button
+              key={i}
+              type="button"
+              onClick={() => { setSelectedClinic(i); setDate(''); setSlot(''); }}
+              className={`rounded-full px-5 py-2 text-sm font-semibold transition ${
+                selectedClinic === i
+                  ? 'bg-brand-gold text-white shadow'
+                  : 'border border-slate-200 text-slate-600 hover:border-brand-gold hover:text-brand-gold'
+              }`}
+            >
+              {c.name}
+            </button>
+          ))}
+        </div>
+      )}
 
       <div className="mt-10 grid gap-8 lg:grid-cols-2">
         {/* Clinic details */}
@@ -62,29 +86,33 @@ export default function Clinics() {
               </svg>
             </span>
             <div>
-              <h3 className="font-serif text-xl font-bold text-slate-900">{CLINIC.name}</h3>
-              <p className="text-sm font-medium text-brand-gold">{CLINIC.shortLocation}</p>
+              <h3 className="font-serif text-xl font-bold text-slate-900">{clinic.name}</h3>
+              <p className="text-sm font-medium text-brand-gold">{clinic.shortLocation}</p>
             </div>
           </div>
 
-          <p className="mt-5 text-sm leading-relaxed text-slate-600">{CLINIC.address}</p>
-          <p className="mt-2 text-sm text-slate-500">{CLINIC.landmark}</p>
+          <p className="mt-5 text-sm leading-relaxed text-slate-600">{clinic.address}</p>
+          {clinic.landmark && (
+            <p className="mt-2 text-sm text-slate-500">{clinic.landmark}</p>
+          )}
 
-          <div className="mt-6 rounded-2xl bg-slate-50 p-5">
-            <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">OPD Hours</p>
-            <ul className="mt-2 space-y-1.5">
-              {CLINIC.hours.map((h) => (
-                <li key={h.days} className="flex justify-between text-sm">
-                  <span className="text-slate-600">{h.days}</span>
-                  <span className="font-semibold text-slate-900">{h.time}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {clinic.hours?.length > 0 && (
+            <div className="mt-6 rounded-2xl bg-slate-50 p-5">
+              <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">OPD Hours</p>
+              <ul className="mt-2 space-y-1.5">
+                {clinic.hours.map((h) => (
+                  <li key={h.days} className="flex justify-between text-sm">
+                    <span className="text-slate-600">{h.days}</span>
+                    <span className="font-semibold text-slate-900">{h.time}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           <div className="mt-6 flex flex-wrap gap-3">
             <a
-              href={CLINIC.mapUrl}
+              href={clinic.mapUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-brand-brown px-5 py-2.5 text-sm font-semibold text-brand-brown transition hover:bg-brand-brown hover:text-white"
@@ -108,6 +136,24 @@ export default function Clinics() {
           </p>
 
           <div className="mt-6 space-y-4">
+            {/* Clinic selector in booking form — shown only when multiple clinics */}
+            {CLINICS.length > 1 && (
+              <div>
+                <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-slate-400">
+                  Select Location
+                </label>
+                <select
+                  value={selectedClinic}
+                  onChange={(e) => { setSelectedClinic(Number(e.target.value)); setDate(''); setSlot(''); }}
+                  className="w-full rounded-xl border border-slate-600 bg-slate-800 px-4 py-2.5 text-sm text-white focus:border-brand-gold focus:outline-none"
+                >
+                  {CLINICS.map((c, i) => (
+                    <option key={i} value={i}>{c.name} — {c.shortLocation}</option>
+                  ))}
+                </select>
+              </div>
+            )}
+
             <div>
               <label htmlFor="bk-name" className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-slate-400">
                 Your Name
