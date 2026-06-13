@@ -28,18 +28,29 @@
     <meta name="twitter:description" content="Advanced orthopaedic care in Thane — robotic joint replacement, foot & ankle surgery, sports injuries & arthroscopy, trauma & fracture management." />
     <meta name="twitter:image" content="https://www.drniranjanghag.com/images/dr-ghag-photo.jpg" />
 
-    <!-- Netlify Identity — required for CMS admin login redirect -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <!-- Netlify Identity — loaded only when needed so it never blocks render -->
     <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on('init', function(user) {
-          if (!user) {
-            window.netlifyIdentity.on('login', function() {
-              document.location.href = '/admin/';
+      (function () {
+        var h = window.location.hash;
+        // Only load synchronously when handling an identity token (invite / recovery)
+        var isToken = h && (h.includes('invite_token') || h.includes('recovery_token') ||
+                            h.includes('access_token') || h.includes('confirmation_token'));
+        var s = document.createElement('script');
+        s.src = 'https://identity.netlify.com/v1/netlify-identity-widget.js';
+        if (!isToken) s.defer = true;
+        s.onload = function () {
+          if (window.netlifyIdentity) {
+            window.netlifyIdentity.on('init', function (user) {
+              if (!user) {
+                window.netlifyIdentity.on('login', function () {
+                  document.location.href = '/admin/';
+                });
+              }
             });
           }
-        });
-      }
+        };
+        document.head.appendChild(s);
+      })();
     </script>
 
     <!-- Google Analytics 4 — replace G-2H33X8JMJT with your real Measurement ID -->
@@ -52,7 +63,10 @@
     </script>
 
     <!-- LCP: preload hero portrait (WebP) -->
-    <link rel="preload" as="image" href="/images/dr-ghag-photo.webp" type="image/webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="/images/dr-ghag-photo-540.webp" type="image/webp"
+          imagesrcset="/images/dr-ghag-photo-400.webp 400w, /images/dr-ghag-photo-540.webp 540w, /images/dr-ghag-photo.webp 969w"
+          imagesizes="(min-width: 1024px) 540px, 100vw"
+          fetchpriority="high" />
 
     <!-- Local SEO: Physician + MedicalClinic JSON-LD -->
     <script type="application/ld+json">

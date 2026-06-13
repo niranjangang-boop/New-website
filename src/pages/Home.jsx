@@ -47,7 +47,7 @@ export default function Home() {
           {/* LCP image: priority bypasses lazy-loading; aspect box kills CLS */}
           <Image
             src="/images/dr-ghag-photo.jpg"
-            webpSrc="/images/dr-ghag-photo.webp"
+            webpSrc="/images/dr-ghag-photo-400.webp 400w, /images/dr-ghag-photo-540.webp 540w, /images/dr-ghag-photo.webp 969w"
             alt="Dr. Niranjan Ghag, Orthopaedic Surgeon"
             width={1157}
             height={1217}
