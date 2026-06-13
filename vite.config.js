@@ -47,7 +47,7 @@ export default defineConfig({
       jpg: { quality: 78, mozjpeg: true },
       jpeg: { quality: 78, mozjpeg: true },
       png: { quality: 80, compressionLevel: 9 },
-      webp: { quality: 78 },
+      webp: { quality: 65 },
       avif: { quality: 60 },
       svg: {
         multipass: true,
