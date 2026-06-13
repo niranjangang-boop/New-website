@@ -1,0 +1,43 @@
+{
+  "slug": "fracture-healing-surgery",
+  "title": "Why Do Some Fractures Need Surgery? Bone Healing Explained",
+  "metaDescription": "Not every broken bone needs an operation. Learn how fractures heal, which ones need fixation, and what malunion and nonunion mean — from a trauma surgeon in Thane.",
+  "category": "Trauma",
+  "date": "2026-06-12",
+  "readTime": 5,
+  "intro": "Bone is one of the few tissues in the body that heals by regenerating itself — but only if the broken ends are adequately aligned and held still. That single principle decides whether your fracture needs a cast or an operation.",
+  "sections": [
+    {
+      "heading": "When a cast is enough",
+      "body": "Undisplaced or minimally displaced fractures in well-aligned positions heal reliably in a cast or brace. Children heal especially well because their bones remodel as they grow."
+    },
+    {
+      "heading": "When surgery is needed",
+      "bullets": [
+        "Displaced fractures that cannot be held aligned in a cast",
+        "Fractures involving a joint surface — even 2 mm of step-off accelerates arthritis",
+        "Fractures of the thigh and certain leg bones, where casting means months in bed",
+        "Open (compound) fractures and fractures with nerve or vessel injury"
+      ]
+    },
+    {
+      "heading": "Malunion and nonunion",
+      "body": "A fracture that heals crooked (malunion) or fails to heal (nonunion) causes persistent pain and deformity. These are correctable — with realignment surgery, stable fixation and, where needed, bone grafting. Early specialist care prevents most of them."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How long does a fracture take to heal?",
+      "a": "Most adult fractures unite in 6–12 weeks, depending on the bone, blood supply, fixation stability, and factors like smoking and diabetes which slow healing."
+    },
+    {
+      "q": "Will the plates and screws be removed later?",
+      "a": "Usually not — implants are designed to stay safely. Removal is considered only if they cause irritation or for specific reasons after healing is complete."
+    },
+    {
+      "q": "Can I walk with an implant in my leg?",
+      "a": "Yes. Modern internal fixation is designed to allow early movement, and in many cases early weight-bearing, which actually stimulates bone healing."
+    }
+  ],
+  "tags": ["fracture", "trauma", "bone healing", "surgery"]
+}

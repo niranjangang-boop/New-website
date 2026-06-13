@@ -1,0 +1,43 @@
+{
+  "slug": "ankle-sprain-vs-fracture",
+  "title": "Ankle Sprain or Fracture? How to Tell the Difference",
+  "metaDescription": "Twisted your ankle? Learn the signs that separate a simple sprain from a fracture, correct first aid, and when an X-ray is essential — from a foot & ankle surgeon in Thane.",
+  "category": "Foot & Ankle",
+  "date": "2026-06-12",
+  "readTime": 4,
+  "intro": "Most twisted ankles are ligament sprains that heal with simple care. But some are fractures or significant ligament ruptures, and treating these like a minor sprain leads to chronic pain and instability.",
+  "sections": [
+    {
+      "heading": "Signs that suggest a fracture",
+      "bullets": [
+        "Inability to take four steps immediately after injury or in the clinic",
+        "Bone tenderness over the ankle prominences (malleoli) or midfoot",
+        "Rapid, severe swelling with visible deformity",
+        "Numbness or color change in the foot"
+      ]
+    },
+    {
+      "heading": "Correct first aid",
+      "body": "Follow RICE — Rest, Ice (15–20 minutes at a time), Compression bandage and Elevation above heart level. Avoid massage, hot fomentation and walking through severe pain in the first 48 hours."
+    },
+    {
+      "heading": "Why proper assessment matters",
+      "body": "Repeated \"minor\" sprains often mean an untreated ligament injury. Chronic ankle instability is preventable with early physiotherapy, bracing, and in selected cases arthroscopic ligament repair. A weight-bearing X-ray decides the matter in minutes."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Can I walk on a fractured ankle?",
+      "a": "Sometimes, yes — which is why \"I can walk, so it is not broken\" is unreliable. Undisplaced fractures may allow painful walking but still need protection to heal correctly."
+    },
+    {
+      "q": "How long does an ankle sprain take to heal?",
+      "a": "Mild sprains settle in 1–3 weeks; moderate ones in 4–6 weeks. Pain beyond 6 weeks deserves specialist review for ligament or cartilage injury."
+    },
+    {
+      "q": "Do all ankle fractures need surgery?",
+      "a": "No. Stable, well-aligned fractures heal in a cast or boot. Surgery is needed when the joint surface is displaced or the ankle is unstable."
+    }
+  ],
+  "tags": ["ankle", "sprain", "fracture", "foot"]
+}
