@@ -22,8 +22,8 @@ function injectSchema(proc) {
     '@graph': [
       {
         '@type': 'MedicalWebPage',
-        '@id': `https://www.drniranjanghag.com/procedures/${proc.slug}#page`,
-        url: `https://www.drniranjanghag.com/procedures/${proc.slug}`,
+        '@id': `https://drniranjanghag.com/procedures/${proc.slug}#page`,
+        url: `https://drniranjanghag.com/procedures/${proc.slug}`,
         name: proc.keywordTitle,
         description: proc.metaDescription,
         inLanguage: 'en',
@@ -40,19 +40,19 @@ function injectSchema(proc) {
           preparation: 'Pre-operative fitness assessment and imaging',
           performer: {
             '@type': 'Physician',
-            '@id': 'https://www.drniranjanghag.com/#physician',
+            '@id': 'https://drniranjanghag.com/#physician',
             name: 'Dr. Niranjan Ghag',
           },
           location: {
             '@type': 'MedicalClinic',
-            '@id': 'https://www.drniranjanghag.com/#joshis-neurotrauma-centre',
+            '@id': 'https://drniranjanghag.com/#joshis-neurotrauma-centre',
           },
         },
       },
       proc.faqs && proc.faqs.length
         ? {
             '@type': 'FAQPage',
-            '@id': `https://www.drniranjanghag.com/procedures/${proc.slug}#faq`,
+            '@id': `https://drniranjanghag.com/procedures/${proc.slug}#faq`,
             mainEntity: proc.faqs.map((f) => ({
               '@type': 'Question',
               name: f.q,

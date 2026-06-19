@@ -33,7 +33,7 @@ export default defineConfig({
 
     // Generates sitemap.xml + robots.txt into dist/ on every build
     sitemap({
-      hostname: 'https://www.drniranjanghag.com',
+      hostname: 'https://drniranjanghag.com',
       dynamicRoutes: routes,
       changefreq: 'weekly',
       priority: 0.8,

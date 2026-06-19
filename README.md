@@ -1,7 +1,7 @@
 # Dr. Niranjan Ghag — Website (Source)
 
-Production source for [www.drniranjanghag.com](https://www.drniranjanghag.com).
-React 18 + Vite 5 + Tailwind CSS 3, deployed to GitHub Pages.
+Production source for [drniranjanghag.com](https://drniranjanghag.com).
+React 18 + Vite 5 + Tailwind CSS 3, deployed to Netlify.
 
 ## Quick start
 
@@ -14,11 +14,9 @@ npm run preview  # preview the production build
 
 ## Deploying
 
-Push to `main`. The GitHub Actions workflow (`.github/workflows/deploy.yml`)
-builds and deploys to GitHub Pages automatically.
-
-One-time repo setup: **Settings → Pages → Source → GitHub Actions**.
-The `public/CNAME` file keeps the custom domain bound.
+Push to `main`. Netlify watches the repo and builds + deploys automatically
+(`npm run build`, publish directory `dist`). Custom domain and the www →
+non-www redirect are configured in Netlify's Domain Management settings.
 
 ## Where things live
 
