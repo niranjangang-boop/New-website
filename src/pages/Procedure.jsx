@@ -221,7 +221,7 @@ export default function Procedure() {
                 {CLINIC.name} · {CLINIC.address.split(',').slice(0, 3).join(', ')}
               </p>
               <p className="text-slate-400 text-xs mt-1">
-                Mon–Sat 3 pm–7 am · Sun open 24 hours
+                Mon–Sat 12 am–8 am &amp; 3 pm–11:30 pm · Sun open 24 hours
               </p>
             </div>
             <div className="relative mt-6 flex flex-col gap-3 sm:flex-row md:mt-0 md:flex-col lg:flex-row">
