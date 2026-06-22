@@ -32,9 +32,59 @@ body {
     transform: none;
     transition: none;
   }
+  .animate-float,
+  .animate-float-slow,
+  .animate-gradient-x,
+  .animate-shimmer {
+    animation: none !important;
+  }
 }
 
 ::selection {
   background: #d9a521;
   color: #1e293b;
+}
+
+/* ── Design system: gradients, glassmorphism, motion ───────────────────── */
+@layer components {
+  /* Light glass surface — used on cards over light/photo backgrounds */
+  .glass {
+    @apply relative border border-white/60 bg-white/70 shadow-glass backdrop-blur-xl;
+  }
+
+  /* Dark glass surface — used on cards over the brand-dark / hero backgrounds */
+  .glass-dark {
+    @apply relative border border-white/15 bg-white/10 shadow-glass backdrop-blur-xl;
+  }
+
+  /* Primary CTA — soft brand gradient with a lift + glow on hover */
+  .btn-gradient {
+    @apply relative inline-flex items-center justify-center rounded-full bg-gradient-to-r from-brand-brown via-brand-brown to-brand-gold px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-brand-brown/20 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-glow;
+  }
+
+  /* Secondary CTA — glassy outline, pairs with .btn-gradient */
+  .btn-outline {
+    @apply relative inline-flex items-center justify-center rounded-full border border-slate-200 bg-white/60 px-7 py-3.5 text-sm font-bold text-slate-800 backdrop-blur-md transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-brand-gold/50 hover:bg-white;
+  }
+
+  /* Dark-background outline variant (hero on brand-dark, CTA bands, etc.) */
+  .btn-outline-dark {
+    @apply relative inline-flex items-center justify-center rounded-full border border-white/30 bg-white/5 px-7 py-3.5 text-sm font-bold text-white backdrop-blur-md transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-white/15;
+  }
+
+  /* Decorative blurred gradient orb — place absolutely inside an
+     `overflow-hidden` section to create a soft mesh-gradient backdrop. */
+  .blob {
+    @apply pointer-events-none absolute rounded-full opacity-40 blur-3xl;
+  }
+
+  /* Hairline gradient border trick: wraps content in a 1px gradient ring */
+  .gradient-ring {
+    @apply relative rounded-3xl bg-gradient-to-br from-brand-gold/40 via-white/10 to-brand-brown/30 p-px;
+  }
+
+  /* Section eyebrow label used across page headers */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-brand-gold;
+  }
 }

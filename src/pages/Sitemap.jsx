@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import Seo from '../components/Seo.jsx';
+import Reveal from '../components/Reveal.jsx';
 import { ARTICLES } from '../data/articles.js';
 
 const groups = [
@@ -55,39 +56,40 @@ export default function Sitemap() {
         </p>
 
         <div className="mt-10 grid gap-8 md:grid-cols-2">
-          {groups.map((g) => (
-            <section
-              key={g.title}
-              aria-labelledby={`sm-${g.title}`}
-              className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm"
-            >
-              <div className="flex items-center gap-3">
-                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-gold/15 text-brand-brown" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d={g.icon} />
-                  </svg>
-                </span>
-                <h2 id={`sm-${g.title}`} className="font-serif text-xl font-bold text-slate-900">
-                  {g.title}
-                </h2>
-              </div>
+          {groups.map((g, i) => (
+            <Reveal key={g.title} delay={i * 80}>
+              <section
+                aria-labelledby={`sm-${g.title}`}
+                className="glass rounded-3xl p-7 transition-shadow duration-300 hover:shadow-glass-lg"
+              >
+                <div className="flex items-center gap-3">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-brand-gold/30 to-brand-brown/20 text-brand-brown" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d={g.icon} />
+                    </svg>
+                  </span>
+                  <h2 id={`sm-${g.title}`} className="font-serif text-xl font-bold text-slate-900">
+                    {g.title}
+                  </h2>
+                </div>
 
-              <ul className="mt-5 divide-y divide-slate-100">
-                {g.links.map((l) => (
-                  <li key={l.to + l.label}>
-                    <Link
-                      to={l.to}
-                      className="group block py-3 transition-colors hover:bg-slate-50"
-                    >
-                      <span className="font-medium text-slate-800 group-hover:text-brand-brown">
-                        {l.label}
-                      </span>
-                      <span className="mt-0.5 block text-xs text-slate-500">{l.note}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </section>
+                <ul className="mt-5 divide-y divide-slate-100">
+                  {g.links.map((l) => (
+                    <li key={l.to + l.label}>
+                      <Link
+                        to={l.to}
+                        className="group block rounded-xl py-3 px-2 transition-colors hover:bg-white/60"
+                      >
+                        <span className="font-medium text-slate-800 group-hover:text-brand-brown">
+                          {l.label}
+                        </span>
+                        <span className="mt-0.5 block text-xs text-slate-500">{l.note}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            </Reveal>
           ))}
         </div>
       </section>

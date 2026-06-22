@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { SITE, CLINICS } from '../data/site.js';
+import Reveal from './Reveal.jsx';
 
 /**
  * Consulting locations with interactive WhatsApp booking.
@@ -13,18 +14,22 @@ export default function Clinics() {
 
   const clinic = CLINICS[selectedClinic] || CLINICS[0];
 
+  // OPD runs 3:00 PM – 7:00 AM daily (overnight), same for every clinic.
   const slots = useMemo(() => {
     if (!date) return [];
-    const day = new Date(date).getDay();
     const out = [];
-    if (day === 0) {
-      for (let h = 9; h < 17; h++) {
-        const label = h < 12 ? `${h}:00 AM` : `${h === 12 ? 12 : h - 12}:00 PM`;
-        const half = h < 12 ? `${h}:30 AM` : `${h === 12 ? 12 : h - 12}:30 PM`;
-        out.push(label, half);
-      }
-    } else {
-      for (let h = 5; h < 10; h++) out.push(`${h}:00 PM`, `${h}:30 PM`);
+    const fmt = (h) => {
+      const period = h < 12 ? 'AM' : 'PM';
+      const display = h % 12 === 0 ? 12 : h % 12;
+      return { label: `${display}:00 ${period}`, half: `${display}:30 ${period}` };
+    };
+    for (let h = 15; h < 24; h++) {
+      const { label, half } = fmt(h);
+      out.push(label, half);
+    }
+    for (let h = 0; h < 7; h++) {
+      const { label, half } = fmt(h);
+      out.push(label, half);
     }
     return out;
   }, [date]);
@@ -48,7 +53,7 @@ export default function Clinics() {
 
   return (
     <section aria-labelledby="clinic-heading" className="mx-auto max-w-6xl px-4 py-16">
-      <p className="text-center text-sm font-semibold uppercase tracking-widest text-brand-gold">
+      <p className="eyebrow justify-center text-center">
         {CLINICS.length > 1 ? 'Consulting Locations' : 'Consulting Location'}
       </p>
       <h2 id="clinic-heading" className="mt-2 text-center font-serif text-3xl font-bold text-slate-900">
@@ -63,10 +68,10 @@ export default function Clinics() {
               key={i}
               type="button"
               onClick={() => { setSelectedClinic(i); setDate(''); setSlot(''); }}
-              className={`rounded-full px-5 py-2 text-sm font-semibold transition ${
+              className={`rounded-full px-5 py-2 text-sm font-semibold transition-all duration-300 ${
                 selectedClinic === i
-                  ? 'bg-brand-gold text-white shadow'
-                  : 'border border-slate-200 text-slate-600 hover:border-brand-gold hover:text-brand-gold'
+                  ? 'bg-gradient-to-r from-brand-brown to-brand-gold text-white shadow-md shadow-brand-brown/20'
+                  : 'border border-slate-200 bg-white/60 text-slate-600 backdrop-blur hover:border-brand-gold hover:text-brand-gold'
               }`}
             >
               {c.name}
@@ -75,9 +80,10 @@ export default function Clinics() {
         </div>
       )}
 
+      <Reveal>
       <div className="mt-10 grid gap-8 lg:grid-cols-2">
         {/* Clinic details */}
-        <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+        <div className="glass rounded-3xl p-8 transition-shadow duration-300 hover:shadow-glass-lg">
           <div className="flex items-start gap-4">
             <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-brand-gold/15 text-brand-brown" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -115,13 +121,13 @@ export default function Clinics() {
               href={clinic.mapUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-brand-brown px-5 py-2.5 text-sm font-semibold text-brand-brown transition hover:bg-brand-brown hover:text-white"
+              className="inline-flex items-center gap-2 rounded-full border border-brand-brown px-5 py-2.5 text-sm font-semibold text-brand-brown transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-brown hover:text-white"
             >
               Get Directions
             </a>
             <a
               href={`tel:+${SITE.phoneRaw}`}
-              className="inline-flex items-center gap-2 rounded-full border border-slate-300 px-5 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-100"
+              className="inline-flex items-center gap-2 rounded-full border border-slate-300 px-5 py-2.5 text-sm font-semibold text-slate-700 transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-100"
             >
               Call {SITE.phoneDisplay}
             </a>
@@ -129,7 +135,8 @@ export default function Clinics() {
         </div>
 
         {/* WhatsApp booking */}
-        <div className="rounded-3xl bg-brand-dark p-8 text-white shadow-lg">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand-dark to-slate-900 p-8 text-white shadow-glass-lg">
+          <div className="blob -right-10 -top-10 h-48 w-48 bg-brand-gold/15" aria-hidden="true" />
           <h3 className="font-serif text-xl font-bold">Book via WhatsApp</h3>
           <p className="mt-1 text-sm text-slate-300">
             Choose a day and time — we'll confirm your appointment on WhatsApp.
@@ -220,6 +227,7 @@ export default function Clinics() {
           </div>
         </div>
       </div>
+      </Reveal>
     </section>
   );
 }

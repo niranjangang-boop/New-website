@@ -86,7 +86,7 @@ collections:
                   - label: "Time"
                     name: "time"
                     widget: "string"
-                    hint: "E.g. 5:00 PM – 10:00 PM"
+                    hint: "E.g. 3:00 PM – 7:00 AM"
 
 
   # ── Patient Education Articles ──────────────────────────────────────────────

@@ -32,10 +32,10 @@ export default function Navbar() {
   const closeProc = () => { closeTimer.current = setTimeout(() => setProcOpen(false), 120); };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-white/40 bg-white/75 shadow-glass backdrop-blur-xl">
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
-        <Link to="/" className="flex items-center gap-2" aria-label="Home">
-          <img src="/icon-192.png" alt="" width="36" height="36" className="h-9 w-9" />
+        <Link to="/" className="group flex items-center gap-2" aria-label="Home">
+          <img src="/icon-192.png" alt="" width="36" height="36" className="h-9 w-9 transition-transform duration-300 group-hover:scale-105" />
           <span className="font-serif text-lg font-bold text-brand-brown">
             {SITE.name}
           </span>
@@ -82,8 +82,8 @@ export default function Navbar() {
             </button>
 
             {procOpen && (
-              <div className="absolute left-1/2 top-full -translate-x-1/2 w-[640px] pt-1" onMouseEnter={openProc} onMouseLeave={closeProc}>
-              <div className="rounded-2xl border border-slate-100 bg-white p-5 shadow-xl">
+              <div className="absolute left-1/2 top-full -translate-x-1/2 w-[640px] pt-1 animate-fade-up" onMouseEnter={openProc} onMouseLeave={closeProc}>
+              <div className="glass rounded-2xl p-5 shadow-glass-lg">
                 <div className="grid grid-cols-2 gap-x-6 gap-y-4">
                   {GROUPS.filter((g) => grouped[g]?.length).map((group) => (
                     <div key={group}>
@@ -113,7 +113,7 @@ export default function Navbar() {
 
           <NavLink
             to="/book"
-            className="rounded-full bg-brand-gold px-5 py-2 text-sm font-semibold text-white shadow hover:opacity-90 transition"
+            className="rounded-full bg-gradient-to-r from-brand-brown to-brand-gold px-5 py-2 text-sm font-semibold text-white shadow-md shadow-brand-brown/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow"
           >
             Book Appointment
           </NavLink>
@@ -135,7 +135,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="border-t border-slate-100 bg-white px-4 py-3 md:hidden">
+        <div className="glass animate-fade-up border-t border-white/40 px-4 py-3 md:hidden">
           <ul className="space-y-0.5">
             {topLinks.map((l) => (
               <li key={l.to}>
@@ -173,7 +173,7 @@ export default function Navbar() {
               <NavLink
                 to="/book"
                 onClick={() => setOpen(false)}
-                className="block rounded-full bg-brand-gold px-5 py-2.5 text-center text-sm font-semibold text-white"
+                className="block rounded-full bg-gradient-to-r from-brand-brown to-brand-gold px-5 py-2.5 text-center text-sm font-semibold text-white shadow-md shadow-brand-brown/20"
               >
                 Book Appointment
               </NavLink>

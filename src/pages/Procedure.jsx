@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { PROCEDURES } from '../data/procedures.js';
 import { SITE, CLINIC } from '../data/site.js';
+import Reveal from '../components/Reveal.jsx';
 
 // ── helpers ─────────────────────────────────────────────────────────────────
 
@@ -133,12 +134,13 @@ export default function Procedure() {
   return (
     <main>
       {/* ── Hero ───────────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-brand-dark text-white">
+      <section className="relative overflow-hidden bg-gradient-to-br from-brand-dark via-brand-dark to-brand-brown text-white">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-20"
           style={{ backgroundImage: `url(${proc.image})` }}
           aria-hidden="true"
         />
+        <div className="blob -left-16 top-0 h-72 w-72 bg-brand-gold/15 animate-float-slow" aria-hidden="true" />
         <div className="relative mx-auto max-w-4xl px-4 py-20 text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-brand-gold">
             Procedure
@@ -150,18 +152,10 @@ export default function Procedure() {
             {proc.hero}
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <a
-              href={waUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full bg-brand-gold px-8 py-3 font-semibold text-white shadow hover:opacity-90 transition"
-            >
+            <a href={waUrl} target="_blank" rel="noopener noreferrer" className="btn-gradient">
               WhatsApp Us
             </a>
-            <a
-              href={`tel:+${SITE.phoneRaw}`}
-              className="rounded-full border border-white/30 px-8 py-3 font-semibold text-white hover:bg-white/10 transition"
-            >
+            <a href={`tel:+${SITE.phoneRaw}`} className="btn-outline-dark">
               Call {SITE.phoneDisplay}
             </a>
           </div>
@@ -171,43 +165,47 @@ export default function Procedure() {
       {/* ── Content sections ───────────────────────────────────────────── */}
       <article className="mx-auto max-w-3xl px-4 py-14">
         {proc.sections.map((sec, i) => (
-          <section key={i} className="mb-10">
-            <h2 className="font-serif text-2xl font-bold text-brand-brown mb-3">
-              {sec.heading}
-            </h2>
-            {sec.body && (
-              <p className="text-slate-600 leading-relaxed mb-3">{sec.body}</p>
-            )}
-            {sec.bullets && (
-              <ul className="space-y-2 text-slate-600">
-                {sec.bullets.map((b, j) => (
-                  <li key={j} className="flex gap-3">
-                    <svg
-                      className="mt-0.5 h-5 w-5 flex-shrink-0 text-brand-gold"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span>{b}</span>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </section>
+          <Reveal key={i} delay={(i % 3) * 80}>
+            <section className="mb-10">
+              <h2 className="font-serif text-2xl font-bold text-brand-brown mb-3">
+                {sec.heading}
+              </h2>
+              {sec.body && (
+                <p className="text-slate-600 leading-relaxed mb-3">{sec.body}</p>
+              )}
+              {sec.bullets && (
+                <ul className="space-y-2 text-slate-600">
+                  {sec.bullets.map((b, j) => (
+                    <li key={j} className="flex gap-3">
+                      <svg
+                        className="mt-0.5 h-5 w-5 flex-shrink-0 text-brand-gold"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </section>
+          </Reveal>
         ))}
       </article>
 
       {/* ── FAQ ────────────────────────────────────────────────────────── */}
       {proc.faqs && proc.faqs.length > 0 && (
-        <section className="bg-slate-50 py-14">
+        <section className="bg-gradient-to-b from-slate-50 to-white py-14">
           <div className="mx-auto max-w-3xl px-4">
             <h2 className="font-serif text-2xl font-bold text-brand-brown mb-6">
               Frequently Asked Questions
             </h2>
-            <Accordion faqs={proc.faqs} />
+            <div className="glass rounded-3xl px-2">
+              <Accordion faqs={proc.faqs} />
+            </div>
           </div>
         </section>
       )}
@@ -215,22 +213,23 @@ export default function Procedure() {
       {/* ── Clinic + CTA ───────────────────────────────────────────────── */}
       <section className="py-14">
         <div className="mx-auto max-w-3xl px-4">
-          <div className="rounded-2xl bg-brand-dark p-8 text-white md:flex md:items-center md:justify-between md:gap-8">
-            <div>
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-brand-dark to-slate-900 p-8 text-white shadow-glass-lg md:flex md:items-center md:justify-between md:gap-8">
+            <div className="blob -right-10 -top-10 h-44 w-44 bg-brand-gold/15" aria-hidden="true" />
+            <div className="relative">
               <p className="font-serif text-xl font-bold mb-1">Book a Consultation</p>
               <p className="text-slate-300 text-sm leading-relaxed">
                 {CLINIC.name} · {CLINIC.address.split(',').slice(0, 3).join(', ')}
               </p>
               <p className="text-slate-400 text-xs mt-1">
-                Mon–Sat 5–10 pm · Sun 9 am–5 pm
+                OPD: 3 pm – 7 am daily
               </p>
             </div>
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row md:mt-0 md:flex-col lg:flex-row">
+            <div className="relative mt-6 flex flex-col gap-3 sm:flex-row md:mt-0 md:flex-col lg:flex-row">
               <a
                 href={waUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full bg-brand-gold px-6 py-2.5 text-center text-sm font-semibold text-white hover:opacity-90 transition whitespace-nowrap"
+                className="rounded-full bg-gradient-to-r from-brand-brown to-brand-gold px-6 py-2.5 text-center text-sm font-semibold text-white shadow-md shadow-brand-brown/20 transition-all duration-300 hover:-translate-y-0.5 whitespace-nowrap"
               >
                 WhatsApp Us
               </a>
@@ -238,7 +237,7 @@ export default function Procedure() {
                 href={CLINIC.mapUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full border border-white/30 px-6 py-2.5 text-center text-sm font-semibold text-white hover:bg-white/10 transition whitespace-nowrap"
+                className="rounded-full border border-white/30 bg-white/5 px-6 py-2.5 text-center text-sm font-semibold text-white backdrop-blur transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/15 whitespace-nowrap"
               >
                 Get Directions
               </a>
@@ -255,14 +254,14 @@ export default function Procedure() {
                 <Link
                   key={a.slug}
                   to={`/education/${a.slug}`}
-                  className="rounded-full border border-slate-200 px-4 py-1.5 text-sm text-slate-700 hover:border-brand-gold hover:text-brand-gold transition"
+                  className="rounded-full border border-slate-200 px-4 py-1.5 text-sm text-slate-700 transition-colors hover:border-brand-gold hover:text-brand-gold"
                 >
                   {a.title}
                 </Link>
               ))}
               <Link
                 to={`/specialties/${proc.specialty}`}
-                className="rounded-full border border-slate-200 px-4 py-1.5 text-sm text-slate-700 hover:border-brand-gold hover:text-brand-gold transition"
+                className="rounded-full border border-slate-200 px-4 py-1.5 text-sm text-slate-700 transition-colors hover:border-brand-gold hover:text-brand-gold"
               >
                 View specialty page →
               </Link>

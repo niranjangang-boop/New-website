@@ -29,16 +29,18 @@ export default function Specialty() {
         path={`/specialties/${slug}`}
       />
 
-      <section className="mx-auto max-w-6xl px-4 py-16">
+      <section className="relative overflow-hidden px-4 py-16">
+        <div className="blob -right-20 top-0 h-72 w-72 bg-brand-brown/10 animate-float" aria-hidden="true" />
+        <div className="relative mx-auto max-w-6xl">
         <nav className="flex flex-wrap gap-2 text-sm" aria-label="Specialties">
           {SPECIALTIES.map((s) => (
             <Link
               key={s.slug}
               to={`/specialties/${s.slug}`}
-              className={`rounded-full px-4 py-1.5 font-medium transition ${
+              className={`rounded-full px-4 py-1.5 font-medium transition-all duration-300 ${
                 s.slug === slug
-                  ? 'bg-brand-brown text-white'
-                  : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                  ? 'bg-gradient-to-r from-brand-brown to-brand-gold text-white shadow-md shadow-brand-brown/20'
+                  : 'bg-white/60 text-slate-600 backdrop-blur hover:bg-slate-100'
               }`}
             >
               {s.name.split(' (')[0]}
@@ -54,36 +56,39 @@ export default function Specialty() {
             <p className="mt-4 text-lg leading-relaxed text-slate-600">{spec.short}</p>
 
             <ul className="mt-8 space-y-3">
-              {spec.points.map((p) => (
-                <li key={p} className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-5 py-3.5 text-slate-800 shadow-sm">
-                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-gold/15 text-brand-brown" aria-hidden="true">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                      <path d="M5 13l4 4L19 7" />
-                    </svg>
-                  </span>
-                  {p}
-                </li>
+              {spec.points.map((p, i) => (
+                <Reveal key={p} delay={i * 60}>
+                  <li className="glass flex items-center gap-3 rounded-2xl px-5 py-3.5 text-slate-800 transition-shadow duration-300 hover:shadow-glass-lg">
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-brand-gold/30 to-brand-brown/20 text-brand-brown" aria-hidden="true">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                        <path d="M5 13l4 4L19 7" />
+                      </svg>
+                    </span>
+                    {p}
+                  </li>
+                </Reveal>
               ))}
             </ul>
 
-            <Link
-              to="/book"
-              className="mt-9 inline-block rounded-full bg-brand-brown px-7 py-3.5 text-sm font-bold text-white transition hover:brightness-110"
-            >
+            <Link to="/book" className="btn-gradient mt-9">
               Book a Consultation
             </Link>
           </div>
 
-          <Image
-            src={spec.image}
-            webpSrc={spec.image.replace('.jpg', '.webp')}
-            alt={spec.name}
-            width={1600}
-            height={1067}
-            aspect="3/2"
-            className="rounded-3xl border border-slate-200 shadow-sm"
-            sizes="(min-width: 1024px) 560px, 100vw"
-          />
+          <div className="relative">
+            <div className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-brand-gold/20 via-transparent to-brand-brown/15 blur-2xl" aria-hidden="true" />
+            <Image
+              src={spec.image}
+              webpSrc={spec.image.replace('.jpg', '.webp')}
+              alt={spec.name}
+              width={1600}
+              height={1067}
+              aspect="3/2"
+              className="glass relative rounded-3xl p-2"
+              imgClassName="rounded-2xl"
+              sizes="(min-width: 1024px) 560px, 100vw"
+            />
+          </div>
         </div>
 
         {related.length > 0 && (
@@ -97,7 +102,7 @@ export default function Specialty() {
                   <Link
                     key={a.slug}
                     to={`/education/${a.slug}`}
-                    className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+                    className="glass group rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-glass-lg"
                   >
                     <h3 className="font-semibold leading-snug text-slate-900 group-hover:text-brand-brown">
                       {a.title}
@@ -111,6 +116,7 @@ export default function Specialty() {
             </section>
           </Reveal>
         )}
+        </div>
       </section>
     </>
   );

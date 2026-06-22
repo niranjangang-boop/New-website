@@ -10,8 +10,17 @@
       "map_url": "https://maps.app.goo.gl/ZwSs24See2xtcHXR7",
       "landmark": "Opposite Viviana Mall, next to Bank of Baroda",
       "hours": [
-        { "days": "Monday – Saturday", "time": "5:00 PM – 10:00 PM" },
-        { "days": "Sunday", "time": "9:00 AM – 5:00 PM" }
+        { "days": "Monday – Sunday", "time": "3:00 PM – 7:00 AM" }
+      ]
+    },
+    {
+      "name": "Sahayogi Hospital LLP",
+      "short_location": "Naupada, Thane West",
+      "address": "Post Office, Sita Vihar Society, Lal Bahadur Shastri Marg, near Navpada, Naupada, Damani Estate, Thane, Maharashtra 400602",
+      "map_url": "https://maps.app.goo.gl/VMzDEiSL7RxFEhZM7",
+      "landmark": "Near Navpada, Naupada",
+      "hours": [
+        { "days": "Monday – Sunday", "time": "3:00 PM – 7:00 AM" }
       ]
     }
   ]

@@ -69,17 +69,17 @@ export default function EducationArticle() {
           </Link>
 
           {/* Language toggle */}
-          <div className="flex rounded-full border border-slate-200 bg-white p-1" role="group" aria-label="Choose language">
+          <div className="glass flex rounded-full p-1" role="group" aria-label="Choose language">
             {LANGS.map((l) => (
               <button
                 key={l.code}
                 type="button"
                 onClick={() => setLang(l.code)}
                 aria-pressed={lang === l.code}
-                className={`rounded-full px-4 py-1.5 text-sm font-medium transition ${
+                className={`rounded-full px-4 py-1.5 text-sm font-medium transition-all duration-300 ${
                   lang === l.code
-                    ? 'bg-brand-brown text-white'
-                    : 'text-slate-600 hover:bg-slate-100'
+                    ? 'bg-gradient-to-r from-brand-brown to-brand-gold text-white shadow-sm'
+                    : 'text-slate-600 hover:bg-white/60'
                 }`}
               >
                 {l.label}
@@ -127,7 +127,7 @@ export default function EducationArticle() {
             {content.faqs.map((f) => (
               <details
                 key={f.q}
-                className="group rounded-2xl border border-slate-200 bg-white p-5 open:shadow-sm"
+                className="glass group rounded-2xl p-5 transition-shadow duration-300 open:shadow-glass-lg"
               >
                 <summary className="cursor-pointer list-none font-semibold text-slate-900">
                   {f.q}
@@ -138,15 +138,15 @@ export default function EducationArticle() {
           </div>
         </section>
 
-        <div className="mt-12 rounded-3xl bg-brand-dark p-8 text-center">
-          <h2 className="font-serif text-xl font-bold text-white">{t.ctaTitle}</h2>
-          <p className="mt-2 text-sm text-slate-300">{t.ctaBody}</p>
-          <Link
-            to="/book"
-            className="mt-5 inline-block rounded-full bg-brand-gold px-7 py-3 text-sm font-bold text-brand-dark transition hover:brightness-110"
-          >
-            {t.ctaBtn}
-          </Link>
+        <div className="relative mt-12 overflow-hidden rounded-3xl bg-gradient-to-br from-brand-dark to-slate-900 p-8 text-center shadow-glass-lg">
+          <div className="blob left-1/3 top-0 h-40 w-40 bg-brand-gold/15" aria-hidden="true" />
+          <div className="relative">
+            <h2 className="font-serif text-xl font-bold text-white">{t.ctaTitle}</h2>
+            <p className="mt-2 text-sm text-slate-300">{t.ctaBody}</p>
+            <Link to="/book" className="btn-gradient mt-5">
+              {t.ctaBtn}
+            </Link>
+          </div>
         </div>
       </article>
     </>

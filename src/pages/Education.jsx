@@ -12,10 +12,10 @@ export default function Education() {
         path="/education"
       />
 
-      <section className="mx-auto max-w-6xl px-4 py-16">
-        <p className="text-sm font-semibold uppercase tracking-widest text-brand-gold">
-          Patient Hub
-        </p>
+      <section className="relative overflow-hidden px-4 py-16">
+        <div className="blob -right-24 top-0 h-72 w-72 bg-brand-gold/15 animate-float-slow" aria-hidden="true" />
+        <div className="relative mx-auto max-w-6xl">
+        <p className="eyebrow">Patient Hub</p>
         <h1 className="mt-2 font-serif text-4xl font-bold text-slate-900">
           Patient Education
         </h1>
@@ -29,7 +29,7 @@ export default function Education() {
             <Reveal key={a.slug} delay={(i % 3) * 80}>
               <Link
                 to={`/education/${a.slug}`}
-                className="group flex h-full flex-col rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                className="glass group flex h-full flex-col rounded-3xl p-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-glass-lg"
               >
                 <span className="inline-flex w-fit rounded-full bg-brand-gold/15 px-3 py-1 text-xs font-bold uppercase tracking-wide text-brand-brown">
                   {a.category}
@@ -46,6 +46,7 @@ export default function Education() {
               </Link>
             </Reveal>
           ))}
+        </div>
         </div>
       </section>
     </>
