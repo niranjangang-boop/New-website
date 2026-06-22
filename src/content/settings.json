@@ -10,7 +10,8 @@
       "map_url": "https://maps.app.goo.gl/ZwSs24See2xtcHXR7",
       "landmark": "Opposite Viviana Mall, next to Bank of Baroda",
       "hours": [
-        { "days": "Monday – Sunday", "time": "3:00 PM – 7:00 AM" }
+        { "days": "Monday – Saturday", "time": "3:00 PM – 7:00 AM" },
+        { "days": "Sunday", "time": "Open 24 hours" }
       ]
     },
     {
@@ -20,7 +21,8 @@
       "map_url": "https://maps.app.goo.gl/VMzDEiSL7RxFEhZM7",
       "landmark": "Near Navpada, Naupada",
       "hours": [
-        { "days": "Monday – Sunday", "time": "3:00 PM – 7:00 AM" }
+        { "days": "Monday – Saturday", "time": "3:00 PM – 7:00 AM" },
+        { "days": "Sunday", "time": "Open 24 hours" }
       ]
     }
   ]

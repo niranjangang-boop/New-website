@@ -14,7 +14,7 @@ export default function Clinics() {
 
   const clinic = CLINICS[selectedClinic] || CLINICS[0];
 
-  // OPD runs 3:00 PM – 7:00 AM daily (overnight), same for every clinic.
+  // OPD runs 3:00 PM – 7:00 AM Mon–Sat (overnight), and 24 hours on Sunday.
   const slots = useMemo(() => {
     if (!date) return [];
     const out = [];
@@ -23,13 +23,22 @@ export default function Clinics() {
       const display = h % 12 === 0 ? 12 : h % 12;
       return { label: `${display}:00 ${period}`, half: `${display}:30 ${period}` };
     };
-    for (let h = 15; h < 24; h++) {
-      const { label, half } = fmt(h);
-      out.push(label, half);
-    }
-    for (let h = 0; h < 7; h++) {
-      const { label, half } = fmt(h);
-      out.push(label, half);
+    const day = new Date(date).getDay();
+    if (day === 0) {
+      // Sunday — open 24 hours
+      for (let h = 0; h < 24; h++) {
+        const { label, half } = fmt(h);
+        out.push(label, half);
+      }
+    } else {
+      for (let h = 15; h < 24; h++) {
+        const { label, half } = fmt(h);
+        out.push(label, half);
+      }
+      for (let h = 0; h < 7; h++) {
+        const { label, half } = fmt(h);
+        out.push(label, half);
+      }
     }
     return out;
   }, [date]);
