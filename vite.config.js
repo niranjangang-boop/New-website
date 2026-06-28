@@ -2,71 +2,75 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import sitemap from 'vite-plugin-sitemap';
-import { readdirSync } from 'fs';
-import { resolve } from 'path';
-import { PROCEDURE_ROUTES } from './src/data/procedures.js';
+import { ROUTES } from './src/data/routes.js';
 
-// Article routes derived from JSON files at build time (avoids importing
-// articles.js which uses import.meta.glob — a Vite-only API not available here).
-const ARTICLE_ROUTES = readdirSync(resolve('./src/content/articles'))
-  .filter((f) => f.endsWith('.json'))
-  .map((f) => `/education/${f.replace('.json', '')}`);
-
-// Every public route on the site. Keep in sync with src/App.jsx.
-const routes = [
-  '/',
-  '/about',
-  '/book',
-  '/sitemap',
-  '/education',
-  ...ARTICLE_ROUTES,
-  '/specialties/joint-replacement',
-  '/specialties/foot-ankle',
-  '/specialties/sports-arthroscopy',
-  '/specialties/trauma-fracture',
-  ...PROCEDURE_ROUTES,
-];
-
-export default defineConfig({
+// `isSsrBuild` is provided by Vite 5.1+ in the config function's env object.
+// We use it to skip plugins/options that are only meaningful for the
+// client bundle when building the separate Node-targeted SSR bundle
+// (`vite build --ssr src/entry-server.jsx`) used by scripts/prerender.mjs.
+export default defineConfig(({ isSsrBuild }) => ({
   plugins: [
     react(),
 
-    // Generates sitemap.xml + robots.txt into dist/ on every build
-    sitemap({
-      hostname: 'https://drniranjanghag.com',
-      dynamicRoutes: routes,
-      changefreq: 'weekly',
-      priority: 0.8,
-      generateRobotsTxt: true,
-      robots: [{ userAgent: '*', allow: '/' }],
-    }),
+    ...(!isSsrBuild
+      ? [
+          // Generates sitemap.xml + robots.txt into dist/ on every build
+          sitemap({
+            hostname: 'https://drniranjanghag.com',
+            dynamicRoutes: ROUTES,
+            changefreq: 'weekly',
+            priority: 0.8,
+            generateRobotsTxt: true,
+            robots: [
+              { userAgent: '*', allow: '/' },
+              { userAgent: '*', disallow: '/admin' },
+              // AI search / answer-engine crawlers — explicitly welcomed so the
+              // site is eligible to be cited by ChatGPT, Perplexity, Gemini, Copilot, etc.
+              { userAgent: 'GPTBot', allow: '/' },
+              { userAgent: 'OAI-SearchBot', allow: '/' },
+              { userAgent: 'ChatGPT-User', allow: '/' },
+              { userAgent: 'ClaudeBot', allow: '/' },
+              { userAgent: 'Claude-Web', allow: '/' },
+              { userAgent: 'anthropic-ai', allow: '/' },
+              { userAgent: 'PerplexityBot', allow: '/' },
+              { userAgent: 'Perplexity-User', allow: '/' },
+              { userAgent: 'Google-Extended', allow: '/' },
+              { userAgent: 'Applebot-Extended', allow: '/' },
+              { userAgent: 'Bingbot', allow: '/' },
+              { userAgent: 'CCBot', allow: '/' },
+            ],
+          }),
 
-    // Surgical image compression at build time (jpg/png/webp/avif/svg)
-    ViteImageOptimizer({
-      includePublic: true,
-      jpg: { quality: 78, mozjpeg: true },
-      jpeg: { quality: 78, mozjpeg: true },
-      png: { quality: 80, compressionLevel: 9 },
-      webp: { quality: 65 },
-      avif: { quality: 60 },
-      svg: {
-        multipass: true,
-        plugins: [{ name: 'preset-default' }],
-      },
-    }),
+          // Surgical image compression at build time (jpg/png/webp/avif/svg)
+          ViteImageOptimizer({
+            includePublic: true,
+            jpg: { quality: 78, mozjpeg: true },
+            jpeg: { quality: 78, mozjpeg: true },
+            png: { quality: 80, compressionLevel: 9 },
+            webp: { quality: 65 },
+            avif: { quality: 60 },
+            svg: {
+              multipass: true,
+              plugins: [{ name: 'preset-default' }],
+            },
+          }),
+        ]
+      : []),
   ],
 
   build: {
     target: 'es2018',
     cssCodeSplit: true,
-    rollupOptions: {
-      output: {
-        // Split vendor code out of route chunks for long-term caching
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom'],
-          'router': ['react-router-dom'],
+    rollupOptions: isSsrBuild
+      ? {}
+      : {
+          output: {
+            // Split vendor code out of route chunks for long-term caching
+            manualChunks: {
+              'react-vendor': ['react', 'react-dom'],
+              'router': ['react-router-dom'],
+            },
+          },
         },
-      },
-    },
   },
-});
+}));

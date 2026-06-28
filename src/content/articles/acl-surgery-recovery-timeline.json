@@ -1,0 +1,47 @@
+{
+  "slug": "acl-surgery-recovery-timeline",
+  "title": "ACL Surgery Recovery, Week by Week (Walking, Work & Sport)",
+  "metaDescription": "What does ACL reconstruction recovery actually look like, week by week? Milestones for walking, driving, work and return to sport, plus warning signs to watch for.",
+  "category": "Sports Injuries",
+  "date": "2026-06-28",
+  "readTime": 6,
+  "intro": "ACL reconstruction recovery is a marked, criteria-based process — not a fixed calendar everyone follows at the same pace. Here is the typical week-by-week path, what determines how fast you progress, and the warning signs that mean you should call your surgeon.",
+  "sections": [
+    {
+      "heading": "The recovery timeline",
+      "bullets": [
+        "Week 0–2: Walking with crutches/support, gentle range-of-motion exercises, swelling control. Most patients walk the same or next day after surgery",
+        "Week 2–6: Progressing to full weight-bearing without support, stationary cycling, early strengthening — crutches are usually dropped within this window",
+        "Week 6–12: Driving typically resumes once you can comfortably and safely control the pedals (often around 6–8 weeks); strength training intensifies",
+        "Month 3: Straight-line jogging begins, once strength and swelling criteria are met — not by the calendar alone",
+        "Month 4–6: Sport-specific drills, agility and cutting work, introduced gradually after formal strength testing",
+        "Month 8–12: Full competitive return, only once hop tests and strength symmetry (typically ≥90% compared to the uninjured leg) are achieved"
+      ]
+    },
+    {
+      "heading": "Why rushing back is the main cause of re-tears",
+      "body": "The graft is biologically weakest between roughly 6 weeks and 4 months as it remodels and integrates — exactly the period patients feel 'almost normal' and want to push. Returning to pivoting sport before strength and hop tests confirm readiness is the single biggest preventable cause of re-rupture. Criteria-based progression, not the calendar, should decide when you advance each stage."
+    },
+    {
+      "heading": "ACL repair vs. reconstruction — a quick note",
+      "body": "Repair (stitching the original ligament) is only suitable for a small subset of very fresh tears with good tissue quality. Reconstruction (replacing the ligament with a graft) remains the standard, more predictable option for most tears, especially in athletes returning to pivoting sport."
+    },
+    {
+      "heading": "Warning signs to call your surgeon",
+      "bullets": [
+        "Sudden increase in swelling, warmth or redness around the knee",
+        "Fever, especially with wound redness or discharge — possible infection",
+        "A new giving-way or popping sensation during rehab",
+        "Calf pain or swelling (possible blood clot) — needs urgent assessment",
+        "Inability to achieve expected range of motion by your scheduled physiotherapy milestones"
+      ]
+    }
+  ],
+  "faqs": [
+    { "q": "How long until I can walk normally after ACL surgery?", "a": "Most patients walk with crutches within a day, and without any support by around 2–6 weeks, depending on associated meniscus repair and individual healing." },
+    { "q": "When can I go back to work after ACL reconstruction?", "a": "Desk-based work: often 1–2 weeks. Physically demanding or standing work: typically 6–12 weeks, depending on job demands and how your rehabilitation is progressing." },
+    { "q": "When can I return to playing sport?", "a": "Typically 8–12 months, and only after passing strength and hop tests — not by a fixed date. Returning earlier substantially raises the risk of re-tearing the graft." },
+    { "q": "Is ACL repair faster to recover from than reconstruction?", "a": "Repair can suit a small group of very fresh, well-selected tears, but it isn't a universal shortcut — reconstruction remains the more predictable choice for most patients and is assessed case by case." }
+  ],
+  "tags": ["ACL", "recovery", "sports injury", "rehabilitation"]
+}

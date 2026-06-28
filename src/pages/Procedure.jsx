@@ -3,22 +3,14 @@ import { useParams, Link, Navigate } from 'react-router-dom';
 import { PROCEDURES } from '../data/procedures.js';
 import { SITE, CLINIC } from '../data/site.js';
 import Reveal from '../components/Reveal.jsx';
+import { headState } from '../components/Seo.jsx';
 
 // ── helpers ─────────────────────────────────────────────────────────────────
 
-function setMeta(title, description) {
-  document.title = `${title} | ${SITE.name}`;
-  const el = document.querySelector('meta[name="description"]');
-  if (el) el.setAttribute('content', description);
-}
-
-function injectSchema(proc) {
-  const id = 'procedure-jsonld';
-  const existing = document.getElementById(id);
-  if (existing) existing.remove();
-
-  // MedicalProcedure + FAQPage combined graph
-  const schema = {
+// Pure — builds the JSON-LD object with no DOM access, so it can run during
+// SSR (`renderToString`) as well as on the client.
+function buildSchema(proc) {
+  return {
     '@context': 'https://schema.org',
     '@graph': [
       {
@@ -63,6 +55,19 @@ function injectSchema(proc) {
         : null,
     ].filter(Boolean),
   };
+}
+
+// Client-only DOM injection — sets <title>/<meta description> and injects
+// the JSON-LD <script> tag. Called only from the useEffect below, so it
+// never executes during SSR.
+function applyHead(proc, schema) {
+  document.title = `${proc.keywordTitle} | ${SITE.name}`;
+  const el = document.querySelector('meta[name="description"]');
+  if (el) el.setAttribute('content', proc.metaDescription);
+
+  const id = 'procedure-jsonld';
+  const existing = document.getElementById(id);
+  if (existing) existing.remove();
 
   const s = document.createElement('script');
   s.id = id;
@@ -113,10 +118,18 @@ export default function Procedure() {
   const { slug } = useParams();
   const proc = PROCEDURES.find((p) => p.slug === slug);
 
+  // Synchronous — runs during SSR render (unlike useEffect), so the
+  // prerender script can read headState right after renderToString.
+  if (proc) {
+    headState.title = `${proc.keywordTitle} | ${SITE.name}`;
+    headState.description = proc.metaDescription;
+    headState.path = `/procedures/${proc.slug}`;
+    headState.jsonLd = buildSchema(proc);
+  }
+
   useEffect(() => {
     if (!proc) return;
-    setMeta(proc.keywordTitle, proc.metaDescription);
-    injectSchema(proc);
+    applyHead(proc, buildSchema(proc));
 
     return () => {
       const s = document.getElementById('procedure-jsonld');

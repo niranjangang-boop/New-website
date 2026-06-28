@@ -1,0 +1,215 @@
+# Decap CMS configuration for drniranjanghag.com
+# Docs: https://decapcms.org/docs/
+
+backend:
+  name: git-gateway
+  branch: main
+
+# Where uploaded images are stored in the repo and served from
+media_folder: "public/images/blog"
+public_folder: "/images/blog"
+
+# Show a live preview of content while editing
+show_preview_links: true
+
+collections:
+
+  # ── Site Settings ───────────────────────────────────────────────────────────
+  # Edit phone number, email, clinic address and hours without touching code.
+  - name: "settings"
+    label: "⚙️ Site Settings"
+    files:
+
+      - name: "contact"
+        label: "Contact & Clinic Details"
+        file: "src/content/settings.json"
+        fields:
+
+          - label: "Phone Number (display)"
+            name: "phone_display"
+            widget: "string"
+            hint: "Shown to visitors on the website. E.g. +91 90760 79000"
+
+          - label: "Phone Number (digits only, no spaces)"
+            name: "phone_raw"
+            widget: "string"
+            hint: "Used for call links and WhatsApp. Include country code, no spaces or dashes. E.g. 919076079000"
+            pattern: ["^[0-9]+$", "Digits only, no spaces or special characters"]
+
+          - label: "Email Address"
+            name: "email"
+            widget: "string"
+
+          - label: "Clinic Locations"
+            name: "clinics"
+            widget: "list"
+            label_singular: "Clinic"
+            hint: "Add as many clinic locations as needed. The first one is used as the primary location on Google and procedure pages."
+            fields:
+
+              - label: "Clinic Name"
+                name: "name"
+                widget: "string"
+                hint: "E.g. Joshi's Neurotrauma Centre"
+
+              - label: "Short Location"
+                name: "short_location"
+                widget: "string"
+                hint: "Brief area shown under the clinic name. E.g. Khopat, Thane West"
+
+              - label: "Full Address"
+                name: "address"
+                widget: "text"
+                hint: "Full postal address as it should appear on the website."
+
+              - label: "Google Maps URL"
+                name: "map_url"
+                widget: "string"
+                hint: "Short link from Google Maps. Open Maps → search clinic → Share → Copy link. Looks like: https://maps.app.goo.gl/XXXXX"
+
+              - label: "Landmark"
+                name: "landmark"
+                widget: "string"
+                required: false
+                hint: "Optional. Short landmark to help patients find you. E.g. Opposite Viviana Mall"
+
+              - label: "OPD Hours"
+                name: "hours"
+                widget: "list"
+                label_singular: "Time Slot"
+                hint: "Add one row per time slot."
+                fields:
+                  - label: "Days"
+                    name: "days"
+                    widget: "string"
+                    hint: "E.g. Monday – Saturday"
+                  - label: "Time"
+                    name: "time"
+                    widget: "string"
+                    hint: "E.g. 3:00 PM – 7:00 AM"
+
+
+  # ── Patient Education Articles ──────────────────────────────────────────────
+  - name: "articles"
+    label: "📝 Patient Education Articles"
+    label_singular: "Article"
+    folder: "src/content/articles"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    identifier_field: slug
+    summary: "{{title}} — {{category}}"
+    sortable_fields: ["date", "title", "category"]
+    fields:
+
+      - label: "URL Slug"
+        name: "slug"
+        widget: "string"
+        hint: "The URL of this article. Use lowercase letters and hyphens only. Example: knee-pain-treatment-thane. Do not change after publishing."
+        pattern: ['^[a-z0-9-]+$', "Lowercase letters, numbers and hyphens only"]
+
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        hint: "The article heading. Keep it under 70 characters for best Google display."
+
+      - label: "Meta Description (for Google)"
+        name: "metaDescription"
+        widget: "text"
+        hint: "What Google shows in search results. 140–160 characters. Include a keyword and location (Thane)."
+
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - "Knee"
+          - "Hip"
+          - "Foot & Ankle"
+          - "Sports Injuries"
+          - "Trauma"
+          - "Spine"
+          - "Hand & Wrist"
+          - "Joint Replacement"
+          - "General Orthopaedics"
+
+      - label: "Date Published"
+        name: "date"
+        widget: "datetime"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        format: "YYYY-MM-DD"
+        default: ""
+
+      - label: "Read Time (minutes)"
+        name: "readTime"
+        widget: "number"
+        default: 5
+        value_type: "int"
+        min: 1
+        max: 20
+
+      - label: "Cover Image"
+        name: "image"
+        widget: "image"
+        required: false
+        hint: "Upload a photo for this article (JPG or PNG, at least 800px wide). If blank, a default image is used."
+        media_library:
+          config:
+            multiple: false
+
+      - label: "Introduction"
+        name: "intro"
+        widget: "text"
+        hint: "2–4 sentence opening paragraph. This is the first thing the patient reads."
+
+      - label: "Sections"
+        name: "sections"
+        widget: "list"
+        label_singular: "Section"
+        hint: "Add one section at a time. Each section has a heading, optional body text, and optional bullet points."
+        fields:
+          - label: "Section Heading"
+            name: "heading"
+            widget: "string"
+            hint: "E.g. 'Warning signs to watch for' or 'When to see a doctor'"
+
+          - label: "Paragraph text"
+            name: "body"
+            widget: "text"
+            required: false
+            hint: "Optional. Body text under the heading."
+
+          - label: "Bullet Points"
+            name: "bullets"
+            widget: "list"
+            required: false
+            field:
+              label: "Point"
+              name: "point"
+              widget: "string"
+            hint: "Optional. Add bullet points one at a time."
+
+      - label: "FAQs"
+        name: "faqs"
+        widget: "list"
+        label_singular: "FAQ"
+        required: false
+        hint: "Add 2–4 frequently asked questions. These appear on the page and help with Google search."
+        fields:
+          - label: "Question"
+            name: "q"
+            widget: "string"
+
+          - label: "Answer"
+            name: "a"
+            widget: "text"
+
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        required: false
+        hint: "Optional keywords for filtering. E.g. arthritis, knee, surgery"
+        field:
+          label: "Tag"
+          name: "tag"
+          widget: "string"

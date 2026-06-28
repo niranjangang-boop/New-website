@@ -82,7 +82,7 @@ export default function Navbar() {
             </button>
 
             {procOpen && (
-              <div className="absolute left-1/2 top-full -translate-x-1/2 w-[640px] pt-1 animate-fade-up" onMouseEnter={openProc} onMouseLeave={closeProc}>
+              <div className="fixed left-1/2 top-16 -translate-x-1/2 w-[640px] max-w-[92vw] pt-1 animate-fade-up" onMouseEnter={openProc} onMouseLeave={closeProc}>
               <div className="glass rounded-2xl p-5 shadow-glass-lg">
                 <div className="grid grid-cols-2 gap-x-6 gap-y-4">
                   {GROUPS.filter((g) => grouped[g]?.length).map((group) => (

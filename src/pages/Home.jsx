@@ -5,6 +5,45 @@ import Clinics from '../components/Clinics.jsx';
 import Reveal from '../components/Reveal.jsx';
 import { SITE, SPECIALTIES } from '../data/site.js';
 
+const HOME_FAQ_JSONLD = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Who is Dr. Niranjan Ghag?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Dr. Niranjan Ghag is an orthopaedic surgeon based in Thane West, Maharashtra, specialising in robotic hip and knee replacement, foot and ankle surgery, sports injuries and arthroscopy, and trauma and fracture management.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Where does Dr. Niranjan Ghag consult in Thane?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "He consults at two Thane West locations: Joshi's Neurotrauma Centre, Khopat (opposite Viviana Mall), and Sahayogi Hospital LLP, Naupada. Appointments can be booked online or on WhatsApp at +91 90760 79000.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What conditions does Dr. Ghag treat?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'He treats knee and hip arthritis, sports injuries such as ACL and meniscus tears, foot and ankle problems including heel pain and plantar fasciitis, and fractures and complex trauma. Both non-surgical and surgical options are offered.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Which languages are consultations available in?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Consultations are available in English, Marathi and Hindi.',
+      },
+    },
+  ],
+};
+
 export default function Home() {
   return (
     <>
@@ -12,6 +51,7 @@ export default function Home() {
         title={null}
         description="Dr. Niranjan Ghag — Orthopaedic Surgeon in Thane specializing in robotic joint replacement, foot & ankle surgery, sports injuries, arthroscopy and complex trauma."
         path="/"
+        jsonLd={HOME_FAQ_JSONLD}
       />
 
       {/* Hero */}
@@ -32,10 +72,16 @@ export default function Home() {
                 Precision, Compassion &amp; Innovation
               </span>
             </h1>
-            <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate-600">
-              Pioneering robotic joint replacement, complex trauma management and
-              sports medicine with a patient-first philosophy focused on mobility
-              and speed of recovery.
+            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-slate-600">
+              Dr. Niranjan Ghag is an orthopaedic surgeon in Thane West, Maharashtra,
+              specialising in robotic-assisted joint replacement of the hip and knee,
+              foot &amp; ankle surgery, sports injuries &amp; arthroscopy, and complex
+              trauma &amp; fracture management. He consults at Joshi&rsquo;s Neurotrauma
+              Centre, Khopat (opposite Viviana Mall) and Sahayogi Hospital LLP, Naupada
+              — both in Thane West — with appointments available in English, Marathi
+              and Hindi. His tissue-sparing robotic techniques are designed for faster
+              recovery: many knee and hip replacement patients walk the same day and
+              return home within two to three days.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link to="/book" className="btn-gradient">

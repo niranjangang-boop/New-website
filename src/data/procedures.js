@@ -21,6 +21,8 @@ export const PROCEDURES = [
     relatedArticles: [
       { slug: 'early-signs-knee-arthritis', title: 'Early signs of knee arthritis' },
       { slug: 'robotic-knee-replacement-recovery', title: 'Robotic knee replacement recovery' },
+      { slug: 'robotic-knee-replacement-cost-thane', title: 'Robotic knee replacement cost in Thane & Mumbai' },
+      { slug: 'knee-arthritis-treatment-without-surgery', title: 'Knee arthritis treatment without surgery' },
     ],
     sections: [
       {
@@ -57,6 +59,9 @@ export const PROCEDURES = [
       { q: 'How painful is the surgery and recovery?', a: 'With modern multimodal pain management — nerve blocks, local infiltration and scheduled medication — most patients describe the pain as far less than they feared, and are walking comfortably within 24 hours.' },
       { q: 'Can both knees be replaced together?', a: 'Yes, for medically fit patients, both knees can be done in one anaesthesia (bilateral TKR) — one hospital stay and one recovery period. Your cardiac and general fitness are assessed first.' },
       { q: 'How soon can I sit cross-legged or use Indian toilets?', a: 'High-flexion implant designs and robotic alignment allow many patients to regain deep bending. This depends on your pre-operative flexibility and is discussed honestly during planning.' },
+      { q: 'What is the cost of robotic knee replacement in Thane/Mumbai?', a: 'Cost depends on implant brand, whether one or both knees are done, robotic system used, hospital tier and room category — there is no single fixed price. A detailed, written estimate is given after your consultation. See our full cost guide for indicative ranges and what drives them.' },
+      { q: 'Is knee replacement covered by insurance/Mediclaim?', a: 'Most health insurance and Mediclaim policies in India cover knee replacement, including cashless treatment at network hospitals, subject to your policy terms and any waiting period for joint conditions. Bring your policy details to the consultation for a clear answer specific to your plan.' },
+      { q: 'Is robotic knee replacement better than traditional, and is it worth the extra cost?', a: 'Robotic assistance improves implant alignment accuracy and can mean less soft-tissue trauma, but it is one factor among several — surgeon experience matters most either way. See our honest robotic vs. traditional comparison for a side-by-side look, including who it does and doesn\'t suit.' },
     ],
   },
 
@@ -73,6 +78,7 @@ export const PROCEDURES = [
     specialty: 'joint-replacement',
     relatedArticles: [
       { slug: 'hip-replacement-signs', title: 'Signs you may need hip replacement' },
+      { slug: 'joint-replacement-insurance-india', title: 'Is joint replacement covered by insurance?' },
     ],
     sections: [
       {
@@ -99,6 +105,59 @@ export const PROCEDURES = [
       { q: 'What is AVN and why do younger patients need hip replacement?', a: 'Avascular necrosis is loss of blood supply to the femoral head, common in 30s–40s, often after steroid use or alcohol excess. Early stages can be treated with preservation procedures; advanced collapse needs replacement — with excellent results.' },
       { q: 'Will I be able to sit on the floor afterwards?', a: 'With modern implants and surgical techniques, many patients regain floor-sitting. It depends on implant type and your anatomy — this is discussed honestly before surgery.' },
       { q: 'How soon can I return to work?', a: 'Desk work: typically 3–4 weeks. Standing or field work: 6–10 weeks depending on demands. Driving usually resumes around 4–6 weeks.' },
+      { q: 'What is the cost of hip replacement in India?', a: 'Cost varies with implant material (metal, ceramic or highly cross-linked polyethylene), single vs. bilateral surgery, hospital tier and room category — government and private hospital pricing also differs significantly. You will get a clear, written estimate before deciding anything.' },
+      { q: 'Is hip replacement covered by Mediclaim/health insurance?', a: 'Yes, in most cases — hip replacement is a standard inclusion in Indian health insurance policies, often available cashless at network hospitals. Pre-existing-condition waiting periods can apply, so it is worth checking your specific policy. See our insurance guide for the documents and process typically involved.' },
+    ],
+  },
+
+  {
+    slug: 'robotic-vs-traditional-knee-replacement',
+    name: 'Robotic vs. Traditional Knee Replacement',
+    group: 'Joint Replacement',
+    featured: false,
+    keywordTitle: 'Robotic vs Traditional Knee Replacement — Honest Comparison | Thane',
+    metaDescription:
+      'Robotic vs traditional knee replacement compared honestly by Dr. Niranjan Ghag — accuracy, recovery, cost and who is (and isn\'t) a good candidate for robotic surgery. Khopat, Thane West.',
+    image: '/images/joint-replacement.jpg',
+    hero: 'An honest, side-by-side comparison — not a sales pitch for either option.',
+    specialty: 'joint-replacement',
+    relatedArticles: [
+      { slug: 'robotic-knee-replacement-cost-thane', title: 'Robotic knee replacement cost in Thane & Mumbai' },
+      { slug: 'knee-arthritis-treatment-without-surgery', title: 'Knee arthritis treatment without surgery' },
+    ],
+    sections: [
+      {
+        heading: 'Side by side',
+        bullets: [
+          'Alignment accuracy: Robotic — accurate to fractions of a millimetre against a pre-built 3D plan. Traditional — relies on the surgeon\'s manual instrumentation and experience, which is excellent in skilled hands but has more natural variability',
+          'Soft-tissue handling: Robotic — typically less soft-tissue trauma since cuts are guided precisely. Traditional — slightly more reliant on jigs that can disturb surrounding tissue',
+          'Recovery speed: Robotic — many patients report quicker early mobilisation. Traditional — recovery is still good, just on average a touch slower in the first few weeks for some patients',
+          'Cost: Robotic — higher, due to the technology usage fee. Traditional — lower, and a well-established, time-tested option',
+          'Long-term outcome: Both achieve excellent, durable results (implants lasting 20–25+ years) in the hands of an experienced joint replacement surgeon — the surgeon\'s skill matters more than the tool',
+        ],
+      },
+      {
+        heading: 'Disadvantages of robotic knee replacement — the honest version',
+        bullets: [
+          'Higher cost than conventional surgery',
+          'Slightly longer operative time in some cases, due to the additional planning and registration steps',
+          'Requires specific equipment and surgeon training — not available everywhere',
+          'For straightforward, well-aligned knees in experienced hands, the outcome difference versus traditional surgery can be modest',
+        ],
+      },
+      {
+        heading: 'Who is not a good candidate for robotic knee replacement?',
+        body: 'Robotic assistance is not strictly necessary for every patient. Some prior knee implants, certain hardware from old fractures, or specific anatomical factors can make a conventional approach more practical in a minority of cases. This is assessed individually — it is not a reason to avoid evaluation, simply a factor in planning the right approach for your knee.',
+      },
+      {
+        heading: 'Our honest recommendation',
+        body: 'Robotic-assisted surgery is our preferred approach for most knee replacements because of the alignment precision it offers, but it is a tool, not a guarantee — surgical experience and post-operative rehabilitation remain the biggest drivers of outcome either way. We discuss both options plainly for your specific knee rather than defaulting to whichever is most profitable to offer.',
+      },
+    ],
+    faqs: [
+      { q: 'Is robotic knee replacement actually better than traditional?', a: 'It offers more consistent alignment accuracy and, in many studies, less soft-tissue trauma — but both approaches achieve excellent, durable outcomes in experienced hands. "Better" depends partly on your specific knee.' },
+      { q: 'Is the extra cost of robotic surgery worth it?', a: 'For complex deformities or revision cases, the added precision can be genuinely valuable. For straightforward knees, the difference is more modest. This is worth discussing case by case rather than assuming one answer fits everyone.' },
+      { q: 'Can every patient choose robotic surgery?', a: 'Almost all patients are candidates, but a small number with specific prior hardware or anatomical factors may be better suited to a conventional approach — assessed individually at consultation.' },
     ],
   },
 
@@ -463,6 +522,7 @@ export const PROCEDURES = [
     specialty: 'sports-arthroscopy',
     relatedArticles: [
       { slug: 'acl-tear-symptoms-treatment', title: 'ACL tear — symptoms and treatment' },
+      { slug: 'acl-surgery-recovery-timeline', title: 'ACL surgery recovery, week by week' },
     ],
     sections: [
       {
@@ -494,6 +554,7 @@ export const PROCEDURES = [
       { q: 'Which graft is best?', a: 'There is no single best graft — hamstring, patellar tendon and quadriceps grafts each have trade-offs in strength, harvest pain and re-rupture rates. The choice is matched to your sport, age and anatomy.' },
       { q: 'How long is the hospital stay?', a: 'ACL reconstruction is typically a day-care or one-night procedure. You walk with support before discharge and start physiotherapy immediately.' },
       { q: 'Will my knee be as good as before?', a: 'With a well-done reconstruction and completed rehabilitation, most athletes return to their previous level. Compliance with the full physiotherapy protocol is the biggest factor — more than the surgery itself.' },
+      { q: 'ACL repair or ACL reconstruction — what is the difference?', a: 'Repair stitches the torn ligament back together and is only suitable for select, very fresh tears with good tissue quality. Reconstruction replaces the ligament with a graft and is the standard, more reliable option for most ACL tears, especially in athletes. Which one applies to you is assessed on MRI and at arthroscopy.' },
     ],
   },
 
