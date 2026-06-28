@@ -48,8 +48,8 @@ export default function Home() {
   return (
     <>
       <Seo
-        title={null}
-        description="Dr. Niranjan Ghag — Orthopaedic Surgeon in Thane specializing in robotic joint replacement, foot & ankle surgery, sports injuries, arthroscopy and complex trauma."
+        title="Orthopaedic Surgeon in Thane"
+        description="Dr. Niranjan Ghag is an orthopaedic surgeon in Thane West offering robotic hip & knee replacement, foot & ankle surgery, sports injury & arthroscopy, and trauma care. Book in English, Marathi or Hindi."
         path="/"
         jsonLd={HOME_FAQ_JSONLD}
       />

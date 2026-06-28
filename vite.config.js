@@ -18,6 +18,7 @@ export default defineConfig(({ isSsrBuild }) => ({
           sitemap({
             hostname: 'https://drniranjanghag.com',
             dynamicRoutes: ROUTES,
+            exclude: ['/admin', '/admin/*', '/404'],
             changefreq: 'weekly',
             priority: 0.8,
             generateRobotsTxt: true,
