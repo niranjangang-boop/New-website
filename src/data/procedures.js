@@ -132,9 +132,13 @@ export const PROCEDURES = [
           'Alignment accuracy: Robotic — accurate to fractions of a millimetre against a pre-built 3D plan. Traditional — relies on the surgeon\'s manual instrumentation and experience, which is excellent in skilled hands but has more natural variability',
           'Soft-tissue handling: Robotic — typically less soft-tissue trauma since cuts are guided precisely. Traditional — slightly more reliant on jigs that can disturb surrounding tissue',
           'Recovery speed: Robotic — many patients report quicker early mobilisation. Traditional — recovery is still good, just on average a touch slower in the first few weeks for some patients',
-          'Cost: Robotic — higher, due to the technology usage fee. Traditional — lower, and a well-established, time-tested option',
+          'Cost: Robotic — approximately ₹2.5–3 lakh per knee, due to the technology usage fee. Traditional — approximately ₹1.5–2 lakh per knee depending on the implant chosen, and a well-established, time-tested option. We quote both honestly so you can weigh the difference against your own priorities',
           'Long-term outcome: Both achieve excellent, durable results (implants lasting 20–25+ years) in the hands of an experienced joint replacement surgeon — the surgeon\'s skill matters more than the tool',
         ],
+      },
+      {
+        heading: 'Image-based vs. imageless robotic systems',
+        body: 'Robotic knee replacement itself comes in two main forms, and the choice affects both planning and cost. Image-based systems use a CT scan taken before surgery to build a precise 3D plan, which adds the cost of that scan. Imageless systems map your knee in real time during the operation using surface and motion tracking, skipping the pre-op CT scan and its cost while still achieving robotic-level alignment accuracy for the great majority of knees. We recommend whichever genuinely suits your case — not the one that costs more.',
       },
       {
         heading: 'Disadvantages of robotic knee replacement — the honest version',
@@ -156,7 +160,8 @@ export const PROCEDURES = [
     ],
     faqs: [
       { q: 'Is robotic knee replacement actually better than traditional?', a: 'It offers more consistent alignment accuracy and, in many studies, less soft-tissue trauma — but both approaches achieve excellent, durable outcomes in experienced hands. "Better" depends partly on your specific knee.' },
-      { q: 'Is the extra cost of robotic surgery worth it?', a: 'For complex deformities or revision cases, the added precision can be genuinely valuable. For straightforward knees, the difference is more modest. This is worth discussing case by case rather than assuming one answer fits everyone.' },
+      { q: 'Is the extra cost of robotic surgery worth it?', a: 'Robotic is approximately ₹2.5–3 lakh and traditional approximately ₹1.5–2 lakh per knee, so the gap is real. For complex deformities or revision cases, the added precision can be genuinely valuable. For straightforward knees, traditional surgery often gives an equally good outcome for less — we will tell you plainly which applies to your knee rather than upselling.' },
+      { q: 'Can I reduce the cost without compromising the outcome?', a: 'Often, yes — choosing an imageless robotic system (no separate CT scan charge) or a well-established domestic implant brand can meaningfully lower the bill without affecting how well the surgery goes. We discuss these trade-offs openly at consultation.' },
       { q: 'Can every patient choose robotic surgery?', a: 'Almost all patients are candidates, but a small number with specific prior hardware or anatomical factors may be better suited to a conventional approach — assessed individually at consultation.' },
     ],
   },

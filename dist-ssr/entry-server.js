@@ -251,9 +251,13 @@ const PROCEDURES = [
           "Alignment accuracy: Robotic — accurate to fractions of a millimetre against a pre-built 3D plan. Traditional — relies on the surgeon's manual instrumentation and experience, which is excellent in skilled hands but has more natural variability",
           "Soft-tissue handling: Robotic — typically less soft-tissue trauma since cuts are guided precisely. Traditional — slightly more reliant on jigs that can disturb surrounding tissue",
           "Recovery speed: Robotic — many patients report quicker early mobilisation. Traditional — recovery is still good, just on average a touch slower in the first few weeks for some patients",
-          "Cost: Robotic — higher, due to the technology usage fee. Traditional — lower, and a well-established, time-tested option",
+          "Cost: Robotic — approximately ₹2.5–3 lakh per knee, due to the technology usage fee. Traditional — approximately ₹1.5–2 lakh per knee depending on the implant chosen, and a well-established, time-tested option. We quote both honestly so you can weigh the difference against your own priorities",
           "Long-term outcome: Both achieve excellent, durable results (implants lasting 20–25+ years) in the hands of an experienced joint replacement surgeon — the surgeon's skill matters more than the tool"
         ]
+      },
+      {
+        heading: "Image-based vs. imageless robotic systems",
+        body: "Robotic knee replacement itself comes in two main forms, and the choice affects both planning and cost. Image-based systems use a CT scan taken before surgery to build a precise 3D plan, which adds the cost of that scan. Imageless systems map your knee in real time during the operation using surface and motion tracking, skipping the pre-op CT scan and its cost while still achieving robotic-level alignment accuracy for the great majority of knees. We recommend whichever genuinely suits your case — not the one that costs more."
       },
       {
         heading: "Disadvantages of robotic knee replacement — the honest version",
@@ -275,7 +279,8 @@ const PROCEDURES = [
     ],
     faqs: [
       { q: "Is robotic knee replacement actually better than traditional?", a: 'It offers more consistent alignment accuracy and, in many studies, less soft-tissue trauma — but both approaches achieve excellent, durable outcomes in experienced hands. "Better" depends partly on your specific knee.' },
-      { q: "Is the extra cost of robotic surgery worth it?", a: "For complex deformities or revision cases, the added precision can be genuinely valuable. For straightforward knees, the difference is more modest. This is worth discussing case by case rather than assuming one answer fits everyone." },
+      { q: "Is the extra cost of robotic surgery worth it?", a: "Robotic is approximately ₹2.5–3 lakh and traditional approximately ₹1.5–2 lakh per knee, so the gap is real. For complex deformities or revision cases, the added precision can be genuinely valuable. For straightforward knees, traditional surgery often gives an equally good outcome for less — we will tell you plainly which applies to your knee rather than upselling." },
+      { q: "Can I reduce the cost without compromising the outcome?", a: "Often, yes — choosing an imageless robotic system (no separate CT scan charge) or a well-established domestic implant brand can meaningfully lower the bill without affecting how well the surgery goes. We discuss these trade-offs openly at consultation." },
       { q: "Can every patient choose robotic surgery?", a: "Almost all patients are candidates, but a small number with specific prior hardware or anatomical factors may be better suited to a conventional approach — assessed individually at consultation." }
     ]
   },
@@ -1358,8 +1363,8 @@ function Home() {
     /* @__PURE__ */ jsx(
       Seo,
       {
-        title: null,
-        description: "Dr. Niranjan Ghag — Orthopaedic Surgeon in Thane specializing in robotic joint replacement, foot & ankle surgery, sports injuries, arthroscopy and complex trauma.",
+        title: "Orthopaedic Surgeon in Thane",
+        description: "Dr. Niranjan Ghag is an orthopaedic surgeon in Thane West offering robotic hip & knee replacement, foot & ankle surgery, sports injury & arthroscopy, and trauma care. Book in English, Marathi or Hindi.",
         path: "/",
         jsonLd: HOME_FAQ_JSONLD
       }
@@ -2242,11 +2247,15 @@ const sections$1 = [
   },
   {
     heading: "Realistic price ranges (India, indicative)",
-    body: "As a rough orientation: conventional total knee replacement in Thane/Mumbai typically falls in a broad mid-range bracket at most accredited private hospitals, with robotic-assisted surgery usually priced somewhat higher due to the technology fee. Bilateral (both knees) costs more in total but is often more economical per knee than two separate admissions. Government and trust hospitals can be substantially lower-cost than private centres. These figures vary by hospital and city — the only reliable number is the written estimate you receive after your consultation and X-ray review."
+    body: "As a rough orientation, conventional (traditional) total knee replacement in Thane/Mumbai is typically in the region of ₹1.5–2 lakh per knee at most accredited private hospitals, with the exact figure depending mainly on the implant chosen. Robotic-assisted knee replacement is typically in the region of ₹2.5–3 lakh per knee, the difference being largely the robotic system's usage fee on top of standard implant and hospital charges. Bilateral (both knees) costs more in total but is often more economical per knee than two separate admissions. Government and trust hospitals can be substantially lower-cost than private centres. These are indicative ranges, not quotes — we keep our pricing as transparent and reasonable as possible, and you will always know the exact, itemised cost before deciding anything, with no pressure to choose the more expensive option if it isn't right for your knee."
+  },
+  {
+    heading: "Image-based vs. imageless robotic systems — does it change the cost?",
+    body: "Not all 'robotic' knee replacement is the same, and the distinction matters for both precision and price. Image-based systems plan the surgery from a CT scan taken before the operation, building a detailed 3D model of your knee in advance — this is very precise but adds the cost of the additional scan. Imageless systems skip the pre-op CT scan entirely and instead map your knee's anatomy in real time during surgery using surface-mapping and motion-tracking — this is typically a more economical option since there's no separate scan to pay for, while still delivering the same robotic-level alignment accuracy for the great majority of knees. We use whichever is genuinely appropriate for your case, and explain the trade-off plainly — we would rather you spend less for the same good outcome than pay for a scan you don't actually need."
   },
   {
     heading: "Is robotic worth the extra cost?",
-    body: "Robotic assistance improves the precision of bone cuts and implant alignment, which published data links to less soft-tissue trauma and more consistent positioning. It is one input into a good outcome — surgical technique and post-operative rehabilitation matter just as much. We discuss this honestly for your specific knee rather than defaulting to one option. See our full robotic vs. traditional comparison for the complete picture, including who robotic surgery may not suit."
+    body: "Robotic assistance improves the precision of bone cuts and implant alignment, which published data links to less soft-tissue trauma and more consistent positioning. It is one input into a good outcome — surgical technique and post-operative rehabilitation matter just as much. Many straightforward knees do just as well with traditional surgery at a lower cost, and we will tell you honestly if that's the better-value option for you rather than steering you toward the pricier route by default. See our full robotic vs. traditional comparison for the complete picture, including who robotic surgery may not suit."
   },
   {
     heading: "Is it covered by insurance or Mediclaim?",
@@ -2260,7 +2269,11 @@ const sections$1 = [
 const faqs$1 = [
   {
     q: "Is robotic knee replacement more expensive than traditional?",
-    a: "Yes, typically — the robotic system carries a usage fee on top of standard implant and hospital charges. The exact gap varies by hospital."
+    a: "Yes, typically — traditional knee replacement is broadly in the ₹1.5–2 lakh range and robotic in the ₹2.5–3 lakh range per knee, mainly due to the robotic system's usage fee on top of standard implant and hospital charges. The exact gap varies by hospital and implant choice; we always confirm the real number in writing before you decide."
+  },
+  {
+    q: "What's the difference between image-based and imageless robotic systems, cost-wise?",
+    a: "Image-based systems use a pre-op CT scan to plan the surgery, which adds the cost of that scan. Imageless systems map your knee during the operation itself, skipping the CT scan and its cost while still achieving robotic-level accuracy for most knees — generally the more economical robotic option."
   },
   {
     q: "Does cost differ between government and private hospitals?",
