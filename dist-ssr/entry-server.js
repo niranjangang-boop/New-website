@@ -1633,42 +1633,73 @@ const __vite_glob_0_0 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.def
 }, Symbol.toStringTag, { value: "Module" }));
 const slug$9 = "acl-tear-symptoms-treatment";
 const title$9 = "ACL Tear: Symptoms, Treatment Options and Return to Sports";
-const metaDescription$9 = "Heard a pop in your knee during sports? Learn ACL tear symptoms, when reconstruction is needed, and the return-to-sport timeline from a sports injury specialist in Thane.";
+const metaDescription$9 = "Heard a pop in your knee during sports? Learn ACL tear symptoms, when surgery is and isn't needed, recovery timeline after reconstruction, and the return-to-sport protocol — from a sports arthroscopy specialist in Thane.";
 const category$9 = "Sports Injuries";
 const date$9 = "2026-06-12";
-const readTime$9 = 5;
-const intro$9 = "An anterior cruciate ligament (ACL) tear is one of the most common serious sports injuries — typically a sudden twist on a planted foot, an audible pop, and a knee that swells within hours.";
+const readTime$9 = 8;
+const intro$9 = 'An anterior cruciate ligament (ACL) tear is one of the most common serious sports injuries. The story is usually the same: a sudden twist on a planted foot — during football, cricket, kabaddi, badminton or even a misstep on stairs — an audible "pop," and a knee that swells within hours. What you do in the following weeks decides whether the knee becomes stable and strong again or keeps giving way for years.';
 const sections$9 = [
   {
-    heading: "Classic symptoms",
+    heading: "Classic symptoms of an ACL tear",
     bullets: [
       "A popping sound or sensation at the moment of injury",
-      "Rapid swelling within 2–6 hours",
-      'A feeling that the knee "gives way" on turning or pivoting',
-      "Difficulty trusting the knee on stairs or uneven ground"
+      "Rapid swelling within 2–6 hours (bleeding into the joint)",
+      'A feeling that the knee "gives way" when turning or pivoting',
+      "Difficulty trusting the knee on stairs or uneven ground",
+      'After swelling settles — a knee that feels almost normal in a straight line but unreliable on any twist. That deceptive "almost normal" phase is when many patients re-injure the knee.'
     ]
   },
   {
-    heading: "Treatment: surgery or not?",
-    body: "Not every ACL tear needs an operation. Low-demand patients with stable knees may do well with structured physiotherapy. Active patients, athletes, and anyone with recurrent instability usually benefit from arthroscopic ACL reconstruction — a keyhole procedure using a graft to rebuild the ligament."
+    heading: "How an ACL tear is diagnosed",
+    body: "A surgeon can usually diagnose an ACL tear from the story and examination (Lachman and pivot-shift tests). An MRI confirms the tear and — importantly — checks the structures injured alongside it: menisci (the knee's shock absorbers) are torn in up to half of ACL injuries, and cartilage or other ligaments may also be involved. X-rays rule out fracture. This is why a proper assessment matters: treating the ACL while missing a meniscus tear gives a poor result."
   },
   {
-    heading: "Return to sports",
-    body: "With modern arthroscopic reconstruction and a criteria-based rehabilitation protocol, jogging typically resumes around 3 months, sport-specific training at 6 months, and full competitive return between 8 and 12 months once strength and stability testing are passed."
+    heading: "Treatment: surgery or not?",
+    body: `Not every ACL tear needs an operation. The decision depends on your age, sports and work demands, and whether the knee is giving way. Physiotherapy alone can work well for low-demand patients — those who don't play pivoting sports — with a stable knee and no other significant injuries. Structured rehabilitation strengthens the hamstrings and quadriceps to compensate for the ligament. Arthroscopic ACL reconstruction is usually recommended for active patients, athletes at any level, people with physically demanding jobs, anyone whose knee keeps giving way, and when a repairable meniscus tear accompanies the ACL. Reconstruction replaces the torn ligament with a graft — most commonly your own hamstring tendons — through keyhole (arthroscopic) surgery. It's typically a day-care or one-night procedure. Why "wait and see" has a cost: every giving-way episode risks tearing a meniscus or damaging cartilage. Repeated instability is a well-established route to early knee arthritis. If your knee has given way more than once, get it assessed.`
+  },
+  {
+    heading: "Recovery timeline after ACL reconstruction",
+    bullets: [
+      "Week 0–2: walking with support, focus on straightening the knee fully and activating the quadriceps.",
+      "Week 2–6: off crutches, stationary cycling, regaining full bend.",
+      "Month 2–3: strength work, normal walking, desk work is comfortable (most return to office work at 2–4 weeks).",
+      "Month 4–6: running in straight lines, sport-specific drills.",
+      "Month 8–12: return to pivoting sports after strength and hop tests confirm the new ligament is protected."
+    ]
+  },
+  {
+    heading: "The timing trap",
+    body: "The graft is biologically weakest around months 2–4 even though the knee feels good — rushing back to sport in that window is the commonest cause of re-tear. Return to competitive sport is a test-based decision, not a calendar-based one."
+  },
+  {
+    heading: "Can an ACL tear heal on its own?",
+    body: "A complete tear does not truly heal, because the ligament's ends retract inside the joint. Partial tears with a stable knee can do well with rehabilitation. This is another reason the initial MRI and examination matter."
+  },
+  {
+    heading: "When to see a surgeon",
+    body: "See an orthopaedic surgeon promptly if your knee swelled within hours of a twisting injury, if it gives way, or if it locks (won't fully straighten — a sign of a displaced meniscus tear, which is urgent). Dr. Niranjan Ghag performs arthroscopic ACL reconstruction in Thane West and supervises a structured return-to-sport programme with your physiotherapist."
   }
 ];
 const faqs$9 = [
   {
-    q: "Can an ACL tear heal on its own?",
-    a: "A completely torn ACL does not reattach by itself because of poor blood supply. Partial tears and low-demand knees can sometimes be managed with physiotherapy alone."
+    q: "What are the symptoms of an ACL tear?",
+    a: "Typical symptoms are a popping sound at the moment of a twisting injury, rapid swelling within 2–6 hours, a feeling of the knee giving way when turning or pivoting, and difficulty trusting the knee on stairs. After swelling settles, the knee may feel normal in a straight line but unstable on any twist."
   },
   {
-    q: "Is ACL reconstruction an open surgery?",
-    a: "No. It is performed arthroscopically through keyhole incisions, usually as a short-stay procedure with walking allowed the same or next day."
+    q: "Can an ACL tear heal without surgery?",
+    a: "A complete ACL tear does not truly heal because the torn ends retract inside the joint. Partial tears with a stable knee, and complete tears in low-demand patients, can do well with structured physiotherapy. Active patients and anyone with recurrent giving-way usually benefit from arthroscopic reconstruction."
   },
   {
-    q: "What happens if I delay ACL treatment?",
-    a: "Repeated episodes of giving way can damage the meniscus and cartilage, accelerating arthritis. Early specialist assessment protects the rest of the knee."
+    q: "How long is recovery after ACL reconstruction surgery?",
+    a: "Most patients walk with support in the first two weeks, return to desk work within 2–4 weeks, start running around 4–6 months, and return to pivoting sports at 8–12 months once strength and hop tests confirm readiness. Return to sport is decided by testing, not just time."
+  },
+  {
+    q: "What happens if an ACL tear is left untreated?",
+    a: "Each giving-way episode risks tearing a meniscus or damaging joint cartilage, and repeated instability is a recognised route to early knee arthritis. If the knee has given way more than once, an orthopaedic assessment is strongly advised."
+  },
+  {
+    q: "Is ACL reconstruction a major operation?",
+    a: "ACL reconstruction is performed arthroscopically (keyhole surgery), usually as a day-care or one-night procedure. The torn ligament is replaced with a graft, most commonly the patient's own hamstring tendons."
   }
 ];
 const footerNote$1 = 'Suspect an ACL injury? Read about <a href="/procedures/acl-reconstruction">arthroscopic ACL reconstruction</a> and <a href="/specialties/sports-arthroscopy">sports arthroscopy</a> with Dr. Ghag, or <a href="/book">book an assessment</a>.';
@@ -1676,7 +1707,9 @@ const tags$9 = [
   "ACL",
   "sports injury",
   "knee",
-  "arthroscopy"
+  "arthroscopy",
+  "ACL reconstruction",
+  "ACL tear treatment"
 ];
 const aclTearSymptomsTreatment = {
   slug: slug$9,
