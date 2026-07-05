@@ -8,10 +8,12 @@ export const SITE = {
   name: 'Dr. Niranjan Ghag',
   fullName: 'Dr. Niranjan Sunil Ghag',
   title: 'Orthopedic Surgeon',
-  url: 'https://www.drniranjanghag.com',
+  url: 'https://drniranjanghag.com',
   email: settings.email,
   phoneDisplay: settings.phone_display,
   phoneRaw: settings.phone_raw,
+  phoneSecondaryDisplay: settings.phone_secondary_display,
+  phoneSecondaryRaw: settings.phone_secondary_raw,
   whatsapp: `https://wa.me/${settings.phone_raw}`,
 };
 

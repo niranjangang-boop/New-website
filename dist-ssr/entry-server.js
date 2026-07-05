@@ -5,6 +5,8 @@ import { Link, NavLink, useParams, Navigate, Routes, Route } from "react-router-
 import { useState, useRef, useEffect, useMemo } from "react";
 const phone_display = "+91 90760 79000";
 const phone_raw = "919076079000";
+const phone_secondary_display = "+91 90294 70134";
+const phone_secondary_raw = "919029470134";
 const email = "Drortho101@gmail.com";
 const clinics = [
   {
@@ -53,6 +55,8 @@ const clinics = [
 const settings = {
   phone_display,
   phone_raw,
+  phone_secondary_display,
+  phone_secondary_raw,
   email,
   clinics
 };
@@ -60,10 +64,12 @@ const SITE = {
   name: "Dr. Niranjan Ghag",
   fullName: "Dr. Niranjan Sunil Ghag",
   title: "Orthopedic Surgeon",
-  url: "https://www.drniranjanghag.com",
+  url: "https://drniranjanghag.com",
   email: settings.email,
   phoneDisplay: settings.phone_display,
   phoneRaw: settings.phone_raw,
+  phoneSecondaryDisplay: settings.phone_secondary_display,
+  phoneSecondaryRaw: settings.phone_secondary_raw,
   whatsapp: `https://wa.me/${settings.phone_raw}`
 };
 const CLINICS = (settings.clinics || []).map((c) => ({
@@ -1000,6 +1006,11 @@ function Footer() {
         ] }, i)) }),
         /* @__PURE__ */ jsxs("ul", { className: "mt-4 space-y-2 text-sm", children: [
           /* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx("a", { href: `tel:+${SITE.phoneRaw}`, className: "transition-colors hover:text-white", children: SITE.phoneDisplay }) }),
+          /* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsxs("a", { href: `tel:+${SITE.phoneSecondaryRaw}`, className: "transition-colors hover:text-white", children: [
+            SITE.phoneSecondaryDisplay,
+            " ",
+            /* @__PURE__ */ jsx("span", { className: "text-slate-400", children: "(alternate)" })
+          ] }) }),
           /* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx("a", { href: `mailto:${SITE.email}`, className: "transition-colors hover:text-white", children: SITE.email }) }),
           /* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, { to: "/sitemap", className: "transition-colors hover:text-white", children: "Sitemap" }) })
         ] })
@@ -1049,6 +1060,7 @@ function Seo({ title: title2, description, path = "/", jsonLd = null }) {
       document.head.appendChild(canonical);
     }
     canonical.href = `${SITE.url}${path}`;
+    document.head.querySelectorAll("script[data-route-schema]").forEach((s) => s.remove());
     let ld = null;
     if (jsonLd) {
       ld = document.createElement("script");

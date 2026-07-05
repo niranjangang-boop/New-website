@@ -83,6 +83,13 @@ export default function Footer() {
                 {SITE.phoneDisplay}
               </a>
             </li>
+            {SITE.phoneSecondaryDisplay && (
+              <li>
+                <a href={`tel:+${SITE.phoneSecondaryRaw}`} className="transition-colors hover:text-white">
+                  {SITE.phoneSecondaryDisplay} <span className="text-slate-400">(alternate)</span>
+                </a>
+              </li>
+            )}
             <li>
               <a href={`mailto:${SITE.email}`} className="transition-colors hover:text-white">
                 {SITE.email}

@@ -47,6 +47,10 @@ export default function Seo({ title, description, path = '/', jsonLd = null }) {
     }
     canonical.href = `${SITE.url}${path}`;
 
+    // Remove any prerendered route schema baked in by scripts/prerender.mjs
+    // (identified by data-route-schema="true") so we never end up with duplicates.
+    document.head.querySelectorAll('script[data-route-schema]').forEach((s) => s.remove());
+
     let ld = null;
     if (jsonLd) {
       ld = document.createElement('script');
