@@ -117,6 +117,12 @@ export default function Home() {
         <h2 id="specialties-heading" className="mt-2 text-center font-serif text-3xl font-bold text-slate-900">
           Specialties
         </h2>
+        <p className="mt-4 text-center text-slate-600 leading-relaxed">
+          Dr. Ghag specialises in{' '}
+          <Link to="/procedures/knee-replacement" className="text-brand-gold underline hover:text-brand-brown">robotic knee replacement in Thane</Link>,{' '}
+          <Link to="/procedures/hip-replacement" className="text-brand-gold underline hover:text-brand-brown">total hip replacement</Link>, and{' '}
+          <Link to="/specialties/sports-arthroscopy" className="text-brand-gold underline hover:text-brand-brown">sports injury &amp; arthroscopy (keyhole) surgery</Link>.
+        </p>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {SPECIALTIES.map((s, i) => (
             <Reveal key={s.slug} delay={i * 80}>

@@ -63,6 +63,7 @@ export const PROCEDURES = [
       { q: 'Is knee replacement covered by insurance/Mediclaim?', a: 'Most health insurance and Mediclaim policies in India cover knee replacement, including cashless treatment at network hospitals, subject to your policy terms and any waiting period for joint conditions. Bring your policy details to the consultation for a clear answer specific to your plan.' },
       { q: 'Is robotic knee replacement better than traditional, and is it worth the extra cost?', a: 'Robotic assistance improves implant alignment accuracy and can mean less soft-tissue trauma, but it is one factor among several — surgeon experience matters most either way. See our honest robotic vs. traditional comparison for a side-by-side look, including who it does and doesn\'t suit.' },
     ],
+    footerNote: 'Not sure knee replacement is right for you? Sports injuries and early cartilage damage can often be treated with <a href="/specialties/sports-arthroscopy">keyhole arthroscopy</a> instead. Read about <a href="/education/robotic-knee-replacement-cost-thane">robotic knee replacement cost in Thane</a> or <a href="/book">book a consultation</a>.',
   },
 
   {

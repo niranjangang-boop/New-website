@@ -191,7 +191,8 @@ const PROCEDURES = [
       { q: "What is the cost of robotic knee replacement in Thane/Mumbai?", a: "Cost depends on implant brand, whether one or both knees are done, robotic system used, hospital tier and room category — there is no single fixed price. A detailed, written estimate is given after your consultation. See our full cost guide for indicative ranges and what drives them." },
       { q: "Is knee replacement covered by insurance/Mediclaim?", a: "Most health insurance and Mediclaim policies in India cover knee replacement, including cashless treatment at network hospitals, subject to your policy terms and any waiting period for joint conditions. Bring your policy details to the consultation for a clear answer specific to your plan." },
       { q: "Is robotic knee replacement better than traditional, and is it worth the extra cost?", a: "Robotic assistance improves implant alignment accuracy and can mean less soft-tissue trauma, but it is one factor among several — surgeon experience matters most either way. See our honest robotic vs. traditional comparison for a side-by-side look, including who it does and doesn't suit." }
-    ]
+    ],
+    footerNote: 'Not sure knee replacement is right for you? Sports injuries and early cartilage damage can often be treated with <a href="/specialties/sports-arthroscopy">keyhole arthroscopy</a> instead. Read about <a href="/education/robotic-knee-replacement-cost-thane">robotic knee replacement cost in Thane</a> or <a href="/book">book a consultation</a>.'
   },
   {
     slug: "hip-replacement",
@@ -1426,6 +1427,18 @@ function Home() {
     /* @__PURE__ */ jsxs("section", { className: "relative mx-auto max-w-6xl px-4 py-16", "aria-labelledby": "specialties-heading", children: [
       /* @__PURE__ */ jsx("p", { className: "eyebrow justify-center text-center", children: "Clinical Expertise" }),
       /* @__PURE__ */ jsx("h2", { id: "specialties-heading", className: "mt-2 text-center font-serif text-3xl font-bold text-slate-900", children: "Specialties" }),
+      /* @__PURE__ */ jsxs("p", { className: "mt-4 text-center text-slate-600 leading-relaxed", children: [
+        "Dr. Ghag specialises in",
+        " ",
+        /* @__PURE__ */ jsx(Link, { to: "/procedures/knee-replacement", className: "text-brand-gold underline hover:text-brand-brown", children: "robotic knee replacement in Thane" }),
+        ",",
+        " ",
+        /* @__PURE__ */ jsx(Link, { to: "/procedures/hip-replacement", className: "text-brand-gold underline hover:text-brand-brown", children: "total hip replacement" }),
+        ", and",
+        " ",
+        /* @__PURE__ */ jsx(Link, { to: "/specialties/sports-arthroscopy", className: "text-brand-gold underline hover:text-brand-brown", children: "sports injury & arthroscopy (keyhole) surgery" }),
+        "."
+      ] }),
       /* @__PURE__ */ jsx("div", { className: "mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4", children: SPECIALTIES.map((s, i) => /* @__PURE__ */ jsx(Reveal, { delay: i * 80, children: /* @__PURE__ */ jsxs(
         Link,
         {
@@ -1658,6 +1671,7 @@ const faqs$9 = [
     a: "Repeated episodes of giving way can damage the meniscus and cartilage, accelerating arthritis. Early specialist assessment protects the rest of the knee."
   }
 ];
+const footerNote$1 = 'Suspect an ACL injury? Read about <a href="/procedures/acl-reconstruction">arthroscopic ACL reconstruction</a> and <a href="/specialties/sports-arthroscopy">sports arthroscopy</a> with Dr. Ghag, or <a href="/book">book an assessment</a>.';
 const tags$9 = [
   "ACL",
   "sports injury",
@@ -1674,6 +1688,7 @@ const aclTearSymptomsTreatment = {
   intro: intro$9,
   sections: sections$9,
   faqs: faqs$9,
+  footerNote: footerNote$1,
   tags: tags$9
 };
 const __vite_glob_0_1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
@@ -1682,6 +1697,7 @@ const __vite_glob_0_1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.def
   date: date$9,
   default: aclTearSymptomsTreatment,
   faqs: faqs$9,
+  footerNote: footerNote$1,
   intro: intro$9,
   metaDescription: metaDescription$9,
   readTime: readTime$9,
@@ -1991,50 +2007,73 @@ const __vite_glob_0_5 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.def
   title: title$5
 }, Symbol.toStringTag, { value: "Module" }));
 const slug$4 = "hip-replacement-signs";
-const title$4 = "Hip Replacement Surgery: 5 Signs You May Need It";
-const metaDescription$4 = "Groin pain, stiffness and a shrinking walking distance? Learn the signs that hip arthritis has advanced, and how modern total hip replacement restores mobility.";
+const title$4 = "Hip Replacement Surgery: 5 Signs You May Need It — and What Happens Next";
+const metaDescription$4 = "Groin pain, stiffness, night pain and a shrinking walking distance? Learn the 5 signs of hip arthritis, what causes it, and what modern total hip replacement actually involves — from a Thane orthopaedic surgeon.";
 const category$4 = "Joint Replacement";
 const date$4 = "2026-06-12";
-const readTime$4 = 5;
-const intro$4 = "Hip arthritis often masquerades as groin strain, thigh pain or even knee pain. By the time the diagnosis is clear, many patients have quietly given up activities they love. Modern total hip replacement is among the most successful operations in all of surgery.";
+const readTime$4 = 7;
+const intro$4 = "Hip arthritis is a master of disguise. It often shows up as a groin strain, thigh pain, or even knee pain — so many patients spend months treating the wrong joint. By the time the diagnosis is clear, they have quietly given up walks, stairs, and sitting on the floor. That's a loss you don't have to accept: modern total hip replacement is one of the most successful operations in all of surgery, with over 90% of implants still working well after 15 years.";
 const sections$4 = [
   {
-    heading: "Five signs the hip is the problem",
+    heading: "The 5 signs your hip — not your back or knee — is the problem",
     bullets: [
-      "Groin or front-of-thigh pain on walking, sometimes felt in the knee",
-      "Stiffness — difficulty wearing socks, cutting toenails or sitting cross-legged",
-      "Walking distance shrinking month by month",
-      "Night pain that disturbs sleep",
-      "A limp your family notices before you do"
+      "Groin or front-of-thigh pain when you walk. Hip arthritis pain classically sits in the groin crease or the front of the thigh, and can travel down to the knee. Pain in the buttock alone is more often the spine. If pressing on the outside of your hip hurts, that may be bursitis instead — a different, non-surgical problem.",
+      "Stiffness that steals small daily tasks. Trouble putting on socks and shoes, cutting toenails, sitting cross-legged, or getting out of a low chair or car. The hip loses rotation first, which is exactly what these movements need.",
+      "Your walking distance is shrinking month by month. If last year you managed the market and back, and now you stop twice on the way — and painkillers no longer bridge the gap — the joint surface is wearing through.",
+      "Night pain that disturbs sleep. Aching in the groin or thigh that wakes you when you turn over is a sign of advanced arthritis. Rest pain generally means the cartilage is largely gone.",
+      "A limp your family notices before you do. A slowly developing limp — often with the body leaning over the painful hip — means the muscles are compensating. Over months this strains the spine and the opposite knee, which is why waiting too long can create two new problems."
     ]
   },
   {
-    heading: "What surgery achieves",
-    body: "Total hip replacement replaces the worn ball-and-socket with smooth, durable implants. Patients typically walk the same or next day, climb stairs within a week, and most describe the result as life-changing — reliable pain relief and restored independence."
+    heading: "What causes the hip to wear out?",
+    body: "The commonest cause is osteoarthritis — age-related wear of the cartilage. In India we also frequently see avascular necrosis (AVN), where the ball of the hip joint loses its blood supply; it affects younger patients and can be linked to steroid use or heavy alcohol intake. Old fractures, childhood hip disease, and inflammatory arthritis (like rheumatoid) are other causes. The signs above apply to all of them."
   },
   {
-    heading: "Timing matters",
-    body: "Waiting too long weakens muscles and worsens bone quality, making surgery and rehabilitation harder. If pain limits your life despite medication and physiotherapy, an evaluation with a standing X-ray will clarify your options."
+    heading: "Do these signs always mean surgery?",
+    body: "No. Early arthritis is treated without an operation: weight reduction, activity modification, physiotherapy to strengthen the muscles around the hip, walking aids, and simple pain relief. Surgery enters the discussion when pain and stiffness limit your daily life despite these measures — that decision is about your quality of life, not just the X-ray."
+  },
+  {
+    heading: "What does hip replacement actually involve?",
+    body: "Total hip replacement removes the worn ball-and-socket and replaces it with smooth, durable implants — a metal or ceramic ball on a stem in the thigh bone, and a cup in the socket. The operation takes about 60–90 minutes. Most patients stand and take their first steps the same day or the next morning, go home in 3–5 days, walk without support by 4–6 weeks, and return to desk work in about a month. Driving usually resumes around 6 weeks."
+  },
+  {
+    heading: "How long does a hip replacement last?",
+    body: "With modern implants, more than 90% last 15 years and many last 25 or more. For younger, active patients, implant choice (such as ceramic bearings) is tailored to maximise lifespan."
+  },
+  {
+    heading: "When to see a surgeon",
+    body: "See an orthopaedic surgeon if you have groin or thigh pain plus any of: night pain, a new limp, shrinking walking distance, or stiffness affecting socks and shoes. An examination and a standing X-ray are usually all that's needed for a clear answer. Dr. Niranjan Ghag consults at two locations in Thane West and operates with robotic assistance for precise implant positioning."
   }
 ];
 const faqs$4 = [
   {
+    q: "What are the first signs of needing a hip replacement?",
+    a: "The typical early signs are groin or front-of-thigh pain on walking, stiffness that makes wearing socks or sitting cross-legged difficult, shrinking walking distance, night pain that disturbs sleep, and a developing limp. Hip arthritis pain is felt in the groin or thigh — sometimes even the knee — rather than the buttock."
+  },
+  {
+    q: "Does hip pain always mean I need surgery?",
+    a: "No. Early hip arthritis is managed with physiotherapy, weight reduction, activity changes and simple pain relief. Surgery is considered when pain and stiffness limit daily life despite these measures. Some hip pain, such as bursitis on the outside of the hip, is not arthritis at all and never needs replacement."
+  },
+  {
     q: "How long does a hip replacement last?",
-    a: "Modern bearings are expected to last 20–25 years or longer, making the operation suitable even for younger, active patients when indicated."
+    a: "With modern implants, more than 90% of hip replacements last 15 years and many last 25 years or more. Implant materials are chosen based on the patient's age and activity level to maximise lifespan."
   },
   {
-    q: "Can I sit on the floor after hip replacement?",
-    a: "With modern implants and surgical techniques, many patients regain the ability to sit cross-legged, though this is discussed individually based on implant type and bone quality."
+    q: "How soon can I walk after hip replacement surgery?",
+    a: "Most patients stand and take their first steps the same day or the next morning, go home within 3–5 days, and walk without support by around 4–6 weeks. Desk work typically resumes in about a month and driving at around 6 weeks."
   },
   {
-    q: "Is hip replacement very painful?",
-    a: "Multimodal pain management and minimally invasive approaches mean most patients are comfortable and walking within 24 hours of surgery."
+    q: "What is AVN (avascular necrosis) of the hip?",
+    a: "Avascular necrosis is loss of blood supply to the ball of the hip joint, causing the bone to collapse. It often affects younger patients and can be linked to steroid use or heavy alcohol intake. Early stages may be treated joint-preservingly; advanced AVN is a common reason for hip replacement in India."
   }
 ];
+const footerNote = 'Think these signs sound familiar? Learn what <a href="/procedures/hip-replacement">hip replacement surgery with Dr. Ghag</a> involves, or <a href="/book">book a consultation</a> in Thane West.';
 const tags$4 = [
   "hip replacement",
   "arthritis",
-  "hip pain"
+  "hip pain",
+  "AVN",
+  "avascular necrosis"
 ];
 const hipReplacementSigns = {
   slug: slug$4,
@@ -2046,6 +2085,7 @@ const hipReplacementSigns = {
   intro: intro$4,
   sections: sections$4,
   faqs: faqs$4,
+  footerNote,
   tags: tags$4
 };
 const __vite_glob_0_6 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
@@ -2054,6 +2094,7 @@ const __vite_glob_0_6 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.def
   date: date$4,
   default: hipReplacementSigns,
   faqs: faqs$4,
+  footerNote,
   intro: intro$4,
   metaDescription: metaDescription$4,
   readTime: readTime$4,
@@ -3052,12 +3093,19 @@ function EducationArticle() {
       /* @__PURE__ */ jsx("p", { className: "mt-8 text-lg leading-relaxed text-slate-700", children: content.intro }),
       content.sections.map((s) => /* @__PURE__ */ jsx(Reveal, { children: /* @__PURE__ */ jsxs("section", { className: "mt-10", children: [
         /* @__PURE__ */ jsx("h2", { className: "font-serif text-2xl font-bold text-slate-900", children: s.heading }),
-        s.body && /* @__PURE__ */ jsx("p", { className: "mt-3 leading-relaxed text-slate-700", children: s.body }),
+        s.bodyHtml ? /* @__PURE__ */ jsx("p", { className: "mt-3 leading-relaxed text-slate-700 [&_a]:text-brand-gold [&_a]:underline [&_a]:hover:text-brand-brown", dangerouslySetInnerHTML: { __html: s.bodyHtml } }) : s.body && /* @__PURE__ */ jsx("p", { className: "mt-3 leading-relaxed text-slate-700", children: s.body }),
         s.bullets && /* @__PURE__ */ jsx("ul", { className: "mt-4 space-y-2.5", children: s.bullets.map((b) => /* @__PURE__ */ jsxs("li", { className: "flex gap-3 text-slate-700", children: [
           /* @__PURE__ */ jsx("span", { className: "mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-gold", "aria-hidden": "true" }),
           b
         ] }, b)) })
       ] }) }, s.heading)),
+      content.footerNote && /* @__PURE__ */ jsx(
+        "p",
+        {
+          className: "mt-10 leading-relaxed text-slate-600 [&_a]:text-brand-gold [&_a]:underline [&_a]:hover:text-brand-brown",
+          dangerouslySetInnerHTML: { __html: content.footerNote }
+        }
+      ),
       /* @__PURE__ */ jsxs("section", { className: "mt-12", children: [
         /* @__PURE__ */ jsx("h2", { className: "font-serif text-2xl font-bold text-slate-900", children: t.faq }),
         /* @__PURE__ */ jsx("div", { className: "mt-5 space-y-3", children: content.faqs.map((f) => /* @__PURE__ */ jsxs(
@@ -3293,7 +3341,7 @@ function Procedure() {
     ] }),
     /* @__PURE__ */ jsx("article", { className: "mx-auto max-w-3xl px-4 py-14", children: proc.sections.map((sec, i) => /* @__PURE__ */ jsx(Reveal, { delay: i % 3 * 80, children: /* @__PURE__ */ jsxs("section", { className: "mb-10", children: [
       /* @__PURE__ */ jsx("h2", { className: "font-serif text-2xl font-bold text-brand-brown mb-3", children: sec.heading }),
-      sec.body && /* @__PURE__ */ jsx("p", { className: "text-slate-600 leading-relaxed mb-3", children: sec.body }),
+      sec.bodyHtml ? /* @__PURE__ */ jsx("p", { className: "text-slate-600 leading-relaxed mb-3 [&_a]:text-brand-gold [&_a]:underline [&_a]:hover:text-brand-brown", dangerouslySetInnerHTML: { __html: sec.bodyHtml } }) : sec.body && /* @__PURE__ */ jsx("p", { className: "text-slate-600 leading-relaxed mb-3", children: sec.body }),
       sec.bullets && /* @__PURE__ */ jsx("ul", { className: "space-y-2 text-slate-600", children: sec.bullets.map((b, j) => /* @__PURE__ */ jsxs("li", { className: "flex gap-3", children: [
         /* @__PURE__ */ jsx(
           "svg",
@@ -3309,6 +3357,13 @@ function Procedure() {
         /* @__PURE__ */ jsx("span", { children: b })
       ] }, j)) })
     ] }) }, i)) }),
+    proc.footerNote && /* @__PURE__ */ jsx("div", { className: "mx-auto max-w-3xl px-4 pb-2 pt-6", children: /* @__PURE__ */ jsx(
+      "p",
+      {
+        className: "text-slate-600 leading-relaxed [&_a]:text-brand-gold [&_a]:underline [&_a]:hover:text-brand-brown",
+        dangerouslySetInnerHTML: { __html: proc.footerNote }
+      }
+    ) }),
     proc.faqs && proc.faqs.length > 0 && /* @__PURE__ */ jsx("section", { className: "bg-gradient-to-b from-slate-50 to-white py-14", children: /* @__PURE__ */ jsxs("div", { className: "mx-auto max-w-3xl px-4", children: [
       /* @__PURE__ */ jsx("h2", { className: "font-serif text-2xl font-bold text-brand-brown mb-6", children: "Frequently Asked Questions" }),
       /* @__PURE__ */ jsx("div", { className: "glass rounded-3xl px-2", children: /* @__PURE__ */ jsx(Accordion, { faqs: proc.faqs }) })

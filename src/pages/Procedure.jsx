@@ -183,9 +183,10 @@ export default function Procedure() {
               <h2 className="font-serif text-2xl font-bold text-brand-brown mb-3">
                 {sec.heading}
               </h2>
-              {sec.body && (
-                <p className="text-slate-600 leading-relaxed mb-3">{sec.body}</p>
-              )}
+              {sec.bodyHtml
+                ? <p className="text-slate-600 leading-relaxed mb-3 [&_a]:text-brand-gold [&_a]:underline [&_a]:hover:text-brand-brown" dangerouslySetInnerHTML={{ __html: sec.bodyHtml }} />
+                : sec.body && <p className="text-slate-600 leading-relaxed mb-3">{sec.body}</p>
+              }
               {sec.bullets && (
                 <ul className="space-y-2 text-slate-600">
                   {sec.bullets.map((b, j) => (
@@ -208,6 +209,14 @@ export default function Procedure() {
           </Reveal>
         ))}
       </article>
+
+      {/* ── Footer note with internal links ──────────────────────────── */}
+      {proc.footerNote && (
+        <div className="mx-auto max-w-3xl px-4 pb-2 pt-6">
+          <p className="text-slate-600 leading-relaxed [&_a]:text-brand-gold [&_a]:underline [&_a]:hover:text-brand-brown"
+            dangerouslySetInnerHTML={{ __html: proc.footerNote }} />
+        </div>
+      )}
 
       {/* ── FAQ ────────────────────────────────────────────────────────── */}
       {proc.faqs && proc.faqs.length > 0 && (

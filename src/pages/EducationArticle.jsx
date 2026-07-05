@@ -106,7 +106,10 @@ export default function EducationArticle() {
           <Reveal key={s.heading}>
             <section className="mt-10">
               <h2 className="font-serif text-2xl font-bold text-slate-900">{s.heading}</h2>
-              {s.body && <p className="mt-3 leading-relaxed text-slate-700">{s.body}</p>}
+              {s.bodyHtml
+                ? <p className="mt-3 leading-relaxed text-slate-700 [&_a]:text-brand-gold [&_a]:underline [&_a]:hover:text-brand-brown" dangerouslySetInnerHTML={{ __html: s.bodyHtml }} />
+                : s.body && <p className="mt-3 leading-relaxed text-slate-700">{s.body}</p>
+              }
               {s.bullets && (
                 <ul className="mt-4 space-y-2.5">
                   {s.bullets.map((b) => (
@@ -120,6 +123,11 @@ export default function EducationArticle() {
             </section>
           </Reveal>
         ))}
+
+        {content.footerNote && (
+          <p className="mt-10 leading-relaxed text-slate-600 [&_a]:text-brand-gold [&_a]:underline [&_a]:hover:text-brand-brown"
+            dangerouslySetInnerHTML={{ __html: content.footerNote }} />
+        )}
 
         <section className="mt-12">
           <h2 className="font-serif text-2xl font-bold text-slate-900">{t.faq}</h2>
