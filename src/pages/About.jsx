@@ -134,10 +134,10 @@ export default function About() {
                 arthroplasty centres, added robotic and revision joint replacement.
               </p>
               <p>
-                He consults in English, Marathi and Hindi at two locations in Thane West, and
-                treats knee and hip arthritis, sports injuries, foot and ankle problems, and
-                fractures and complex trauma — with non-surgical options considered first
-                wherever they are reasonable.
+                He consults in English, Marathi and Hindi across his hospital appointments in
+                Thane, and treats knee and hip arthritis, sports injuries, foot and ankle
+                problems, and fractures and complex trauma — with non-surgical options
+                considered first wherever they are reasonable.
               </p>
             </div>
           </div>

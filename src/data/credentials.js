@@ -13,7 +13,7 @@ export const CURRENT_ROLES = {
   title: 'Consultant Orthopaedic Surgeon',
   hospitals: [
     "Joshi's Neurotrauma Centre, Thane West",
-    'Kaizen Hospital, Thane',
+    'Kaizen Super Speciality Hospital, Thane West',
     'Sahayogi Hospital LLP, Naupada, Thane West',
   ],
 };
