@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { PROCEDURES } from '../data/procedures.js';
 import { SITE, CLINIC } from '../data/site.js';
@@ -79,34 +79,28 @@ function applyHead(proc, schema) {
 // ── FAQ accordion ────────────────────────────────────────────────────────────
 
 function Accordion({ faqs }) {
-  const [open, setOpen] = useState(null);
   return (
-    <div className="divide-y divide-slate-200">
-      {faqs.map((faq, i) => (
-        <div key={i}>
-          <button
-            type="button"
-            onClick={() => setOpen(open === i ? null : i)}
-            className="flex w-full items-center justify-between gap-4 py-4 text-left"
-            aria-expanded={open === i}
-          >
-            <span className="font-medium text-slate-800">{faq.q}</span>
+    <div className="space-y-3">
+      {faqs.map((faq) => (
+        <details
+          key={faq.q}
+          className="glass group rounded-2xl p-5 transition-shadow duration-300 open:shadow-glass-lg"
+        >
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-medium text-slate-800">
+            <span>{faq.q}</span>
             <svg
-              className={`h-5 w-5 flex-shrink-0 text-brand-gold transition-transform ${
-                open === i ? 'rotate-45' : ''
-              }`}
+              className="h-5 w-5 flex-shrink-0 text-brand-gold transition-transform duration-200 group-open:rotate-45"
               fill="none"
               stroke="currentColor"
               strokeWidth="2"
               viewBox="0 0 24 24"
+              aria-hidden="true"
             >
               <path d="M12 5v14M5 12h14" />
             </svg>
-          </button>
-          {open === i && (
-            <p className="pb-4 text-sm leading-relaxed text-slate-600">{faq.a}</p>
-          )}
-        </div>
+          </summary>
+          <p className="mt-3 text-sm leading-relaxed text-slate-600">{faq.a}</p>
+        </details>
       ))}
     </div>
   );

@@ -43,7 +43,9 @@ function buildPage(html, head) {
 
   const pageTitle = head.title || 'Dr. Niranjan Ghag | Orthopedic Surgeon';
   const pageDesc = head.description || '';
-  const canonicalUrl = `${SITE_URL}${head.path}`;
+  // Netlify serves all pages with a trailing slash — keep prerendered canonical in sync.
+  const canonicalPath = head.path === '/' ? '/' : (head.path.endsWith('/') ? head.path : `${head.path}/`);
+  const canonicalUrl = `${SITE_URL}${canonicalPath}`;
 
   page = page.replace(/<title>[^<]*<\/title>/, `<title>${escapeHtml(pageTitle)}</title>`);
   page = page.replace(/<meta name="description"[^>]*>/, `<meta name="description" content="${escapeAttr(pageDesc)}" />`);

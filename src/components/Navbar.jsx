@@ -35,7 +35,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 border-b border-white/40 bg-white/75 shadow-glass backdrop-blur-xl">
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
         <Link to="/" className="group flex items-center gap-2" aria-label="Home">
-          <img src="/icon-192.png" alt="" width="36" height="36" className="h-9 w-9 transition-transform duration-300 group-hover:scale-105" />
+          <img src="/icon-192.png" alt="Dr. Niranjan Ghag – Orthopaedic Surgeon" width="36" height="36" className="h-9 w-9 transition-transform duration-300 group-hover:scale-105" />
           <span className="font-serif text-lg font-bold text-brand-brown">
             {SITE.name}
           </span>

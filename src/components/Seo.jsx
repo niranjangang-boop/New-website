@@ -45,7 +45,9 @@ export default function Seo({ title, description, path = '/', jsonLd = null }) {
       canonical.rel = 'canonical';
       document.head.appendChild(canonical);
     }
-    canonical.href = `${SITE.url}${path}`;
+    // Netlify serves all pages with a trailing slash — keep canonical in sync.
+    const canonicalPath = path === '/' ? '/' : (path.endsWith('/') ? path : `${path}/`);
+    canonical.href = `${SITE.url}${canonicalPath}`;
 
     // Remove any prerendered route schema baked in by scripts/prerender.mjs
     // (identified by data-route-schema="true") so we never end up with duplicates.
