@@ -53,6 +53,18 @@ export default function EducationArticle() {
           lastReviewed: article.dateModified || article.date,
           reviewedBy: { '@type': 'Physician', name: SITE.name, url: SITE.url },
           inLanguage: ['en', 'mr', 'hi'],
+          ...(article.citations?.length
+            ? {
+                citation: article.citations.map((c) => ({
+                  '@type': 'CreativeWork',
+                  name: c.label,
+                  url: c.url,
+                  ...(c.publisher
+                    ? { publisher: { '@type': 'Organization', name: c.publisher } }
+                    : {}),
+                })),
+              }
+            : {}),
           author: { '@type': 'Physician', name: SITE.name, url: SITE.url },
           url: `${SITE.url}/education/${article.slug}`,
         },
@@ -208,6 +220,31 @@ export default function EducationArticle() {
             </section>
           </Reveal>
         ))}
+
+        {/* Outbound citations to authoritative bodies. Deliberately not
+            nofollow — linking out to primary sources is the point. */}
+        {article.citations?.length > 0 && (
+          <section className="mt-12 rounded-2xl bg-slate-50 p-6" aria-labelledby="sources-heading">
+            <h2 id="sources-heading" className="font-serif text-lg font-bold text-slate-900">
+              Sources &amp; further reading
+            </h2>
+            <ul className="mt-4 space-y-3">
+              {article.citations.map((c) => (
+                <li key={c.url} className="text-sm leading-relaxed text-slate-600">
+                  <a
+                    href={c.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium text-brand-gold underline hover:text-brand-brown"
+                  >
+                    {c.label}
+                  </a>
+                  {c.publisher && <span className="text-slate-500"> — {c.publisher}</span>}
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         {content.footerNote && (
           <p className="mt-10 leading-relaxed text-slate-600 [&_a]:text-brand-gold [&_a]:underline [&_a]:hover:text-brand-brown"

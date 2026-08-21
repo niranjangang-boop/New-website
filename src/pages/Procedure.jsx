@@ -20,6 +20,19 @@ function crumbs(proc) {
   ];
 }
 
+// Date these procedure pages were last reviewed for clinical accuracy.
+// Override per procedure with a `reviewed` field in procedures.js when an
+// individual page is revised on its own.
+const CONTENT_REVIEWED = '2026-08-22';
+
+function formatReviewed(iso) {
+  return new Date(iso).toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
+}
+
 // ── helpers ─────────────────────────────────────────────────────────────────
 
 // Pure — builds the JSON-LD object with no DOM access, so it can run during
@@ -31,10 +44,17 @@ function buildSchema(proc) {
       {
         '@type': 'MedicalWebPage',
         '@id': `https://drniranjanghag.com/procedures/${proc.slug}#page`,
-        url: `https://drniranjanghag.com/procedures/${proc.slug}`,
+        url: `https://drniranjanghag.com/procedures/${proc.slug}/`,
         name: proc.keywordTitle,
         description: proc.metaDescription,
         inLanguage: 'en',
+        dateModified: proc.reviewed || CONTENT_REVIEWED,
+        lastReviewed: proc.reviewed || CONTENT_REVIEWED,
+        reviewedBy: {
+          '@type': 'Physician',
+          '@id': 'https://drniranjanghag.com/#physician',
+          name: 'Dr. Niranjan Ghag',
+        },
         about: {
           '@type': 'MedicalProcedure',
           name: proc.name,
@@ -84,6 +104,14 @@ function applyHead(proc, schema) {
   const id = 'procedure-jsonld';
   const existing = document.getElementById(id);
   if (existing) existing.remove();
+
+  // Also drop the block scripts/prerender.mjs baked into the static HTML
+  // (marked data-route-schema). This page doesn't use <Seo>, which already
+  // does this — without it the prerendered and client-injected blocks both
+  // survive and every procedure page ships two identical @graph blocks.
+  document.head
+    .querySelectorAll('script[data-route-schema]')
+    .forEach((node) => node.remove());
 
   const s = document.createElement('script');
   s.id = id;
@@ -177,6 +205,12 @@ export default function Procedure() {
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-300">
             {proc.hero}
+          </p>
+          <p className="mt-4 text-sm text-slate-400">
+            Reviewed by {SITE.name} ·{' '}
+            <time dateTime={proc.reviewed || CONTENT_REVIEWED}>
+              Last reviewed {formatReviewed(proc.reviewed || CONTENT_REVIEWED)}
+            </time>
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <a href={waUrl} target="_blank" rel="noopener noreferrer" className="btn-gradient">

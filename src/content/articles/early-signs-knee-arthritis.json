@@ -46,5 +46,22 @@
       "a": "An orthopaedic surgeon can evaluate knee pain clinically and with X-rays. Dr. Niranjan Ghag consults at Joshi's Neurotrauma Centre, Khopat, Thane West."
     }
   ],
-  "tags": ["arthritis", "knee", "joint pain"]
+  "tags": [
+    "arthritis",
+    "knee",
+    "joint pain"
+  ],
+  "citations": [
+    {
+      "label": "Arthritis of the Knee — patient information",
+      "url": "https://www.orthoinfo.org/diseases--conditions/arthritis-of-the-knee/",
+      "publisher": "American Academy of Orthopaedic Surgeons (OrthoInfo)"
+    },
+    {
+      "label": "Surgical Management of Osteoarthritis of the Knee — Clinical Practice Guideline",
+      "url": "https://www.orthoguidelines.org/topic?id=1041",
+      "publisher": "American Academy of Orthopaedic Surgeons"
+    }
+  ],
+  "dateModified": "2026-08-22"
 }

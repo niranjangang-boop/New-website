@@ -4,7 +4,7 @@
   "metaDescription": "Groin pain, stiffness, night pain and a shrinking walking distance? Learn the 5 signs of hip arthritis, what causes it, and what modern total hip replacement actually involves — from a Thane orthopaedic surgeon.",
   "category": "Joint Replacement",
   "date": "2026-06-12",
-  "dateModified": "2026-08-21",
+  "dateModified": "2026-08-22",
   "readTime": 7,
   "intro": "Hip arthritis is a master of disguise. It often shows up as a groin strain, thigh pain, or even knee pain — so many patients spend months treating the wrong joint. By the time the diagnosis is clear, they have quietly given up walks, stairs, and sitting on the floor. That's a loss you don't have to accept: modern total hip replacement is one of the most successful operations in all of surgery, with over 90% of implants still working well after 15 years.",
   "sections": [
@@ -62,5 +62,18 @@
     }
   ],
   "footerNote": "Think these signs sound familiar? Learn what <a href=\"/procedures/hip-replacement\">hip replacement surgery with Dr. Ghag</a> involves, or <a href=\"/book\">book a consultation</a> in Thane West.",
-  "tags": ["hip replacement", "arthritis", "hip pain", "AVN", "avascular necrosis"]
+  "tags": [
+    "hip replacement",
+    "arthritis",
+    "hip pain",
+    "AVN",
+    "avascular necrosis"
+  ],
+  "citations": [
+    {
+      "label": "Total Hip Replacement — patient information",
+      "url": "https://www.orthoinfo.org/treatment/total-hip-replacement/",
+      "publisher": "American Academy of Orthopaedic Surgeons (OrthoInfo)"
+    }
+  ]
 }

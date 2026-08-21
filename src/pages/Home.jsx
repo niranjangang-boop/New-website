@@ -143,6 +143,44 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Visible counterpart to HOME_FAQ_JSONLD. The schema above declares
+          these four questions, so the answer text has to exist in the markup —
+          native <details> ships it whether or not the reader expands it. */}
+      <section className="mx-auto max-w-3xl px-4 py-16" aria-labelledby="home-faq-heading">
+        <p className="eyebrow justify-center text-center">Common Questions</p>
+        <h2
+          id="home-faq-heading"
+          className="mt-2 text-center font-serif text-3xl font-bold text-slate-900"
+        >
+          Frequently Asked Questions
+        </h2>
+        <div className="mt-8 space-y-3">
+          {HOME_FAQ_JSONLD.mainEntity.map((q) => (
+            <details
+              key={q.name}
+              className="glass group rounded-2xl p-5 transition-shadow duration-300 open:shadow-glass-lg"
+            >
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-slate-900">
+                <span>{q.name}</span>
+                <svg
+                  className="h-5 w-5 flex-shrink-0 text-brand-gold transition-transform duration-200 group-open:rotate-45"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+              </summary>
+              <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                {q.acceptedAnswer.text}
+              </p>
+            </details>
+          ))}
+        </div>
+      </section>
+
       <Clinics />
 
       {/* CTA */}
