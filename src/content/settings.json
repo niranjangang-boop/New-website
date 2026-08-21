@@ -24,7 +24,12 @@
       "address": "1st & 2nd Floor, Ranka Chambers, near Nitin Company Junction, Ramachandra Nagar, Sambhaji Nagar, Thane West, Thane, Maharashtra",
       "map_url": "https://www.google.com/maps/search/?api=1&query=Kaizen+Super+Speciality+Hospital+Ranka+Chambers+Thane+West",
       "landmark": "Above Ranka Banquet, near Nitin Company Junction",
-      "hours": []
+      "hours": [
+        {
+          "days": "Monday – Sunday",
+          "time": "Open 24 hours"
+        }
+      ]
     },
     {
       "name": "Sahayogi Hospital LLP",
