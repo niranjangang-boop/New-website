@@ -25,6 +25,7 @@ export const ROUTES = [
   '/',
   '/about',
   '/book',
+  '/contact',
   '/sitemap',
   '/education',
   ...ARTICLE_ROUTES,

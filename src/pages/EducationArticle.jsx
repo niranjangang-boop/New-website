@@ -2,6 +2,7 @@ import { Link, useParams, Navigate } from 'react-router-dom';
 import { useMemo, useState } from 'react';
 import Seo from '../components/Seo.jsx';
 import Reveal from '../components/Reveal.jsx';
+import Breadcrumbs, { breadcrumbLd } from '../components/Breadcrumbs.jsx';
 import { ARTICLES } from '../data/articles.js';
 import { TRANSLATIONS, LABELS } from '../data/translations.js';
 import { SITE } from '../data/site.js';
@@ -25,11 +26,24 @@ export default function EducationArticle() {
   const t = LABELS[lang] || LABELS.en;
 
   // Article + FAQ rich-result schema (kept in English for Google)
+  const crumbs = useMemo(
+    () =>
+      article
+        ? [
+            { name: 'Home', path: '/' },
+            { name: 'Patient Education', path: '/education' },
+            { name: article.title, path: `/education/${article.slug}` },
+          ]
+        : [],
+    [article]
+  );
+
   const jsonLd = useMemo(() => {
     if (!article) return null;
     return {
       '@context': 'https://schema.org',
       '@graph': [
+        breadcrumbLd(crumbs),
         {
           '@type': 'MedicalWebPage',
           headline: article.title,
@@ -52,7 +66,7 @@ export default function EducationArticle() {
         },
       ],
     };
-  }, [article]);
+  }, [article, crumbs]);
 
   if (!article) return <Navigate to="/education" replace />;
 
@@ -66,6 +80,7 @@ export default function EducationArticle() {
       />
 
       <article className="mx-auto max-w-3xl px-4 py-16" lang={lang}>
+        <Breadcrumbs items={crumbs} className="mb-6" />
         <div className="flex flex-wrap items-center justify-between gap-4">
           <Link to="/education" className="text-sm font-medium text-brand-gold hover:underline">
             ← Patient Education Hub

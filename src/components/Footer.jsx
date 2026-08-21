@@ -96,6 +96,11 @@ export default function Footer() {
               </a>
             </li>
             <li>
+              <Link to="/contact" className="transition-colors hover:text-white">
+                Contact &amp; Locations
+              </Link>
+            </li>
+            <li>
               <Link to="/sitemap" className="transition-colors hover:text-white">
                 Sitemap
               </Link>

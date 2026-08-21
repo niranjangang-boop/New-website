@@ -9,6 +9,7 @@ import { trackPageView } from './lib/analytics.js';
 // routes stay code-split and load on demand.
 const About = lazy(() => import('./pages/About.jsx'));
 const Book = lazy(() => import('./pages/Book.jsx'));
+const Contact = lazy(() => import('./pages/Contact.jsx'));
 const Sitemap = lazy(() => import('./pages/Sitemap.jsx'));
 const Education = lazy(() => import('./pages/Education.jsx'));
 const EducationArticle = lazy(() => import('./pages/EducationArticle.jsx'));
@@ -45,6 +46,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/book" element={<Book />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="/sitemap" element={<Sitemap />} />
             <Route path="/education" element={<Education />} />
             <Route path="/education/:slug" element={<EducationArticle />} />

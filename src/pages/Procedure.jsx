@@ -1,9 +1,24 @@
 import { useEffect } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { PROCEDURES } from '../data/procedures.js';
-import { SITE, CLINIC } from '../data/site.js';
+import { SITE, CLINIC, SPECIALTIES } from '../data/site.js';
 import Reveal from '../components/Reveal.jsx';
+import Breadcrumbs, { breadcrumbLd } from '../components/Breadcrumbs.jsx';
 import { headState } from '../components/Seo.jsx';
+
+// Home › <specialty> › <this procedure>. There is no /procedures index route,
+// so the middle crumb points at the specialty hub the procedure belongs to —
+// which is also a useful internal link up to the broader topic page.
+function crumbs(proc) {
+  const spec = SPECIALTIES.find((s) => s.slug === proc.specialty);
+  return [
+    { name: 'Home', path: '/' },
+    ...(spec
+      ? [{ name: spec.name.split(' (')[0], path: `/specialties/${spec.slug}` }]
+      : []),
+    { name: proc.name, path: `/procedures/${proc.slug}` },
+  ];
+}
 
 // ── helpers ─────────────────────────────────────────────────────────────────
 
@@ -53,6 +68,7 @@ function buildSchema(proc) {
             })),
           }
         : null,
+      breadcrumbLd(crumbs(proc)),
     ].filter(Boolean),
   };
 }
@@ -149,6 +165,10 @@ export default function Procedure() {
         />
         <div className="blob -left-16 top-0 h-72 w-72 bg-brand-gold/15 animate-float-slow" aria-hidden="true" />
         <div className="relative mx-auto max-w-4xl px-4 py-20 text-center">
+          <Breadcrumbs
+            items={crumbs(proc)}
+            className="mb-6 flex justify-center [&_a]:text-slate-300 [&_a:hover]:text-brand-gold [&_ol]:text-slate-400 [&_span[aria-current]]:text-white"
+          />
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-brand-gold">
             Procedure
           </p>

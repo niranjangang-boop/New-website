@@ -9,8 +9,9 @@ const groups = [
     icon: 'M3 12l9-9 9 9M5 10v10h5v-6h4v6h5V10',
     links: [
       { to: '/', label: 'Home', note: 'Practice overview & featured specialties' },
-      { to: '/about', label: 'About — Credentials & Biography', note: 'Training, fellowships & philosophy' },
+      { to: '/about', label: 'About — Credentials & Training', note: 'Qualifications, fellowships, memberships & research' },
       { to: '/book', label: 'Appointment Booking', note: 'WhatsApp-confirmed bookings' },
+      { to: '/contact', label: 'Contact & Consulting Locations', note: 'Phone, WhatsApp, email & all three locations' },
     ],
   },
   {

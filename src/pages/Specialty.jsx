@@ -3,6 +3,7 @@ import { useMemo } from 'react';
 import Seo from '../components/Seo.jsx';
 import Image from '../components/Image.jsx';
 import Reveal from '../components/Reveal.jsx';
+import Breadcrumbs, { breadcrumbLd } from '../components/Breadcrumbs.jsx';
 import { SPECIALTIES, SITE } from '../data/site.js';
 import { SPECIALTY_CONTENT } from '../data/specialty-content.js';
 import { ARTICLES } from '../data/articles.js';
@@ -19,11 +20,24 @@ export default function Specialty() {
   const spec = SPECIALTIES.find((s) => s.slug === slug);
   const content = SPECIALTY_CONTENT[slug];
 
+  const crumbs = useMemo(
+    () =>
+      spec
+        ? [
+            { name: 'Home', path: '/' },
+            { name: 'Specialties', path: '/specialties/joint-replacement' },
+            { name: spec.name, path: `/specialties/${slug}` },
+          ]
+        : [],
+    [spec, slug]
+  );
+
   const jsonLd = useMemo(() => {
     if (!spec || !content) return null;
     return {
       '@context': 'https://schema.org',
       '@graph': [
+        breadcrumbLd(crumbs),
         {
           '@type': 'MedicalWebPage',
           headline: spec.name,
@@ -44,7 +58,7 @@ export default function Specialty() {
         },
       ],
     };
-  }, [spec, content, slug]);
+  }, [spec, content, slug, crumbs]);
 
   if (!spec) return <Navigate to="/" replace />;
 
@@ -67,6 +81,7 @@ export default function Specialty() {
       <section className="relative overflow-hidden px-4 py-16">
         <div className="blob -right-20 top-0 h-72 w-72 bg-brand-brown/10 animate-float" aria-hidden="true" />
         <div className="relative mx-auto max-w-6xl">
+        <Breadcrumbs items={crumbs} className="mb-6" />
         <nav className="flex flex-wrap gap-2 text-sm" aria-label="Specialties">
           {SPECIALTIES.map((s) => (
             <Link
