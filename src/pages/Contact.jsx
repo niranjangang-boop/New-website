@@ -155,8 +155,9 @@ export default function Contact() {
               ))}
             </div>
             <p className="mt-6 max-w-3xl text-sm leading-relaxed text-slate-500">
-              Emergency and trauma cover is available outside routine consulting hours —
-              call the primary line for urgent orthopaedic problems.
+              Cover is available round the clock for emergency and trauma cases. Routine
+              consultations are by appointment — call or message on WhatsApp to confirm a
+              time that suits you.
             </p>
           </section>
 

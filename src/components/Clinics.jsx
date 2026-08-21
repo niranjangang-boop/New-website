@@ -14,7 +14,7 @@ export default function Clinics() {
 
   const clinic = CLINICS[selectedClinic] || CLINICS[0];
 
-  // OPD runs 12:00 AM – 8:00 AM and 3:00 PM – 11:30 PM Mon–Sat, and 24 hours on Sunday.
+  // Open 24 hours, Monday to Sunday — matching the Google Business Profile.
   const slots = useMemo(() => {
     if (!date) return [];
     const out = [];
@@ -23,24 +23,9 @@ export default function Clinics() {
       const display = h % 12 === 0 ? 12 : h % 12;
       return { label: `${display}:00 ${period}`, half: `${display}:30 ${period}` };
     };
-    const day = new Date(date).getDay();
-    if (day === 0) {
-      // Sunday — open 24 hours
-      for (let h = 0; h < 24; h++) {
-        const { label, half } = fmt(h);
-        out.push(label, half);
-      }
-    } else {
-      for (let h = 0; h < 8; h++) {
-        const { label, half } = fmt(h);
-        out.push(label, half);
-      }
-      for (let h = 15; h < 23; h++) {
-        const { label, half } = fmt(h);
-        out.push(label, half);
-      }
-      out.push(fmt(23).label); // 11:00 PM
-      out.push('11:30 PM');
+    for (let h = 0; h < 24; h++) {
+      const { label, half } = fmt(h);
+      out.push(label, half);
     }
     return out;
   }, [date]);
