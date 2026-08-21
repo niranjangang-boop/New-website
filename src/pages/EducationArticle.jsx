@@ -35,6 +35,9 @@ export default function EducationArticle() {
           headline: article.title,
           description: article.metaDescription,
           datePublished: article.date,
+          dateModified: article.dateModified || article.date,
+          lastReviewed: article.dateModified || article.date,
+          reviewedBy: { '@type': 'Physician', name: SITE.name, url: SITE.url },
           inLanguage: ['en', 'mr', 'hi'],
           author: { '@type': 'Physician', name: SITE.name, url: SITE.url },
           url: `${SITE.url}/education/${article.slug}`,
@@ -97,6 +100,19 @@ export default function EducationArticle() {
           </h1>
           <p className="mt-3 text-sm text-slate-400">
             {t.by} {SITE.name} · {article.readTime} {t.minRead}
+          </p>
+          <p className="mt-1 text-sm text-slate-400">
+            <time dateTime={article.date}>
+              Published {new Date(article.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+            </time>
+            {article.dateModified && article.dateModified !== article.date && (
+              <>
+                {' · '}
+                <time dateTime={article.dateModified}>
+                  Last reviewed {new Date(article.dateModified).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+                </time>
+              </>
+            )}
           </p>
         </header>
 

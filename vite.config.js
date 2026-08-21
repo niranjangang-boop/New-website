@@ -14,7 +14,10 @@ export default defineConfig(({ isSsrBuild }) => ({
 
     ...(!isSsrBuild
       ? [
-          // Generates sitemap.xml + robots.txt into dist/ on every build
+          // Generates robots.txt into dist/ on every build.
+          // NOTE: this plugin also writes a sitemap.xml, but scripts/prerender.mjs
+          // overwrites it afterwards — the plugin strips trailing slashes from
+          // routes, which would conflict with our canonical tags. See prerender.mjs.
           sitemap({
             hostname: 'https://drniranjanghag.com',
             dynamicRoutes: ROUTES,

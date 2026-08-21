@@ -17,7 +17,7 @@
 // Run manually with: node scripts/prerender.mjs (after `vite build` and
 // `vite build --ssr src/entry-server.jsx --outDir dist-ssr`).
 
-import { readFileSync, writeFileSync, mkdirSync } from 'fs';
+import { readFileSync, writeFileSync, mkdirSync, readdirSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { ROUTES } from '../src/data/routes.js';
@@ -95,3 +95,68 @@ for (const route of ROUTES) {
 }
 
 console.log(`Prerendered ${count} routes + 404.html into dist/`);
+
+// ── sitemap.xml ──────────────────────────────────────────────────────────────
+// Written here rather than by vite-plugin-sitemap: that plugin runs path.parse()
+// on each route and rebuilds it from `dir` + `name`, which strips the trailing
+// slash. Netlify serves every page WITH a trailing slash and our canonical tags
+// declare the same, so the sitemap has to match or we hand Google a third URL
+// variant for every page. This overwrites the plugin's sitemap.xml (the plugin
+// still generates robots.txt, which it does correctly).
+
+// Real publication dates, so lastmod means something instead of being the build
+// timestamp repeated 34 times.
+const ARTICLE_DATES = Object.fromEntries(
+  readdirSync(resolve(root, 'src/content/articles'))
+    .filter((f) => f.endsWith('.json'))
+    .map((f) => {
+      const data = JSON.parse(readFileSync(resolve(root, 'src/content/articles', f), 'utf-8'));
+      // dateModified wins when present — a substantially rewritten article
+      // should not still report its original publication date.
+      return [`/education/${f.replace('.json', '')}`, data.dateModified || data.date];
+    })
+);
+
+const BUILD_DATE = new Date().toISOString().slice(0, 10);
+
+function sitemapMeta(route) {
+  if (route === '/') return { priority: '1.0', changefreq: 'weekly' };
+  if (route.startsWith('/procedures/')) return { priority: '0.9', changefreq: 'monthly' };
+  if (route.startsWith('/specialties/')) return { priority: '0.9', changefreq: 'monthly' };
+  if (route === '/book') return { priority: '0.8', changefreq: 'monthly' };
+  if (route === '/about') return { priority: '0.8', changefreq: 'monthly' };
+  if (route === '/education') return { priority: '0.7', changefreq: 'weekly' };
+  if (route.startsWith('/education/')) return { priority: '0.7', changefreq: 'monthly' };
+  return { priority: '0.5', changefreq: 'monthly' };
+}
+
+function sitemapUrl(route) {
+  const path = route === '/' ? '/' : (route.endsWith('/') ? route : `${route}/`);
+  return `${SITE_URL}${path}`.replace(/&/g, '&amp;');
+}
+
+// De-duplicate: '/' was previously emitted twice (once from the plugin's dist
+// scan, once from the ROUTES manifest).
+const sitemapRoutes = [...new Set(ROUTES)];
+
+const sitemapXml = [
+  '<?xml version="1.0" encoding="UTF-8"?>',
+  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+  ...sitemapRoutes.map((route) => {
+    const { priority, changefreq } = sitemapMeta(route);
+    const lastmod = ARTICLE_DATES[route] || BUILD_DATE;
+    return [
+      '  <url>',
+      `    <loc>${sitemapUrl(route)}</loc>`,
+      `    <lastmod>${lastmod}</lastmod>`,
+      `    <changefreq>${changefreq}</changefreq>`,
+      `    <priority>${priority}</priority>`,
+      '  </url>',
+    ].join('\n');
+  }),
+  '</urlset>',
+  '',
+].join('\n');
+
+writeFileSync(resolve(distDir, 'sitemap.xml'), sitemapXml);
+console.log(`Wrote sitemap.xml with ${sitemapRoutes.length} URLs`);
