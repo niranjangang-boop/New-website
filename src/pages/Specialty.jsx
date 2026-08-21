@@ -1,8 +1,10 @@
 import { Link, useParams, Navigate } from 'react-router-dom';
+import { useMemo } from 'react';
 import Seo from '../components/Seo.jsx';
 import Image from '../components/Image.jsx';
 import Reveal from '../components/Reveal.jsx';
-import { SPECIALTIES } from '../data/site.js';
+import { SPECIALTIES, SITE } from '../data/site.js';
+import { SPECIALTY_CONTENT } from '../data/specialty-content.js';
 import { ARTICLES } from '../data/articles.js';
 
 const RELATED = {
@@ -15,6 +17,35 @@ const RELATED = {
 export default function Specialty() {
   const { slug } = useParams();
   const spec = SPECIALTIES.find((s) => s.slug === slug);
+  const content = SPECIALTY_CONTENT[slug];
+
+  const jsonLd = useMemo(() => {
+    if (!spec || !content) return null;
+    return {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'MedicalWebPage',
+          headline: spec.name,
+          description: content.metaDescription,
+          about: { '@type': 'MedicalSpecialty', name: 'Orthopedic' },
+          inLanguage: 'en',
+          author: { '@type': 'Physician', name: SITE.name, url: SITE.url },
+          reviewedBy: { '@type': 'Physician', name: SITE.name, url: SITE.url },
+          url: `${SITE.url}/specialties/${slug}/`,
+        },
+        {
+          '@type': 'FAQPage',
+          mainEntity: content.faqs.map((f) => ({
+            '@type': 'Question',
+            name: f.q,
+            acceptedAnswer: { '@type': 'Answer', text: f.a },
+          })),
+        },
+      ],
+    };
+  }, [spec, content, slug]);
+
   if (!spec) return <Navigate to="/" replace />;
 
   const related = (RELATED[slug] || [])
@@ -25,8 +56,12 @@ export default function Specialty() {
     <>
       <Seo
         title={spec.name}
-        description={`${spec.short} ${spec.points.join(', ')} — Dr. Niranjan Ghag, Orthopaedic Surgeon, Thane.`}
+        description={
+          content?.metaDescription ||
+          `${spec.short} — Dr. Niranjan Ghag, Orthopaedic Surgeon, Thane.`
+        }
         path={`/specialties/${slug}`}
+        jsonLd={jsonLd}
       />
 
       <section className="relative overflow-hidden px-4 py-16">
@@ -53,7 +88,9 @@ export default function Specialty() {
             <h1 className="font-serif text-4xl font-bold leading-tight text-slate-900">
               {spec.name}
             </h1>
-            <p className="mt-4 text-lg leading-relaxed text-slate-600">{spec.short}</p>
+            <p className="mt-4 text-lg leading-relaxed text-slate-600">
+              {content?.intro || spec.short}
+            </p>
 
             <ul className="mt-8 space-y-3">
               {spec.points.map((p, i) => (
@@ -90,6 +127,57 @@ export default function Specialty() {
             />
           </div>
         </div>
+
+        {content && (
+          <div className="mx-auto mt-16 max-w-3xl">
+            {content.sections.map((s) => (
+              <Reveal key={s.heading}>
+                <section className="mt-10">
+                  <h2 className="font-serif text-2xl font-bold text-slate-900">{s.heading}</h2>
+                  {s.body && (
+                    <p className="mt-3 leading-relaxed text-slate-700">{s.body}</p>
+                  )}
+                  {s.bullets && (
+                    <ul className="mt-4 space-y-2.5">
+                      {s.bullets.map((b) => (
+                        <li key={b} className="flex gap-3 text-slate-700">
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-gold" aria-hidden="true" />
+                          {b}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </section>
+              </Reveal>
+            ))}
+
+            <section className="mt-12">
+              <h2 className="font-serif text-2xl font-bold text-slate-900">
+                Frequently Asked Questions
+              </h2>
+              <div className="mt-5 space-y-3">
+                {content.faqs.map((f) => (
+                  <details
+                    key={f.q}
+                    className="glass group rounded-2xl p-5 transition-shadow duration-300 open:shadow-glass-lg"
+                  >
+                    <summary className="cursor-pointer list-none font-semibold text-slate-900">
+                      {f.q}
+                    </summary>
+                    <p className="mt-3 text-sm leading-relaxed text-slate-600">{f.a}</p>
+                  </details>
+                ))}
+              </div>
+            </section>
+
+            {content.footerNote && (
+              <p
+                className="mt-10 leading-relaxed text-slate-600 [&_a]:text-brand-gold [&_a]:underline [&_a]:hover:text-brand-brown"
+                dangerouslySetInnerHTML={{ __html: content.footerNote }}
+              />
+            )}
+          </div>
+        )}
 
         {related.length > 0 && (
           <Reveal>
