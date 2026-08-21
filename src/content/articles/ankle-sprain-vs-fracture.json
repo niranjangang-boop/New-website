@@ -17,6 +17,55 @@
       ]
     },
     {
+      "heading": "Sprain or fracture: how the two compare",
+      "body": "No table replaces an examination, and severe sprains can look every bit as dramatic as fractures. Use this to judge how urgently you need assessment, not to rule a fracture out.",
+      "table": {
+        "caption": "General patterns only — an X-ray is the reliable way to distinguish the two.",
+        "headers": [
+          "",
+          "More typical of a sprain",
+          "More typical of a fracture"
+        ],
+        "rows": [
+          [
+            "Site of tenderness",
+            "Soft tissue just below or in front of the ankle bone",
+            "Directly over the bone, on the back edge or tip of either ankle bone"
+          ],
+          [
+            "Weight-bearing",
+            "Painful but usually possible, often with a limp",
+            "Often impossible to take four steps, immediately and afterwards"
+          ],
+          [
+            "Sound at injury",
+            "Often none, sometimes a tearing sensation",
+            "A crack or snap is sometimes reported"
+          ],
+          [
+            "Swelling",
+            "Develops over hours, often considerable",
+            "Rapid and severe, sometimes with visible deformity"
+          ],
+          [
+            "Shape of the ankle",
+            "Swollen but normally aligned",
+            "Visible deformity or the foot pointing abnormally"
+          ],
+          [
+            "Numbness or colour change",
+            "Unusual",
+            "Needs urgent assessment — may indicate nerve or vessel involvement"
+          ],
+          [
+            "Usual treatment",
+            "RICE, bracing and progressive physiotherapy",
+            "Immobilisation, and surgery if fragments are displaced or the joint is involved"
+          ]
+        ]
+      }
+    },
+    {
       "heading": "Correct first aid",
       "body": "Follow RICE — Rest, Ice (15–20 minutes at a time), Compression bandage and Elevation above heart level. Avoid massage, hot fomentation and walking through severe pain in the first 48 hours."
     },
@@ -39,5 +88,11 @@
       "a": "No. Stable, well-aligned fractures heal in a cast or boot. Surgery is needed when the joint surface is displaced or the ankle is unstable."
     }
   ],
-  "tags": ["ankle", "sprain", "fracture", "foot"]
+  "tags": [
+    "ankle",
+    "sprain",
+    "fracture",
+    "foot"
+  ],
+  "dateModified": "2026-08-22"
 }

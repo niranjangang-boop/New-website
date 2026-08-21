@@ -16,7 +16,8 @@
         "Month 3: Straight-line jogging begins, once strength and swelling criteria are met — not by the calendar alone",
         "Month 4–6: Sport-specific drills, agility and cutting work, introduced gradually after formal strength testing",
         "Month 8–12: Full competitive return, only once hop tests and strength symmetry (typically ≥90% compared to the uninjured leg) are achieved"
-      ]
+      ],
+      "ordered": true
     },
     {
       "heading": "Why rushing back is the main cause of re-tears",
@@ -38,10 +39,28 @@
     }
   ],
   "faqs": [
-    { "q": "How long until I can walk normally after ACL surgery?", "a": "Most patients walk with crutches within a day, and without any support by around 2–6 weeks, depending on associated meniscus repair and individual healing." },
-    { "q": "When can I go back to work after ACL reconstruction?", "a": "Desk-based work: often 1–2 weeks. Physically demanding or standing work: typically 6–12 weeks, depending on job demands and how your rehabilitation is progressing." },
-    { "q": "When can I return to playing sport?", "a": "Typically 8–12 months, and only after passing strength and hop tests — not by a fixed date. Returning earlier substantially raises the risk of re-tearing the graft." },
-    { "q": "Is ACL repair faster to recover from than reconstruction?", "a": "Repair can suit a small group of very fresh, well-selected tears, but it isn't a universal shortcut — reconstruction remains the more predictable choice for most patients and is assessed case by case." }
+    {
+      "q": "How long until I can walk normally after ACL surgery?",
+      "a": "Most patients walk with crutches within a day, and without any support by around 2–6 weeks, depending on associated meniscus repair and individual healing."
+    },
+    {
+      "q": "When can I go back to work after ACL reconstruction?",
+      "a": "Desk-based work: often 1–2 weeks. Physically demanding or standing work: typically 6–12 weeks, depending on job demands and how your rehabilitation is progressing."
+    },
+    {
+      "q": "When can I return to playing sport?",
+      "a": "Typically 8–12 months, and only after passing strength and hop tests — not by a fixed date. Returning earlier substantially raises the risk of re-tearing the graft."
+    },
+    {
+      "q": "Is ACL repair faster to recover from than reconstruction?",
+      "a": "Repair can suit a small group of very fresh, well-selected tears, but it isn't a universal shortcut — reconstruction remains the more predictable choice for most patients and is assessed case by case."
+    }
   ],
-  "tags": ["ACL", "recovery", "sports injury", "rehabilitation"]
+  "tags": [
+    "ACL",
+    "recovery",
+    "sports injury",
+    "rehabilitation"
+  ],
+  "dateModified": "2026-08-22"
 }

@@ -21,7 +21,18 @@
     },
     {
       "heading": "Realistic price ranges (India, indicative)",
-      "body": "As a rough orientation, conventional (traditional) total knee replacement in Thane/Mumbai is typically in the region of ₹1.5–2 lakh per knee at most accredited private hospitals, with the exact figure depending mainly on the implant chosen. Robotic-assisted knee replacement is typically in the region of ₹2.5–3 lakh per knee, the difference being largely the robotic system's usage fee on top of standard implant and hospital charges. Bilateral (both knees) costs more in total but is often more economical per knee than two separate admissions. Government and trust hospitals can be substantially lower-cost than private centres. These are indicative ranges, not quotes — we keep our pricing as transparent and reasonable as possible, and you will always know the exact, itemised cost before deciding anything, with no pressure to choose the more expensive option if it isn't right for your knee."
+      "body": "As a rough orientation, conventional (traditional) total knee replacement in Thane/Mumbai is typically in the region of ₹1.5–2 lakh per knee at most accredited private hospitals, with the exact figure depending mainly on the implant chosen. Robotic-assisted knee replacement is typically in the region of ₹2.5–3 lakh per knee, the difference being largely the robotic system's usage fee on top of standard implant and hospital charges. Bilateral (both knees) costs more in total but is often more economical per knee than two separate admissions. Government and trust hospitals can be substantially lower-cost than private centres. These are indicative ranges, not quotes — we keep our pricing as transparent and reasonable as possible, and you will always know the exact, itemised cost before deciding anything, with no pressure to choose the more expensive option if it isn't right for your knee.",
+      "table": {
+        "caption": "Indicative ranges per knee at accredited private hospitals in Thane and Mumbai. Not a quote — your written estimate follows a clinical assessment.",
+        "headers": ["Approach", "Indicative range (per knee)", "What drives the difference"],
+        "rows": [
+          ["Traditional total knee replacement", "₹1.5 – 2 lakh", "Implant brand and material; hospital tier and room category"],
+          ["Robotic-assisted, imageless", "₹2.5 – 3 lakh", "Robotic system usage fee; no pre-operative CT scan needed"],
+          ["Robotic-assisted, image-based", "₹2.5 – 3 lakh + scan", "Robotic usage fee plus the cost of the planning CT scan"],
+          ["Bilateral (both knees, one sitting)", "Higher total, lower per knee", "One admission, one anaesthesia and one recovery period instead of two"],
+          ["Government / trust hospitals", "Substantially lower", "Subsidised hospital and implant charges; waiting times may apply"]
+        ]
+      }
     },
     {
       "heading": "Image-based vs. imageless robotic systems — does it change the cost?",

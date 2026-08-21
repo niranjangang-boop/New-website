@@ -141,7 +141,20 @@ export default function EducationArticle() {
                 ? <p className="mt-3 leading-relaxed text-slate-700 [&_a]:text-brand-gold [&_a]:underline [&_a]:hover:text-brand-brown" dangerouslySetInnerHTML={{ __html: s.bodyHtml }} />
                 : s.body && <p className="mt-3 leading-relaxed text-slate-700">{s.body}</p>
               }
-              {s.bullets && (
+              {/* `ordered: true` marks a genuine sequence (recovery weeks,
+                  step-by-step processes) — semantically an <ol>, not a <ul>. */}
+              {s.bullets && (s.ordered ? (
+                <ol className="mt-4 space-y-2.5">
+                  {s.bullets.map((b, i) => (
+                    <li key={b} className="flex gap-3 text-slate-700">
+                      <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-gold/15 text-xs font-bold text-brand-brown">
+                        {i + 1}
+                      </span>
+                      {b}
+                    </li>
+                  ))}
+                </ol>
+              ) : (
                 <ul className="mt-4 space-y-2.5">
                   {s.bullets.map((b) => (
                     <li key={b} className="flex gap-3 text-slate-700">
@@ -150,6 +163,47 @@ export default function EducationArticle() {
                     </li>
                   ))}
                 </ul>
+              ))}
+
+              {/* Comparison tables — real <table> markup so the relationships
+                  are machine-readable, not a visual grid of <div>s. */}
+              {s.table && (
+                <div className="mt-5 overflow-x-auto">
+                  <table className="w-full border-collapse text-left text-sm">
+                    {s.table.caption && (
+                      <caption className="mb-3 text-left text-sm text-slate-500">
+                        {s.table.caption}
+                      </caption>
+                    )}
+                    <thead>
+                      <tr>
+                        {s.table.headers.map((h) => (
+                          <th
+                            key={h}
+                            scope="col"
+                            className="border-b-2 border-brand-gold/40 px-3 py-2.5 font-semibold text-slate-900"
+                          >
+                            {h}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {s.table.rows.map((row) => (
+                        <tr key={row[0]} className="border-b border-slate-200 align-top">
+                          {row.map((cell, ci) => (
+                            <td
+                              key={ci}
+                              className={`px-3 py-2.5 ${ci === 0 ? 'font-medium text-slate-900' : 'text-slate-600'}`}
+                            >
+                              {cell}
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               )}
             </section>
           </Reveal>

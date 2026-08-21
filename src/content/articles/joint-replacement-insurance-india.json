@@ -16,7 +16,47 @@
       "bullets": [
         "Cashless: available if the hospital is in your insurer's network. The hospital's insurance desk sends a pre-authorisation request; once approved, you pay only for anything outside the policy's coverage",
         "Reimbursement: if the hospital isn't in-network, you pay upfront and claim the amount back afterwards with bills and discharge documents"
-      ]
+      ],
+      "table": {
+        "caption": "Which route applies depends on whether your hospital is inside your insurer's network.",
+        "headers": [
+          "",
+          "Cashless",
+          "Reimbursement"
+        ],
+        "rows": [
+          [
+            "When it applies",
+            "Hospital is in your insurer's network",
+            "Hospital is outside the network"
+          ],
+          [
+            "Who pays the hospital",
+            "The insurer settles directly",
+            "You pay upfront and claim it back"
+          ],
+          [
+            "Money you need in hand",
+            "Usually only non-covered items and any co-pay",
+            "The full estimated bill"
+          ],
+          [
+            "Approval timing",
+            "Pre-authorisation before admission, so plan ahead",
+            "Claim submitted after discharge"
+          ],
+          [
+            "Typical settlement",
+            "At discharge",
+            "Weeks after documents are submitted"
+          ],
+          [
+            "Main risk",
+            "Pre-authorisation may be partially approved",
+            "Claim shortfall if documents are incomplete"
+          ]
+        ]
+      }
     },
     {
       "heading": "Waiting periods and pre-existing conditions",
@@ -38,10 +78,28 @@
     }
   ],
   "faqs": [
-    { "q": "Does Mediclaim cover robotic knee replacement specifically?", "a": "Most policies cover the procedure itself (knee/hip replacement) regardless of whether it's done robotically or conventionally, though some insurers cap the robotic system's usage fee as a separate, partially-covered charge. Check this specific point with your insurer." },
-    { "q": "What if my hospital isn't in my insurer's network?", "a": "You can still get coverage via reimbursement — pay upfront, then submit bills and discharge documents to your insurer for repayment, per your policy's terms." },
-    { "q": "Is there a waiting period for joint replacement under health insurance?", "a": "Often yes — many policies apply a waiting period (commonly a few years) for pre-existing joint and orthopaedic conditions. The exact duration depends on your specific policy." },
-    { "q": "Can the clinic help with insurance paperwork?", "a": "Yes — our team assists with pre-authorisation forms and coordinates with the hospital's insurance desk on your behalf." }
+    {
+      "q": "Does Mediclaim cover robotic knee replacement specifically?",
+      "a": "Most policies cover the procedure itself (knee/hip replacement) regardless of whether it's done robotically or conventionally, though some insurers cap the robotic system's usage fee as a separate, partially-covered charge. Check this specific point with your insurer."
+    },
+    {
+      "q": "What if my hospital isn't in my insurer's network?",
+      "a": "You can still get coverage via reimbursement — pay upfront, then submit bills and discharge documents to your insurer for repayment, per your policy's terms."
+    },
+    {
+      "q": "Is there a waiting period for joint replacement under health insurance?",
+      "a": "Often yes — many policies apply a waiting period (commonly a few years) for pre-existing joint and orthopaedic conditions. The exact duration depends on your specific policy."
+    },
+    {
+      "q": "Can the clinic help with insurance paperwork?",
+      "a": "Yes — our team assists with pre-authorisation forms and coordinates with the hospital's insurance desk on your behalf."
+    }
   ],
-  "tags": ["insurance", "mediclaim", "knee replacement", "hip replacement"]
+  "tags": [
+    "insurance",
+    "mediclaim",
+    "knee replacement",
+    "hip replacement"
+  ],
+  "dateModified": "2026-08-22"
 }

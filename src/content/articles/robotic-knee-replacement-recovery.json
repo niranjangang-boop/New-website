@@ -19,7 +19,8 @@
         "Week 3–6: Walking unaided indoors, returning to desk work",
         "Month 3: Most daily activities pain-free; continued strengthening",
         "Month 6–12: Full benefit realised, including travel and recreational activity"
-      ]
+      ],
+      "ordered": true
     },
     {
       "heading": "Who is a candidate?",
@@ -40,5 +41,10 @@
       "a": "Most patients climb stairs with support within the first week, and independently by 3–6 weeks, depending on muscle strength and physiotherapy compliance."
     }
   ],
-  "tags": ["knee replacement", "robotic surgery", "recovery"]
+  "tags": [
+    "knee replacement",
+    "robotic surgery",
+    "recovery"
+  ],
+  "dateModified": "2026-08-22"
 }
