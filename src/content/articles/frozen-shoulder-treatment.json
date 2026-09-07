@@ -1,0 +1,99 @@
+{
+  "slug": "frozen-shoulder-treatment",
+  "title": "Frozen Shoulder: Why It Happens, How Long It Lasts, and What Actually Helps",
+  "metaDescription": "Frozen shoulder explained: the three stages, why diabetes raises your risk, which treatments have evidence, and when to see a shoulder specialist in Thane.",
+  "category": "Sports Injuries",
+  "date": "2026-09-06",
+  "dateModified": "2026-09-06",
+  "readTime": 7,
+  "intro": "Frozen shoulder is one of the few orthopaedic conditions that gets worse for months before it gets better — and that timeline is what makes it so distressing. Patients are often told to \"give it time,\" which is partly right and deeply unsatisfying. Here is what is actually happening inside the joint, why it disproportionately affects people with diabetes, and which treatments have evidence behind them.",
+  "sections": [
+    {
+      "heading": "What is frozen shoulder?",
+      "body": "Frozen shoulder, or adhesive capsulitis, is inflammation and progressive tightening of the capsule that surrounds the shoulder joint. The capsule thickens and contracts, physically restricting movement. The distinguishing feature is loss of passive movement: someone else cannot move your arm through its full range either. That is what separates it from a rotator cuff problem, where the shoulder is weak or painful but can usually still be moved passively."
+    },
+    {
+      "heading": "What are the three stages, and how long does each last?",
+      "body": "Frozen shoulder passes through three recognised stages, and knowing which one you are in changes what treatment makes sense. Trying to force movement during the freezing stage tends to increase pain without improving range; the same stretching in the thawing stage is exactly what helps.",
+      "ordered": true,
+      "bullets": [
+        "Freezing: pain builds steadily and movement narrows. Typically 2–9 months, and the most distressing stage.",
+        "Frozen: pain often eases somewhat, but stiffness dominates and daily tasks are hardest. Typically 4–14 months.",
+        "Thawing: range of movement gradually returns. Typically 5–24 months."
+      ]
+    },
+    {
+      "heading": "Why does diabetes raise the risk of frozen shoulder?",
+      "body": "Frozen shoulder affects roughly 2–5% of the general population, but between 11% and 30% of people with diabetes — a several-fold increase. Longer diabetes duration and poorer blood sugar control both raise the risk further. The association is strong enough that some authors argue an unexplained frozen shoulder with no injury behind it should prompt HbA1c testing, because for a proportion of patients the shoulder is the first sign of undiagnosed diabetes or prediabetes. This matters practically in India, where diabetes prevalence is high and often undetected. If you develop a frozen shoulder without any injury, it is reasonable to ask for a blood sugar check."
+    },
+    {
+      "heading": "Does frozen shoulder get better on its own?",
+      "body": "Most people improve substantially with simple treatment aimed at controlling pain and restoring motion, and surgery is not needed in the majority of cases. That said, \"self-limiting\" oversells it — recovery is often measured in one to three years, and a meaningful minority are left with some permanent restriction. Waiting it out is a legitimate choice, but it should be an informed one rather than the default because nobody offered anything else."
+    },
+    {
+      "heading": "Which treatments actually have evidence?",
+      "body": "No single treatment resolves frozen shoulder quickly, and anyone promising that is overselling. The evidence favours combining approaches — pain control that makes movement tolerable, paired with a structured stretching programme. Corticosteroid injection into the joint is the most useful early intervention: roughly half of patients get meaningful pain relief and improved range, and the relief creates a window in which physiotherapy becomes possible. Injection without follow-up physiotherapy wastes that window.",
+      "table": {
+        "caption": "Treatment options in rough order of escalation. Stage matters — what helps in the thawing stage can aggravate the freezing stage.",
+        "headers": ["Treatment", "What it does", "Where it fits"],
+        "rows": [
+          ["Analgesia and activity modification", "Controls pain enough to keep the shoulder moving", "First line, all stages"],
+          ["Structured physiotherapy", "Restores range through graded stretching", "Core of treatment; most effective once pain is controlled"],
+          ["Intra-articular corticosteroid injection", "Reduces capsular inflammation and pain", "Early, to open a window for physiotherapy"],
+          ["Hydrodilatation (capsular distension)", "Distends the tight capsule with fluid under pressure", "When stiffness persists despite the above"],
+          ["Manipulation under anaesthesia", "Releases adhesions with the patient asleep", "Resistant cases, after conservative treatment has been given a fair trial"],
+          ["Arthroscopic capsular release", "Keyhole division of the contracted capsule", "Last resort, for persistent disabling stiffness"]
+        ]
+      }
+    },
+    {
+      "heading": "Does having diabetes change the outlook?",
+      "body": "Yes, and it is worth knowing in advance. People with diabetes tend to have slower recovery, poorer functional outcomes and a higher rate of recurrence, and they fail conservative treatment more often than people without diabetes. That is not a reason to skip conservative treatment — it remains the right starting point. It is a reason to keep blood sugar well controlled during recovery, to expect a longer course, and to review earlier rather than waiting another six months hoping."
+    },
+    {
+      "heading": "When should you see a shoulder specialist?",
+      "body": "See a specialist if your shoulder has been stiff for more than six weeks and is not improving, if pain is disturbing your sleep, if you cannot reach behind your back or overhead for ordinary tasks, or if stiffness followed a fall or injury rather than appearing on its own. Sudden stiffness after trauma needs prompt assessment to rule out a fracture or dislocation. An examination distinguishes frozen shoulder from rotator cuff disease and arthritis; imaging is used to exclude other causes rather than to diagnose frozen shoulder itself."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How long does frozen shoulder take to get better?",
+      "a": "Frozen shoulder passes through three stages — freezing (2–9 months), frozen (4–14 months) and thawing (5–24 months) — so total recovery is often measured in one to three years. Most people improve substantially with pain control and structured physiotherapy, but a minority are left with some lasting restriction."
+    },
+    {
+      "q": "Why do people with diabetes get frozen shoulder more often?",
+      "a": "Frozen shoulder affects about 2–5% of the general population but 11–30% of people with diabetes. Longer diabetes duration and poorer blood sugar control both increase the risk. If a frozen shoulder develops without any injury, it is reasonable to have your blood sugar checked, since the shoulder is sometimes the first sign."
+    },
+    {
+      "q": "Does frozen shoulder need surgery?",
+      "a": "Usually not. Most people improve with pain control and a structured stretching programme, often helped by a corticosteroid injection early on. Hydrodilatation, manipulation under anaesthesia and arthroscopic capsular release are reserved for shoulders that stay stiff and disabling despite a fair trial of conservative treatment."
+    },
+    {
+      "q": "Should I push through the pain to keep my shoulder moving?",
+      "a": "Not during the freezing stage. Forcing movement while the capsule is actively inflamed tends to increase pain without restoring range. The same stretching becomes valuable later, in the frozen and thawing stages. Matching the treatment to the stage is what makes physiotherapy effective."
+    },
+    {
+      "q": "How is frozen shoulder different from a rotator cuff tear?",
+      "a": "The key difference is passive movement. With frozen shoulder, the shoulder cannot be moved through its full range even by someone else, because the capsule is physically tight. With a rotator cuff tear the shoulder is weak and painful on active movement, but passive range is usually preserved. Examination distinguishes the two."
+    }
+  ],
+  "citations": [
+    {
+      "label": "Frozen Shoulder (Adhesive Capsulitis) — patient information",
+      "url": "https://www.orthoinfo.org/diseases--conditions/frozen-shoulder/",
+      "publisher": "American Academy of Orthopaedic Surgeons (OrthoInfo)"
+    },
+    {
+      "label": "Evidence for Combining Conservative Treatments for Adhesive Capsulitis",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10949050/",
+      "publisher": "PubMed Central (PMID 38510216)"
+    },
+    {
+      "label": "Frozen Shoulder as a Metabolic Signal: Advocating Routine HbA1c Screening in Atraumatic Cases",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12310412/",
+      "publisher": "Cureus, via PubMed Central (PMID 40746797)"
+    }
+  ],
+  "footerNote": "Shoulder stiff for more than six weeks? Read about <a href=\"/specialties/sports-arthroscopy\">sports injury &amp; arthroscopy care</a> or <a href=\"/procedures/keyhole-surgery\">keyhole (arthroscopic) surgery</a> with Dr. Ghag, or <a href=\"/book\">book an assessment</a> in Thane West.",
+  "tags": ["frozen shoulder", "adhesive capsulitis", "shoulder pain", "diabetes", "physiotherapy", "shoulder stiffness"]
+}
