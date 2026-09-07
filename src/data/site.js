@@ -14,6 +14,7 @@ export const SITE = {
   phoneRaw: settings.phone_raw,
   phoneSecondaryDisplay: settings.phone_secondary_display,
   phoneSecondaryRaw: settings.phone_secondary_raw,
+  campEndpoint: settings.camp_form_endpoint || '',
   whatsapp: `https://wa.me/${settings.phone_raw}`,
 };
 

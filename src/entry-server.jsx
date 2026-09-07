@@ -6,6 +6,7 @@ import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import Book from './pages/Book.jsx';
 import Contact from './pages/Contact.jsx';
+import Camp from './pages/Camp.jsx';
 import Sitemap from './pages/Sitemap.jsx';
 import Education from './pages/Education.jsx';
 import EducationArticle from './pages/EducationArticle.jsx';
@@ -27,6 +28,7 @@ function ServerApp() {
         <Route path="/about" element={<About />} />
         <Route path="/book" element={<Book />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/camp" element={<Camp />} />
         <Route path="/sitemap" element={<Sitemap />} />
         <Route path="/education" element={<Education />} />
         <Route path="/education/:slug" element={<EducationArticle />} />

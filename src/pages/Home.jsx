@@ -4,6 +4,7 @@ import Image from '../components/Image.jsx';
 import Clinics from '../components/Clinics.jsx';
 import Reveal from '../components/Reveal.jsx';
 import { SITE, SPECIALTIES } from '../data/site.js';
+import { CAMP } from '../data/camp.js';
 
 const HOME_FAQ_JSONLD = {
   '@context': 'https://schema.org',
@@ -53,6 +54,25 @@ export default function Home() {
         path="/"
         jsonLd={HOME_FAQ_JSONLD}
       />
+
+      {/* Camp announcement — self-expiring, so it disappears on its own the day
+          after the camp rather than going stale on the homepage. */}
+      {new Date() <= new Date(`${CAMP.date}T23:59:59+05:30`) && (
+        <Link
+          to="/camp"
+          className="group block bg-gradient-to-r from-brand-brown to-brand-gold px-4 py-3 text-center text-white transition-opacity hover:opacity-95"
+        >
+          <span className="text-sm font-semibold sm:text-base">
+            <span className="mr-2 inline-block rounded-full bg-white/20 px-2.5 py-0.5 text-xs font-bold uppercase tracking-wide">
+              Free
+            </span>
+            {CAMP.name} · {CAMP.dateDisplay} · {CAMP.timeDisplay}
+            <span className="ml-2 inline-block underline decoration-white/50 underline-offset-2 transition-transform group-hover:translate-x-0.5">
+              Register →
+            </span>
+          </span>
+        </Link>
+      )}
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-white">

@@ -12,6 +12,7 @@ const groups = [
       { to: '/about', label: 'About — Credentials & Training', note: 'Qualifications, fellowships, memberships & research' },
       { to: '/book', label: 'Appointment Booking', note: 'WhatsApp-confirmed bookings' },
       { to: '/contact', label: 'Contact & Consulting Locations', note: 'Phone, WhatsApp, email & all three locations' },
+      { to: '/camp', label: 'Free Orthopaedic Health Camp', note: '24 September 2026 — register for a slot' },
     ],
   },
   {
