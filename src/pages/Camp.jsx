@@ -154,7 +154,10 @@ export default function Camp() {
       `Preferred time: ${p.slot}`,
       `Reason: ${p.reason}`,
     ].join('\n');
-    return `https://wa.me/${CAMP.enquiryRaw}?text=${encodeURIComponent(msg)}`;
+    // Sent to the main practice line, which is the number already used for
+    // WhatsApp bookings site-wide. The camp helpdesk number is a phone line and
+    // may not accept WhatsApp.
+    return `https://wa.me/${SITE.phoneRaw}?text=${encodeURIComponent(msg)}`;
   }
 
   const waFallback = `https://wa.me/${SITE.phoneRaw}?text=${encodeURIComponent(
@@ -236,13 +239,28 @@ export default function Camp() {
                   Get Directions
                 </a>
 
-                <h3 className="mt-7 font-semibold text-slate-900">Enquiries</h3>
-                <a
-                  href={`tel:+${CAMP.enquiryRaw}`}
-                  className="mt-1 inline-block font-serif text-lg font-bold text-brand-gold hover:text-brand-brown"
-                >
-                  {CAMP.enquiryDisplay}
-                </a>
+                <h3 className="mt-7 font-semibold text-slate-900">
+                  For appointments &amp; enquiries
+                </h3>
+                <ul className="mt-2 space-y-2">
+                  <li>
+                    <a
+                      href={`tel:+${SITE.phoneRaw}`}
+                      className="font-serif text-lg font-bold text-brand-gold hover:text-brand-brown"
+                    >
+                      {SITE.phoneDisplay}
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href={`tel:+${CAMP.enquiryRaw}`}
+                      className="font-serif text-lg font-bold text-brand-gold hover:text-brand-brown"
+                    >
+                      {CAMP.enquiryDisplay}
+                    </a>
+                    <span className="ml-2 text-sm text-slate-500">(camp helpdesk)</span>
+                  </li>
+                </ul>
 
                 <p className="mt-7 text-sm leading-relaxed text-slate-500">
                   Bring any previous X-rays, MRI films or reports with you, along with a list of
