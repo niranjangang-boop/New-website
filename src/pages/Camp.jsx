@@ -279,8 +279,8 @@ export default function Camp() {
                     You&rsquo;re registered
                   </p>
                   <p className="mt-2 text-sm leading-relaxed text-emerald-800">
-                    We have your details for the {form.slot} slot. Our team will call
-                    you on {form.mobile} to confirm. Please arrive 10 minutes early.
+                    We have your details for the {form.slot} slot on {CAMP.dateDisplay}.
+                    Please arrive 10 minutes early.
                   </p>
                   <button
                     type="button"
