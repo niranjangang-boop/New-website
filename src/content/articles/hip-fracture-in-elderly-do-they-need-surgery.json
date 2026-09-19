@@ -1,0 +1,133 @@
+{
+  "slug": "hip-fracture-in-elderly-do-they-need-surgery",
+  "title": "My Elderly Parent Has Broken a Hip — Do They Really Need Surgery?",
+  "metaDescription": "Most hip fractures in older adults need surgery, usually within 24–48 hours. Which operation, why age alone is no reason to avoid it, and what recovery holds.",
+  "category": "Trauma",
+  "date": "2026-09-19",
+  "dateModified": "2026-09-19",
+  "readTime": 6,
+  "intro": "It usually starts with a small fall at home — a slip near the bathroom, a trip on a rug — and suddenly an 80-year-old cannot stand and the family is being asked to consent to an operation within hours. The question we hear most is some version of \"is she not too old for surgery?\" It is a fair question, and it deserves a straight answer rather than a consent form.",
+  "sections": [
+    {
+      "heading": "Does a broken hip in an elderly person always need surgery?",
+      "body": "Almost always, yes. The American Academy of Orthopaedic Surgeons is explicit that most hip fractures require surgical treatment. The reason is not that surgeons prefer operating — it is that a broken hip does not let an older person stand, and the alternative to fixing it is several weeks lying flat. Age by itself is not a reason to avoid it.\n\nThe situations where surgery may reasonably be avoided are narrow, and none of them is simply being old:",
+      "bullets": [
+        "An undisplaced fracture in an otherwise healthy person — managed with careful monitoring, because it can still shift",
+        "A patient who did not walk before the injury, or who has severe medical problems",
+        "A patient genuinely too unwell to survive an anaesthetic",
+        "An isolated fracture of the greater trochanter — the bony bump on the side of the hip — which is stable and usually heals with a walker and protected weight-bearing"
+      ]
+    },
+    {
+      "heading": "Isn't an operation too risky at 82?",
+      "body": "The honest comparison is not surgery versus safety. It is surgery versus several weeks flat in bed. A fractured hip is severely painful and will not let someone stand, and it is the lying still that causes bed sores, chest infections, blood clots and, in very old patients, disorientation that makes rehabilitation far harder.\n\nThat is why prompt surgery is recommended even in frail patients — the operation is largely how the pain is controlled and the person got upright. NICE makes the point at the other extreme too: even where a hip fracture complicates or precipitates a terminal illness, the team should still consider surgery as part of a palliative approach, because it minimises pain, while respecting the person's own priorities for end-of-life care. If surgery is worth considering even then, frailty alone is rarely the deciding factor. What genuinely changes the risk is the medical condition underneath — and that is treated, not ignored."
+    },
+    {
+      "heading": "How quickly does hip fracture surgery need to happen?",
+      "body": "Soon, but not recklessly. NICE recommends operating on the day of admission or the day after. The AAOS guideline puts it at within 24 to 48 hours of admission, on moderate evidence. The two differ slightly on the exact number of hours; what they agree on is that the delay should not be an avoidable one.\n\nThere is an honest caveat. The AAOS is clear that 48 hours is a target, not always achievable, and that it is better for a patient to be properly optimised than rushed to theatre. Correctable problems — anaemia, anticoagulation, dehydration, uncontrolled diabetes, heart failure, a chest infection — should be treated immediately, precisely so they do not become the reason for delay.\n\nWhat should never happen is the wait taking place at home. Sudden hip or groin pain after a fall, inability to bear weight, or a leg that looks shorter and turned outwards means the same-day emergency department. If X-rays look normal but the pain and inability to weight-bear persist, NICE advises an MRI — some fractures are invisible on plain X-ray.",
+      "ordered": true,
+      "bullets": [
+        "Do not try to get them up or 'walk it off' — arrange transport to hospital the same day",
+        "Note when they last ate and drank, and bring the medicine list, especially blood thinners",
+        "Bring records of heart, lung, kidney or diabetes problems — they speed up the pre-operative work-up",
+        "Ask the team what is being corrected before surgery, and the planned timing"
+      ]
+    },
+    {
+      "heading": "Which operation will they actually have?",
+      "body": "It depends on where the femur has broken, not on how severe the pain is. A displaced break at the femoral neck usually means a hip replacement, because the break itself injures the blood supply to the ball. A break lower down, in the intertrochanteric region, is fixed with metalwork — the blood supply there is good and the bone heals reliably.",
+      "table": {
+        "caption": "How the site of the fracture determines the operation. Based on AAOS and NICE guidance; the final decision is made on your parent's X-rays and general condition.",
+        "headers": [
+          "Where the break is",
+          "Usual operation",
+          "Why"
+        ],
+        "rows": [
+          [
+            "Femoral neck, not displaced",
+            "Screws, or a plate-and-screw device, holding the bone in place",
+            "Blood supply to the ball is likely intact, so the bone can heal — the metalwork stops it slipping"
+          ],
+          [
+            "Femoral neck, displaced",
+            "Partial hip replacement (hemiarthroplasty), or total hip replacement in selected patients",
+            "The displacement injures the blood supply, so the ball often will not heal and can collapse later"
+          ],
+          [
+            "Intertrochanteric",
+            "Sliding hip screw with a side plate, or an intramedullary nail",
+            "Blood supply is good here, so the bone heals well once it is held firmly"
+          ],
+          [
+            "Subtrochanteric",
+            "Intramedullary nail down the shaft of the femur",
+            "The break is in the strong upper shaft and needs a long implant that shares the load"
+          ],
+          [
+            "Isolated greater trochanter",
+            "Usually no surgery — protected weight-bearing with a walker",
+            "A stable fracture that generally heals on its own; CT confirms it does not extend inward"
+          ]
+        ]
+      }
+    },
+    {
+      "heading": "Partial or total hip replacement — which is better for my parent?",
+      "body": "For most older adults with a displaced femoral neck fracture, a partial replacement is standard. NICE reserves total hip replacement for the fitter patient, setting three conditions together: they walked independently outdoors with no more than a stick, no condition makes the bigger procedure unsuitable, and they are expected to manage daily activities independently beyond two years.\n\nThis is a genuine trade-off, not a better-or-worse choice. A total replacement can give better function in the right patient, but it is a larger operation and the AAOS notes that benefit comes at the risk of more complications — which is why it is offered selectively. One detail worth asking about either way: the AAOS guideline reports strong evidence that the stem placed into the thigh bone should be fixed with bone cement, giving better patient-reported outcomes and a lower risk of a further fracture around the implant. NICE likewise recommends a cemented femoral component as standard for hemiarthroplasty."
+    },
+    {
+      "heading": "Will they walk again, and how soon?",
+      "body": "Standing usually begins the day after the operation. NICE advises operating with the aim that the leg can take full weight immediately, and offering physiotherapy assessment and mobilisation the next day unless there is a medical reason not to. Getting up early is not impatience — it prevents clots, chest infections and deconditioning.\n\nWhether they return to their previous level of walking deserves an honest answer rather than reassurance. The AAOS states plainly that hip fractures can be difficult for elderly patients to recover from, that many need more help in daily life afterwards, and that a stepwise decrease in function is common. The best guide to how your parent will do is how they were doing before the fall: someone walking to the market unaided has a very different outlook from someone already housebound.\n\nTwo things improve the odds. The AAOS guideline reports strong evidence that interdisciplinary care programmes — orthopaedic, geriatric, nursing, dietetic and therapy input together — reduce complications and improve outcomes. The second is treating what caused the fracture: a fragility hip fracture is usually osteoporosis announcing itself, and bone density treatment plus a falls check at home (lighting, loose rugs, grab bars, vision, footwear) is how you avoid returning for the other hip."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Does a broken hip in an 85-year-old really need an operation?",
+      "a": "In almost all cases, yes. The AAOS states that most hip fractures require surgical treatment, and age by itself is not a reason to avoid it. The comparison is not surgery versus safety — it is surgery versus several weeks in bed, which is what causes bed sores, chest infections, blood clots and confusion. Surgery is largely how the pain is relieved and the person is got upright."
+    },
+    {
+      "q": "Can an elderly person with a broken hip be treated without surgery?",
+      "a": "Sometimes, but it is uncommon. Non-surgical treatment may be considered for an undisplaced fracture in an otherwise healthy person (with careful monitoring, because it can still shift), for someone who was not walking before the injury, or for a patient too unwell for anaesthesia. An isolated fracture of the greater trochanter is the one type that usually heals without an operation."
+    },
+    {
+      "q": "How soon should hip fracture surgery be done?",
+      "a": "NICE recommends surgery on the day of admission or the day after. The AAOS guideline puts it at within 24 to 48 hours. Both accept that a patient who needs their anaemia, blood thinners, diabetes, heart failure or chest infection corrected first is better optimised than rushed. What matters is that the delay is not avoidable — and never spent waiting at home."
+    },
+    {
+      "q": "Is a partial or a total hip replacement better after a hip fracture?",
+      "a": "Partial replacement (hemiarthroplasty) is the standard choice for most older adults with a displaced femoral neck fracture. NICE suggests considering a total hip replacement for someone who walked independently outdoors with no more than a stick, has no condition making the procedure unsuitable, and is expected to remain independent beyond two years. Total can give better function but carries a higher complication risk."
+    },
+    {
+      "q": "How soon can they walk after hip fracture surgery?",
+      "a": "Usually the day after. The operation is planned so the leg can take full weight immediately, and NICE advises physiotherapy assessment and mobilisation on the first post-operative day. Returning to the previous level of walking takes longer and is not guaranteed — the best predictor is how mobile and independent the person was before the fall."
+    }
+  ],
+  "footerNote": "A suspected hip fracture in an older adult is an emergency, not something to watch for a few days — if a parent cannot stand or bear weight after a fall, or the leg looks short and turned outwards, get them to a hospital the same day. Read more about <a href=\"/procedures/trauma-surgery\">trauma and fracture surgery</a> and <a href=\"/procedures/hip-replacement\">hip replacement</a> with Dr. Ghag, how <a href=\"/education/fracture-healing-surgery\">fractures heal and when surgery is needed</a>, or whether <a href=\"/education/joint-replacement-insurance-india\">insurance covers joint replacement in India</a>. For non-urgent concerns you can <a href=\"/book\">book an assessment</a> in Thane West.",
+  "tags": [
+    "hip fracture",
+    "elderly",
+    "fragility fracture",
+    "trauma",
+    "hip replacement",
+    "hemiarthroplasty",
+    "osteoporosis"
+  ],
+  "citations": [
+    {
+      "label": "Hip Fractures — types, treatment and recovery (patient information)",
+      "url": "https://orthoinfo.aaos.org/en/diseases--conditions/hip-fractures/",
+      "publisher": "American Academy of Orthopaedic Surgeons (OrthoInfo)"
+    },
+    {
+      "label": "Hip fracture: management (CG124) — recommendations on timing of surgery, surgical procedures and mobilisation",
+      "url": "https://www.nice.org.uk/guidance/cg124/chapter/recommendations",
+      "publisher": "National Institute for Health and Care Excellence (NICE), updated 2023"
+    },
+    {
+      "label": "The Management of Hip Fractures in Older Adults — plain language summary of the AAOS clinical practice guideline (2024)",
+      "url": "https://orthoinfo.aaos.org/globalassets/pdfs/plain-language-summary_hip-fractures-2024.pdf",
+      "publisher": "American Academy of Orthopaedic Surgeons"
+    }
+  ]
+}
