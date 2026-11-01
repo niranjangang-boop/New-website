@@ -1,0 +1,120 @@
+{
+  "slug": "do-i-need-an-mri-for-back-pain",
+  "title": "Do I Need an MRI for My Back Pain? When a Scan Helps and When It Doesn't",
+  "metaDescription": "Most back pain settles without a scan. When an MRI is genuinely needed, what scans can't tell you, and the symptoms that need prompt assessment.",
+  "category": "Trauma",
+  "date": "2026-11-01",
+  "dateModified": "2026-11-01",
+  "readTime": 5,
+  "intro": "Many people with back pain assume the first step is an MRI. In most cases it is not. Scans are very good at showing structure and poor at explaining pain, and a report full of alarming words can worry you more than the pain itself. This guide explains when a scan changes what we do, when it does not, and which symptoms mean you should be seen promptly instead of waiting.",
+  "sections": [
+    {
+      "heading": "Do I need an MRI for new back pain?",
+      "body": "Usually not. Most back pain without warning signs improves on its own within a few weeks, and a scan done early rarely changes the treatment. NICE guidance in the UK advises against routine imaging in non-specialist settings, and suggests specialist imaging only if the result is likely to change management. A scan is for decisions, not for reassurance. Staying gently active matters more than the picture."
+    },
+    {
+      "heading": "Why not scan it anyway, just to be safe?",
+      "body": "Because a scan can show \"abnormalities\" that are not the cause of your pain. A review of imaging studies in people with no back pain found disc degeneration in 37% of 20-year-olds and 96% of 80-year-olds, and disc bulges in 30% and 84%. These findings rise with age and often reflect normal ageing. A report listing a bulge, degeneration or a fissure does not prove that is what hurts. It can lead to worry, more tests, and sometimes treatment you did not need, so the findings must be read alongside your symptoms and examination."
+    },
+    {
+      "heading": "What does an X-ray show, and what does it miss?",
+      "body": "An X-ray shows bone alignment, fractures and obvious wear, but not discs, nerves or muscles. OrthoInfo notes it can help identify the most obvious causes of back pain. A plain X-ray is of limited value for most back pain, and is mainly useful when a fracture is suspected, for example after a significant fall or in someone on long-term steroids. It cannot tell you whether a disc is pressing on a nerve.",
+      "table": {
+        "caption": "What each test is generally used for in back pain (general principles, not advice for your back)",
+        "headers": [
+          "Test",
+          "What it shows",
+          "When it is typically useful"
+        ],
+        "rows": [
+          [
+            "X-ray",
+            "Bones, alignment, fractures, obvious wear",
+            "Suspected fracture, such as after a fall, or in a person on long-term steroids"
+          ],
+          [
+            "MRI",
+            "Discs, nerves, spinal canal, soft tissue, infection",
+            "Red-flag symptoms, or pain that has not improved after several weeks of treatment, especially if surgery or injection is being considered"
+          ],
+          [
+            "CT scan",
+            "Detailed bone anatomy",
+            "When a bone problem is suspected, or when MRI cannot be done"
+          ]
+        ]
+      }
+    },
+    {
+      "heading": "When is an MRI genuinely the right test?",
+      "body": "An MRI is worth doing when symptoms have not improved after roughly six weeks of proper treatment, or when warning signs suggest something more serious than a strain. The American College of Radiology, as summarised in a 2020 review, supports imaging in exactly those two situations. MRI is the preferred scan for most people who need one, because it shows discs and nerves. It makes most sense when the result could change the plan, such as before considering an injection or surgery."
+    },
+    {
+      "heading": "Which symptoms mean I should be seen promptly?",
+      "body": "Seek assessment promptly for leg weakness, loss of bladder or bowel control, numbness between the legs, fever or chills with back pain, unexplained weight loss, a history of cancer, or pain that is constant regardless of position or activity. OrthoInfo lists leg weakness and loss of bladder or bowel control as reasons to get care right away. These causes are uncommon, but they are the reason this advice exists. The 2020 review estimates spinal cancer in 0% to 0.7% of people with back pain, which is why a specific warning sign matters more than the pain itself.",
+      "bullets": [
+        "Same day: new leg weakness, trouble passing urine or controlling your bowels, numbness in the groin or saddle area",
+        "Soon: fever or chills with back pain, unexplained weight loss, a past cancer, or constant night or rest pain",
+        "Also soon: back pain after a significant fall or accident, or a minor fall if you are older or have weak bones"
+      ]
+    },
+    {
+      "heading": "What should I do while it settles?",
+      "body": "Keep moving as normally as you can. NICE recommends advice and information that includes encouragement to continue normal activities, and suggests considering a group exercise programme. Short walks and gentle movement are sensible starting points. If your pain is not improving after a few weeks, or you simply cannot tell whether it is serious, that is the time for an examination, which often decides whether any scan is needed at all."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Should I get an MRI for back pain that has lasted a week?",
+      "a": "Usually not. Most new back pain without warning signs improves within a few weeks, and early scanning rarely changes treatment. NICE advises against routine imaging in non-specialist settings. If you have leg weakness, bladder or bowel changes, fever, or unexplained weight loss, get assessed promptly instead of waiting."
+    },
+    {
+      "q": "My MRI says disc degeneration. Is that why my back hurts?",
+      "a": "Not necessarily. Degeneration, bulges and fissures are common in people with no back pain, and become more common with age. In one review, disc degeneration appeared on imaging in 37% of pain-free 20-year-olds and 96% of pain-free 80-year-olds. What matters is whether the finding fits your symptoms and examination."
+    },
+    {
+      "q": "Can an X-ray show a slipped disc?",
+      "a": "No. An X-ray shows bone, not discs or nerves. It can help look for a fracture or obvious wear. An MRI is the usual scan for a disc problem, and is normally reserved for people with red flags or pain that has not improved with treatment."
+    },
+    {
+      "q": "When is an MRI worth doing for back pain?",
+      "a": "When pain has not improved after about six weeks of proper treatment, or when warning signs point to something serious, such as cancer, infection, fracture or nerve compression. It is most useful when the result could change the plan, for example before an injection or surgery is considered."
+    },
+    {
+      "q": "Which back pain symptoms need urgent attention?",
+      "a": "Leg weakness, loss of bladder or bowel control, numbness in the groin area, fever or chills with back pain, unexplained weight loss, or a history of cancer. OrthoInfo advises seeking care right away for leg weakness and loss of bladder or bowel control."
+    }
+  ],
+  "footerNote": "Back pain with leg weakness, numbness between the legs, or any bladder or bowel change needs same-day assessment, not a wait-and-see approach. If a disc is behind your leg pain, read how <a href=\"/education/slipped-disc-sciatica-how-long-and-do-i-need-surgery\">long a slipped disc takes to settle</a> and what <a href=\"/procedures/spine-surgery\">spine care</a> with Dr. Ghag in Thane West involves, or <a href=\"/book\">book an assessment</a>.",
+  "tags": [
+    "back pain",
+    "MRI",
+    "low back pain",
+    "sciatica",
+    "spine",
+    "kamar dard",
+    "Thane"
+  ],
+  "citations": [
+    {
+      "label": "Low back pain and sciatica in over 16s: assessment and management (NG59), Recommendations",
+      "url": "https://www.nice.org.uk/guidance/ng59/chapter/Recommendation",
+      "publisher": "National Institute for Health and Care Excellence (NICE)"
+    },
+    {
+      "label": "Low Back Pain",
+      "url": "https://www.orthoinfo.org/diseases--conditions/low-back-pain",
+      "publisher": "American Academy of Orthopaedic Surgeons (OrthoInfo)"
+    },
+    {
+      "label": "Brinjikji W et al. Systematic literature review of imaging features of spinal degeneration in asymptomatic populations",
+      "url": "https://www.ajnr.org/content/36/4/811",
+      "publisher": "American Journal of Neuroradiology, 2015"
+    },
+    {
+      "label": "Lancaster B et al. When Is Imaging Appropriate for a Patient With Low Back Pain?",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7529135",
+      "publisher": "Ochsner Journal, 2020"
+    }
+  ]
+}
