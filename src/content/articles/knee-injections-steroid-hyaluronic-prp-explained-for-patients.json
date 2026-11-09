@@ -1,0 +1,86 @@
+{
+  "slug": "knee-injections-steroid-hyaluronic-prp-explained-for-patients",
+  "title": "Knee Injections for Arthritis: Steroid, Hyaluronic Acid (Gel) and PRP Explained",
+  "metaDescription": "Steroid, hyaluronic acid (gel) or PRP for knee arthritis? What each does, how long relief lasts, and why we use injections only for selected patients.",
+  "category": "Knee",
+  "date": "2026-11-09",
+  "dateModified": "2026-11-09",
+  "readTime": 6,
+  "intro": "Injections can ease knee pain for a while, but they do not repair the knee. We usually try medicines, exercises and physiotherapy first, because they treat the cause. We keep injections for patients who are still in pain after that, and use them for pain relief only. A steroid injection is the one we use most often.",
+  "sections": [
+    {
+      "heading": "When do we consider a knee injection?",
+      "body": "Usually after medicines, exercises and physiotherapy treatments have been given a fair trial and pain is still limiting your life. The aim is to calm the pain so you can get on with exercises."
+    },
+    {
+      "heading": "What does a steroid injection do?",
+      "body": "It reduces inflammation and pain inside the knee. The NHS says relief can last several weeks or months; NICE says typically 2 to 10 weeks. It does not repair the cartilage. The number of injections is limited, and your doctor will discuss it with you."
+    },
+    {
+      "heading": "What about hyaluronic acid (gel) injections?",
+      "body": "Guidelines disagree. NICE advises against them for arthritis, while some other guidelines allow them. The evidence of benefit is not strong. We usually avoid them in the knee, but may offer one to a selected patient for pain relief only, after explaining the evidence honestly."
+    },
+    {
+      "heading": "What about PRP (platelet-rich plasma)?",
+      "body": "PRP uses a sample of your own blood. A review of major guidelines found that none of them recommended PRP for knee arthritis. We usually avoid it, and use it only occasionally for pain relief in selected patients, after explaining that the evidence is limited."
+    },
+    {
+      "heading": "Are injections safe?",
+      "body": "Any injection carries a small risk of pain at the site, bleeding or infection. Steroids can temporarily raise blood sugar in people with diabetes, so tell us if you have it. A hot, red, swollen knee with fever after an injection needs same-day attention."
+    },
+    {
+      "heading": "How do we decide which patient gets what?",
+      "body": "By tailoring the plan to you: your pain, your health, how you have responded so far and what you want. You are told what each option can and cannot do, and the decision is yours."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How long does a knee steroid injection last?",
+      "a": "From a few weeks to a few months, according to the NHS and NICE."
+    },
+    {
+      "q": "How many steroid injections can I have?",
+      "a": "Not many; your doctor sets a limit based on your knee and health."
+    },
+    {
+      "q": "Are gel injections worth it?",
+      "a": "The evidence is weak and NICE advises against them, so we use them rarely."
+    },
+    {
+      "q": "Is PRP a cure for knee arthritis?",
+      "a": "No. It has not been shown to repair arthritis and is not recommended in major guidelines."
+    },
+    {
+      "q": "Can I have an injection and a knee replacement later?",
+      "a": "Yes, though the timing around surgery should be planned with your surgeon."
+    },
+    {
+      "q": "Do injections hurt?",
+      "a": "There is usually brief discomfort, often eased with local numbing medicine."
+    }
+  ],
+  "footerNote": "Related reading: <a href=\"/education/knee-arthritis-complete-guide-symptoms-treatment-surgery\">complete knee arthritis guide</a>, <a href=\"/education/knee-arthritis-treatment-without-surgery\">treatment without surgery</a>, <a href=\"/education/ultrasound-shockwave-short-wave-therapy-for-knee-pain-do-they-help\">ultrasound, shockwave and short-wave</a>. If your knee is limiting your walking, stairs or sleep, Dr. Niranjan Ghag, orthopaedic surgeon in Thane West, can examine your knee and explain your options at a <a href=\"/book\">consultation</a>; the decision about treatment, including whether you need surgery at all, stays with you. A hot, red, very swollen knee with fever, especially after an injection, needs same-day medical care. This page is general information and does not replace an examination.",
+  "tags": [
+    "knee injection",
+    "steroid injection knee",
+    "hyaluronic acid knee",
+    "PRP knee"
+  ],
+  "citations": [
+    {
+      "label": "Osteoarthritis in over 16s: recommendations (NG226)",
+      "url": "https://www.nice.org.uk/guidance/NG226/chapter/recommendations",
+      "publisher": "NICE"
+    },
+    {
+      "label": "Osteoarthritis: treatment",
+      "url": "https://www.nhs.uk/conditions/osteoarthritis/treatment/",
+      "publisher": "NHS"
+    },
+    {
+      "label": "Injection-based management of osteoarthritis of the knee: a systematic review of guidelines",
+      "url": "https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2021.661805/full",
+      "publisher": "Frontiers in Pharmacology, 2021"
+    }
+  ]
+}

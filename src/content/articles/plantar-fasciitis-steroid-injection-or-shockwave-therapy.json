@@ -1,0 +1,84 @@
+{
+  "slug": "plantar-fasciitis-steroid-injection-or-shockwave-therapy",
+  "title": "Heel Pain (Plantar Fasciitis): Do I Need a Steroid Injection or Shockwave?",
+  "metaDescription": "Heel pain in the morning? Plantar fasciitis usually improves with stretching and good footwear. When shockwave or an injection is worth considering.",
+  "category": "Foot & Ankle",
+  "date": "2026-11-09",
+  "dateModified": "2026-11-09",
+  "readTime": 5,
+  "intro": "Most heel pain from plantar fasciitis improves with stretching, good shoes and time. OrthoInfo says over 90 out of 100 people improve within 10 months with simple measures. Shockwave and steroid injections are options for pain that will not settle, but they are not the first step.",
+  "sections": [
+    {
+      "heading": "What is plantar fasciitis?",
+      "body": "Pain under the heel from strain of the thick band along the sole of the foot. It is worst with the first steps in the morning and after sitting. It is most common between ages 40 and 60 and linked to standing on hard floors, tight calves, flat feet or high arches, and extra weight."
+    },
+    {
+      "heading": "What should I try first?",
+      "body": "Stretching comes first. OrthoInfo describes calf and sole stretches held for 10 seconds and repeated 20 times, with the sole stretch done before you stand in the morning. Cushioned shoes, heel pads, orthotics and a night splint help. Rest from running and avoid walking barefoot on hard floors."
+    },
+    {
+      "heading": "What is our usual order?",
+      "body": "Medicines and stretching first, then more if you are not improving.",
+      "bullets": [
+        "Pain relief gels or tablets for a short time, plus stretching and supportive footwear.",
+        "A night splint and a physiotherapy programme.",
+        "Physiotherapy treatments such as ultrasound or shockwave if pain persists.",
+        "A steroid injection last, for pain relief."
+      ],
+      "ordered": true
+    },
+    {
+      "heading": "Does shockwave work?",
+      "body": "The evidence is mixed. OrthoInfo says it is not clear that it helps. A recent review of 16 trials found shockwave did better than steroid injection for pain and foot function at medium-term follow-up, and called it safe. It is a reasonable option if simple measures have not worked, but it needs patience and several sessions."
+    },
+    {
+      "heading": "What are the risks of a steroid injection?",
+      "body": "OrthoInfo warns that steroid injections can weaken the heel band and cause it to tear, leading to a flatter foot and long-lasting pain. For this reason, we use them last, carefully, and usually only once."
+    },
+    {
+      "heading": "When should I think about surgery or see a doctor early?",
+      "body": "Surgery is only for heel pain that has not improved after about 12 months of good treatment. See a doctor sooner for sudden severe pain or a pop in the heel, pain after an injury, numbness, redness or swelling, or any heel pain if you have diabetes."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How long does plantar fasciitis take to heal?",
+      "a": "Most improve within about 10 months with simple measures."
+    },
+    {
+      "q": "Is a heel spur the cause?",
+      "a": "Usually not. The pain comes from the band under the heel, not the spur."
+    },
+    {
+      "q": "Is walking barefoot bad for heel pain?",
+      "a": "On hard floors it can aggravate it. Supportive footwear helps."
+    },
+    {
+      "q": "Can I run with plantar fasciitis?",
+      "a": "Cut back until the pain settles, then return gradually."
+    },
+    {
+      "q": "Is shockwave therapy painful?",
+      "a": "There is usually brief discomfort during treatment."
+    }
+  ],
+  "footerNote": "Related reading: <a href=\"/education/heel-pain-plantar-fasciitis\">heel pain guide</a>, <a href=\"/procedures/heel-pain\">heel pain treatment</a>, <a href=\"/procedures/foot-ankle-surgery\">foot and ankle surgery</a>. If your knee is limiting your walking, stairs or sleep, Dr. Niranjan Ghag, orthopaedic surgeon in Thane West, can examine your knee and explain your options at a <a href=\"/book\">consultation</a>; the decision about treatment, including whether you need surgery at all, stays with you. Sudden severe heel pain, or any foot sore or heel pain in someone with diabetes, needs prompt assessment. This page is general information and does not replace an examination.",
+  "tags": [
+    "plantar fasciitis",
+    "heel pain",
+    "shockwave therapy",
+    "morning heel pain"
+  ],
+  "citations": [
+    {
+      "label": "Plantar fasciitis and bone spurs",
+      "url": "https://www.orthoinfo.org/bodypart/foot-ankle/plantar-fasciitis-and-bone-spurs",
+      "publisher": "American Academy of Orthopaedic Surgeons (OrthoInfo)"
+    },
+    {
+      "label": "Efficacy of extracorporeal shockwave therapy compared to corticosteroid injections in plantar fasciitis",
+      "url": "https://search.pedro.org.au/search-results/record-detail/79233",
+      "publisher": "Clinical Rehabilitation, 2024 (via PEDro)"
+    }
+  ]
+}

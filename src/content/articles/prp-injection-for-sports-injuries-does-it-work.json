@@ -1,0 +1,87 @@
+{
+  "slug": "prp-injection-for-sports-injuries-does-it-work",
+  "title": "PRP Injections for Sports Injuries and Tendon Pain: Do They Work?",
+  "metaDescription": "Does PRP (platelet-rich plasma) work for tendon or sports injuries? What research shows and what to ask before paying.",
+  "category": "Sports Injuries",
+  "date": "2026-11-09",
+  "dateModified": "2026-11-09",
+  "readTime": 4,
+  "intro": "PRP is not yet proven for most sports and tendon injuries. A large Cochrane review found too little reliable evidence to recommend it. It uses your own blood and is generally low risk, so it is not dangerous, but it may add little. We usually try exercises and physiotherapy first and use PRP only occasionally for pain relief.",
+  "sections": [
+    {
+      "heading": "What is PRP?",
+      "body": "Platelet-rich plasma is made from a sample of your own blood that is spun to concentrate platelets, then injected near the injury. The idea is to help healing."
+    },
+    {
+      "heading": "Does it work?",
+      "body": "A Cochrane review of 19 trials concluded there was insufficient evidence to support it for soft-tissue injuries. Pain was reduced by a very small amount in the short term, with no clear gain in function. The review is from 2014, and newer studies are mixed."
+    },
+    {
+      "heading": "What do other sources say?",
+      "body": "For tennis elbow, OrthoInfo says studies are mixed. For golfer's elbow, it says nobody yet knows if PRP beats stretching and strengthening. For knee arthritis, a review of five major guidelines found none recommended it."
+    },
+    {
+      "heading": "Is it safe?",
+      "body": "In the Cochrane review, side effects were similar with and without PRP. Any injection has a small risk of pain, bleeding or infection."
+    },
+    {
+      "heading": "When might we use it?",
+      "body": "Not as a first choice. Our usual order is medicines, then exercises, then physiotherapy treatments, and an injection only if still needed. Occasionally, for selected patients, we may use PRP for pain relief after explaining the limits of the evidence."
+    },
+    {
+      "heading": "What should I ask before agreeing?",
+      "body": "What evidence supports it for my condition, what result is realistic, how many injections and what cost, and whether I have first completed proper exercises. A good doctor will tell you where the evidence is thin."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is PRP worth it for tendon pain?",
+      "a": "The evidence is limited. Exercises come first."
+    },
+    {
+      "q": "Is PRP recommended for knee arthritis?",
+      "a": "No major guideline reviewed recommended it."
+    },
+    {
+      "q": "Is PRP safe?",
+      "a": "It uses your own blood and is generally low risk."
+    },
+    {
+      "q": "How many PRP injections do I need?",
+      "a": "There is no proven number, which is part of why evidence is hard to judge."
+    },
+    {
+      "q": "Is PRP covered by insurance?",
+      "a": "Often not; check your policy."
+    }
+  ],
+  "footerNote": "Related reading: <a href=\"/education/tennis-elbow-steroid-injection-or-physiotherapy\">tennis elbow</a>, <a href=\"/education/knee-injections-steroid-hyaluronic-prp-explained-for-patients\">knee injections</a>, <a href=\"/procedures/sports-injuries\">sports injuries</a>. If your knee is limiting your walking, stairs or sleep, Dr. Niranjan Ghag, orthopaedic surgeon in Thane West, can examine your knee and explain your options at a <a href=\"/book\">consultation</a>; the decision about treatment, including whether you need surgery at all, stays with you. Pain after a fall or injury, a swollen or locked joint, or numbness that is getting worse should be seen promptly. This page is general information and does not replace an examination.",
+  "tags": [
+    "PRP injection",
+    "platelet rich plasma",
+    "tendon pain",
+    "sports injury"
+  ],
+  "citations": [
+    {
+      "label": "Platelet-rich therapies for musculoskeletal soft tissue injuries",
+      "url": "https://www.cochrane.org/evidence/CD010071_platelet-rich-therapies-musculoskeletal-soft-tissue-injuries",
+      "publisher": "Cochrane"
+    },
+    {
+      "label": "Tennis elbow (lateral epicondylitis)",
+      "url": "https://www.orthoinfo.org/diseases--conditions/tennis-elbow-lateral-epicondylitis/",
+      "publisher": "American Academy of Orthopaedic Surgeons (OrthoInfo)"
+    },
+    {
+      "label": "Golfer's elbow (medial epicondylitis)",
+      "url": "https://www.orthoinfo.org/diseases--conditions/medial-epicondylitis-golfers-elbow/",
+      "publisher": "American Academy of Orthopaedic Surgeons (OrthoInfo)"
+    },
+    {
+      "label": "Injection-based management of osteoarthritis of the knee: a systematic review of guidelines",
+      "url": "https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2021.661805/full",
+      "publisher": "Frontiers in Pharmacology, 2021"
+    }
+  ]
+}

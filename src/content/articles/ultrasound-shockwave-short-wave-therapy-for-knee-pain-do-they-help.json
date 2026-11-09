@@ -1,0 +1,91 @@
+{
+  "slug": "ultrasound-shockwave-short-wave-therapy-for-knee-pain-do-they-help",
+  "title": "Ultrasound, Shockwave and Short-Wave Therapy for Knee Pain: Do They Help?",
+  "metaDescription": "Do ultrasound, shockwave (ESWT) and short-wave diathermy relieve knee arthritis pain? An honest look at what they can and cannot do.",
+  "category": "Knee",
+  "date": "2026-11-09",
+  "dateModified": "2026-11-09",
+  "readTime": 6,
+  "intro": "These physiotherapy treatments can ease knee pain for some people for a while, but they are helpers, not cures. The research is modest, and some UK guidelines do not recommend them. That is why we use them only alongside exercises, usually when medicines alone have not given enough relief, and we tell you plainly what to expect.",
+  "sections": [
+    {
+      "heading": "What are these treatments?",
+      "body": "Ultrasound uses sound waves and short-wave diathermy uses gentle heat to soothe the knee. Shockwave therapy (ESWT) sends pressure waves into the sore area. All are done in a clinic or physiotherapy centre, take a short time per session, and are given as a course."
+    },
+    {
+      "heading": "Do they actually work?",
+      "body": "The evidence is mixed. A Cochrane review found ultrasound reduced knee pain a little in the short term but not movement, from small, low-quality studies. A review of short-wave found small pain benefits only when the treatment produced a feeling of warmth. A recent overview of eight reviews found shockwave improved knee pain and function compared with a fake treatment, though quality varied."
+    },
+    {
+      "heading": "Why do some guidelines not recommend them?",
+      "body": "NICE in the UK advises against offering TENS, ultrasound and pulsed short-wave therapy for arthritis, because it judges the benefit not strong enough. We follow the evidence honestly: these can help some patients feel better, but they are never a replacement for exercise."
+    },
+    {
+      "heading": "When do we use them?",
+      "body": "Our usual order is medicines first, then exercises. If pain is still stopping you from exercising or living normally, we may add one of these treatments for pain relief. If they do not help after a fair trial, we move on rather than repeat them."
+    },
+    {
+      "heading": "Are they safe?",
+      "body": "In the studies, serious side effects were not reported. Shockwave can cause brief discomfort during treatment. They are not suitable for everyone, for example over some implants or in certain skin or circulation problems, so the physiotherapist checks first."
+    },
+    {
+      "heading": "What should I expect?",
+      "body": "Relief, if it comes, is usually partial and temporary, so keep doing your exercises during and after the course. You decide whether to try them, and you should never be pushed into long, expensive courses."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is shockwave therapy good for knee arthritis?",
+      "a": "A 2024 overview found it improved pain and function compared with a fake treatment, but benefit can fade and quality of studies varies."
+    },
+    {
+      "q": "Does ultrasound therapy cure knee arthritis?",
+      "a": "No. At best it gives short-term pain relief."
+    },
+    {
+      "q": "Is short-wave diathermy effective for knee pain?",
+      "a": "Small benefits were seen only when it produced a warm feeling."
+    },
+    {
+      "q": "How many sessions are needed?",
+      "a": "It varies. We review after a few sessions and stop if there is no benefit."
+    },
+    {
+      "q": "Can I have these treatments instead of exercise?",
+      "a": "No. They are meant to help you exercise, not replace it."
+    },
+    {
+      "q": "Are these treatments covered by insurance?",
+      "a": "It depends on your policy; check with your insurer."
+    }
+  ],
+  "footerNote": "Related reading: <a href=\"/education/knee-arthritis-complete-guide-symptoms-treatment-surgery\">complete knee arthritis guide</a>, <a href=\"/education/best-exercises-for-knee-arthritis-simple-home-plan\">best exercises for knee arthritis</a>, <a href=\"/education/knee-injections-steroid-hyaluronic-prp-explained-for-patients\">knee injections explained</a>. If your knee is limiting your walking, stairs or sleep, Dr. Niranjan Ghag, orthopaedic surgeon in Thane West, can examine your knee and explain your options at a <a href=\"/book\">consultation</a>; the decision about treatment, including whether you need surgery at all, stays with you. This page is general information and does not replace an examination.",
+  "tags": [
+    "knee shockwave therapy",
+    "ESWT knee",
+    "ultrasound therapy knee",
+    "short wave diathermy knee"
+  ],
+  "citations": [
+    {
+      "label": "Osteoarthritis in over 16s: recommendations (NG226)",
+      "url": "https://www.nice.org.uk/guidance/NG226/chapter/recommendations",
+      "publisher": "NICE"
+    },
+    {
+      "label": "Therapeutic ultrasound for osteoarthritis of the knee or hip",
+      "url": "https://cochranelibrary.com/es/cdsr/doi/10.1002/14651858.CD003132.pub2/information/pl",
+      "publisher": "Cochrane"
+    },
+    {
+      "label": "Effectiveness of thermal and athermal short wave diathermy for the management of knee osteoarthritis",
+      "url": "https://cris.haifa.ac.il/en/publications/effectiveness-of-thermal-and-athermal-short-wave-diathermy-for-th/",
+      "publisher": "Osteoarthritis and Cartilage, 2012"
+    },
+    {
+      "label": "The efficacy of extracorporeal shock wave therapy for knee osteoarthritis: an umbrella review",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11020044",
+      "publisher": "PubMed Central, 2024"
+    }
+  ]
+}

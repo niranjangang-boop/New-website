@@ -1,0 +1,89 @@
+{
+  "slug": "tennis-elbow-steroid-injection-or-physiotherapy",
+  "title": "Tennis Elbow: Do I Need a Steroid Injection, or Is Physiotherapy Enough?",
+  "metaDescription": "Tennis elbow pain on the outer elbow: how long it takes to heal, why a steroid injection may not be the best first choice, and what works instead.",
+  "category": "Sports Injuries",
+  "date": "2026-11-09",
+  "dateModified": "2026-11-09",
+  "readTime": 5,
+  "intro": "Most tennis elbow settles without surgery or injections. Rest from the painful activity, medicines, and exercises for the forearm work for the large majority. A steroid injection eases pain quickly, but in a good trial people who had it were more likely to have the pain return within a year. So we usually keep it for later.",
+  "sections": [
+    {
+      "heading": "What is tennis elbow?",
+      "body": "Pain on the outer side of the elbow from strain on the forearm tendons. You do not need to play tennis; gripping, lifting and repetitive forearm work cause it. The AAOS (OrthoInfo) says it usually affects people aged 30 to 50 and comes on gradually, with a weaker grip and sometimes pain at night."
+    },
+    {
+      "heading": "Will it get better without surgery?",
+      "body": "Very likely. OrthoInfo says about 80 to 95 out of every 100 patients do well without surgery. Recovery takes weeks to months, so patience and a steady routine matter."
+    },
+    {
+      "heading": "What is our usual order of treatment?",
+      "body": "We usually start simple and move up only if you are not improving.",
+      "bullets": [
+        "Rest from painful activities for a few weeks and use pain relief gels or tablets.",
+        "Once the pain has eased, forearm stretching and strengthening exercises, with a brace if it helps.",
+        "If pain persists, physiotherapy treatments such as ultrasound or shockwave.",
+        "Injection only if still needed, for pain relief."
+      ],
+      "ordered": true
+    },
+    {
+      "heading": "Why not an injection first?",
+      "body": "In a trial of 165 adults, those given a steroid injection felt better quickly, but at one year they were less likely to be fully recovered and more likely to have the pain come back than those given a dummy injection. OrthoInfo also advises using steroid injections very sparingly."
+    },
+    {
+      "heading": "Are PRP and shockwave worth trying?",
+      "body": "The evidence is not strong. OrthoInfo says PRP studies are mixed and many doctors consider shockwave experimental. A Cochrane review found too little proof for platelet-rich treatments in tendon injuries. They may help some people with pain, but they should not replace exercises."
+    },
+    {
+      "heading": "When is surgery considered?",
+      "body": "Only if you have had no improvement after 6 to 12 months of proper treatment. OrthoInfo reports good results in 80 to 90 out of 100 people, though some strength loss is not unusual. Most people never need it."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How long does tennis elbow take to heal?",
+      "a": "Usually several weeks to months. Most improve without surgery."
+    },
+    {
+      "q": "Is a cortisone shot good for tennis elbow?",
+      "a": "It relieves pain quickly but may make the pain more likely to return later. OrthoInfo advises caution."
+    },
+    {
+      "q": "Should I wear a tennis elbow brace?",
+      "a": "A brace over the forearm can ease symptoms for some people while the tendon rests."
+    },
+    {
+      "q": "Can I keep working with tennis elbow?",
+      "a": "Often yes, with changes to how you grip and lift. We can advise for your job."
+    },
+    {
+      "q": "What is the difference between tennis elbow and golfer's elbow?",
+      "a": "Tennis elbow hurts on the outer side of the elbow; golfer's elbow on the inner side."
+    }
+  ],
+  "footerNote": "Related reading: <a href=\"/education/golfers-elbow-inner-elbow-pain-what-to-do\">golfer's elbow</a>, <a href=\"/education/prp-injection-for-sports-injuries-does-it-work\">PRP injections</a>, <a href=\"/procedures/sports-injuries\">sports injuries</a>. If your knee is limiting your walking, stairs or sleep, Dr. Niranjan Ghag, orthopaedic surgeon in Thane West, can examine your knee and explain your options at a <a href=\"/book\">consultation</a>; the decision about treatment, including whether you need surgery at all, stays with you. Pain after a fall or injury, a swollen or locked joint, or numbness that is getting worse should be seen promptly. This page is general information and does not replace an examination.",
+  "tags": [
+    "tennis elbow",
+    "lateral epicondylitis",
+    "elbow pain",
+    "steroid injection"
+  ],
+  "citations": [
+    {
+      "label": "Tennis elbow (lateral epicondylitis)",
+      "url": "https://www.orthoinfo.org/diseases--conditions/tennis-elbow-lateral-epicondylitis/",
+      "publisher": "American Academy of Orthopaedic Surgeons (OrthoInfo)"
+    },
+    {
+      "label": "Corticosteroid injections for tennis elbow: summary of the 2013 JAMA trial",
+      "url": "https://www.sciencedaily.com/releases/2013/02/130205162119.htm",
+      "publisher": "ScienceDaily (reporting JAMA 2013)"
+    },
+    {
+      "label": "Platelet-rich therapies for musculoskeletal soft tissue injuries",
+      "url": "https://www.cochrane.org/evidence/CD010071_platelet-rich-therapies-musculoskeletal-soft-tissue-injuries",
+      "publisher": "Cochrane"
+    }
+  ]
+}

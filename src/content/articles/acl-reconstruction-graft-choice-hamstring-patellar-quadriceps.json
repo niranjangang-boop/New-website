@@ -1,0 +1,77 @@
+{
+  "slug": "acl-reconstruction-graft-choice-hamstring-patellar-quadriceps",
+  "title": "ACL Surgery: Which Graft Is Best - Hamstring, Patellar Tendon or Quadriceps?",
+  "metaDescription": "Choosing a graft for ACL reconstruction: hamstring, patellar tendon, quadriceps or donor graft compared simply, with pros and cons.",
+  "category": "Sports Injuries",
+  "date": "2026-11-09",
+  "dateModified": "2026-11-09",
+  "readTime": 5,
+  "intro": "There is no single best graft for ACL reconstruction. A 2025 review says the choice should suit your age, sport, other health issues and recovery goals. Each graft trades something: strength, pain at the donor site, or speed of healing. Your surgeon should explain why they recommend one for you.",
+  "sections": [
+    {
+      "heading": "What are the options?",
+      "body": "The new ligament is built from a tendon. It can be taken from your own hamstring, your own patellar tendon (below the kneecap, with small bone blocks), or your own quadriceps tendon. A donor tendon (allograft) can also be used."
+    },
+    {
+      "heading": "What is used most often?",
+      "body": "The hamstring. In a large Swedish registry of nearly 40,000 ACL operations, hamstring was used in about 94 out of 100, patellar tendon in 4 and quadriceps tendon in 2. Practice differs between countries."
+    },
+    {
+      "heading": "Hamstring or patellar tendon?",
+      "body": "Hamstring is very strong and usually causes less pain at the front of the knee. Patellar tendon heals faster because bone joins to bone, but pain at the front of the knee is more common. Neither is proven better for everyone."
+    },
+    {
+      "heading": "What about the quadriceps tendon?",
+      "body": "A growing option. Reviews suggest less donor-site pain than patellar tendon with similar function, but long-term evidence is less than for the other two grafts, and it depends on the surgeon's experience."
+    },
+    {
+      "heading": "When is a donor graft used?",
+      "body": "Mostly for revisions or when several ligaments are injured, because it avoids harvesting your own tendon and shortens surgery. Some studies report higher failure with certain donor grafts."
+    },
+    {
+      "heading": "How should I decide?",
+      "body": "Ask which grafts your surgeon uses regularly, why they recommend one for you, and what recovery to expect. Recovery and return to sport depend on rehabilitation as much as the graft."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Which ACL graft is best?",
+      "a": "It depends on you. There is no single best."
+    },
+    {
+      "q": "Which ACL graft has the lowest re-tear rate?",
+      "a": "Studies are mixed, so no graft can be called safest for everyone."
+    },
+    {
+      "q": "Does a hamstring graft weaken my leg?",
+      "a": "Some hamstring weakness can occur; rehabilitation helps."
+    },
+    {
+      "q": "Do I need ACL surgery?",
+      "a": "Not everyone. See our ACL guide."
+    },
+    {
+      "q": "How long is ACL recovery?",
+      "a": "Several months; see our recovery timeline."
+    }
+  ],
+  "footerNote": "Related reading: <a href=\"/education/acl-tear-symptoms-treatment\">ACL tear guide</a>, <a href=\"/education/acl-surgery-recovery-timeline\">ACL recovery timeline</a>, <a href=\"/procedures/acl-reconstruction\">ACL reconstruction</a>. If your knee is limiting your walking, stairs or sleep, Dr. Niranjan Ghag, orthopaedic surgeon in Thane West, can examine your knee and explain your options at a <a href=\"/book\">consultation</a>; the decision about treatment, including whether you need surgery at all, stays with you. A knee that gives way repeatedly, locks, or swells quickly after an injury should be assessed promptly. This page is general information and does not replace an examination.",
+  "tags": [
+    "ACL graft",
+    "ACL reconstruction",
+    "hamstring graft",
+    "patellar tendon graft"
+  ],
+  "citations": [
+    {
+      "label": "What are the graft options for anterior cruciate ligament (ACL) reconstruction?",
+      "url": "https://orthopedicreviews.openmedicalpublishing.org/article/143767-what-are-the-graft-options-for-anterior-cruciate-ligament-acl-reconstruction",
+      "publisher": "Orthopedic Reviews, 2025"
+    },
+    {
+      "label": "Swedish National Knee Ligament Registry: factors in graft choice for ACL reconstruction",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9898417",
+      "publisher": "Swedish National Knee Ligament Registry study"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "slug": "partial-vs-total-knee-replacement-which-is-right-for-me",
+  "title": "Partial or Total Knee Replacement: Which Is Right for My Knee?",
+  "metaDescription": "Partial vs total knee replacement: who suits each, how recovery and long-term results compare, and why the right choice depends on your knee.",
+  "category": "Joint Replacement",
+  "date": "2026-11-09",
+  "dateModified": "2026-11-09",
+  "readTime": 5,
+  "intro": "Neither operation is better for everyone. A partial knee replacement suits a knee where only one part is worn, and a total knee replacement is the more dependable choice when the wear is spread across the knee. Your examination and standing X-rays decide, not the name of the operation.",
+  "sections": [
+    {
+      "heading": "What is the difference?",
+      "body": "The knee has three parts: the inner side, the outer side and the joint behind the kneecap. A partial (half) knee replacement replaces only the damaged part and keeps the rest of your own knee. A total knee replacement replaces the surfaces of the whole joint."
+    },
+    {
+      "heading": "Who is suitable for a partial replacement?",
+      "body": "People whose arthritis is limited to one part of the knee, with pain mainly on that side. OrthoInfo says you may not be suitable if you have arthritis from inflammatory disease, a very stiff knee or damaged ligaments. Pain all over the knee points towards a total replacement."
+    },
+    {
+      "heading": "Is recovery faster after a partial replacement?",
+      "body": "Somewhat. The NHS says recovery after a partial replacement is typically shorter, and people can usually drive after 3 weeks rather than 6. Studies show a hospital stay about one to two days shorter. The difference is real but modest, and rehabilitation matters either way."
+    },
+    {
+      "heading": "Does a partial replacement need redoing more often?",
+      "body": "On average, yes. Large registry studies show partial replacements are revised more often than total ones, which is the main drawback. A good trial found similar knee scores between the two at 5 years in the right patients. This is why choosing carefully matters."
+    },
+    {
+      "heading": "Which one will you recommend?",
+      "body": "We look at your X-rays, your knee's alignment and stability, your age, activity and what matters to you, and explain the options, including the pros and cons. If both are possible, the choice is yours."
+    },
+    {
+      "heading": "Do I need surgery at all?",
+      "body": "Only if pain still limits your life after medicines, exercises and other treatment. Many people never need an operation."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is partial knee replacement better than total?",
+      "a": "Not in general. It is better only for the right knee."
+    },
+    {
+      "q": "Who cannot have a partial knee replacement?",
+      "a": "People with wear in several parts of the knee, a very stiff knee, damaged ligaments or inflammatory arthritis may not be suitable."
+    },
+    {
+      "q": "How long does a partial knee replacement last?",
+      "a": "Studies show it lasts a long time in many people but is somewhat more likely to need redoing than a total replacement."
+    },
+    {
+      "q": "Is a partial knee replacement cheaper?",
+      "a": "Cost depends on the implant and hospital; we give you an itemised estimate after examination."
+    },
+    {
+      "q": "Can a partial be changed into a total later?",
+      "a": "Yes, if needed. Total replacement may be needed later if arthritis develops in the other parts of the knee."
+    },
+    {
+      "q": "How soon can I walk after a partial knee replacement?",
+      "a": "Most people walk with support the same or next day; the NHS says most go home within 1 to 4 days."
+    }
+  ],
+  "footerNote": "Related reading: <a href=\"/education/knee-arthritis-complete-guide-symptoms-treatment-surgery\">complete knee arthritis guide</a>, <a href=\"/education/how-long-does-a-knee-replacement-last\">how long a knee replacement lasts</a>, <a href=\"/education/knee-replacement-risks-how-safe-is-the-operation\">risks of knee replacement</a>, <a href=\"/procedures/knee-replacement\">knee replacement</a>. If your knee is limiting your walking, stairs or sleep, Dr. Niranjan Ghag, orthopaedic surgeon in Thane West, can examine your knee and explain your options at a <a href=\"/book\">consultation</a>; the decision about treatment, including whether you need surgery at all, stays with you. A knee that is suddenly hot, red and very swollen, locked, or unable to take weight needs to be seen the same day. This page is general information and does not replace an examination.",
+  "tags": [
+    "partial knee replacement",
+    "unicompartmental knee",
+    "total knee replacement"
+  ],
+  "citations": [
+    {
+      "label": "Unicompartmental knee replacement",
+      "url": "https://www.orthoinfo.org/bodypart/kneelower-leg/unicompartmental-knee-replacement",
+      "publisher": "American Academy of Orthopaedic Surgeons (OrthoInfo)"
+    },
+    {
+      "label": "Knee replacement: recovery",
+      "url": "https://www.nhs.uk/conditions/knee-replacement/recovery/",
+      "publisher": "NHS"
+    },
+    {
+      "label": "Partial knee replacements have some short-term advantages compared to total knee replacements",
+      "url": "https://evidence.nihr.ac.uk/alert/partial-knee-replacements-have-some-short-term-advantages-compared-to-total-knee-replacements",
+      "publisher": "National Institute for Health and Care Research"
+    },
+    {
+      "label": "Total versus partial knee replacement in patients with medial compartment knee osteoarthritis: the TOPKAT trial",
+      "url": "https://www.ndorms.ox.ac.uk/research/clinical-trials/current-trials-and-studies/topkat/publication_modal/1102846",
+      "publisher": "University of Oxford, NDORMS"
+    }
+  ]
+}
