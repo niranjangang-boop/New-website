@@ -1,0 +1,101 @@
+{
+  "slug": "lower-back-pain-what-helps-when-to-see-a-doctor",
+  "title": "Lower Back Pain: What Helps, What to Avoid and When to See a Doctor",
+  "metaDescription": "Most lower back pain settles within weeks. Learn what helps at home, what to avoid, and the warning signs that need a doctor's check without delay.",
+  "category": "Spine",
+  "date": "2026-11-10",
+  "dateModified": "2026-11-10",
+  "readTime": 4,
+  "intro": "Most lower back pain gets better by itself within a few weeks. What usually helps is staying active, using heat or cold, and taking a suitable painkiller. Long bed rest does not help. See a doctor if the pain lasts beyond a few weeks, or straight away if you have any of the warning signs listed below.",
+  "sections": [
+    {
+      "heading": "Will my lower back pain go away on its own?",
+      "body": "Usually, yes. The NHS describes lower back pain as very common, and it usually improves within a few weeks, although it can last longer or come back. Often there is no obvious cause. The most common reason is a strained muscle. A slipped disc or another spine condition is less common, and a serious cause such as a broken bone, infection or cancer is very rare."
+    },
+    {
+      "heading": "What can I do at home?",
+      "body": "Keep moving and carry on with your daily activities as far as pain allows. Gentle movement is better for most people than lying down. These simple steps can ease the pain:",
+      "bullets": [
+        "Avoid lying in bed for long periods.",
+        "Use an ice pack wrapped in a cloth for pain and swelling.",
+        "Use a hot water bottle wrapped in a cloth for stiffness or muscle spasm.",
+        "Try gentle back exercises and stretches, and stop if the pain gets worse.",
+        "Walking, swimming, yoga and pilates may also ease symptoms."
+      ]
+    },
+    {
+      "heading": "Which painkillers help?",
+      "body": "Anti-inflammatory tablets such as ibuprofen may help, but they are not suitable for everyone, and OrthoInfo notes that long-term use can cause stomach ulcers and kidney problems. NICE advises using them at the lowest effective dose for the shortest time. The NHS says paracetamol on its own is not recommended for back pain. Stronger opioid painkillers are kept for short-term use when other tablets are unsuitable or have not worked. Please ask a doctor or pharmacist which tablet is safe for you."
+    },
+    {
+      "heading": "Which treatments do guidelines advise against?",
+      "body": "NICE guidance on low back pain advises against several treatments. These are back belts or corsets, traction, acupuncture, ultrasound, TENS (a machine that sends mild electrical pulses through the skin), interferential therapy, special shoe inserts and rocker-sole shoes. It also advises against spinal injections for low back pain, and against gabapentin-type nerve medicines. OrthoInfo also notes there is no scientific evidence that traction works."
+    },
+    {
+      "heading": "What is our usual approach?",
+      "body": "We start with medicines to control the pain. Once the pain eases, we move on to exercises and strengthening, which help you return to normal activity. If that is not enough, we may use physiotherapy treatments such as ultrasound, short-wave or TENS for pain relief only. We are honest that the evidence for these is modest, and NICE does not recommend some of them. Injections are kept for selected patients and are for pain relief. Surgery is considered last, and only if it is appropriate. The decision is yours. Every plan is adjusted to the person."
+    },
+    {
+      "heading": "When should I see a doctor?",
+      "body": "Book a visit if your back pain has not improved after a few weeks of home care, or if it affects daily activities or sleep. The NHS also lists these reasons to get checked:",
+      "bullets": [
+        "Unexplained weight loss.",
+        "Pain that is worse at night or does not ease with rest.",
+        "Pain that gets worse when you cough, sneeze or open your bowels.",
+        "A lump, swelling or change in the shape of your back.",
+        "Fever, chills or feeling generally unwell, or severe pain that starts suddenly. Get seen the same day.",
+        "Weakness or numbness in both legs, numbness around the genitals or anus, new bladder or bowel problems, or pain after a serious injury. Go to an emergency department at once."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Should I rest in bed with back pain?",
+      "a": "No. The NHS advises keeping active and avoiding long periods in bed. Short rests are fine, but try to return to normal activity soon."
+    },
+    {
+      "q": "Is heat or ice better for back pain?",
+      "a": "Both can help. Ice wrapped in a cloth is used for pain and swelling, and heat for stiffness or muscle spasm. Always keep a cloth between the pack and your skin."
+    },
+    {
+      "q": "Can I take paracetamol alone for back pain?",
+      "a": "The NHS says paracetamol alone is not recommended for back pain. Your doctor or pharmacist may suggest another suitable painkiller, with or without paracetamol."
+    },
+    {
+      "q": "Do I need an MRI scan for back pain?",
+      "a": "Not always. Whether a scan is useful depends on your symptoms and examination. Our separate article on MRI scans explains this in more detail."
+    },
+    {
+      "q": "Is exercise safe when my back hurts?",
+      "a": "Gentle exercise is usually encouraged, and the NHS suggests trying stretches and back exercises. Stop if the pain clearly gets worse, and ask for advice on suitable exercises."
+    },
+    {
+      "q": "How long does lower back pain usually last?",
+      "a": "Most episodes improve within a few weeks. Pain that lasts longer, keeps returning or limits your life should be examined."
+    }
+  ],
+  "footerNote": "Related reading: <a href=\"/education/do-i-need-an-mri-for-back-pain\">Do I need an MRI for back pain?</a>, <a href=\"/education/slipped-disc-sciatica-how-long-and-do-i-need-surgery\">Slipped disc and sciatica: how long and do I need surgery?</a>, <a href=\"/education/back-pain-injections-and-treatments-do-they-help\">Back pain treatments explained</a>. If pain is limiting your daily activities or sleep, Dr. Niranjan Ghag, orthopaedic surgeon in Thane West, can examine you and explain your options at a <a href=\"/book\">consultation</a>; the decision about treatment, including whether you need surgery at all, stays with you. Seek prompt help if back pain comes with weakness or numbness in the legs, numbness around the genitals or anus, loss of bladder or bowel control, fever, a recent injury, unexplained weight loss, or pain that is worse at night. This page is general information and does not replace an examination.",
+  "tags": [
+    "lower back pain",
+    "back pain treatment",
+    "back pain home care",
+    "back pain red flags"
+  ],
+  "citations": [
+    {
+      "label": "NHS: Back pain",
+      "url": "https://www.nhs.uk/conditions/back-pain/",
+      "publisher": "NHS"
+    },
+    {
+      "label": "NICE NG59: Low back pain and sciatica in over 16s: assessment and management",
+      "url": "https://www.nice.org.uk/guidance/ng59/resources/low-back-pain-and-sciatica-in-over-16s-assessment-and-management-1837521693637",
+      "publisher": "NICE"
+    },
+    {
+      "label": "OrthoInfo: Low Back Pain",
+      "url": "https://www.orthoinfo.org/bodypart/back/low-back-pain",
+      "publisher": "AAOS OrthoInfo"
+    }
+  ]
+}

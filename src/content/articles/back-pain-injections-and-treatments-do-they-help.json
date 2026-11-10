@@ -1,0 +1,91 @@
+{
+  "slug": "back-pain-injections-and-treatments-do-they-help",
+  "title": "Back Pain Treatments Explained: Medicines, Physiotherapy, Injections and Surgery",
+  "metaDescription": "A plain guide to back pain treatments: medicines, exercise, physiotherapy, injections and surgery, what the evidence says, and how choices are made.",
+  "category": "Spine",
+  "date": "2026-11-10",
+  "dateModified": "2026-11-10",
+  "readTime": 4,
+  "intro": "Back pain treatment usually goes in steps. Medicines and exercise come first, and most people improve with them. Injections and surgery are for a smaller group of patients, and the evidence for some physiotherapy machines is modest. Here is how each option works and what guidelines say, so you can decide with your doctor.",
+  "sections": [
+    {
+      "heading": "Which medicines help back pain?",
+      "body": "Our usual approach is medicines first, to settle the pain. The NHS says anti-inflammatory painkillers such as ibuprofen may help but are not suitable for everyone. NICE advises the lowest effective dose for the shortest time, and says paracetamol alone should not be offered. Opioid painkillers are for short-term use only when other tablets are unsuitable or have not worked. NICE does not recommend gabapentin-type medicines for low back pain or sciatica."
+    },
+    {
+      "heading": "Do exercises and physiotherapy help?",
+      "body": "Once pain eases, exercise is the main treatment. The NHS lists exercise sessions and physiotherapy as main treatments, and NICE suggests considering a group exercise programme. NICE also says hands-on treatment such as massage or manipulation, and talking therapy to cope with pain (cognitive behavioural therapy), should only be used as part of a package that includes exercise. OrthoInfo adds that exercise to restore movement and strength in the lower back can be very helpful."
+    },
+    {
+      "heading": "What about ultrasound, short-wave and TENS?",
+      "body": "If exercise alone is not enough, we sometimes use physiotherapy machines such as ultrasound, short-wave or TENS (mild electrical pulses through the skin). We use them for pain relief only, not as a way to fix the problem. The evidence is modest, and NICE advises against ultrasound, TENS and interferential therapy for low back pain. We tell patients this openly, and some may prefer to skip them."
+    },
+    {
+      "heading": "When are injections used?",
+      "body": "Injections are for selected patients and for pain relief. NICE says not to offer spinal injections for low back pain itself. It does suggest considering an epidural injection of local anaesthetic and steroid for acute, severe sciatica (pain travelling down the leg). The NHS also mentions radiofrequency denervation, which seals off some small nerves, for long-term low back pain. NICE says it should be considered only after other non-surgical treatment has failed and a test injection has confirmed the source of pain."
+    },
+    {
+      "heading": "When is surgery considered?",
+      "body": "Surgery comes last, and only if it is appropriate. The NHS says it may be considered when an underlying problem such as a slipped disc does not respond to other treatments. NICE suggests considering decompression for sciatica when non-surgical treatment has not helped and scans match the symptoms. NICE advises against spinal fusion or disc replacement for low back pain, except in research trials. OrthoInfo says to try non-surgical options for 6 months to 1 year before considering surgery for general low back pain. The decision is yours."
+    },
+    {
+      "heading": "How do we choose the right treatment?",
+      "body": "We listen to your symptoms, examine you, and use scans only when they will change the plan. Treatment is tailored to your age, work, other illnesses and goals. You can stop or change course at any stage. Please see a doctor promptly if you have leg weakness, numbness around the genitals or anus, bladder or bowel changes, fever, a recent injury, unexplained weight loss or pain at night."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Do back pain injections fix the problem?",
+      "a": "No. Injections are used for pain relief in selected patients. Any relief may be temporary, and they do not replace exercise."
+    },
+    {
+      "q": "Why does NICE advise against TENS and ultrasound?",
+      "a": "NICE advises against them for low back pain. Some people still find them soothing, so we use them only for pain relief, after an honest discussion."
+    },
+    {
+      "q": "Is physiotherapy worth trying?",
+      "a": "Exercise-based physiotherapy is among the main treatments listed by the NHS. It is easier to take part once the pain has settled enough to move."
+    },
+    {
+      "q": "Do I need surgery for back pain?",
+      "a": "Most people do not. Surgery is considered when other treatments have not helped and there is a clear, treatable cause. The choice is always yours."
+    },
+    {
+      "q": "Are strong painkillers safe for long-term back pain?",
+      "a": "NICE does not advise opioids for long-term back pain or sciatica. Any medicine should be used at the lowest dose for the shortest time."
+    },
+    {
+      "q": "Is a back belt useful?",
+      "a": "NICE advises against belts and corsets for low back pain. Staying gently active is preferred."
+    }
+  ],
+  "footerNote": "Related reading: <a href=\"/education/lower-back-pain-what-helps-when-to-see-a-doctor\">Lower back pain: what helps</a>, <a href=\"/education/slipped-disc-sciatica-how-long-and-do-i-need-surgery\">Slipped disc and sciatica</a>, <a href=\"/procedures/spine-surgery\">Spine surgery</a>. If pain is limiting your daily activities or sleep, Dr. Niranjan Ghag, orthopaedic surgeon in Thane West, can examine you and explain your options at a <a href=\"/book\">consultation</a>; the decision about treatment, including whether you need surgery at all, stays with you. Seek prompt help if back pain comes with weakness or numbness in the legs, numbness around the genitals or anus, loss of bladder or bowel control, fever, a recent injury or unexplained weight loss. This page is general information and does not replace an examination.",
+  "tags": [
+    "back pain treatment",
+    "back pain injections",
+    "physiotherapy",
+    "back surgery"
+  ],
+  "citations": [
+    {
+      "label": "NICE NG59: Low back pain and sciatica in over 16s: assessment and management",
+      "url": "https://www.nice.org.uk/guidance/ng59/resources/low-back-pain-and-sciatica-in-over-16s-assessment-and-management-1837521693637",
+      "publisher": "NICE"
+    },
+    {
+      "label": "NHS: Back pain",
+      "url": "https://www.nhs.uk/conditions/back-pain/",
+      "publisher": "NHS"
+    },
+    {
+      "label": "NHS: Sciatica",
+      "url": "https://www.nhs.uk/conditions/sciatica/",
+      "publisher": "NHS"
+    },
+    {
+      "label": "OrthoInfo: Low Back Pain",
+      "url": "https://www.orthoinfo.org/bodypart/back/low-back-pain",
+      "publisher": "AAOS OrthoInfo"
+    }
+  ]
+}
