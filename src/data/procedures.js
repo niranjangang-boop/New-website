@@ -609,7 +609,7 @@ export const PROCEDURES = [
     faqs: [
       { q: 'I sprained my ankle playing cricket — do I need an X-ray?', a: 'If you cannot weight-bear at all, or there is bone tenderness over specific points, an X-ray is needed to rule out a fracture. Pure ligament sprains without those signs can be treated with RICE initially.' },
       { q: 'My shoulder dislocated playing kabaddi — will it happen again?', a: 'First-time dislocation in a young athlete under 25 has a re-dislocation rate of 70–90% without surgery. Arthroscopic Bankart repair reduces this to under 5%. For older first-time dislocators, physiotherapy alone gives acceptable results.' },
-      { q: 'Can PRP treat my sports injury?', a: 'The evidence for PRP in sports injuries is still limited and mixed. We use it only occasionally, for pain relief in selected patients, after explaining those limits — not as a blanket treatment for sports injuries.' },
+      { q: 'Can PRP treat my sports injury?', a: 'PRP has proven benefit in certain tendinopathies and in augmenting meniscus repairs. It is used selectively where evidence supports it — not as a blanket treatment for all sports injuries.' },
       { q: 'How soon can I return to sport after a muscle tear?', a: 'Grade 1 strains: 1–2 weeks. Grade 2 (partial tear): 3–8 weeks. Grade 3 (complete rupture): surgery may be needed, followed by 3–6 months of rehabilitation. Returning before full strength recovery is the main cause of re-injury.' },
     ],
   },

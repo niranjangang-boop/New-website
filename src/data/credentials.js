@@ -14,7 +14,7 @@ export const CURRENT_ROLES = {
   hospitals: [
     "Joshi's Neurotrauma Centre, Thane West",
     'Kaizen Super Speciality Hospital, Thane West',
-    'Sahayogi Hospital LLP, Naupada, Thane West',
+    'Borneo Hospital, Panch Pakhadi, Thane West',
   ],
 };
 

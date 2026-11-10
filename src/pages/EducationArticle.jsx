@@ -1,5 +1,5 @@
 import { Link, useParams, Navigate } from 'react-router-dom';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Seo from '../components/Seo.jsx';
 import Reveal from '../components/Reveal.jsx';
 import Breadcrumbs, { breadcrumbLd } from '../components/Breadcrumbs.jsx';
@@ -19,9 +19,20 @@ export default function EducationArticle() {
   const article = ARTICLES.find((a) => a.slug === slug);
 
   // Active-language content (falls back to English if a translation is missing)
+  // The 41 newer articles' translations live in per-language JSON files that are
+  // fetched only when a reader picks that language (keeps English pages light).
+  const [extra, setExtra] = useState({});
+  useEffect(() => {
+    if (lang === 'en' || extra[lang]) return;
+    const load = lang === 'mr'
+      ? () => import('../data/translations-extra-mr.json')
+      : () => import('../data/translations-extra-hi.json');
+    load().then((m) => setExtra((prev) => ({ ...prev, [lang]: m.default }))).catch(() => {});
+  }, [lang, extra]);
+
   const content =
-    lang !== 'en' && TRANSLATIONS[lang]?.[slug]
-      ? TRANSLATIONS[lang][slug]
+    lang !== 'en'
+      ? (TRANSLATIONS[lang]?.[slug] || extra[lang]?.[slug] || article)
       : article;
   const t = LABELS[lang] || LABELS.en;
 

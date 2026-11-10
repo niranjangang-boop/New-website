@@ -32,17 +32,11 @@
       ]
     },
     {
-      "name": "Sahayogi Hospital LLP",
-      "short_location": "Naupada, Thane West",
-      "address": "Post Office, Sita Vihar Society, Lal Bahadur Shastri Marg, near Navpada, Naupada, Damani Estate, Thane, Maharashtra 400602",
-      "map_url": "https://maps.app.goo.gl/VMzDEiSL7RxFEhZM7",
-      "landmark": "Near Navpada, Naupada",
-      "hours": [
-        {
-          "days": "Monday – Sunday",
-          "time": "Open 24 hours"
-        }
-      ]
+      "name": "Borneo Hospital",
+      "short_location": "Panch Pakhadi, Thane West",
+      "address": "Larkins 315, Namdeo Wadi Marg, Banacha Pada, Panch Pakhadi, Thane West, Thane, Maharashtra 400602",
+      "map_url": "https://share.google/hywmszMUWcwuyELJd",
+      "landmark": "Namdeo Wadi Marg, Banacha Pada, Panch Pakhadi"
     }
   ],
   "camp_form_endpoint": "https://script.google.com/macros/s/AKfycby0En5bCGLEC69YzqU8FTwVJHj79enj_HoLW8yYciPJGBNhtJQMbTCzfRARpaTKTBaA/exec"
