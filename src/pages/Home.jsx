@@ -23,7 +23,7 @@ const HOME_FAQ_JSONLD = {
       name: 'Where does Dr. Niranjan Ghag consult in Thane?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "He consults at three Thane West locations: Joshi's Neurotrauma Centre, Khopat (opposite Viviana Mall); Kaizen Super Speciality Hospital, Ramachandra Nagar; and Borneo Hospital, Panch Pakhadi. Appointments can be booked online or on WhatsApp at +91 90760 79000.",
+        text: "He consults at three Thane West locations: Joshi's Neurotrauma Centre, Khopat (opposite Viviana Mall); Kaizen Super Speciality Hospital, Ramachandra Nagar; and Borneo Mother and Child Care Hospital, Panch Pakhdi. Appointments can be booked online or on WhatsApp at +91 90760 79000.",
       },
     },
     {
@@ -98,7 +98,7 @@ export default function Home() {
               foot &amp; ankle surgery, sports injuries &amp; arthroscopy, and complex
               trauma &amp; fracture management. He consults at Joshi&rsquo;s Neurotrauma
               Centre, Khopat (opposite Viviana Mall), Kaizen Super Speciality Hospital,
-              Ramachandra Nagar, and Borneo Hospital, Panch Pakhadi — all in Thane West — with appointments available in English, Marathi
+              Ramachandra Nagar, and Borneo Mother and Child Care Hospital, Panch Pakhdi — all in Thane West — with appointments available in English, Marathi
               and Hindi. His tissue-sparing robotic techniques are designed for faster
               recovery: many knee and hip replacement patients walk the same day and
               return home within two to three days.
