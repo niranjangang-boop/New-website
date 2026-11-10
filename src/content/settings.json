@@ -36,7 +36,13 @@
       "short_location": "Panch Pakhadi, Thane West",
       "address": "Larkins 315, Namdeo Wadi Marg, Banacha Pada, Panch Pakhadi, Thane West, Thane, Maharashtra 400602",
       "map_url": "https://share.google/hywmszMUWcwuyELJd",
-      "landmark": "Namdeo Wadi Marg, Banacha Pada, Panch Pakhadi"
+      "landmark": "By appointment only — call or WhatsApp to book",
+      "hours": [
+        {
+          "days": "By appointment",
+          "time": "Call or WhatsApp +91 90760 79000 to book"
+        }
+      ]
     }
   ],
   "camp_form_endpoint": "https://script.google.com/macros/s/AKfycby0En5bCGLEC69YzqU8FTwVJHj79enj_HoLW8yYciPJGBNhtJQMbTCzfRARpaTKTBaA/exec"
