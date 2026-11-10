@@ -4,13 +4,13 @@
   "metaDescription": "Do ultrasound, shockwave (ESWT) and short-wave diathermy relieve knee arthritis pain? An honest look at what they can and cannot do.",
   "category": "Knee",
   "date": "2026-11-09",
-  "dateModified": "2026-11-09",
+  "dateModified": "2026-11-10",
   "readTime": 6,
-  "intro": "These physiotherapy treatments can ease knee pain for some people for a while, but they are helpers, not cures. The research is modest, and some UK guidelines do not recommend them. That is why we use them only alongside exercises, usually when medicines alone have not given enough relief, and we tell you plainly what to expect.",
+  "intro": "Ultrasound, short-wave diathermy and shockwave are pain-relieving treatments only. They can ease knee pain for some people for a while, but they do not repair or reverse arthritis. The research is modest, and some UK guidelines do not recommend them. That is why we use them only to settle pain so you can exercise, usually when medicines alone have not given enough relief, and we tell you plainly what to expect.",
   "sections": [
     {
       "heading": "What are these treatments?",
-      "body": "Ultrasound uses sound waves and short-wave diathermy uses gentle heat to soothe the knee. Shockwave therapy (ESWT) sends pressure waves into the sore area. All are done in a clinic or physiotherapy centre, take a short time per session, and are given as a course."
+      "body": "Ultrasound uses sound waves and short-wave diathermy uses gentle heat to soothe the knee. Shockwave therapy (ESWT) sends pressure waves into the sore area. None of them treats the cause of the arthritis. All are done in a clinic or physiotherapy centre, take a short time per session, and are given as a course."
     },
     {
       "heading": "Do they actually work?",
@@ -22,7 +22,7 @@
     },
     {
       "heading": "When do we use them?",
-      "body": "Our usual order is medicines first, then exercises. If pain is still stopping you from exercising or living normally, we may add one of these treatments for pain relief. If they do not help after a fair trial, we move on rather than repeat them."
+      "body": "Our usual order is medicines first, then exercises. If pain is still stopping you from exercising or living normally, we may add one of these treatments as a pain-relief measure only. If they do not help after a fair trial, we move on rather than repeat them."
     },
     {
       "heading": "Are they safe?",
@@ -59,7 +59,7 @@
       "a": "It depends on your policy; check with your insurer."
     }
   ],
-  "footerNote": "Related reading: <a href=\"/education/knee-arthritis-complete-guide-symptoms-treatment-surgery\">complete knee arthritis guide</a>, <a href=\"/education/best-exercises-for-knee-arthritis-simple-home-plan\">best exercises for knee arthritis</a>, <a href=\"/education/knee-injections-steroid-hyaluronic-prp-explained-for-patients\">knee injections explained</a>. If your knee is limiting your walking, stairs or sleep, Dr. Niranjan Ghag, orthopaedic surgeon in Thane West, can examine your knee and explain your options at a <a href=\"/book\">consultation</a>; the decision about treatment, including whether you need surgery at all, stays with you. This page is general information and does not replace an examination.",
+  "footerNote": "Related reading: <a href=\"/education/knee-arthritis-complete-guide-symptoms-treatment-surgery\">complete knee arthritis guide</a>, <a href=\"/education/exercises-for-knee-arthritis-simple-home-plan\">exercises for knee arthritis</a>, <a href=\"/education/knee-injections-steroid-hyaluronic-prp-explained-for-patients\">knee injections explained</a>. If your knee is limiting your walking, stairs or sleep, Dr. Niranjan Ghag, orthopaedic surgeon in Thane West, can examine your knee and explain your options at a <a href=\"/book\">consultation</a>; the decision about treatment, including whether you need surgery at all, stays with you. This page is general information and does not replace an examination.",
   "tags": [
     "knee shockwave therapy",
     "ESWT knee",

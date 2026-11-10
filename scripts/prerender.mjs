@@ -91,7 +91,8 @@ for (const route of ROUTES) {
 // <Seo path="/404" />) instead of just copying the homepage shell.
 {
   const { html, head } = render('/__not_found__');
-  writeFileSync(resolve(distDir, '404.html'), buildPage(html, head));
+  const notFoundPage = buildPage(html, head).replace('</head>', '    <meta name="robots" content="noindex, follow" />\n  </head>');
+  writeFileSync(resolve(distDir, '404.html'), notFoundPage);
 }
 
 console.log(`Prerendered ${count} routes + 404.html into dist/`);

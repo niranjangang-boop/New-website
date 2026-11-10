@@ -14,6 +14,9 @@ import {
   EXPERIENCE,
   RESEARCH_HIGHLIGHTS,
   MEDICAL_COUNCIL_REG,
+  MEDICAL_COUNCIL_REG_NO,
+  ORCID_ID,
+  ORCID_URL,
 } from '../data/credentials.js';
 
 export default function About() {
@@ -31,6 +34,15 @@ export default function About() {
         url: `${SITE.url}/about/`,
         image: `${SITE.url}/images/dr-ghag-photo.jpg`,
         medicalSpecialty: 'Orthopedic',
+        identifier: [
+          {
+            '@type': 'PropertyValue',
+            propertyID: 'Maharashtra Medical Council registration number',
+            value: MEDICAL_COUNCIL_REG_NO,
+          },
+          { '@type': 'PropertyValue', propertyID: 'ORCID', value: ORCID_ID },
+        ],
+        sameAs: [ORCID_URL],
         knowsLanguage: ['en', 'mr', 'hi'],
         jobTitle: CURRENT_ROLES.title,
         hospitalAffiliation: CURRENT_ROLES.hospitals.map((name) => ({
@@ -101,6 +113,12 @@ export default function About() {
                 imgClassName="rounded-2xl"
               />
               <p className="mt-4 text-center text-xs text-slate-500">{MEDICAL_COUNCIL_REG}</p>
+              <p className="mt-1 text-center text-xs text-slate-500">
+                ORCID:{' '}
+                <a href={ORCID_URL} target="_blank" rel="noopener noreferrer me" className="underline hover:text-brand-brown">
+                  {ORCID_ID}
+                </a>
+              </p>
             </div>
 
             <div className="space-y-5 leading-relaxed text-slate-700">

@@ -142,3 +142,9 @@ export const RESEARCH_HIGHLIGHTS = [
 ];
 
 export const MEDICAL_COUNCIL_REG = 'Maharashtra Medical Council — Reg. No. 2019/04/2411';
+export const MEDICAL_COUNCIL_REG_NO = '2019/04/2411';
+export const ORCID_ID = '0009-0004-4161-732X';
+export const ORCID_URL = `https://orcid.org/${ORCID_ID}`;
+// Shown in the site footer on every page (NMC ethical-advertising notice,
+// 06/10/2026: name, qualification and registration number must be visible).
+export const FOOTER_CREDENTIAL_LINE = 'Dr. Niranjan Ghag, M.S. (Orthopaedics) · Maharashtra Medical Council Reg. No. 2019/04/2411';

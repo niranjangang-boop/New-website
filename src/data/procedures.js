@@ -204,7 +204,7 @@ export const PROCEDURES = [
         bullets: [
           'Physiotherapy and exercise — the foundation for most knee problems; often underused',
           'Medications — anti-inflammatories, supplements; realistic expectations set upfront',
-          'Injections — corticosteroid for inflammation, hyaluronic acid for arthritis, PRP selectively',
+          'Injections — corticosteroid for inflammation; hyaluronic acid or PRP only occasionally, for pain relief only',
           'Arthroscopy — keyhole surgery to clean, repair or reconstruct inside the knee',
           'Knee replacement — only when arthritis is advanced and all other treatments have failed',
         ],
@@ -213,7 +213,7 @@ export const PROCEDURES = [
     faqs: [
       { q: 'My knee clicks and grinds — is that serious?', a: 'Clicking and crepitus (grinding) are common and usually harmless if there is no pain, swelling or locking. Clicking with pain or swelling needs investigation.' },
       { q: 'Can exercise make knee arthritis worse?', a: 'The right exercise actually protects the knee — it strengthens the muscles that take load off the joint. Walking, cycling and swimming are well tolerated and encouraged.' },
-      { q: 'Are knee injections effective?', a: 'Corticosteroid injections provide significant short-term relief (4–12 weeks) for inflamed arthritic knees. Hyaluronic acid has more modest evidence. PRP is used selectively where evidence supports it.' },
+      { q: 'Are knee injections effective?', a: 'Corticosteroid injections provide significant short-term relief (4–12 weeks) for inflamed arthritic knees. Hyaluronic acid has more modest evidence, and PRP is not recommended for knee arthritis in major guidelines; both are used only occasionally, for pain relief only, in selected patients.' },
       { q: 'When should I see a doctor for knee pain?', a: 'Immediately: if the knee is severely swollen, very hot, or locked. Soon: if pain limits your walking, work, or sleep for more than 2–3 weeks despite rest.' },
     ],
   },
@@ -417,7 +417,7 @@ export const PROCEDURES = [
     faqs: [
       { q: 'I have numbness in my fingers at night — what is it?', a: 'Night-time numbness in the first three fingers (thumb, index, middle) is the classic presentation of carpal tunnel syndrome. A nerve conduction study confirms the diagnosis. Treatment ranges from a night splint to a simple surgical release.' },
       { q: 'My finger keeps getting stuck in a bent position — what is wrong?', a: 'This is trigger finger — the tendon catches on a thickened pulley sheath. A single injection resolves it in 60–70% of cases. If it returns, a day-care surgical release gives a permanent cure.' },
-      { q: 'How long after a tendon cut should surgery be done?', a: 'Flexor tendon repairs are best done within 12–24 hours of injury. Seeking emergency care promptly gives the best outcomes.' },
+      { q: 'How long after a tendon cut should surgery be done?', a: 'Flexor tendon repairs are usually done within 12–24 hours of injury. Seeking emergency care promptly improves outcomes.' },
     ],
   },
 
@@ -497,17 +497,17 @@ export const PROCEDURES = [
       {
         heading: 'Treatment — most cases resolve without surgery',
         bullets: [
-          'Stretching — calf and plantar fascia stretches; the most effective treatment when done consistently',
+          'Stretching — calf and plantar fascia stretches; the cornerstone of treatment when done consistently',
           'Supportive footwear and insoles — heel cups, arch support; avoid walking barefoot on hard floors',
           'Night splint — keeps the plantar fascia stretched while sleeping',
-          'Corticosteroid injection — targeted relief for persistent cases; significant improvement in most',
-          'Shockwave therapy — for chronic cases not responding after 3–6 months',
-          'Surgery — plantar fascia release; reserved for the small number who fail all non-surgical treatment',
+          'Corticosteroid injection — short-term pain relief for persistent cases, used sparingly because it can weaken the heel band',
+          'Shockwave therapy — for pain relief in chronic cases not responding after 3–6 months; research results are mixed',
+          'Surgery — plantar fascia release; considered only after about 12 months of good non-surgical care',
         ],
       },
     ],
     faqs: [
-      { q: 'How long does plantar fasciitis take to heal?', a: 'With consistent stretching and appropriate footwear, 80% of patients are significantly better within 6–12 months. An injection can accelerate this considerably. Surgery is a last resort for the 5–10% who do not respond.' },
+      { q: 'How long does plantar fasciitis take to heal?', a: 'More than 9 in 10 people improve within about 10 months with simple measures such as stretching and supportive footwear (American Academy of Orthopaedic Surgeons), and many feel better sooner. An injection may ease pain for a while but is used sparingly. Surgery is considered only if there is no improvement after about 12 months of good non-surgical care.' },
       { q: 'Does a heel spur always need surgery?', a: 'Almost never. The spur itself is rarely the source of pain — the plantar fascia inflammation is. Treating the inflammation resolves the pain without touching the spur.' },
       { q: 'My heel pain is worst in the morning — why?', a: 'The plantar fascia tightens during sleep. The first steps suddenly stretch it, causing pain. This "first-step pain" that eases after a few minutes is the classic presentation of plantar fasciitis.' },
     ],
@@ -557,7 +557,7 @@ export const PROCEDURES = [
     ],
     faqs: [
       { q: 'What happens if I just leave my ACL tear?', a: 'Some knees cope; many give way during twisting movements. Each giving-way episode risks tearing the meniscus and damaging cartilage, accelerating arthritis. If your knee feels unstable, early assessment protects its future.' },
-      { q: 'Which graft is best?', a: 'There is no single best graft — hamstring, patellar tendon and quadriceps grafts each have trade-offs in strength, harvest pain and re-rupture rates. The choice is matched to your sport, age and anatomy.' },
+      { q: 'Which graft should I choose?', a: 'No single graft suits everyone — hamstring, patellar tendon and quadriceps grafts each have trade-offs in strength, harvest pain and re-rupture rates. The choice is matched to your sport, age and anatomy.' },
       { q: 'How long is the hospital stay?', a: 'ACL reconstruction is typically a day-care or one-night procedure. You walk with support before discharge and start physiotherapy immediately.' },
       { q: 'Will my knee be as good as before?', a: 'With a well-done reconstruction and completed rehabilitation, most athletes return to their previous level. Compliance with the full physiotherapy protocol is the biggest factor — more than the surgery itself.' },
       { q: 'ACL repair or ACL reconstruction — what is the difference?', a: 'Repair stitches the torn ligament back together and is only suitable for select, very fresh tears with good tissue quality. Reconstruction replaces the ligament with a graft and is the standard, more reliable option for most ACL tears, especially in athletes. Which one applies to you is assessed on MRI and at arthroscopy.' },
@@ -609,7 +609,7 @@ export const PROCEDURES = [
     faqs: [
       { q: 'I sprained my ankle playing cricket — do I need an X-ray?', a: 'If you cannot weight-bear at all, or there is bone tenderness over specific points, an X-ray is needed to rule out a fracture. Pure ligament sprains without those signs can be treated with RICE initially.' },
       { q: 'My shoulder dislocated playing kabaddi — will it happen again?', a: 'First-time dislocation in a young athlete under 25 has a re-dislocation rate of 70–90% without surgery. Arthroscopic Bankart repair reduces this to under 5%. For older first-time dislocators, physiotherapy alone gives acceptable results.' },
-      { q: 'Can PRP treat my sports injury?', a: 'PRP has proven benefit in certain tendinopathies and in augmenting meniscus repairs. It is used selectively where evidence supports it — not as a blanket treatment for all sports injuries.' },
+      { q: 'Can PRP treat my sports injury?', a: 'The evidence for PRP in sports injuries is still limited and mixed. We use it only occasionally, for pain relief in selected patients, after explaining those limits — not as a blanket treatment for sports injuries.' },
       { q: 'How soon can I return to sport after a muscle tear?', a: 'Grade 1 strains: 1–2 weeks. Grade 2 (partial tear): 3–8 weeks. Grade 3 (complete rupture): surgery may be needed, followed by 3–6 months of rehabilitation. Returning before full strength recovery is the main cause of re-injury.' },
     ],
   },

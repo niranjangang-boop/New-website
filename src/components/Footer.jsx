@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { SITE, CLINICS, SPECIALTIES } from '../data/site.js';
 import { PROCEDURES } from '../data/procedures.js';
+import { FOOTER_CREDENTIAL_LINE, ORCID_ID, ORCID_URL } from '../data/credentials.js';
 
 const featuredProcedures = PROCEDURES.filter((p) => p.featured);
 
@@ -109,8 +110,20 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="relative border-t border-white/10 py-4 text-center text-xs text-slate-400">
-        © {new Date().getFullYear()} {SITE.name}. All rights reserved.
+      <div className="relative border-t border-white/10 px-4 py-4 text-center text-xs text-slate-400">
+        <p>{FOOTER_CREDENTIAL_LINE}</p>
+        <p className="mt-1">
+          ORCID:{' '}
+          <a
+            href={ORCID_URL}
+            target="_blank"
+            rel="noopener noreferrer me"
+            className="transition-colors hover:text-white hover:underline"
+          >
+            {ORCID_ID}
+          </a>
+        </p>
+        <p className="mt-1">© {new Date().getFullYear()} {SITE.name}. All rights reserved.</p>
       </div>
     </footer>
   );

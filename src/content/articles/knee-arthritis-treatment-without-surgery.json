@@ -4,6 +4,7 @@
   "metaDescription": "Bone-on-bone knee arthritis? Surgery isn't always the first step. An honest look at exercises, injections and lifestyle changes that work — and when surgery is truly needed.",
   "category": "Knee",
   "date": "2026-06-28",
+  "dateModified": "2026-11-10",
   "readTime": 6,
   "intro": "Not every painful knee needs an operation — including many that are described as 'bone-on-bone' on a report. Here's the actual treatment ladder, in the order it should usually be tried, and the honest signs that tell you when surgery has become the right call rather than just an option.",
   "sections": [
@@ -15,7 +16,7 @@
         "Targeted physiotherapy — quadriceps and hip-strengthening exercises that offload the joint, not generic stretching",
         "Activity modification — switching high-impact activity for swimming, cycling or an elliptical",
         "Medication — short courses of anti-inflammatories or pain relief for flare-ups, not continuous long-term use",
-        "Injections — steroid for quick flare relief, hyaluronic acid (viscosupplementation) for lubrication, PRP for some patients — each has a different role and duration of benefit",
+        "Injections — steroid for flare relief; hyaluronic acid or PRP only occasionally, and only for pain relief — each has a different role and duration of benefit",
         "Surgery — considered only once the steps above no longer give an acceptable quality of life"
       ]
     },
@@ -38,9 +39,9 @@
     }
   ],
   "faqs": [
-    { "q": "What is the best home remedy for bone-on-bone knee pain?", "a": "There is no single remedy that reverses bone-on-bone changes, but consistent quadriceps strengthening, weight management, low-impact activity and short flare-up courses of ice/anti-inflammatories together give the most reliable relief without surgery." },
+    { "q": "Which home remedies help bone-on-bone knee pain?", "a": "There is no single remedy that reverses bone-on-bone changes, but consistent quadriceps strengthening, weight management, low-impact activity and short flare-up courses of ice/anti-inflammatories together give the most reliable relief without surgery." },
     { "q": "Can you live a normal life with knee arthritis?", "a": "Many people do, for years, with the right combination of strengthening, activity modification and occasional injections. The goal of conservative treatment is exactly this — a normal, active life without rushing to surgery." },
-    { "q": "How long do knee injections last?", "a": "Steroid injections typically help for weeks to a few months and are best used sparingly. Hyaluronic acid injections can offer relief for several months in suitable patients. Neither is a permanent fix, but both can meaningfully delay or avoid surgery." },
+    { "q": "How long do knee injections last?", "a": "Steroid injections typically help for weeks to a few months and are best used sparingly. Hyaluronic acid or PRP may give some pain relief in selected patients, but guidelines disagree and NICE advises against hyaluronic acid for arthritis. None of them repairs the knee or is a permanent fix; we use them for pain relief only." },
     { "q": "When should I stop trying non-surgical treatment and consider replacement?", "a": "When pain persists despite a genuine, consistent trial of the steps above — not just one injection or a few physiotherapy sessions — and it is limiting your sleep, walking or daily activities." }
   ],
   "tags": ["knee arthritis", "non-surgical", "physiotherapy", "injections"]
