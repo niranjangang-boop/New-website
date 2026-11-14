@@ -1,12 +1,14 @@
 {
   "slug": "frozen-shoulder-treatment",
   "title": "Frozen Shoulder: Why It Happens, How Long It Lasts, and What Actually Helps",
+  "seoTitle": "Frozen Shoulder: Causes, Duration and Treatment",
   "metaDescription": "Frozen shoulder explained: the three stages, why diabetes raises your risk, which treatments have evidence, and when to see a shoulder specialist in Thane.",
   "category": "Sports Injuries",
   "date": "2026-09-06",
   "dateModified": "2026-09-06",
   "readTime": 7,
   "intro": "Frozen shoulder is one of the few orthopaedic conditions that gets worse for months before it gets better — and that timeline is what makes it so distressing. Patients are often told to \"give it time,\" which is partly right and deeply unsatisfying. Here is what is actually happening inside the joint, why it disproportionately affects people with diabetes, and which treatments have evidence behind them.",
+  "summary": "Frozen shoulder stiffens and hurts for months before slowly freeing up, and full recovery often takes one to three years. Most people improve with pain control and regular gentle stretching, sometimes with an early steroid injection. Surgery is kept for shoulders that stay stiff despite this. It is more common with diabetes.",
   "sections": [
     {
       "heading": "What is frozen shoulder?",
@@ -35,14 +37,42 @@
       "body": "No single treatment resolves frozen shoulder quickly, and anyone promising that is overselling. The evidence favours combining approaches — pain control that makes movement tolerable, paired with a structured stretching programme. Corticosteroid injection into the joint is the most useful early intervention: roughly half of patients get meaningful pain relief and improved range, and the relief creates a window in which physiotherapy becomes possible. Injection without follow-up physiotherapy wastes that window.",
       "table": {
         "caption": "Treatment options in rough order of escalation. Stage matters — what helps in the thawing stage can aggravate the freezing stage.",
-        "headers": ["Treatment", "What it does", "Where it fits"],
+        "headers": [
+          "Treatment",
+          "What it does",
+          "Where it fits"
+        ],
         "rows": [
-          ["Analgesia and activity modification", "Controls pain enough to keep the shoulder moving", "First line, all stages"],
-          ["Structured physiotherapy", "Restores range through graded stretching", "Core of treatment; most effective once pain is controlled"],
-          ["Intra-articular corticosteroid injection", "Reduces capsular inflammation and pain", "Early, to open a window for physiotherapy"],
-          ["Hydrodilatation (capsular distension)", "Distends the tight capsule with fluid under pressure", "When stiffness persists despite the above"],
-          ["Manipulation under anaesthesia", "Releases adhesions with the patient asleep", "Resistant cases, after conservative treatment has been given a fair trial"],
-          ["Arthroscopic capsular release", "Keyhole division of the contracted capsule", "Last resort, for persistent disabling stiffness"]
+          [
+            "Analgesia and activity modification",
+            "Controls pain enough to keep the shoulder moving",
+            "First line, all stages"
+          ],
+          [
+            "Structured physiotherapy",
+            "Restores range through graded stretching",
+            "Core of treatment; most effective once pain is controlled"
+          ],
+          [
+            "Intra-articular corticosteroid injection",
+            "Reduces capsular inflammation and pain",
+            "Early, to open a window for physiotherapy"
+          ],
+          [
+            "Hydrodilatation (capsular distension)",
+            "Distends the tight capsule with fluid under pressure",
+            "When stiffness persists despite the above"
+          ],
+          [
+            "Manipulation under anaesthesia",
+            "Releases adhesions with the patient asleep",
+            "Resistant cases, after conservative treatment has been given a fair trial"
+          ],
+          [
+            "Arthroscopic capsular release",
+            "Keyhole division of the contracted capsule",
+            "Last resort, for persistent disabling stiffness"
+          ]
         ]
       }
     },
@@ -95,5 +125,12 @@
     }
   ],
   "footerNote": "Shoulder stiff for more than six weeks? Read about <a href=\"/specialties/sports-arthroscopy\">sports injury &amp; arthroscopy care</a> or <a href=\"/procedures/keyhole-surgery\">keyhole (arthroscopic) surgery</a> with Dr. Ghag, or <a href=\"/book\">book an assessment</a> in Thane West.",
-  "tags": ["frozen shoulder", "adhesive capsulitis", "shoulder pain", "diabetes", "physiotherapy", "shoulder stiffness"]
+  "tags": [
+    "frozen shoulder",
+    "adhesive capsulitis",
+    "shoulder pain",
+    "diabetes",
+    "physiotherapy",
+    "shoulder stiffness"
+  ]
 }

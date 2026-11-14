@@ -1,6 +1,7 @@
 {
   "slug": "flat-feet-in-adults-inner-ankle-pain-do-i-need-surgery",
   "title": "Flat Feet in Adults: When Does It Matter, and Do You Need Surgery?",
+  "seoTitle": "Flat Feet in Adults: Do You Need Surgery?",
   "metaDescription": "Most adult flat feet need no treatment. If your arch is dropping with inner-ankle pain: what helps, when surgery is considered and what recovery involves.",
   "category": "Foot & Ankle",
   "date": "2026-11-11",
@@ -47,12 +48,32 @@
       "body": "Surgery is considered when pain persists after several months of proper non-surgical treatment, or when walking has become very difficult. It is not offered to change how a painless foot looks. The operation depends on how flexible the foot is and whether arthritis has set in, and it is often a combination of procedures rather than a single one. A flexible foot can often be corrected while preserving its joints; a stiff or arthritic foot usually needs some joints fused.",
       "table": {
         "caption": "How the type of flat foot usually shapes the surgical options. A general guide based on AAOS patient information; the actual plan depends on your examination and X-rays.",
-        "headers": ["Situation", "Usual surgical approach", "Aim"],
+        "headers": [
+          "Situation",
+          "Usual surgical approach",
+          "Aim"
+        ],
         "rows": [
-          ["Early disease, inflamed tendon, little deformity", "Cleaning out the inflamed tendon lining, sometimes calf lengthening", "Relieve pain and protect the tendon"],
-          ["Flexible flat foot with a failing tendon", "Tendon transfer combined with a heel bone realignment (osteotomy) and often ligament repair", "Restore support while keeping the joints moving"],
-          ["Stiff or arthritic flat foot", "Fusion of the affected foot joints", "A stable, less painful foot"],
-          ["Ankle also unstable or arthritic", "Ligament repair, or ankle fusion or replacement", "Address the ankle along with the foot"]
+          [
+            "Early disease, inflamed tendon, little deformity",
+            "Cleaning out the inflamed tendon lining, sometimes calf lengthening",
+            "Relieve pain and protect the tendon"
+          ],
+          [
+            "Flexible flat foot with a failing tendon",
+            "Tendon transfer combined with a heel bone realignment (osteotomy) and often ligament repair",
+            "Restore support while keeping the joints moving"
+          ],
+          [
+            "Stiff or arthritic flat foot",
+            "Fusion of the affected foot joints",
+            "A stable, less painful foot"
+          ],
+          [
+            "Ankle also unstable or arthritic",
+            "Ligament repair, or ankle fusion or replacement",
+            "Address the ankle along with the foot"
+          ]
         ]
       }
     },
@@ -87,8 +108,15 @@
       "a": "It is a long recovery. A period of around three months in a cast is common, with no weight on the foot until your surgeon allows it, and healing typically takes six months or more before pain improves substantially. More severe deformities take longer."
     }
   ],
-  "footerNote": "See also our guides to <a href=\"/education/heel-pain-plantar-fasciitis\">heel pain and plantar fasciitis</a>, <a href=\"/education/bunion-surgery-do-i-need-it\">whether a bunion needs surgery</a>, <a href=\"/education/ankle-sprain-vs-fracture\">ankle sprain versus fracture</a> and <a href=\"/education/diabetic-foot-sore-not-healing-how-worried-should-i-be\">diabetic foot sores</a>. For the wider picture, read about <a href=\"/specialties/foot-ankle\">foot and ankle problems</a> and <a href=\"/procedures/foot-ankle-surgery\">foot and ankle surgery</a>, or <a href=\"/book\">book a consultation</a>. This article is general information, not a substitute for examination of your own foot.",
-  "tags": ["flat feet", "flat foot", "posterior tibial tendon dysfunction", "adult acquired flatfoot", "foot and ankle", "flat foot surgery"],
+  "footerNote": "See also our guides to <a href=\"/education/heel-pain-plantar-fasciitis\">heel pain and plantar fasciitis</a>, <a href=\"/education/bunion-surgery-do-i-need-it\">whether a bunion needs surgery</a>, <a href=\"/education/ankle-sprain-vs-fracture\">ankle sprain versus fracture</a> and <a href=\"/education/diabetic-foot-sore-not-healing-how-worried-should-i-be\">diabetic foot sores</a>. For the wider picture, read about <a href=\"/specialties/foot-ankle\">foot and ankle problems</a> and <a href=\"/procedures/foot-ankle-surgery\">foot and ankle surgery</a>, or <a href=\"/contact\">see locations and OPD hours</a>. This article is general information, not a substitute for examination of your own foot.",
+  "tags": [
+    "flat feet",
+    "flat foot",
+    "posterior tibial tendon dysfunction",
+    "adult acquired flatfoot",
+    "foot and ankle",
+    "flat foot surgery"
+  ],
   "citations": [
     {
       "label": "Progressive Collapsing Foot Deformity (Flatfoot)",

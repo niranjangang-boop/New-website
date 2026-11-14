@@ -86,7 +86,7 @@ collections:
                   - label: "Time"
                     name: "time"
                     widget: "string"
-                    hint: "E.g. Open 24 hours, or 3:00 PM – 7:00 PM"
+                    hint: "Dr. Ghag's own OPD hours, e.g. 4:00 PM – 6:00 PM. Not the hospital's 24-hour emergency cover. Also update src/data/opd.js (booking slots and schema)."
 
 
   # ── Patient Education Articles ──────────────────────────────────────────────

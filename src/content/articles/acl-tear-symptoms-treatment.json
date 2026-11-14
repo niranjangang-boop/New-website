@@ -1,12 +1,14 @@
 {
   "slug": "acl-tear-symptoms-treatment",
   "title": "ACL Tear: Symptoms, Treatment Options and Return to Sports",
-  "metaDescription": "Heard a pop in your knee during sports? Learn ACL tear symptoms, when surgery is and isn't needed, recovery timeline after reconstruction, and the return-to-sport protocol — from a sports arthroscopy specialist in Thane.",
+  "seoTitle": "ACL Tear: Symptoms, Treatment and Return to Sport",
+  "metaDescription": "Heard a pop in your knee during sport? ACL tear symptoms, when surgery is and isn't needed, recovery after reconstruction and return to sport.",
   "category": "Sports Injuries",
   "date": "2026-06-12",
   "dateModified": "2026-08-21",
   "readTime": 8,
   "intro": "An anterior cruciate ligament (ACL) tear is one of the most common serious sports injuries. The story is usually the same: a sudden twist on a planted foot — during football, cricket, kabaddi, badminton or even a misstep on stairs — an audible \"pop,\" and a knee that swells within hours. What you do in the following weeks decides whether the knee becomes stable and strong again or keeps giving way for years.",
+  "summary": "Typical signs are a pop during a twist, swelling within a few hours, and a knee that gives way on turning. A complete tear does not heal back together, but not everyone needs surgery: low-demand knees can do well with physiotherapy, while active people with a knee that gives way usually benefit from reconstruction.",
   "sections": [
     {
       "heading": "Classic symptoms of an ACL tear",
@@ -72,5 +74,12 @@
     }
   ],
   "footerNote": "Suspect an ACL injury? Read about <a href=\"/procedures/acl-reconstruction\">arthroscopic ACL reconstruction</a> and <a href=\"/specialties/sports-arthroscopy\">sports arthroscopy</a> with Dr. Ghag, or <a href=\"/book\">book an assessment</a>.",
-  "tags": ["ACL", "sports injury", "knee", "arthroscopy", "ACL reconstruction", "ACL tear treatment"]
+  "tags": [
+    "ACL",
+    "sports injury",
+    "knee",
+    "arthroscopy",
+    "ACL reconstruction",
+    "ACL tear treatment"
+  ]
 }

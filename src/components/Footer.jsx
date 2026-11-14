@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { SITE, CLINICS, SPECIALTIES } from '../data/site.js';
+import { SITE, CLINICS, SPECIALTIES, slugify } from '../data/site.js';
 import { PROCEDURES } from '../data/procedures.js';
 import { FOOTER_CREDENTIAL_LINE, ORCID_ID, ORCID_URL } from '../data/credentials.js';
 
@@ -17,7 +17,7 @@ export default function Footer() {
         <div>
           <p className="font-serif text-lg font-bold text-white">{SITE.name}</p>
           <p className="mt-2 text-sm leading-relaxed">
-            Advanced orthopaedic care with precision, compassion &amp; innovation.
+            Orthopaedic surgeon in Thane West — knee, hip, sports injury, foot &amp; ankle and fracture care.
           </p>
         </div>
 
@@ -63,7 +63,9 @@ export default function Footer() {
           <div className="space-y-4">
             {CLINICS.map((clinic, i) => (
               <div key={i} className={i > 0 ? 'border-t border-white/10 pt-4' : ''}>
-                <p className="text-sm font-medium text-white">{clinic.name}</p>
+                <p className="text-sm font-medium text-white">
+                  <Link to={`/locations/${slugify(clinic.name)}`} className="hover:underline">{clinic.name}</Link>
+                </p>
                 <p className="mt-1 text-sm leading-relaxed">{clinic.address}</p>
                 <a
                   href={clinic.mapUrl}
@@ -104,6 +106,11 @@ export default function Footer() {
             <li>
               <Link to="/sitemap" className="transition-colors hover:text-white">
                 Sitemap
+              </Link>
+            </li>
+            <li>
+              <Link to="/privacy" className="transition-colors hover:text-white">
+                Privacy Policy
               </Link>
             </li>
           </ul>

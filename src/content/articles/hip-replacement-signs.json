@@ -1,12 +1,14 @@
 {
   "slug": "hip-replacement-signs",
   "title": "Hip Replacement Surgery: 5 Signs You May Need It — and What Happens Next",
-  "metaDescription": "Groin pain, stiffness, night pain and a shrinking walking distance? Learn the 5 signs of hip arthritis, what causes it, and what modern total hip replacement actually involves — from a Thane orthopaedic surgeon.",
+  "seoTitle": "5 Signs You May Need a Hip Replacement",
+  "metaDescription": "Groin pain, stiffness, night pain or a shrinking walking distance? Five signs of hip arthritis, what causes it, and what hip replacement involves.",
   "category": "Joint Replacement",
   "date": "2026-06-12",
-  "dateModified": "2026-08-22",
+  "dateModified": "2026-11-14",
   "readTime": 7,
   "intro": "Hip arthritis is a master of disguise. It often shows up as a groin strain, thigh pain, or even knee pain — so many patients spend months treating the wrong joint. By the time the diagnosis is clear, they have quietly given up walks, stairs, and sitting on the floor. That's a loss you don't have to accept: modern total hip replacement is one of the most successful operations in all of surgery, with over 90% of implants still working well after 15 years.",
+  "summary": "Signs that hip arthritis may need replacement are groin or thigh pain on walking, stiffness that makes socks or sitting cross-legged hard, shrinking walking distance, night pain and a limp. Surgery is considered only when these limit daily life despite physiotherapy, weight control and pain relief.",
   "sections": [
     {
       "heading": "The 5 signs your hip — not your back or knee — is the problem",
@@ -32,7 +34,7 @@
     },
     {
       "heading": "How long does a hip replacement last?",
-      "body": "With modern implants, more than 90% last 15 years and many last 25 or more. For younger, active patients, implant choice (such as ceramic bearings) is tailored to maximise lifespan."
+      "body": "Registry analyses published in The Lancet in 2019 found about 89% of total hip replacements still in place at 15 years and about 58% at 25 years. For younger, active patients, implant choice (such as ceramic bearings) is tailored to maximise lifespan."
     },
     {
       "heading": "When to see a surgeon",
@@ -50,7 +52,7 @@
     },
     {
       "q": "How long does a hip replacement last?",
-      "a": "With modern implants, more than 90% of hip replacements last 15 years and many last 25 years or more. Implant materials are chosen based on the patient's age and activity level to maximise lifespan."
+      "a": "Registry analyses published in The Lancet in 2019 found about 89% of total hip replacements still in place at 15 years and about 58% at 25 years. Implant materials are chosen based on the patient's age and activity level to maximise lifespan."
     },
     {
       "q": "How soon can I walk after hip replacement surgery?",
@@ -61,7 +63,7 @@
       "a": "Avascular necrosis is loss of blood supply to the ball of the hip joint, causing the bone to collapse. It often affects younger patients and can be linked to steroid use or heavy alcohol intake. Early stages may be treated joint-preservingly; advanced AVN is a common reason for hip replacement in India."
     }
   ],
-  "footerNote": "Think these signs sound familiar? Learn what <a href=\"/procedures/hip-replacement\">hip replacement surgery with Dr. Ghag</a> involves, or <a href=\"/book\">book a consultation</a> in Thane West.",
+  "footerNote": "Think these signs sound familiar? Learn what <a href=\"/procedures/hip-replacement\">hip replacement surgery with Dr. Ghag</a> involves, or <a href=\"/contact\">see locations and OPD hours</a> in Thane West.",
   "tags": [
     "hip replacement",
     "arthritis",
@@ -74,6 +76,11 @@
       "label": "Total Hip Replacement — patient information",
       "url": "https://www.orthoinfo.org/treatment/total-hip-replacement/",
       "publisher": "American Academy of Orthopaedic Surgeons (OrthoInfo)"
+    },
+    {
+      "label": "Global study finds high success rate for hip and knee replacements (The Lancet, 2019)",
+      "url": "https://www.bristol.ac.uk/news/2019/february/hip-knee-replacements.html",
+      "publisher": "University of Bristol"
     }
   ]
 }

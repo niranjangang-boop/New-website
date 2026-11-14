@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import Seo from '../components/Seo.jsx';
 import Reveal from '../components/Reveal.jsx';
 import { ARTICLES } from '../data/articles.js';
+import { CLINICS, slugify } from '../data/site.js';
 
 const groups = [
   {
@@ -11,8 +12,9 @@ const groups = [
       { to: '/', label: 'Home', note: 'Practice overview & featured specialties' },
       { to: '/about', label: 'About — Credentials & Training', note: 'Qualifications, fellowships, memberships & research' },
       { to: '/book', label: 'Appointment Booking', note: 'WhatsApp-confirmed bookings' },
-      { to: '/contact', label: 'Contact & Consulting Locations', note: 'Phone, WhatsApp, email & all three locations' },
-      { to: '/camp', label: 'Free Orthopaedic Health Camp', note: '24 September 2026 — register for a slot' },
+      { to: '/contact', label: 'Contact & Consulting Locations', note: 'Phone, WhatsApp, email, locations & OPD hours' },
+      { to: '/events', label: 'Events & Camps', note: 'Past health camps and talks' },
+      { to: '/privacy', label: 'Privacy Policy', note: 'How personal data is handled' },
     ],
   },
   {
@@ -34,10 +36,10 @@ const groups = [
     ],
   },
   {
-    title: 'Consulting Location',
+    title: 'Consulting Locations',
     icon: 'M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z',
     links: [
-      { to: '/book', label: "Joshi's Neurotrauma Centre", note: 'Khopat, Thane West — hours, directions & booking' },
+      ...CLINICS.map((c) => ({ to: `/locations/${slugify(c.name)}`, label: c.name, note: `${c.shortLocation} — OPD hours, map & booking` })),
     ],
   },
 ];

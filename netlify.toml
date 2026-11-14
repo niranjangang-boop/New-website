@@ -8,3 +8,17 @@
 # No catch-all rewrite: every real route is prerendered to dist/<route>/index.html
 # (scripts/prerender.mjs), so unknown URLs fall through to dist/404.html and
 # Netlify returns a genuine HTTP 404 instead of a "soft 404" homepage with 200.
+
+# The 24 Sept 2026 camp has ended; its page is archived on /events.
+# Old /camp links land on the homepage, as requested by Dr. Ghag.
+[[redirects]]
+  from   = "/camp"
+  to     = "/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/camp/"
+  to     = "/"
+  status = 301
+  force  = true

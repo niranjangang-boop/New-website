@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { SITE, CLINICS } from '../data/site.js';
+import { slotsFor, PART_OF_DAY } from '../data/opd.js';
 import Reveal from './Reveal.jsx';
 
 /**
@@ -14,21 +15,7 @@ export default function Clinics() {
 
   const clinic = CLINICS[selectedClinic] || CLINICS[0];
 
-  // Open 24 hours, Monday to Sunday — matching the Google Business Profile.
-  const slots = useMemo(() => {
-    if (!date) return [];
-    const out = [];
-    const fmt = (h) => {
-      const period = h < 12 ? 'AM' : 'PM';
-      const display = h % 12 === 0 ? 12 : h % 12;
-      return { label: `${display}:00 ${period}`, half: `${display}:30 ${period}` };
-    };
-    for (let h = 0; h < 24; h++) {
-      const { label, half } = fmt(h);
-      out.push(label, half);
-    }
-    return out;
-  }, [date]);
+  const slots = useMemo(() => slotsFor(clinic?.name, date), [clinic, date]);
 
   const today = new Date().toISOString().split('T')[0];
 
@@ -135,7 +122,8 @@ export default function Clinics() {
           <div className="blob -right-10 -top-10 h-48 w-48 bg-brand-gold/15" aria-hidden="true" />
           <h3 className="font-serif text-xl font-bold">Book via WhatsApp</h3>
           <p className="mt-1 text-sm text-slate-300">
-            Choose a day and time — we'll confirm your appointment on WhatsApp.
+            Choose a location, day and time. This sends a booking request on WhatsApp;
+            the clinic team replies there to confirm the time.
           </p>
 
           <div className="mt-6 space-y-4">
@@ -188,7 +176,7 @@ export default function Clinics() {
             {date && (
               <div>
                 <span className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-slate-400">
-                  Available Slots
+                  {slots === PART_OF_DAY ? 'Preferred time of day (by appointment)' : 'Preferred Time'}
                 </span>
                 <div className="grid max-h-40 grid-cols-3 gap-2 overflow-y-auto pr-1 sm:grid-cols-4">
                   {slots.map((s) => (
@@ -220,6 +208,11 @@ export default function Clinics() {
               </svg>
               Book Appointment on WhatsApp
             </a>
+            <p className="text-xs leading-relaxed text-slate-400">
+              Your name, date and time go only to the clinic&rsquo;s WhatsApp number to arrange
+              your appointment. See the{' '}
+              <a href="/privacy" className="underline hover:text-white">privacy policy</a>.
+            </p>
           </div>
         </div>
       </div>

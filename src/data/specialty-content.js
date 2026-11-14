@@ -13,6 +13,11 @@
 
 export const SPECIALTY_CONTENT = {
   'joint-replacement': {
+    updated: '2026-11-14',
+    sources: [
+      { label: 'Robotic-assisted vs conventional total knee arthroplasty: meta-analysis of 9 randomised trials (J Robot Surg 2024) — OrthoEvidence summary', url: 'https://myorthoevidence.com/AceReport/Show/robotic-assisted-versus-conventional-total-knee-arthroplasty-for-surgical-precision', publisher: 'OrthoEvidence' },
+      { label: 'Global study finds high success rate for hip and knee replacements (The Lancet, 2019)', url: 'https://www.bristol.ac.uk/news/2019/february/hip-knee-replacements.html', publisher: 'University of Bristol' },
+    ],
     metaDescription:
       'Robotic hip & knee replacement in Thane West by Dr. Niranjan Ghag — when surgery is needed, what robotics change, recovery and implant lifespan.',
     intro:
@@ -24,7 +29,7 @@ export const SPECIALTY_CONTENT = {
       },
       {
         heading: 'What does robotic assistance actually change?',
-        body: 'A 3D plan of your specific joint is built before surgery. During the operation, the robotic arm holds every bone cut to that plan, with alignment accurate to fractions of a millimetre, and stops the instrument outside the planned boundary — which is what protects the surrounding ligaments and healthy bone. Published results show more accurate implant positioning and less soft-tissue trauma, which tends to translate into lower early pain scores and quicker rehabilitation. It is worth being clear about what robotics is not: it is not an autonomous robot, and it does not replace surgical judgement. The surgeon plans and performs the operation; the system enforces the precision of it. Surgeon experience remains the single biggest factor in the result either way.',
+        body: 'A 3D plan of your specific joint is built before surgery. During the operation, the robotic arm holds every bone cut to that plan, with alignment accurate to fractions of a millimetre, and stops the instrument outside the planned boundary — which is what protects the surrounding ligaments and healthy bone. A 2024 review of nine randomised trials found more accurate alignment and fewer alignment outliers with robotic assistance and slightly better patient-reported scores, with longer operating time; long-term benefit and cost-effectiveness are not yet proven. It is worth being clear about what robotics is not: it is not an autonomous robot, and it does not replace surgical judgement. The surgeon plans and performs the operation; the system enforces the precision of it. Surgeon experience remains the single biggest factor in the result either way.',
       },
       {
         heading: 'Total or partial knee replacement — which is right?',
@@ -36,13 +41,13 @@ export const SPECIALTY_CONTENT = {
       },
       {
         heading: 'How long do modern joint replacements last?',
-        body: 'National joint registry data show that more than 90% of hip and knee replacements are still functioning well at 15 years, and a substantial proportion reach 25 years and beyond. Implant material choice is tailored to the patient — for younger, more active patients, bearing surfaces such as ceramic or highly cross-linked polyethylene are selected specifically to extend lifespan. Your weight, activity level and general health all influence the number, which is part of why the timing conversation matters.',
+        body: 'Analyses of national joint registries published in The Lancet in 2019 found about 93% of total knee and 89% of total hip replacements still in place at 15 years, and about 82% of knees and 58% of hips at 25 years. Implant material choice is tailored to the patient — for younger, more active patients, bearing surfaces such as ceramic or highly cross-linked polyethylene are selected specifically to extend lifespan. Your weight, activity level and general health all influence the number, which is part of why the timing conversation matters.',
       },
       {
         heading: 'What does recovery look like?',
         bullets: [
-          'Same day: standing and taking first steps with a walker, usually within hours of surgery',
-          'Day 2–3: staircase training, and discharge home in most cases',
+          'Day 0–1: most people stand and take first steps with a walker, with physiotherapy support',
+          'Day 2–4: staircase training; most people go home within a few days, depending on health',
           'Week 2–3: walking indoors without support; sutures reviewed',
           'Week 4–6: desk work, driving, most routine daily activities',
           'Month 3 onward: full routine including travel and longer walking',
@@ -72,10 +77,11 @@ export const SPECIALTY_CONTENT = {
       },
     ],
     footerNote:
-      'Read more on <a href="/education/early-signs-knee-arthritis">early signs of knee arthritis</a>, <a href="/education/robotic-knee-replacement-cost-thane">robotic knee replacement cost in Thane</a>, or the honest <a href="/procedures/robotic-vs-traditional-knee-replacement">robotic vs. traditional comparison</a>. You can also <a href="/book">book a consultation</a> in Thane West.',
+      'Read more on <a href="/education/early-signs-knee-arthritis">early signs of knee arthritis</a>, <a href="/education/robotic-knee-replacement-cost-thane">robotic knee replacement cost in Thane</a>, or the honest <a href="/procedures/robotic-vs-traditional-knee-replacement">robotic vs. traditional comparison</a>. Locations and OPD hours are on the <a href="/contact">contact page</a> in Thane West.',
   },
 
   'foot-ankle': {
+    updated: '2026-11-14',
     metaDescription:
       'Foot & ankle surgeon in Thane West — bunions, flat foot, heel pain, Achilles problems, ankle instability and diabetic foot care by Dr. Niranjan Ghag.',
     intro:
@@ -129,10 +135,11 @@ export const SPECIALTY_CONTENT = {
       },
     ],
     footerNote:
-      'Read more on <a href="/education/heel-pain-plantar-fasciitis">heel pain and plantar fasciitis</a> or <a href="/education/ankle-sprain-vs-fracture">telling an ankle sprain from a fracture</a>. See <a href="/procedures/foot-ankle-surgery">foot &amp; ankle surgery</a> with Dr. Ghag, or <a href="/book">book a consultation</a>.',
+      'Read more on <a href="/education/heel-pain-plantar-fasciitis">heel pain and plantar fasciitis</a> or <a href="/education/ankle-sprain-vs-fracture">telling an ankle sprain from a fracture</a>. See <a href="/procedures/foot-ankle-surgery">foot &amp; ankle surgery</a> with Dr. Ghag, or <a href="/contact">see locations and OPD hours</a>.',
   },
 
   'sports-arthroscopy': {
+    updated: '2026-11-14',
     metaDescription:
       'Sports injury & arthroscopy in Thane West — ACL reconstruction, meniscus repair and shoulder keyhole surgery with structured return-to-sport care.',
     intro:
@@ -172,7 +179,7 @@ export const SPECIALTY_CONTENT = {
     faqs: [
       {
         q: 'What is keyhole (arthroscopic) surgery?',
-        a: 'Arthroscopy uses a small camera and fine instruments inserted through incisions a few millimetres wide, so the joint is treated without being opened. The surgeon works from a magnified view on screen. Because healthy tissue is largely undisturbed, most arthroscopic procedures are day-care or one-night stays with faster recovery than open surgery.',
+        a: 'Arthroscopy uses a small camera and fine instruments inserted through incisions a few millimetres wide, so the joint is treated without being opened. The surgeon works from a magnified view on screen. Because healthy tissue is largely undisturbed, most arthroscopic procedures are day-care or one-night stays, and recovery is usually quicker than after open surgery.',
       },
       {
         q: 'Does every ACL tear need surgery?',
@@ -196,6 +203,7 @@ export const SPECIALTY_CONTENT = {
   },
 
   'trauma-fracture': {
+    updated: '2026-11-14',
     metaDescription:
       'Complex fracture & trauma surgery in Thane West — intra-articular fractures, pelvic trauma, nonunion correction and polytrauma care by Dr. Niranjan Ghag.',
     intro:
@@ -249,6 +257,6 @@ export const SPECIALTY_CONTENT = {
       },
     ],
     footerNote:
-      'Read more on <a href="/education/fracture-healing-surgery">how fractures heal and when surgery is needed</a> or <a href="/education/ankle-sprain-vs-fracture">ankle sprain vs. fracture</a>. See <a href="/procedures/trauma-surgery">trauma &amp; fracture surgery</a> with Dr. Ghag, or <a href="/book">book a consultation</a>.',
+      'Read more on <a href="/education/fracture-healing-surgery">how fractures heal and when surgery is needed</a> or <a href="/education/ankle-sprain-vs-fracture">ankle sprain vs. fracture</a>. See <a href="/procedures/trauma-surgery">trauma &amp; fracture surgery</a> with Dr. Ghag, or <a href="/contact">see locations and OPD hours</a>.',
   },
 };

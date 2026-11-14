@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Seo from '../components/Seo.jsx';
 import Reveal from '../components/Reveal.jsx';
 import Breadcrumbs, { breadcrumbLd } from '../components/Breadcrumbs.jsx';
-import { SITE, CLINICS } from '../data/site.js';
+import { SITE, CLINICS, slugify } from '../data/site.js';
 
 const CRUMBS = [
   { name: 'Home', path: '/' },
@@ -117,11 +117,13 @@ export default function Contact() {
             <h2 id="locations-heading" className="font-serif text-2xl font-bold text-slate-900">
               Consulting Locations
             </h2>
-            <div className="mt-6 grid gap-6 lg:grid-cols-3">
+            <div className="mt-6 grid gap-6 md:grid-cols-2">
               {CLINICS.map((c, i) => (
                 <Reveal key={c.name} delay={i * 80}>
                   <div className="glass flex h-full flex-col rounded-3xl p-6">
-                    <h3 className="font-serif text-lg font-bold text-slate-900">{c.name}</h3>
+                    <h3 className="font-serif text-lg font-bold text-slate-900">
+                      <Link to={`/locations/${slugify(c.name)}`} className="hover:text-brand-brown">{c.name}</Link>
+                    </h3>
                     <p className="mt-1 text-sm font-medium text-brand-gold">{c.shortLocation}</p>
                     <p className="mt-4 text-sm leading-relaxed text-slate-600">{c.address}</p>
                     {c.landmark && <p className="mt-2 text-sm text-slate-500">{c.landmark}</p>}
@@ -129,7 +131,7 @@ export default function Contact() {
                     {c.hours?.length > 0 && (
                       <div className="mt-5 rounded-2xl bg-slate-50 p-4">
                         <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-                          Availability
+                          OPD hours
                         </p>
                         <ul className="mt-2 space-y-1.5">
                           {c.hours.map((h) => (
@@ -155,9 +157,11 @@ export default function Contact() {
               ))}
             </div>
             <p className="mt-6 max-w-3xl text-sm leading-relaxed text-slate-500">
-              Cover is available round the clock for emergency and trauma cases. Routine
-              consultations are by appointment — call or message on WhatsApp to confirm a
-              time that suits you.
+              The hours above are Dr. Ghag&rsquo;s own consulting hours. Joshi&rsquo;s
+              Neurotrauma Centre and Kaizen Super Speciality Hospital also have 24-hour
+              emergency departments run by the hospitals. For any visit, call or message on
+              WhatsApp first to confirm the time and location. Consultation charges are
+              explained when you book.
             </p>
           </section>
 

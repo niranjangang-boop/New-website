@@ -6,7 +6,7 @@ export default function Book() {
     <>
       <Seo
         title="Book Appointment"
-        description="Book an appointment with Dr. Niranjan Ghag at Joshi's Neurotrauma Centre, Khopat, Thane West — instant confirmation via WhatsApp."
+        description="Request an appointment with Dr. Niranjan Ghag at any of his four Thane West locations. Choose a date and time; the clinic confirms on WhatsApp."
         path="/book"
       />
       <section className="relative overflow-hidden px-4 pt-16 text-center">
@@ -16,8 +16,8 @@ export default function Book() {
             Book Your Consultation
           </h1>
           <p className="mx-auto mt-3 max-w-2xl text-slate-600">
-            Select your preferred date and time below. Your booking request is sent
-            directly to the clinic on WhatsApp for confirmation.
+            Choose a location, date and time below. Your request is sent to the clinic
+            on WhatsApp, and the clinic team replies there to confirm the time.
           </p>
         </div>
       </section>

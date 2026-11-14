@@ -13,8 +13,16 @@
       "landmark": "Opposite Viviana Mall, next to Bank of Baroda",
       "hours": [
         {
-          "days": "Monday – Sunday",
-          "time": "Open 24 hours"
+          "days": "Monday – Saturday",
+          "time": "6:00 PM – 8:00 AM (next morning)"
+        },
+        {
+          "days": "Sunday",
+          "time": "Available through the day – call or WhatsApp to confirm"
+        },
+        {
+          "days": "Emergency",
+          "time": "The hospital has 24-hour emergency cover"
         }
       ]
     },
@@ -26,8 +34,16 @@
       "landmark": "Above Ranka Banquet, near Nitin Company Junction",
       "hours": [
         {
-          "days": "Monday – Sunday",
-          "time": "Open 24 hours"
+          "days": "Monday – Saturday",
+          "time": "4:00 PM – 6:00 PM; other times by appointment"
+        },
+        {
+          "days": "Sunday",
+          "time": "Available through the day – call or WhatsApp to confirm"
+        },
+        {
+          "days": "Emergency",
+          "time": "The hospital has 24-hour emergency cover"
         }
       ]
     },
@@ -39,8 +55,21 @@
       "landmark": "By appointment only — call or WhatsApp to book",
       "hours": [
         {
-          "days": "By appointment",
-          "time": "Call or WhatsApp +91 90760 79000 to book"
+          "days": "All days",
+          "time": "By appointment – call or WhatsApp +91 90760 79000"
+        }
+      ]
+    },
+    {
+      "name": "Sahayogi Hospital LLP",
+      "short_location": "Naupada, Thane West",
+      "address": "Post Office, Sita Vihar Society, Lal Bahadur Shastri Marg, near Navpada, Vishnu Nagar, Naupada, Damani Estate, Thane, Maharashtra 400602",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Sahayogi+Hospital+LLP+Naupada+Thane",
+      "landmark": "Near Navpada, Vishnu Nagar — by appointment only",
+      "hours": [
+        {
+          "days": "All days",
+          "time": "By appointment – call or WhatsApp +91 90760 79000"
         }
       ]
     }

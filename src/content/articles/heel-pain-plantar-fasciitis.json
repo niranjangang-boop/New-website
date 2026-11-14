@@ -1,12 +1,14 @@
 {
   "slug": "heel-pain-plantar-fasciitis",
   "title": "Heel Pain and Plantar Fasciitis: Causes, Relief and When to See a Specialist",
-  "metaDescription": "Sharp heel pain with the first steps in the morning? Understand plantar fasciitis causes, proven home treatment, and when to consult a foot & ankle surgeon in Thane.",
+  "seoTitle": "Heel Pain and Plantar Fasciitis: Causes and Relief",
+  "metaDescription": "Sharp heel pain with the first steps in the morning? Plantar fasciitis causes, home treatment that works, and when to see a foot and ankle surgeon.",
   "category": "Foot & Ankle",
   "date": "2026-06-12",
   "dateModified": "2026-11-10",
   "readTime": 5,
   "intro": "Sharp, stabbing heel pain with your first steps in the morning is the hallmark of plantar fasciitis — inflammation of the thick band of tissue supporting the arch of your foot. It is one of the most common reasons patients visit a foot and ankle clinic.",
+  "summary": "Plantar fasciitis causes sharp heel pain with the first steps in the morning. More than 9 in 10 people improve within about 10 months with stretching, supportive footwear and activity changes. Heel spurs are usually not the cause, and scans are rarely needed.",
   "sections": [
     {
       "heading": "Why it happens",
@@ -46,7 +48,12 @@
       "a": "Rarely. Diagnosis is clinical in most cases. Imaging is reserved for atypical pain or when symptoms fail to improve with proper treatment."
     }
   ],
-  "tags": ["heel pain", "plantar fasciitis", "foot", "tacchi dard"],
+  "tags": [
+    "heel pain",
+    "plantar fasciitis",
+    "foot",
+    "tacchi dard"
+  ],
   "citations": [
     {
       "label": "Plantar fasciitis and bone spurs",

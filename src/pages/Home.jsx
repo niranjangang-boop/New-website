@@ -3,8 +3,7 @@ import Seo from '../components/Seo.jsx';
 import Image from '../components/Image.jsx';
 import Clinics from '../components/Clinics.jsx';
 import Reveal from '../components/Reveal.jsx';
-import { SITE, SPECIALTIES } from '../data/site.js';
-import { CAMP } from '../data/camp.js';
+import { SITE, SPECIALTIES, CLINIC_LIST_TEXT, CLINIC_COUNT_TEXT } from '../data/site.js';
 
 const HOME_FAQ_JSONLD = {
   '@context': 'https://schema.org',
@@ -23,7 +22,7 @@ const HOME_FAQ_JSONLD = {
       name: 'Where does Dr. Niranjan Ghag consult in Thane?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "He consults at three Thane West locations: Joshi's Neurotrauma Centre, Khopat (opposite Viviana Mall); Kaizen Super Speciality Hospital, Ramachandra Nagar; and Borneo Mother and Child Care Hospital, Panch Pakhdi. Appointments can be booked online or on WhatsApp at +91 90760 79000.",
+        text: `He consults at ${CLINIC_COUNT_TEXT} Thane West locations: ${CLINIC_LIST_TEXT}. OPD hours differ by location and are listed on the contact page; appointments can be requested by phone or WhatsApp at ${SITE.phoneDisplay}.`,
       },
     },
     {
@@ -49,30 +48,11 @@ export default function Home() {
   return (
     <>
       <Seo
-        title="Orthopaedic Surgeon in Thane"
-        description="Dr. Niranjan Ghag is an orthopaedic surgeon in Thane West offering robotic hip & knee replacement, foot & ankle surgery, sports injury & arthroscopy, and trauma care. Book in English, Marathi or Hindi."
+        title="Orthopaedic Surgeon in Thane West"
+        description="Dr. Niranjan Ghag, orthopaedic surgeon in Thane West: knee and hip replacement, foot and ankle, sports injury and fracture care. OPD hours and locations."
         path="/"
         jsonLd={HOME_FAQ_JSONLD}
       />
-
-      {/* Camp announcement — self-expiring, so it disappears on its own the day
-          after the camp rather than going stale on the homepage. */}
-      {new Date() <= new Date(`${CAMP.date}T23:59:59+05:30`) && (
-        <Link
-          to="/camp"
-          className="group block bg-gradient-to-r from-brand-brown to-brand-gold px-4 py-3 text-center text-white transition-opacity hover:opacity-95"
-        >
-          <span className="text-sm font-semibold sm:text-base">
-            <span className="mr-2 inline-block rounded-full bg-white/20 px-2.5 py-0.5 text-xs font-bold uppercase tracking-wide">
-              Free
-            </span>
-            {CAMP.name} · {CAMP.dateDisplay} · {CAMP.timeDisplay}
-            <span className="ml-2 inline-block underline decoration-white/50 underline-offset-2 transition-transform group-hover:translate-x-0.5">
-              Register →
-            </span>
-          </span>
-        </Link>
-      )}
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-white">
@@ -84,31 +64,25 @@ export default function Home() {
           <div>
             <p className="glass inline-flex items-center rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-brand-brown">
               <span className="mr-2 inline-block h-1.5 w-1.5 rounded-full bg-brand-gold" aria-hidden="true" />
-              Now accepting consultations
+              Dr. Niranjan Ghag · M.S. (Orthopaedics)
             </p>
             <h1 className="mt-5 font-serif text-4xl font-bold leading-tight text-slate-900 lg:text-5xl">
-              Advanced Orthopaedic Care with{' '}
+              Orthopaedic Surgeon in Thane West:{' '}
               <span className="bg-gradient-to-r from-brand-brown to-brand-gold bg-clip-text text-transparent">
-                Precision, Compassion &amp; Innovation
+                Knee, Hip, Sports Injury &amp; Fracture Care
               </span>
             </h1>
             <p className="mt-5 max-w-2xl text-lg leading-relaxed text-slate-600">
               Dr. Niranjan Ghag is an orthopaedic surgeon in Thane West, Maharashtra,
               specialising in robotic-assisted joint replacement of the hip and knee,
               foot &amp; ankle surgery, sports injuries &amp; arthroscopy, and complex
-              trauma &amp; fracture management. He consults at Joshi&rsquo;s Neurotrauma
-              Centre, Khopat (opposite Viviana Mall), Kaizen Super Speciality Hospital,
-              Ramachandra Nagar, and Borneo Mother and Child Care Hospital, Panch Pakhdi — all in Thane West — with appointments available in English, Marathi
-              and Hindi. His tissue-sparing robotic techniques are designed for faster
-              recovery: many knee and hip replacement patients walk the same day and
-              return home within two to three days.
+              trauma &amp; fracture management. He consults at {CLINIC_LIST_TEXT} — all
+              in Thane West — in English, Marathi and Hindi. Non-surgical treatment is
+              considered first wherever it is reasonable.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Link to="/book" className="btn-gradient">
-                Book Appointment
-              </Link>
-              <a href={`tel:+${SITE.phoneRaw}`} className="btn-outline">
-                Call {SITE.phoneDisplay}
+              <a href="#clinic-heading" className="btn-outline">
+                Locations, OPD hours &amp; appointments
               </a>
             </div>
           </div>
@@ -203,24 +177,6 @@ export default function Home() {
 
       <Clinics />
 
-      {/* CTA */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-brand-dark via-brand-brown to-brand-dark">
-        <div className="blob left-1/4 top-0 h-64 w-64 bg-brand-gold/20 animate-float" aria-hidden="true" />
-        <Reveal>
-          <div className="relative mx-auto max-w-4xl px-4 py-16 text-center">
-            <h2 className="font-serif text-3xl font-bold text-white">
-              Unsure about your condition?
-            </h2>
-            <p className="mx-auto mt-3 max-w-2xl text-white/80">
-              Schedule a detailed clinical evaluation. A correct early diagnosis
-              translates to simpler treatments and faster recovery.
-            </p>
-            <Link to="/book" className="btn-gradient mt-7">
-              Book Your Consultation
-            </Link>
-          </div>
-        </Reveal>
-      </section>
     </>
   );
 }

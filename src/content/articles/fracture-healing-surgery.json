@@ -1,11 +1,13 @@
 {
   "slug": "fracture-healing-surgery",
   "title": "Why Do Some Fractures Need Surgery? Bone Healing Explained",
-  "metaDescription": "Not every broken bone needs an operation. Learn how fractures heal, which ones need fixation, and what malunion and nonunion mean — from a trauma surgeon in Thane.",
+  "seoTitle": "Why Do Some Fractures Need Surgery?",
+  "metaDescription": "Not every broken bone needs an operation. How fractures heal, which ones need fixation, and what malunion and nonunion mean.",
   "category": "Trauma",
   "date": "2026-06-12",
   "readTime": 5,
   "intro": "Bone is one of the few tissues in the body that heals by regenerating itself — but only if the broken ends are adequately aligned and held still. That single principle decides whether your fracture needs a cast or an operation.",
+  "summary": "Many fractures heal well in a cast. Surgery is advised when the broken ends are out of place, involve a joint surface, or would heal crooked or not at all without fixation. Most adult fractures unite in about 6–12 weeks; smoking and diabetes slow healing.",
   "sections": [
     {
       "heading": "When a cast is enough",
@@ -39,5 +41,10 @@
       "a": "Yes. Modern internal fixation is designed to allow early movement, and in many cases early weight-bearing, which actually stimulates bone healing."
     }
   ],
-  "tags": ["fracture", "trauma", "bone healing", "surgery"]
+  "tags": [
+    "fracture",
+    "trauma",
+    "bone healing",
+    "surgery"
+  ]
 }

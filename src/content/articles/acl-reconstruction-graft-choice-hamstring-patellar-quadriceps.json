@@ -1,16 +1,52 @@
 {
   "slug": "acl-reconstruction-graft-choice-hamstring-patellar-quadriceps",
   "title": "ACL Surgery: Choosing a Graft - Hamstring, Patellar Tendon or Quadriceps?",
+  "seoTitle": "ACL Graft Choice: Hamstring, Patellar or Quadriceps?",
   "metaDescription": "Choosing a graft for ACL reconstruction: hamstring, patellar tendon, quadriceps or donor graft compared simply, with pros and cons.",
   "category": "Sports Injuries",
   "date": "2026-11-09",
-  "dateModified": "2026-11-10",
+  "dateModified": "2026-11-14",
   "readTime": 5,
   "intro": "No single graft suits everyone in ACL reconstruction. A 2025 review says the choice should suit your age, sport, other health issues and recovery goals. Each graft trades something: strength, pain at the donor site, or speed of healing. Your surgeon should explain why they recommend one for you.",
   "sections": [
     {
       "heading": "What are the options?",
-      "body": "The new ligament is built from a tendon. It can be taken from your own hamstring, your own patellar tendon (below the kneecap, with small bone blocks), or your own quadriceps tendon. A donor tendon (allograft) can also be used."
+      "body": "The new ligament is built from a tendon. It can be taken from your own hamstring, your own patellar tendon (below the kneecap, with small bone blocks), or your own quadriceps tendon. A donor tendon (allograft) can also be used.",
+      "table": {
+        "caption": "ACL graft options compared (as described on this page)",
+        "headers": [
+          "Graft",
+          "Main advantage",
+          "Main drawback",
+          "Typical use"
+        ],
+        "rows": [
+          [
+            "Hamstring (own)",
+            "Strong; less pain at the front of the knee",
+            "—",
+            "Most common (about 94 in 100 in a Swedish registry)"
+          ],
+          [
+            "Patellar tendon (own)",
+            "Heals faster (bone to bone)",
+            "Front-of-knee pain more common",
+            "Less common (about 4 in 100 in the same registry)"
+          ],
+          [
+            "Quadriceps tendon (own)",
+            "Less donor-site pain than patellar tendon in reviews",
+            "Less long-term evidence; depends on surgeon experience",
+            "Growing option (about 2 in 100 in the same registry)"
+          ],
+          [
+            "Donor (allograft)",
+            "No tendon taken from you; shorter surgery",
+            "Higher failure with some donor grafts in studies",
+            "Mostly revisions or multiple ligament injuries"
+          ]
+        ]
+      }
     },
     {
       "heading": "What is used most often?",

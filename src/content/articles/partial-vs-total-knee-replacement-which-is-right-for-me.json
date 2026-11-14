@@ -1,16 +1,52 @@
 {
   "slug": "partial-vs-total-knee-replacement-which-is-right-for-me",
   "title": "Partial or Total Knee Replacement: Which Is Right for My Knee?",
+  "seoTitle": "Partial vs Total Knee Replacement",
   "metaDescription": "Partial vs total knee replacement: who suits each, how recovery and long-term results compare, and why the right choice depends on your knee.",
   "category": "Joint Replacement",
   "date": "2026-11-09",
-  "dateModified": "2026-11-09",
+  "dateModified": "2026-11-14",
   "readTime": 5,
   "intro": "Neither operation is better for everyone. A partial knee replacement suits a knee where only one part is worn, and a total knee replacement is the more dependable choice when the wear is spread across the knee. Your examination and standing X-rays decide, not the name of the operation.",
   "sections": [
     {
       "heading": "What is the difference?",
-      "body": "The knee has three parts: the inner side, the outer side and the joint behind the kneecap. A partial (half) knee replacement replaces only the damaged part and keeps the rest of your own knee. A total knee replacement replaces the surfaces of the whole joint."
+      "body": "The knee has three parts: the inner side, the outer side and the joint behind the kneecap. A partial (half) knee replacement replaces only the damaged part and keeps the rest of your own knee. A total knee replacement replaces the surfaces of the whole joint.",
+      "table": {
+        "caption": "Partial and total knee replacement compared (summary of the evidence on this page)",
+        "headers": [
+          "",
+          "Partial knee replacement",
+          "Total knee replacement"
+        ],
+        "rows": [
+          [
+            "What is replaced",
+            "Only the worn part of the knee",
+            "All three joint surfaces"
+          ],
+          [
+            "Who it suits",
+            "Arthritis limited to one part, stable ligaments",
+            "Wear in more than one part, stiffness, or damaged ligaments"
+          ],
+          [
+            "Recovery",
+            "Somewhat shorter; NHS: driving often after about 3 weeks",
+            "Longer; NHS: driving usually after about 6 weeks"
+          ],
+          [
+            "Hospital stay",
+            "About one to two days shorter in studies",
+            "Usually a few days"
+          ],
+          [
+            "Need for a repeat operation",
+            "Higher on average in registries",
+            "Lower on average in registries"
+          ]
+        ]
+      }
     },
     {
       "heading": "Who is suitable for a partial replacement?",

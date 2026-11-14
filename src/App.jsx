@@ -10,12 +10,16 @@ import { trackPageView } from './lib/analytics.js';
 const About = lazy(() => import('./pages/About.jsx'));
 const Book = lazy(() => import('./pages/Book.jsx'));
 const Contact = lazy(() => import('./pages/Contact.jsx'));
-const Camp = lazy(() => import('./pages/Camp.jsx'));
+const Events = lazy(() => import('./pages/Events.jsx'));
 const Sitemap = lazy(() => import('./pages/Sitemap.jsx'));
 const Education = lazy(() => import('./pages/Education.jsx'));
 const EducationArticle = lazy(() => import('./pages/EducationArticle.jsx'));
 const Specialty = lazy(() => import('./pages/Specialty.jsx'));
 const NotFound = lazy(() => import('./pages/NotFound.jsx'));
+const Privacy = lazy(() => import('./pages/Privacy.jsx'));
+const MarathiArticle = lazy(() => import('./pages/MarathiArticle.jsx'));
+const HindiArticle = lazy(() => import('./pages/HindiArticle.jsx'));
+const Location = lazy(() => import('./pages/Location.jsx'));
 const Procedure = lazy(() => import('./pages/Procedure.jsx'));
 
 function ScrollToTop() {
@@ -48,12 +52,16 @@ export default function App() {
             <Route path="/about" element={<About />} />
             <Route path="/book" element={<Book />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/camp" element={<Camp />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/privacy" element={<Privacy />} />
             <Route path="/sitemap" element={<Sitemap />} />
             <Route path="/education" element={<Education />} />
             <Route path="/education/:slug" element={<EducationArticle />} />
+            <Route path="/mr/education/:slug" element={<MarathiArticle />} />
+            <Route path="/hi/education/:slug" element={<HindiArticle />} />
             <Route path="/specialties/:slug" element={<Specialty />} />
             <Route path="/procedures/:slug" element={<Procedure />} />
+            <Route path="/locations/:slug" element={<Location />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

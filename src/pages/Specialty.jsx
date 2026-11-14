@@ -44,8 +44,9 @@ export default function Specialty() {
           description: content.metaDescription,
           about: { '@type': 'MedicalSpecialty', name: 'Orthopedic' },
           inLanguage: 'en',
-          author: { '@type': 'Physician', name: SITE.name, url: SITE.url },
-          reviewedBy: { '@type': 'Physician', name: SITE.name, url: SITE.url },
+          author: { '@type': 'Physician', '@id': `${SITE.url}/#physician`, name: SITE.name, url: `${SITE.url}/about/` },
+          reviewedBy: { '@type': 'Physician', '@id': `${SITE.url}/#physician`, name: SITE.name, url: `${SITE.url}/about/` },
+          ...(content.updated ? { dateModified: content.updated } : {}),
           url: `${SITE.url}/specialties/${slug}/`,
         },
         {
@@ -122,8 +123,15 @@ export default function Specialty() {
               ))}
             </ul>
 
-            <Link to="/book" className="btn-gradient mt-9">
-              Book a Consultation
+            <p className="mt-8 text-sm text-slate-500">
+              Written and reviewed by{' '}
+              <Link to="/about" className="underline hover:text-brand-brown">{SITE.name}</Link>
+              {content?.updated && (
+                <> · Last updated <time dateTime={content.updated}>{new Date(content.updated).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</time></>
+              )}
+            </p>
+            <Link to="/contact" className="btn-outline mt-5">
+              Locations &amp; OPD hours
             </Link>
           </div>
 
@@ -185,6 +193,19 @@ export default function Specialty() {
               </div>
             </section>
 
+            {content.sources?.length > 0 && (
+              <section className="mt-10">
+                <h2 className="font-serif text-lg font-bold text-slate-900">Sources</h2>
+                <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-slate-600">
+                  {content.sources.map((c) => (
+                    <li key={c.url}>
+                      <a href={c.url} target="_blank" rel="noopener noreferrer" className="text-brand-gold underline hover:text-brand-brown">{c.label}</a>
+                      {c.publisher && <span className="text-slate-500"> — {c.publisher}</span>}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
             {content.footerNote && (
               <p
                 className="mt-10 leading-relaxed text-slate-600 [&_a]:text-brand-gold [&_a]:underline [&_a]:hover:text-brand-brown"

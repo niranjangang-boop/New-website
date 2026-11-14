@@ -11,7 +11,6 @@ import {
   TRAINING,
   MEMBERSHIPS,
   CERTIFICATIONS,
-  EXPERIENCE,
   RESEARCH_HIGHLIGHTS,
   MEDICAL_COUNCIL_REG,
   MEDICAL_COUNCIL_REG_NO,
@@ -52,13 +51,13 @@ export default function About() {
         hasCredential: [
           ...QUALIFICATIONS.map((q) => ({
             '@type': 'EducationalOccupationalCredential',
-            credentialCategory: 'degree',
+            credentialCategory: q.isExamination ? 'examination' : 'degree',
             name: q.degree,
             recognizedBy: { '@type': 'Organization', name: q.university || q.institution },
           })),
           ...FELLOWSHIPS.map((f) => ({
             '@type': 'EducationalOccupationalCredential',
-            credentialCategory: 'Fellowship',
+            credentialCategory: 'Fellowship training',
             name: f.name,
             recognizedBy: { '@type': 'Organization', name: f.institution },
           })),
@@ -86,7 +85,7 @@ export default function About() {
     <>
       <Seo
         title="About — Credentials & Training"
-        description="Dr. Niranjan Ghag: M.S., D.N.B. orthopaedic surgeon in Thane with fellowships in joint replacement & robotics, arthroscopy and foot & ankle surgery."
+        description="Dr. Niranjan Ghag: M.S., D.N.B. orthopaedic surgeon in Thane West; fellowship training in joint replacement & robotics, arthroscopy and foot & ankle surgery."
         path="/about"
         jsonLd={jsonLd}
       />
@@ -148,8 +147,8 @@ export default function About() {
                 Tilak Municipal Medical College at Sion, and Dr. Shankarrao Chavan Government
                 Medical College in Nanded — where complex trauma arrives without appointment
                 and decisions are made at volume. His fellowship training at KIMS Sunshine
-                Bone and Joint Institute in Hyderabad, one of India&rsquo;s highest-volume
-                arthroplasty centres, added robotic and revision joint replacement.
+                Bone and Joint Institute in Hyderabad added robotic and revision joint
+                replacement.
               </p>
               <p>
                 He consults in English, Marathi and Hindi across his hospital appointments in
@@ -159,26 +158,6 @@ export default function About() {
               </p>
             </div>
           </div>
-
-          {/* Surgical experience */}
-          <section className="mt-16" aria-labelledby="experience-heading">
-            <h2 id="experience-heading" className="font-serif text-2xl font-bold text-slate-900">
-              Surgical Experience
-            </h2>
-            <div className="mt-6 grid gap-5 sm:grid-cols-3">
-              {EXPERIENCE.map((e, i) => (
-                <Reveal key={e.label} delay={i * 80}>
-                  <div className="glass h-full rounded-3xl p-6">
-                    <p className="bg-gradient-to-r from-brand-brown to-brand-gold bg-clip-text font-serif text-4xl font-bold text-transparent">
-                      {e.figure}
-                    </p>
-                    <h3 className="mt-2 font-bold text-slate-900">{e.label}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-slate-600">{e.detail}</p>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-          </section>
 
           {/* Qualifications */}
           <section className="mt-16" aria-labelledby="qualifications-heading">
@@ -205,7 +184,7 @@ export default function About() {
           {/* Fellowships */}
           <section className="mt-16" aria-labelledby="fellowships-heading">
             <h2 id="fellowships-heading" className="font-serif text-2xl font-bold text-slate-900">
-              Sub-specialty Fellowship Training
+              Sub-specialty Fellowship Training (completed)
             </h2>
             <div className="mt-6 grid gap-5 md:grid-cols-3">
               {FELLOWSHIPS.map((f, i) => (
@@ -300,8 +279,9 @@ export default function About() {
                 result lasts. Robotic assistance in joint replacement plans each bone cut in
                 3D and holds the instrument to that plan, protecting healthy bone and
                 ligament. Arthroscopy treats the joint through incisions a few millimetres
-                wide. Both exist to reduce what the body has to recover from — which is why
-                many patients walk the same day and go home within two to three days.
+                wide. Both aim to reduce what the body has to recover from. How quickly any one
+                person recovers depends on their health, the operation and their rehabilitation,
+                and that is discussed honestly before surgery.
               </p>
               <p>
                 Patients are told what the alternatives are, what the operation cannot fix,

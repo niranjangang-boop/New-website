@@ -6,12 +6,16 @@ import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import Book from './pages/Book.jsx';
 import Contact from './pages/Contact.jsx';
-import Camp from './pages/Camp.jsx';
+import Events from './pages/Events.jsx';
 import Sitemap from './pages/Sitemap.jsx';
 import Education from './pages/Education.jsx';
 import EducationArticle from './pages/EducationArticle.jsx';
 import Specialty from './pages/Specialty.jsx';
 import Procedure from './pages/Procedure.jsx';
+import Location from './pages/Location.jsx';
+import Privacy from './pages/Privacy.jsx';
+import MarathiArticle from './pages/MarathiArticle.jsx';
+import HindiArticle from './pages/HindiArticle.jsx';
 import NotFound from './pages/NotFound.jsx';
 import { headState } from './components/Seo.jsx';
 
@@ -28,12 +32,16 @@ function ServerApp() {
         <Route path="/about" element={<About />} />
         <Route path="/book" element={<Book />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/camp" element={<Camp />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/privacy" element={<Privacy />} />
         <Route path="/sitemap" element={<Sitemap />} />
         <Route path="/education" element={<Education />} />
         <Route path="/education/:slug" element={<EducationArticle />} />
+        <Route path="/mr/education/:slug" element={<MarathiArticle />} />
+        <Route path="/hi/education/:slug" element={<HindiArticle />} />
         <Route path="/specialties/:slug" element={<Specialty />} />
         <Route path="/procedures/:slug" element={<Procedure />} />
+        <Route path="/locations/:slug" element={<Location />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Layout>
@@ -51,6 +59,8 @@ export function render(url) {
   headState.description = '';
   headState.path = url;
   headState.jsonLd = null;
+  headState.lang = 'en';
+  headState.alternates = [];
 
   const html = renderToString(
     <StaticRouter location={url}>

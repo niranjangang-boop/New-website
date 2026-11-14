@@ -1,15 +1,16 @@
 {
   "slug": "robotic-knee-replacement-recovery",
   "title": "Robotic Knee Replacement: What to Expect and Recovery Timeline",
-  "metaDescription": "How robotic knee replacement works, why it enables faster recovery, and a week-by-week recovery timeline from an orthopaedic surgeon in Thane.",
+  "seoTitle": "Robotic Knee Replacement: Recovery Timeline",
+  "metaDescription": "How robotic-assisted knee replacement works, who it suits, and a realistic week-by-week recovery timeline, from an orthopaedic surgeon in Thane West.",
   "category": "Joint Replacement",
   "date": "2026-06-12",
   "readTime": 6,
-  "intro": "Robotic-assisted knee replacement combines surgical expertise with computer-guided precision, allowing implant alignment within fractions of a millimetre, smaller incisions and less soft-tissue damage.",
+  "intro": "Robotic-assisted knee replacement uses a 3D plan of your knee and a robotic arm that helps the surgeon keep each bone cut to that plan. Trials show it improves alignment accuracy; the long-term benefit over conventional surgery is not yet proven, and recovery still depends mostly on your health and rehabilitation.",
   "sections": [
     {
       "heading": "How robotic surgery is different",
-      "body": "A CT-based or imageless 3D plan of your knee is created before surgery. During the operation, the robotic arm keeps bone cuts exactly on plan, sparing healthy bone and ligaments. The result is a more natural-feeling knee and typically less post-operative pain."
+      "body": "A CT-based or imageless 3D plan of your knee is created before surgery. During the operation, the robotic arm keeps bone cuts on plan and stops the saw outside the planned boundary, which is intended to protect healthy bone and ligaments. A 2024 review of nine randomised trials found more accurate alignment and slightly better patient-reported scores with robotic assistance, with longer operating time."
     },
     {
       "heading": "Typical recovery timeline",
@@ -30,11 +31,11 @@
   "faqs": [
     {
       "q": "Is robotic knee replacement safer than conventional surgery?",
-      "a": "The robot does not operate by itself — it ensures the surgical plan is executed precisely. Studies show more accurate alignment, less soft-tissue injury and quicker early recovery compared with conventional techniques."
+      "a": "The robot does not operate by itself; it helps the surgeon carry out the plan precisely. Randomised trials show more accurate alignment and small differences in early patient-reported scores, but no proven long-term advantage yet. Surgeon experience matters most."
     },
     {
       "q": "How long does a robotic knee implant last?",
-      "a": "Modern implants placed with accurate alignment are expected to last 20–25 years or more, which is why precision at the time of surgery matters so much."
+      "a": "There are no long-term data specific to robotic surgery yet. For knee replacements in general, registry analyses found about 93% still in place at 15 years and about 82% at 25 years."
     },
     {
       "q": "When can I climb stairs after knee replacement?",
@@ -46,5 +47,17 @@
     "robotic surgery",
     "recovery"
   ],
-  "dateModified": "2026-11-13"
+  "dateModified": "2026-11-14",
+  "citations": [
+    {
+      "label": "Robotic-assisted vs conventional total knee arthroplasty: meta-analysis of 9 RCTs (J Robot Surg 2024), OrthoEvidence summary",
+      "url": "https://myorthoevidence.com/AceReport/Show/robotic-assisted-versus-conventional-total-knee-arthroplasty-for-surgical-precision",
+      "publisher": "OrthoEvidence"
+    },
+    {
+      "label": "More than 80% of total knee replacements can last for 25 years",
+      "url": "https://evidence.nihr.ac.uk/alert/more-than-80-of-total-knee-replacements-can-last-for-25-years/",
+      "publisher": "National Institute for Health and Care Research"
+    }
+  ]
 }

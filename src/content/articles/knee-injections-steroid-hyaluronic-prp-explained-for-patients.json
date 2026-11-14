@@ -1,16 +1,50 @@
 {
   "slug": "knee-injections-steroid-hyaluronic-prp-explained-for-patients",
   "title": "Knee Injections for Arthritis: Steroid, Hyaluronic Acid (Gel) and PRP Explained",
+  "seoTitle": "Knee Injections: Steroid, Gel and PRP Explained",
   "metaDescription": "Steroid, hyaluronic acid (gel) or PRP for knee arthritis? What each does, how long relief lasts, and why we use injections only for selected patients.",
   "category": "Knee",
   "date": "2026-11-09",
-  "dateModified": "2026-11-10",
+  "dateModified": "2026-11-14",
   "readTime": 6,
   "intro": "Injections can ease knee pain for a while, but they do not repair the knee. We usually try medicines, exercises and physiotherapy first, because they treat the cause. We keep injections for patients who are still in pain after that, and use them for pain relief only. A steroid injection is the one we use most often.",
   "sections": [
     {
       "heading": "When do we consider a knee injection?",
-      "body": "Usually after medicines, exercises and physiotherapy treatments have been given a fair trial and pain is still limiting your life. The aim is to calm the pain so you can get on with exercises."
+      "body": "Usually after medicines, exercises and physiotherapy treatments have been given a fair trial and pain is still limiting your life. The aim is to calm the pain so you can get on with exercises.",
+      "table": {
+        "caption": "Knee injections for arthritis at a glance (as described on this page)",
+        "headers": [
+          "Injection",
+          "What it does",
+          "How long relief lasts",
+          "Guidelines",
+          "How we use it"
+        ],
+        "rows": [
+          [
+            "Steroid",
+            "Reduces inflammation and pain",
+            "Weeks to a few months (NICE: typically 2–10 weeks)",
+            "Used for short-term relief",
+            "Selected patients, limited number"
+          ],
+          [
+            "Hyaluronic acid (gel)",
+            "Pain relief in some people; does not lubricate or repair",
+            "Variable; evidence not strong",
+            "NICE advises against; others allow",
+            "Usually avoided; occasionally for pain relief only"
+          ],
+          [
+            "PRP",
+            "Uses your own blood; does not repair the joint",
+            "Uncertain",
+            "None of the major guidelines reviewed recommends it for knee arthritis",
+            "Usually avoided; occasionally for pain relief only"
+          ]
+        ]
+      }
     },
     {
       "heading": "What does a steroid injection do?",

@@ -28,6 +28,19 @@ export const CLINICS = (settings.clinics || []).map((c) => ({
   hours: c.hours || [],
 }));
 
+export const slugify = (s) =>
+  s.toLowerCase().replace(/['’]/g, '').replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
+// One-line list of all locations, built from settings.json so copy across the
+// site never drifts from the CMS (e.g. "A, Khopat; B, Ramachandra Nagar; and C, Naupada").
+const clinicBits = CLINICS.map((c) => `${c.name}, ${c.shortLocation.replace(/, Thane West$/, '')}`);
+export const CLINIC_LIST_TEXT =
+  clinicBits.length > 1
+    ? `${clinicBits.slice(0, -1).join('; ')}; and ${clinicBits[clinicBits.length - 1]}`
+    : clinicBits[0] || '';
+const NUM_WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six'];
+export const CLINIC_COUNT_TEXT = NUM_WORDS[CLINICS.length] || String(CLINICS.length);
+
 // Primary clinic — used where only one is needed (Procedure pages, schema, etc.)
 export const CLINIC = CLINICS[0] || {
   name: '',
@@ -42,7 +55,7 @@ export const SPECIALTIES = [
   {
     slug: 'joint-replacement',
     name: 'Joint Replacement (Hip & Knee)',
-    short: 'Robotic-assisted, tissue-sparing hip and knee replacement for rapid recovery.',
+    short: 'Robotic-assisted hip and knee replacement, when non-surgical care is no longer enough.',
     image: '/images/joint-replacement.jpg',
     points: [
       'Robotic Total Knee Replacement',
@@ -66,7 +79,7 @@ export const SPECIALTIES = [
   {
     slug: 'sports-arthroscopy',
     name: 'Sports Injuries & Arthroscopy',
-    short: 'ACL reconstruction, meniscus repair and advanced keyhole surgery with minimal downtime.',
+    short: 'ACL reconstruction, meniscus repair and keyhole (arthroscopic) surgery of the knee, shoulder and ankle.',
     image: '/images/sports-arthroscopy.jpg',
     points: [
       'ACL & Ligament Reconstruction',

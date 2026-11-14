@@ -15,6 +15,7 @@ export const CURRENT_ROLES = {
     "Joshi's Neurotrauma Centre, Thane West",
     'Kaizen Super Speciality Hospital, Thane West',
     'Borneo Mother and Child Care Hospital, Panch Pakhdi, Thane West',
+    'Sahayogi Hospital LLP, Naupada, Thane West',
   ],
 };
 
@@ -46,7 +47,10 @@ export const QUALIFICATIONS = [
     isAwardingBody: true,
   },
   {
-    degree: 'M.R.C.S. (Part A)',
+    degree: 'MRCS Part A examination (passed)',
+    // NMC: only recognised qualifications as suffixes — shown as an examination
+    // passed, not as a degree.
+    isExamination: true,
     year: '',
     institution: 'Royal College of Surgeons of Edinburgh',
     isAwardingBody: true,
@@ -55,19 +59,19 @@ export const QUALIFICATIONS = [
 
 export const FELLOWSHIPS = [
   {
-    name: 'Fellowship in Joint Replacement & Robotics (FIJR, FIRJR)',
+    name: 'Fellowship training in Joint Replacement & Robotics',
     institution: 'KIMS Sunshine Bone and Joint Institute, Hyderabad',
     focus:
       'Robotic-assisted and conventional hip and knee replacement, revision arthroplasty and complex deformity correction.',
   },
   {
-    name: 'Fellowship in Arthroscopy & Sports Medicine (FASM)',
+    name: 'Fellowship training in Arthroscopy & Sports Medicine',
     institution: 'KIMS Sunshine Bone and Joint Institute, Hyderabad',
     focus:
       'ACL and ligament reconstruction, meniscus repair, shoulder arthroscopy and return-to-sport rehabilitation.',
   },
   {
-    name: 'Fellowship in Foot & Ankle Surgery (FFAS)',
+    name: 'Fellowship training in Foot & Ankle Surgery',
     institution: 'Mumbai Foot and Ankle Clinic, Mumbai',
     focus:
       'Foot and ankle deformity correction, Achilles and tendon disorders, ankle instability and diabetic foot care.',
@@ -112,25 +116,6 @@ export const CERTIFICATIONS = [
   { name: 'Diploma in Football Medicine', body: 'FIFA' },
   { name: 'Ponseti Method of Clubfoot Management', body: 'CURE International' },
   { name: 'Basic Biomedical Research Course', body: 'Indian Council of Medical Research' },
-];
-
-// Figures provided by Dr. Ghag.
-export const EXPERIENCE = [
-  {
-    figure: '5,000+',
-    label: 'Trauma cases managed',
-    detail: 'Including spine and complex trauma, across high-volume tertiary centres in Mumbai and Maharashtra.',
-  },
-  {
-    figure: '500+',
-    label: 'Joint replacements',
-    detail: 'Hip and knee replacement, including over 100 robotic-assisted procedures.',
-  },
-  {
-    figure: '150+',
-    label: 'Arthroscopic surgeries',
-    detail: 'ACL and ligament reconstruction, meniscus repair and shoulder arthroscopy.',
-  },
 ];
 
 export const RESEARCH_HIGHLIGHTS = [

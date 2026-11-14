@@ -1,11 +1,15 @@
 import { Link, useParams, Navigate } from 'react-router-dom';
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import Seo from '../components/Seo.jsx';
 import Reveal from '../components/Reveal.jsx';
 import Breadcrumbs, { breadcrumbLd } from '../components/Breadcrumbs.jsx';
 import { ARTICLES } from '../data/articles.js';
 import { TRANSLATIONS, LABELS } from '../data/translations.js';
 import { SITE } from '../data/site.js';
+import TRANSLATION_INDEX from '../data/translation-index.json';
+
+const LANG_PREFIX = { en: '', mr: '/mr', hi: '/hi' };
+const fmtDate = (iso) => new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
 
 const LANGS = [
   { code: 'en', label: 'English' },
@@ -13,22 +17,27 @@ const LANGS = [
   { code: 'hi', label: 'हिंदी' },
 ];
 
-export default function EducationArticle() {
+// routeLang comes from the URL: /education/x (en), /mr/education/x, /hi/education/x.
+// Each language is its own indexable page with hreflang alternates. `preloaded`
+// carries the large Marathi/Hindi JSON for the localized routes so they render
+// fully during prerender (see MarathiArticle.jsx / HindiArticle.jsx).
+export default function EducationArticle({ routeLang = 'en', preloaded = null }) {
   const { slug } = useParams();
-  const [lang, setLang] = useState('en');
+  const lang = routeLang;
   const article = ARTICLES.find((a) => a.slug === slug);
+  const available = ['en', ...['mr', 'hi'].filter((l) => TRANSLATION_INDEX[l]?.includes(slug))];
+  const langPath = (l) => `${LANG_PREFIX[l]}/education/${slug}`;
+  const alternates =
+    available.length > 1
+      ? [
+          ...available.map((l) => ({ hreflang: l, path: langPath(l) })),
+          { hreflang: 'x-default', path: langPath('en') },
+        ]
+      : [];
 
-  // Active-language content (falls back to English if a translation is missing)
-  // The 41 newer articles' translations live in per-language JSON files that are
-  // fetched only when a reader picks that language (keeps English pages light).
-  const [extra, setExtra] = useState({});
-  useEffect(() => {
-    if (lang === 'en' || extra[lang]) return;
-    const load = lang === 'mr'
-      ? () => import('../data/translations-extra-mr.json')
-      : () => import('../data/translations-extra-hi.json');
-    load().then((m) => setExtra((prev) => ({ ...prev, [lang]: m.default }))).catch(() => {});
-  }, [lang, extra]);
+  // Active-language content. Localized routes pass the Marathi/Hindi JSON in
+  // `preloaded`; the seven oldest translations live in translations.js.
+  const extra = preloaded || {};
 
   const content =
     lang !== 'en'
@@ -36,17 +45,17 @@ export default function EducationArticle() {
       : article;
   const t = LABELS[lang] || LABELS.en;
 
-  // Article + FAQ rich-result schema (kept in English for Google)
+  // Article + FAQ rich-result schema, in the page's own language
   const crumbs = useMemo(
     () =>
       article
         ? [
             { name: 'Home', path: '/' },
             { name: 'Patient Education', path: '/education' },
-            { name: article.title, path: `/education/${article.slug}` },
+            { name: content.title, path: langPath(lang) },
           ]
         : [],
-    [article]
+    [article, content, lang]
   );
 
   const jsonLd = useMemo(() => {
@@ -62,8 +71,9 @@ export default function EducationArticle() {
           datePublished: article.date,
           dateModified: article.dateModified || article.date,
           lastReviewed: article.dateModified || article.date,
-          reviewedBy: { '@type': 'Physician', name: SITE.name, url: SITE.url },
-          inLanguage: ['en', 'mr', 'hi'],
+          reviewedBy: { '@type': 'Physician', '@id': `${SITE.url}/#physician`, name: SITE.name, url: `${SITE.url}/about/` },
+          inLanguage: lang,
+          ...(lang !== 'en' ? { name: content.title, translationOfWork: { '@type': 'MedicalWebPage', url: `${SITE.url}/education/${article.slug}/` } } : {}),
           ...(article.citations?.length
             ? {
                 citation: article.citations.map((c) => ({
@@ -76,12 +86,13 @@ export default function EducationArticle() {
                 })),
               }
             : {}),
-          author: { '@type': 'Physician', name: SITE.name, url: SITE.url },
-          url: `${SITE.url}/education/${article.slug}`,
+          author: { '@type': 'Physician', '@id': `${SITE.url}/#physician`, name: SITE.name, url: `${SITE.url}/about/` },
+          url: `${SITE.url}${langPath(lang)}/`,
         },
         {
           '@type': 'FAQPage',
-          mainEntity: article.faqs.map((f) => ({
+          inLanguage: lang,
+          mainEntity: content.faqs.map((f) => ({
             '@type': 'Question',
             name: f.q,
             acceptedAnswer: { '@type': 'Answer', text: f.a },
@@ -89,34 +100,43 @@ export default function EducationArticle() {
         },
       ],
     };
-  }, [article, crumbs]);
+  }, [article, crumbs, content, lang]);
 
   if (!article) return <Navigate to="/education" replace />;
+  if (lang !== 'en' && !available.includes(lang)) return <Navigate to={`/education/${slug}`} replace />;
+
+  const metaDesc =
+    lang === 'en'
+      ? article.metaDescription
+      : content.metaDescription || (content.intro.length > 155 ? `${content.intro.slice(0, 152).trimEnd()}…` : content.intro);
 
   return (
     <>
       <Seo
-        title={article.title}
-        description={article.metaDescription}
-        path={`/education/${article.slug}`}
+        title={lang === 'en' ? (article.seoTitle || article.title) : content.title}
+        description={metaDesc}
+        path={langPath(lang)}
         jsonLd={jsonLd}
+        lang={lang}
+        alternates={alternates}
       />
 
       <article className="mx-auto max-w-3xl px-4 py-16" lang={lang}>
         <Breadcrumbs items={crumbs} className="mb-6" />
         <div className="flex flex-wrap items-center justify-between gap-4">
           <Link to="/education" className="text-sm font-medium text-brand-gold hover:underline">
-            ← Patient Education Hub
+            {t.back || '← Patient Education Hub'}
           </Link>
 
           {/* Language toggle */}
           <div className="glass flex rounded-full p-1" role="group" aria-label="Choose language">
-            {LANGS.map((l) => (
-              <button
+            {LANGS.filter((l) => available.includes(l.code)).map((l) => (
+              <Link
                 key={l.code}
-                type="button"
-                onClick={() => setLang(l.code)}
-                aria-pressed={lang === l.code}
+                to={langPath(l.code)}
+                hrefLang={l.code}
+                lang={l.code}
+                aria-current={lang === l.code ? 'page' : undefined}
                 className={`rounded-full px-4 py-1.5 text-sm font-medium transition-all duration-300 ${
                   lang === l.code
                     ? 'bg-gradient-to-r from-brand-brown to-brand-gold text-white shadow-sm'
@@ -124,7 +144,7 @@ export default function EducationArticle() {
                 }`}
               >
                 {l.label}
-              </button>
+              </Link>
             ))}
           </div>
         </div>
@@ -137,23 +157,29 @@ export default function EducationArticle() {
             {content.title}
           </h1>
           <p className="mt-3 text-sm text-slate-400">
-            {t.by} {SITE.name} · {article.readTime} {t.minRead}
+            {t.by} <Link to="/about" className="underline hover:text-brand-brown">{SITE.name}</Link> · {article.readTime} {t.minRead}
           </p>
           <p className="mt-1 text-sm text-slate-400">
             <time dateTime={article.date}>
-              Published {new Date(article.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+              {t.published || 'Published'} {fmtDate(article.date)}
             </time>
             {article.dateModified && article.dateModified !== article.date && (
               <>
                 {' · '}
                 <time dateTime={article.dateModified}>
-                  Last reviewed {new Date(article.dateModified).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+                  {t.updated || 'Last updated'} {fmtDate(article.dateModified)}
                 </time>
               </>
             )}
           </p>
         </header>
 
+        {lang === 'en' && article.summary && (
+          <div className="mt-8 rounded-2xl border-l-4 border-brand-gold bg-brand-gold/10 p-5">
+            <p className="text-xs font-bold uppercase tracking-wide text-brand-brown">Short answer</p>
+            <p className="mt-2 leading-relaxed text-slate-800">{article.summary}</p>
+          </div>
+        )}
         <p className="mt-8 text-lg leading-relaxed text-slate-700">{content.intro}</p>
 
         {content.sections.map((s) => (
@@ -237,7 +263,7 @@ export default function EducationArticle() {
         {article.citations?.length > 0 && (
           <section className="mt-12 rounded-2xl bg-slate-50 p-6" aria-labelledby="sources-heading">
             <h2 id="sources-heading" className="font-serif text-lg font-bold text-slate-900">
-              Sources &amp; further reading
+              {t.sources || 'Sources & further reading'}
             </h2>
             <ul className="mt-4 space-y-3">
               {article.citations.map((c) => (
@@ -279,16 +305,12 @@ export default function EducationArticle() {
           </div>
         </section>
 
-        <div className="relative mt-12 overflow-hidden rounded-3xl bg-gradient-to-br from-brand-dark to-slate-900 p-8 text-center shadow-glass-lg">
-          <div className="blob left-1/3 top-0 h-40 w-40 bg-brand-gold/15" aria-hidden="true" />
-          <div className="relative">
-            <h2 className="font-serif text-xl font-bold text-white">{t.ctaTitle}</h2>
-            <p className="mt-2 text-sm text-slate-300">{t.ctaBody}</p>
-            <Link to="/book" className="btn-gradient mt-5">
-              {t.ctaBtn}
-            </Link>
-          </div>
-        </div>
+        {lang !== 'en' && t.translationNote && (
+          <p className="mt-10 text-xs text-slate-500">
+            {t.translationNote}{' '}
+            <Link to={langPath('en')} hrefLang="en" lang="en" className="underline">English</Link>
+          </p>
+        )}
       </article>
     </>
   );

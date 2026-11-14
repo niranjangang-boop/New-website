@@ -10,16 +10,25 @@ export const headState = {
   description: '',
   path: '/',
   jsonLd: null,
+  lang: 'en',
+  // [{ hreflang: 'mr', path: '/mr/education/x' }, ...] — includes the page itself
+  alternates: [],
 };
+
+// Search results cut titles at about 60 characters, so the "| Dr. Niranjan Ghag"
+// suffix is added only when it still fits.
+export function withBrand(title) {
+  if (!title) return `${SITE.name} | Orthopaedic Surgeon in Thane`;
+  const full = `${title} | ${SITE.name}`;
+  return full.length <= 60 ? full : title;
+}
 
 /**
  * Lightweight per-route SEO (no react-helmet needed).
  * Updates title, meta description, canonical and optional JSON-LD.
  */
-export default function Seo({ title, description, path = '/', jsonLd = null }) {
-  const resolvedTitle = title
-    ? `${title} | ${SITE.name}`
-    : `${SITE.name} | ${SITE.title}`;
+export default function Seo({ title, description, path = '/', jsonLd = null, lang = 'en', alternates = [] }) {
+  const resolvedTitle = withBrand(title);
 
   // Synchronous write — runs during SSR render. On the client it's
   // immediately followed by the effect below, so it's harmless there too.
@@ -27,6 +36,22 @@ export default function Seo({ title, description, path = '/', jsonLd = null }) {
   headState.description = description || '';
   headState.path = path;
   headState.jsonLd = jsonLd || null;
+  headState.lang = lang;
+  headState.alternates = alternates;
+
+  const altKey = alternates.map((a) => `${a.hreflang}:${a.path}`).join('|');
+
+  useEffect(() => {
+    document.documentElement.lang = lang;
+    document.head.querySelectorAll('link[rel="alternate"][hreflang]').forEach((l) => l.remove());
+    alternates.forEach((a) => {
+      const l = document.createElement('link');
+      l.rel = 'alternate';
+      l.hreflang = a.hreflang;
+      l.href = `${SITE.url}${a.path.endsWith('/') ? a.path : `${a.path}/`}`;
+      document.head.appendChild(l);
+    });
+  }, [lang, altKey]);
 
   useEffect(() => {
     document.title = resolvedTitle;

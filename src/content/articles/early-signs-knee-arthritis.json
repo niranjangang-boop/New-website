@@ -1,11 +1,13 @@
 {
   "slug": "early-signs-knee-arthritis",
   "title": "Early Signs of Knee Arthritis: Don't Ignore These Symptoms",
-  "metaDescription": "Knee pain while climbing stairs or getting up from a chair? Learn the early warning signs of knee arthritis, home care, and when to see an orthopaedic surgeon in Thane.",
+  "seoTitle": "Early Signs of Knee Arthritis",
+  "metaDescription": "Knee pain on stairs or getting up from a chair? Early warning signs of knee arthritis, home care, and when to see an orthopaedic surgeon in Thane.",
   "category": "Knee",
   "date": "2026-06-12",
   "readTime": 5,
   "intro": "Do you feel knee pain while climbing stairs or getting up from a chair? It may not be 'just age'. Many patients ignore early symptoms hoping they will go away, but this often leads to worsening of the condition over time.",
+  "summary": "Early knee arthritis usually shows as pain on stairs or rising from a chair, morning stiffness that eases with movement, swelling after activity, and grinding. It cannot be reversed, but most early and moderate cases are managed without surgery, and starting exercise and weight control early helps.",
   "sections": [
     {
       "heading": "Warning signs to watch for",
@@ -29,13 +31,13 @@
     },
     {
       "heading": "When to see a specialist",
-      "body": "If pain persists beyond a few weeks, disturbs sleep, or limits daily activity, a clinical evaluation and standing X-ray can grade the arthritis accurately. Early diagnosis translates to simpler treatments — from physiotherapy and injections to, in advanced cases, robotic-assisted knee replacement with rapid recovery."
+      "body": "If pain persists beyond a few weeks, disturbs sleep, or limits daily activity, a clinical evaluation and standing X-ray can grade the arthritis accurately. Early diagnosis translates to simpler treatments — from physiotherapy and injections to, in advanced cases, robotic-assisted knee replacement."
     }
   ],
   "faqs": [
     {
       "q": "Can early knee arthritis be reversed?",
-      "a": "Cartilage damage cannot be fully reversed, but early intervention with physiotherapy, weight management and activity modification can halt progression and keep you pain-free for years without surgery."
+      "a": "Cartilage damage cannot be reversed, but physiotherapy, weight management and activity changes can slow progression and keep many people comfortable for years without surgery."
     },
     {
       "q": "Does knee arthritis always need replacement surgery?",
@@ -43,7 +45,7 @@
     },
     {
       "q": "Which doctor should I see for knee pain in Thane?",
-      "a": "An orthopaedic surgeon can evaluate knee pain clinically and with X-rays. Dr. Niranjan Ghag consults at Joshi's Neurotrauma Centre, Khopat, Thane West."
+      "a": "An orthopaedic surgeon can assess knee pain with an examination and X-rays. Dr. Niranjan Ghag consults at four locations in Thane West; hours are on the contact page."
     }
   ],
   "tags": [
@@ -63,5 +65,5 @@
       "publisher": "American Academy of Orthopaedic Surgeons"
     }
   ],
-  "dateModified": "2026-08-22"
+  "dateModified": "2026-11-14"
 }

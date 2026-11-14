@@ -9,14 +9,19 @@ export const PROCEDURES = [
 
   {
     slug: 'knee-replacement',
+    reviewed: '2026-11-14',
+    sources: [
+      { label: 'Robotic-assisted vs conventional total knee arthroplasty: meta-analysis of 9 randomised trials (J Robot Surg 2024) — OrthoEvidence summary', url: 'https://myorthoevidence.com/AceReport/Show/robotic-assisted-versus-conventional-total-knee-arthroplasty-for-surgical-precision', publisher: 'OrthoEvidence' },
+      { label: 'More than 80% of total knee replacements can last for 25 years', url: 'https://evidence.nihr.ac.uk/alert/more-than-80-of-total-knee-replacements-can-last-for-25-years/', publisher: 'NIHR' },
+    ],
     name: 'Robotic Knee Replacement',
     group: 'Joint Replacement',
     featured: true,
     keywordTitle: 'Robotic Knee Replacement Surgeon in Thane',
     metaDescription:
-      'Robotic total & partial knee replacement in Thane by Dr. Niranjan Ghag. Walk the same day, home in 2–3 days. English, मराठी & हिंदी. Khopat, Thane West.',
+      'Robotic-assisted total and partial knee replacement in Thane West with Dr. Niranjan Ghag: who needs it, recovery, cost and insurance. English, मराठी, हिंदी.',
     image: '/images/joint-replacement.jpg',
-    hero: 'Precision-aligned implants, smaller incisions and faster recovery — walking within hours of surgery.',
+    hero: 'Knee replacement planned and guided with robotic assistance, offered only when non-surgical treatment is no longer enough.',
     specialty: 'joint-replacement',
     relatedArticles: [
       { slug: 'early-signs-knee-arthritis', title: 'Early signs of knee arthritis' },
@@ -37,16 +42,16 @@ export const PROCEDURES = [
       },
       {
         heading: 'Why robotic-assisted?',
-        body: 'A 3D plan of your knee is created before surgery. During the operation, the robotic arm keeps every bone cut exactly on plan — alignment accurate to fractions of a millimetre, healthy bone and ligaments preserved. Published results show more accurate implant positioning, less soft-tissue trauma, lower early pain scores and quicker rehabilitation than conventional techniques. The surgeon operates; the robot ensures precision.',
+        body: 'A 3D plan of your knee is created before surgery. During the operation, the robotic arm keeps every bone cut exactly on plan — alignment accurate to fractions of a millimetre, healthy bone and ligaments preserved. A 2024 review of nine randomised trials found more accurate alignment and fewer alignment outliers with robotic assistance, and slightly better patient-reported scores; it also found longer operating time, and the long-term benefit and cost-effectiveness are not yet proven. The surgeon operates; the robot helps hold the plan, and surgeon experience still matters most.',
       },
       {
         heading: 'Your recovery, step by step',
         bullets: [
-          'Same day: standing and walking with a walker, usually within hours',
-          'Day 2–3: staircase training, discharge home in most cases',
+          'Day 0–1: most people stand and walk with a walker, with physiotherapy support',
+          'Day 2–4: staircase training; most people go home within a few days, depending on health',
           'Week 2–3: walking indoors without support; sutures reviewed',
           'Week 6: most daily activities, desk work, short outings',
-          'Month 3 onward: full routine including travel; implant designed to last 20–25+ years',
+          'Month 3 onward: most people are much more comfortable; some ache and swelling can last several months',
         ],
       },
       {
@@ -55,27 +60,31 @@ export const PROCEDURES = [
       },
     ],
     faqs: [
-      { q: 'Am I too old (or too young) for knee replacement?', a: 'Age alone is not the deciding factor. Patients from their 50s to late 80s undergo successful replacement; what matters is fitness for anaesthesia, the severity of arthritis, and how much pain limits your life. Modern implants lasting 20–25 years also make surgery reasonable for younger patients with severe disease.' },
-      { q: 'How painful is the surgery and recovery?', a: 'With modern multimodal pain management — nerve blocks, local infiltration and scheduled medication — most patients describe the pain as far less than they feared, and are walking comfortably within 24 hours.' },
+      { q: 'Am I too old (or too young) for knee replacement?', a: 'Age alone is not the deciding factor. Patients from their 50s to late 80s undergo successful replacement; what matters is fitness for anaesthesia, the severity of arthritis, and how much pain limits your life. Registry data show about 93% of total knee replacements still in place at 15 years and about 82% at 25 years, which is relevant when younger patients with severe disease are deciding.' },
+      { q: 'How painful is the surgery and recovery?', a: 'With modern multimodal pain management — nerve blocks, local infiltration and scheduled medication — most patients describe the pain as far less than they feared, and most are up and walking with support within a day or so. Some ache and swelling for a few months is common.' },
       { q: 'Can both knees be replaced together?', a: 'Yes, for medically fit patients, both knees can be done in one anaesthesia (bilateral TKR) — one hospital stay and one recovery period. Your cardiac and general fitness are assessed first.' },
       { q: 'How soon can I sit cross-legged or use Indian toilets?', a: 'High-flexion implant designs and robotic alignment allow many patients to regain deep bending. This depends on your pre-operative flexibility and is discussed honestly during planning.' },
       { q: 'What is the cost of robotic knee replacement in Thane/Mumbai?', a: 'Cost depends on implant brand, whether one or both knees are done, robotic system used, hospital tier and room category — there is no single fixed price. A detailed, written estimate is given after your consultation. See our full cost guide for indicative ranges and what drives them.' },
       { q: 'Is knee replacement covered by insurance/Mediclaim?', a: 'Most health insurance and Mediclaim policies in India cover knee replacement, including cashless treatment at network hospitals, subject to your policy terms and any waiting period for joint conditions. Bring your policy details to the consultation for a clear answer specific to your plan.' },
-      { q: 'Is robotic knee replacement better than traditional, and is it worth the extra cost?', a: 'Robotic assistance improves implant alignment accuracy and can mean less soft-tissue trauma, but it is one factor among several — surgeon experience matters most either way. See our honest robotic vs. traditional comparison for a side-by-side look, including who it does and doesn\'t suit.' },
+      { q: 'Is robotic knee replacement better than traditional, and is it worth the extra cost?', a: 'Robotic assistance improves implant alignment accuracy in trials, but long-term benefit is not yet proven and it is one factor among several — surgeon experience matters most either way. See our honest robotic vs. traditional comparison for a side-by-side look, including who it does and doesn\'t suit.' },
     ],
-    footerNote: 'Not sure knee replacement is right for you? Sports injuries and early cartilage damage can often be treated with <a href="/specialties/sports-arthroscopy">keyhole arthroscopy</a> instead. Read about <a href="/education/robotic-knee-replacement-cost-thane">robotic knee replacement cost in Thane</a> or <a href="/book">book a consultation</a>.',
+    footerNote: 'Not sure knee replacement is right for you? Sports injuries and early cartilage damage can often be treated with <a href="/specialties/sports-arthroscopy">keyhole arthroscopy</a> instead. Read about <a href="/education/robotic-knee-replacement-cost-thane">robotic knee replacement cost in Thane</a> or see <a href="/contact">locations and OPD hours</a>.',
   },
 
   {
     slug: 'hip-replacement',
+    reviewed: '2026-11-14',
+    sources: [
+      { label: 'Global study finds high success rate for hip and knee replacements (The Lancet, 2019)', url: 'https://www.bristol.ac.uk/news/2019/february/hip-knee-replacements.html', publisher: 'University of Bristol' },
+    ],
     name: 'Total Hip Replacement',
     group: 'Joint Replacement',
     featured: true,
     keywordTitle: 'Hip Replacement Surgeon in Thane',
     metaDescription:
-      'Total hip replacement in Thane by Dr. Niranjan Ghag. Walk within 24 hours; modern implants lasting 20–25+ years. Khopat, Thane West, opp. Viviana Mall.',
+      'Total hip replacement in Thane West with Dr. Niranjan Ghag: signs you may need it, what the operation involves, recovery, implant lifespan and insurance.',
     image: '/images/joint-replacement.jpg',
-    hero: 'One of the most successful operations in all of medicine — reliable pain relief and restored independence.',
+    hero: 'For hip arthritis or AVN that still limits walking and sleep after non-surgical treatment.',
     specialty: 'joint-replacement',
     relatedArticles: [
       { slug: 'hip-replacement-signs', title: 'Signs you may need hip replacement' },
@@ -94,7 +103,7 @@ export const PROCEDURES = [
       },
       {
         heading: 'What modern hip replacement looks like',
-        body: 'The worn ball-and-socket joint is replaced with smooth, durable implants through a tissue-sparing approach. Most patients stand and walk within 24 hours, climb stairs within a week, and return to independent daily life within 4–6 weeks. Modern ceramic and highly cross-linked polyethylene bearings are expected to last 20–25 years or more — which is why hip replacement is now routinely offered to younger patients with AVN.',
+        body: 'The worn ball-and-socket joint is replaced with smooth, durable implants through a tissue-sparing approach. Most people stand and walk with support within a day or so, manage stairs within about a week, and are independent for daily life by about 4–6 weeks, though this varies with age and health. Registry analyses found about 89% of total hip replacements still in place at 15 years, and modern ceramic and highly cross-linked polyethylene bearings are chosen partly to extend that — which is why hip replacement is also offered to younger patients with advanced AVN.',
       },
       {
         heading: 'Why timing matters',
@@ -102,8 +111,8 @@ export const PROCEDURES = [
       },
     ],
     faqs: [
-      { q: 'How long will the implant last?', a: 'Modern bearing surfaces are expected to last 20–25 years or longer. Registry data shows over 90% of hip replacements still functioning well at 15 years.' },
-      { q: 'What is AVN and why do younger patients need hip replacement?', a: 'Avascular necrosis is loss of blood supply to the femoral head, common in 30s–40s, often after steroid use or alcohol excess. Early stages can be treated with preservation procedures; advanced collapse needs replacement — with excellent results.' },
+      { q: 'How long will the implant last?', a: 'A 2019 analysis of national joint registries in The Lancet found about 89% of total hip replacements still in place at 15 years and about 58% at 25 years. Newer bearing surfaces are expected to do at least as well, but long-term data on them are still being collected.' },
+      { q: 'What is AVN and why do younger patients need hip replacement?', a: 'Avascular necrosis is loss of blood supply to the femoral head, common in 30s–40s, often after steroid use or alcohol excess. Early stages can be treated with preservation procedures; advanced collapse usually needs replacement.' },
       { q: 'Will I be able to sit on the floor afterwards?', a: 'With modern implants and surgical techniques, many patients regain floor-sitting. It depends on implant type and your anatomy — this is discussed honestly before surgery.' },
       { q: 'How soon can I return to work?', a: 'Desk work: typically 3–4 weeks. Standing or field work: 6–10 weeks depending on demands. Driving usually resumes around 4–6 weeks.' },
       { q: 'What is the cost of hip replacement in India?', a: 'Cost varies with implant material (metal, ceramic or highly cross-linked polyethylene), single vs. bilateral surgery, hospital tier and room category — government and private hospital pricing also differs significantly. You will get a clear, written estimate before deciding anything.' },
@@ -113,6 +122,11 @@ export const PROCEDURES = [
 
   {
     slug: 'robotic-vs-traditional-knee-replacement',
+    reviewed: '2026-11-14',
+    sources: [
+      { label: 'Robotic-assisted vs conventional total knee arthroplasty: meta-analysis of 9 randomised trials (J Robot Surg 2024) — OrthoEvidence summary', url: 'https://myorthoevidence.com/AceReport/Show/robotic-assisted-versus-conventional-total-knee-arthroplasty-for-surgical-precision', publisher: 'OrthoEvidence' },
+      { label: 'More than 80% of total knee replacements can last for 25 years', url: 'https://evidence.nihr.ac.uk/alert/more-than-80-of-total-knee-replacements-can-last-for-25-years/', publisher: 'NIHR' },
+    ],
     name: 'Robotic vs. Traditional Knee Replacement',
     group: 'Joint Replacement',
     featured: false,
@@ -131,10 +145,10 @@ export const PROCEDURES = [
         heading: 'Side by side',
         bullets: [
           'Alignment accuracy: Robotic — accurate to fractions of a millimetre against a pre-built 3D plan. Traditional — relies on the surgeon\'s manual instrumentation and experience, which is excellent in skilled hands but has more natural variability',
-          'Soft-tissue handling: Robotic — typically less soft-tissue trauma since cuts are guided precisely. Traditional — slightly more reliant on jigs that can disturb surrounding tissue',
-          'Recovery speed: Robotic — many patients report quicker early mobilisation. Traditional — recovery is still good, just on average a touch slower in the first few weeks for some patients',
+          'Soft-tissue handling: Robotic — the arm stops the saw outside the planned boundary, which is intended to protect ligaments. Traditional — relies on cutting guides and the surgeon\'s control',
+          'Recovery speed: Robotic — some trials report slightly better early patient-reported scores; differences are small. Traditional — recovery is good, and for many patients indistinguishable after the first months',
           'Cost: Robotic — approximately ₹2.5–3 lakh per knee, due to the technology usage fee. Traditional — approximately ₹1.5–2 lakh per knee depending on the implant chosen, and a well-established, time-tested option. We quote both honestly so you can weigh the difference against your own priorities',
-          'Long-term outcome: Both achieve excellent, durable results (implants lasting 20–25+ years) in the hands of an experienced joint replacement surgeon — the surgeon\'s skill matters more than the tool',
+          'Long-term outcome: Long-term data exist for conventional surgery (about 93% of total knees in place at 15 years in registries); robotic long-term benefit is not yet proven. The surgeon\'s experience matters more than the tool',
         ],
       },
       {
@@ -160,7 +174,7 @@ export const PROCEDURES = [
       },
     ],
     faqs: [
-      { q: 'Is robotic knee replacement actually better than traditional?', a: 'It offers more consistent alignment accuracy and, in many studies, less soft-tissue trauma — but both approaches achieve excellent, durable outcomes in experienced hands. "Better" depends partly on your specific knee.' },
+      { q: 'Is robotic knee replacement actually better than traditional?', a: 'Randomised trials show more consistent alignment with robotic assistance and small differences in early patient-reported scores, but no proven long-term advantage yet. Both approaches work well in experienced hands, and "better" depends partly on your specific knee.' },
       { q: 'Is the extra cost of robotic surgery worth it?', a: 'Robotic is approximately ₹2.5–3 lakh and traditional approximately ₹1.5–2 lakh per knee, so the gap is real. For complex deformities or revision cases, the added precision can be genuinely valuable. For straightforward knees, traditional surgery often gives an equally good outcome for less — we will tell you plainly which applies to your knee rather than recommending more than you need.' },
       { q: 'Can I reduce the cost without compromising the outcome?', a: 'Often, yes — choosing an imageless robotic system (no separate CT scan charge) or a well-established domestic implant brand can meaningfully lower the bill without affecting how well the surgery goes. We discuss these trade-offs openly at consultation.' },
       { q: 'Can every patient choose robotic surgery?', a: 'Almost all patients are candidates, but a small number with specific prior hardware or anatomical factors may be better suited to a conventional approach — assessed individually at consultation.' },
@@ -384,42 +398,62 @@ export const PROCEDURES = [
     featured: false,
     keywordTitle: 'Hand & Wrist Surgeon in Thane',
     metaDescription:
-      'Hand and wrist surgery in Thane — wrist and finger fractures, tendon injuries, trigger finger and carpal tunnel syndrome. Khopat, Thane West.',
+      'Hand and wrist problems in Thane West: wrist and finger fractures, tendon injuries, trigger finger, carpal tunnel and De Quervain\'s. When surgery helps.',
     image: '/images/trauma-fracture.jpg',
-    hero: 'Your hands do everything — precise surgery and early rehabilitation restore what an injury takes away.',
+    hero: 'Most hand and wrist problems settle without an operation. Some injuries, such as cut tendons, need prompt repair.',
     specialty: 'trauma-fracture',
+    reviewed: '2026-11-14',
+    sources: [
+      { label: 'Carpal tunnel syndrome', url: 'https://www.nhs.uk/conditions/carpal-tunnel-syndrome/', publisher: 'NHS' },
+      { label: 'Trigger finger', url: 'https://www.orthoinfo.org/bodypart/hand-wrist/trigger-finger', publisher: 'AAOS OrthoInfo' },
+      { label: 'De Quervain\'s tendinosis', url: 'https://www.orthoinfo.org/bodypart/hand-wrist/de-quervains-tendinosis', publisher: 'AAOS OrthoInfo' },
+    ],
     relatedArticles: [
+      { slug: 'carpal-tunnel-syndrome-hand-numbness-at-night', title: 'Hand numbness at night: carpal tunnel?' },
+      { slug: 'trigger-finger-locking-finger-treatment', title: 'Trigger finger: causes and treatment' },
+      { slug: 'wrist-thumb-pain-de-quervain-tenosynovitis', title: 'Thumb-side wrist pain (De Quervain\'s)' },
+      { slug: 'ganglion-cyst-lump-on-wrist-do-i-need-surgery', title: 'Ganglion cyst on the wrist' },
       { slug: 'fracture-healing-surgery', title: 'How fractures heal — and when surgery is needed' },
     ],
     sections: [
       {
-        heading: 'Conditions treated',
+        heading: 'Which hand and wrist problems are treated?',
+        body: 'The hand clinic sees two broad groups: injuries, where timing matters, and wear-and-overuse problems, which usually settle with simple treatment first.',
         bullets: [
-          'Wrist fractures — distal radius, scaphoid, perilunate dislocations',
-          'Metacarpal and finger fractures — boxing fractures, crush injuries, sports injuries',
-          'Tendon injuries — flexor and extensor tendon cuts requiring prompt repair',
-          'Trigger finger (stenosing tenosynovitis) — finger locking or clicking in a bent position',
+          'Wrist fractures — distal radius (the commonest wrist fracture) and scaphoid fractures, which can be missed on the first X-ray',
+          'Metacarpal and finger fractures — boxing fractures, crush and sports injuries',
+          'Tendon injuries — cut flexor or extensor tendons, which need prompt repair',
+          'Mallet finger — a drooping fingertip after the tendon is pulled off, usually treated in a splint',
+          'Trigger finger — a finger that catches, clicks or locks in a bent position',
           'De Quervain\'s tenosynovitis — pain on the thumb side of the wrist with gripping',
-          'Carpal tunnel syndrome — numbness, tingling and weakness from median nerve compression',
-          'Mallet finger — fingertip droop after tendon avulsion injury',
-          'Ganglion cysts — fluid-filled lumps around the wrist or finger joints',
+          'Carpal tunnel syndrome — numbness and tingling in the thumb and first fingers, often at night',
+          'Ganglion cysts — harmless fluid-filled lumps around the wrist or fingers',
         ],
       },
       {
-        heading: 'Trigger finger and De Quervain\'s — common, treatable',
-        body: 'Trigger finger causes a finger to lock or snap when bending — very common in people who grip repeatedly (drivers, housewives, mechanics). Most respond to a single steroid injection; persistent cases need a small day-care release procedure. De Quervain\'s causes pain at the base of the thumb wrist with pinching or gripping — treated with splinting, injection or surgical release with excellent results.',
+        heading: 'Which hand injuries need to be seen urgently?',
+        body: 'A cut on the palm or finger with loss of bending or straightening, a finger that is numb beyond a cut, a wrist that is deformed or very swollen after a fall, and pain in the anatomical snuffbox (the hollow at the base of the thumb) after a fall should all be seen the same day. Cut tendons and nerves are repaired best early, and scaphoid fractures can be missed on a first X-ray, so a suspected one is usually splinted and re-checked.',
       },
       {
-        heading: 'Carpal tunnel syndrome',
-        body: 'Carpal tunnel syndrome causes numbness, tingling and weakness in the thumb, index and middle fingers — often worst at night or when driving. It is the most common nerve compression condition in the upper limb. Mild cases: night splint and injections. Moderate–severe: a 15-minute day-care carpal tunnel release gives immediate lasting relief.',
+        heading: 'Do trigger finger and De Quervain\'s need surgery?',
+        body: 'Usually not. Both start with rest from the painful activity, a splint and simple painkillers. A steroid injection helps many people and can be repeated a limited number of times; it works less well in people with diabetes and in long-standing cases. Surgery — a short day-case release under local anaesthetic — is considered when symptoms are severe, a finger stays locked, or other treatment has not helped. Complications are uncommon but include infection, stiffness and the problem returning.',
+      },
+      {
+        heading: 'When does carpal tunnel syndrome need an operation?',
+        body: 'Night splints and, for selected people, a steroid injection help many cases. The NHS advises that surgery is considered when symptoms are getting worse, have not settled with other treatment, or the numbness is constant or the thumb muscle is wasting. The operation releases the tight ligament over the nerve, usually as a day procedure under local anaesthetic. Tingling often improves quickly, but grip strength and long-standing numbness can take months, and not every symptom always goes.',
+      },
+      {
+        heading: 'How are wrist fractures treated?',
+        body: 'Many wrist fractures that are not displaced heal in a cast in about six weeks. Surgery with a plate or wires is advised when the broken ends are displaced, unstable or involve the joint surface, because healing out of position can leave a stiff, weak or painful wrist. The choice also depends on your age, hand dominance and work. After a fracture in an older adult, it is worth checking bone strength, since a wrist fracture can be the first sign of osteoporosis.',
       },
     ],
     faqs: [
-      { q: 'I have numbness in my fingers at night — what is it?', a: 'Night-time numbness in the first three fingers (thumb, index, middle) is the classic presentation of carpal tunnel syndrome. A nerve conduction study confirms the diagnosis. Treatment ranges from a night splint to a simple surgical release.' },
-      { q: 'My finger keeps getting stuck in a bent position — what is wrong?', a: 'This is trigger finger — the tendon catches on a thickened pulley sheath. A single injection resolves it in 60–70% of cases. If it returns, a day-care surgical release gives a permanent cure.' },
-      { q: 'How long after a tendon cut should surgery be done?', a: 'Flexor tendon repairs are usually done within 12–24 hours of injury. Seeking emergency care promptly improves outcomes.' },
+      { q: 'I have numbness in my fingers at night — what is it?', a: 'Night-time numbness in the thumb, index and middle fingers is typical of carpal tunnel syndrome. The diagnosis is usually made by examination; a nerve test is sometimes needed. Treatment ranges from a night splint to a small release operation.' },
+      { q: 'My finger keeps getting stuck in a bent position — what is wrong?', a: 'This is usually trigger finger: a thickened tendon catches in its tunnel. A splint, rest and sometimes a steroid injection help many people; a day-case release is considered if it persists or the finger locks.' },
+      { q: 'How soon should a cut tendon be repaired?', a: 'Cut tendons in the hand are best repaired early, so a cut with loss of finger movement needs same-day emergency assessment.' },
+      { q: 'Does a ganglion need removing?', a: 'Usually not. More than half go away on their own. Removal is considered if it is painful or limits the hand; it can come back after draining and, less often, after surgery.' },
     ],
-  },
+},
 
   // ── FOOT & ANKLE ─────────────────────────────────────────────────────────
 
@@ -430,43 +464,63 @@ export const PROCEDURES = [
     featured: true,
     keywordTitle: 'Foot & Ankle Surgeon in Thane',
     metaDescription:
-      'Foot and ankle surgery in Thane — ankle fractures, flat foot, bunions, Achilles tendon problems and diabetic foot care. Khopat, Thane West.',
+      'Foot and ankle care in Thane West: ankle fractures, Achilles rupture, flat foot, bunions, heel pain and diabetic foot. When surgery helps and when it does not.',
     image: '/images/foot-ankle.jpg',
-    hero: 'Foot and ankle problems affect every step — and most have excellent treatment options.',
+    hero: 'Most foot and ankle problems improve without an operation. Surgery is for the ones that do not, or that cannot heal well without it.',
     specialty: 'foot-ankle',
+    reviewed: '2026-11-14',
+    sources: [
+      { label: 'Achilles tendon rupture — patient information', url: 'https://www.orthoinfo.org/diseases--conditions/achilles-tendon-rupture-tear', publisher: 'AAOS OrthoInfo' },
+      { label: 'Bunions — patient information', url: 'https://www.orthoinfo.org/en/diseases--conditions/bunions/', publisher: 'AAOS OrthoInfo' },
+      { label: 'Posterior tibial tendon dysfunction (adult flat foot)', url: 'https://www.orthoinfo.org/diseases--conditions/posterior-tibial-tendon-dysfunction/', publisher: 'AAOS OrthoInfo' },
+      { label: 'Diabetes and your feet', url: 'https://www.cdc.gov/diabetes/diabetes-complications/diabetes-and-your-feet.html', publisher: 'CDC' },
+    ],
     relatedArticles: [
       { slug: 'heel-pain-plantar-fasciitis', title: 'Heel pain — causes and treatment' },
       { slug: 'ankle-sprain-vs-fracture', title: 'Ankle sprain vs fracture — how to tell the difference' },
+      { slug: 'achilles-tendon-rupture-surgery-or-not', title: 'Achilles rupture: do you need surgery?' },
+      { slug: 'bunion-surgery-do-i-need-it', title: 'Do I need bunion surgery?' },
+      { slug: 'flat-feet-in-adults-inner-ankle-pain-do-i-need-surgery', title: 'Flat feet in adults' },
+      { slug: 'diabetic-foot-sore-not-healing-how-worried-should-i-be', title: 'Diabetic foot sore not healing' },
     ],
     sections: [
       {
-        heading: 'Conditions we treat',
+        heading: 'Which foot and ankle conditions are treated?',
         bullets: [
-          'Ankle fractures — bimalleolar, trimalleolar, Maisonneuve; most displaced fractures need surgical fixation',
-          'Ankle instability — chronic giving-way after repeated sprains; treated with ligament reconstruction',
-          'Achilles tendon rupture — sudden "snap" in the back of the leg; surgery returns athletes faster',
-          'Flat foot (pes planus) — symptomatic flat foot with pain, especially in children and young adults',
-          'Bunion (hallux valgus) — painful bump at the base of the big toe; corrected surgically when symptomatic',
-          'Hammer toes — curled toes causing shoe pressure and pain',
-          'Ankle arthritis — end-stage treated with ankle fusion or replacement',
-          'Diabetic foot — Charcot arthropathy, chronic ulcers, infection management',
+          'Ankle fractures — from simple undisplaced breaks to unstable fractures that need fixation',
+          'Ankle instability — repeated giving-way after sprains',
+          'Achilles tendon rupture and Achilles tendon pain',
+          'Adult flat foot — especially painful, collapsing flat foot with inner-ankle pain',
+          'Bunions (hallux valgus) and toe deformities',
+          'Heel pain and plantar fasciitis',
+          'Ankle arthritis',
+          'Diabetic foot problems — sores that do not heal, infection and Charcot foot',
         ],
       },
       {
-        heading: 'Ankle fracture — why surgery usually wins',
-        body: 'Most displaced ankle fractures heal better with surgical fixation than in a cast. Precise reduction and fixation allows earlier movement, better alignment, and significantly lower risk of long-term ankle arthritis. A cast-treated displaced ankle fracture that heals even slightly crooked often leads to chronic pain within 5–10 years.',
+        heading: 'Does every ankle fracture need surgery?',
+        body: 'No. Stable, undisplaced fractures often heal in a cast or boot. Surgery is advised when the ankle joint is displaced or unstable, because a joint that heals out of position can become painful and arthritic. The decision rests on the X-ray pattern, whether the ankle is stable, and your health — diabetes, smoking and poor circulation raise the risk of wound problems after surgery and are weighed carefully.',
       },
       {
-        heading: 'Achilles tendon rupture',
-        body: 'The Achilles is the strongest tendon in the body — but when it ruptures (usually during a sudden sprint or jump), it is debilitating. Surgical repair stitches the tendon ends together, restoring full push-off strength. Most patients return to recreational sport by 6 months. Non-surgical treatment in a boot is an option for sedentary patients.',
+        heading: 'Does a ruptured Achilles tendon need an operation?',
+        body: 'Not always. Good-quality trials show that a structured non-surgical programme in a boot gives functional results similar to surgery at one year for most adults. Surgery lowers the chance of the tendon re-rupturing but adds wound and nerve risks. The choice depends on your activity level, health and how soon you are seen, so a suspected rupture should be assessed within days.',
+      },
+      {
+        heading: 'When are bunion or flat-foot operations worth considering?',
+        body: 'Only for pain and difficulty walking that persist after good non-surgical care — wider shoes, padding, insoles and a fair trial of time. Neither operation is done to change how a painless foot looks. Recovery is long: weeks of protected weight-bearing and, for flat-foot reconstruction, often around three months in a cast and six months or more before pain improves substantially.',
+      },
+      {
+        heading: 'Why does a diabetic foot sore need early attention?',
+        body: 'Diabetes can reduce feeling and blood supply in the feet, so a small sore may not hurt and may heal slowly. A sore that is not clearly improving within a few days needs examination, and spreading redness, swelling, pus, fever, dark skin or a cold foot need same-day care. Daily foot checks and well-fitting footwear prevent many problems.',
       },
     ],
     faqs: [
-      { q: 'My ankle still hurts months after a sprain — is that normal?', a: 'A simple sprain should feel much better within 4–6 weeks. Persistent pain beyond that suggests either a missed fracture, ligament instability, peroneal tendon injury or cartilage damage inside the ankle — all detectable on MRI.' },
-      { q: 'What is the recovery after ankle surgery?', a: 'For most ankle fractures: non-weight-bearing for 6 weeks, then graduated weight-bearing with physiotherapy. Most patients walk normally by 3–4 months.' },
-      { q: 'My child has flat feet — does it need treatment?', a: 'Most children under 8 have flat feet that resolve naturally. Symptomatic flat feet with pain, or flat feet that persist beyond age 8–10 without improvement, should be assessed. Insoles usually help; surgery is rarely needed in children.' },
+      { q: 'My ankle still hurts months after a sprain — is that normal?', a: 'A simple sprain usually feels much better within about 4–6 weeks. Pain or giving-way beyond that can mean a missed fracture, ligament instability, a tendon injury or cartilage damage, and is worth an examination; imaging is chosen based on what the examination shows.' },
+      { q: 'What is the recovery after ankle fracture surgery?', a: 'It varies with the fracture. Many people keep weight off the ankle for some weeks, then build up with physiotherapy; getting back to normal walking commonly takes a few months.' },
+      { q: 'Can an Achilles rupture heal without surgery?', a: 'Yes, for most adults, with a structured boot programme. Surgery lowers the re-rupture risk but adds wound and nerve risks.' },
+      { q: 'My child has flat feet — does it need treatment?', a: 'Flexible, painless flat feet are common in children and usually need no treatment. A flat foot that is painful or stiff should be assessed.' },
     ],
-  },
+},
 
   {
     slug: 'heel-pain',
@@ -517,12 +571,13 @@ export const PROCEDURES = [
 
   {
     slug: 'acl-reconstruction',
+    reviewed: '2026-11-14',
     name: 'ACL Reconstruction',
     group: 'Sports Medicine',
     featured: true,
     keywordTitle: 'ACL Reconstruction Surgeon in Thane',
     metaDescription:
-      'Arthroscopic ACL reconstruction in Thane — keyhole surgery, same-day walking and a structured return-to-sport protocol. Khopat, Thane West.',
+      'ACL tear in Thane West: who needs reconstruction, how keyhole ACL surgery works, graft choice and an honest, criteria-based return-to-sport timeline.',
     image: '/images/sports-arthroscopy.jpg',
     hero: 'Keyhole ligament reconstruction with a criteria-based path back to the sport you love.',
     specialty: 'sports-arthroscopy',
@@ -621,44 +676,56 @@ export const PROCEDURES = [
     featured: false,
     keywordTitle: 'Arthroscopy & Keyhole Surgery in Thane',
     metaDescription:
-      'Arthroscopic keyhole surgery in Thane — knee and shoulder arthroscopy, ACL reconstruction, meniscus repair. Day-care surgery. Khopat, Thane West.',
+      'Arthroscopic (keyhole) surgery in Thane West: what it can and cannot fix in the knee, shoulder and ankle, what happens on the day, recovery and risks.',
     image: '/images/sports-arthroscopy.jpg',
-    hero: 'Keyhole surgery means seeing inside the joint clearly — and fixing it through incisions smaller than your fingertip.',
+    hero: 'A camera and fine instruments through small incisions — useful for specific problems, not for general arthritis.',
     specialty: 'sports-arthroscopy',
+    reviewed: '2026-11-14',
+    sources: [
+      { label: 'Knee arthroscopy — patient information', url: 'https://orthoinfo.aaos.org/en/diseases--conditions/meniscus-tears/', publisher: 'AAOS OrthoInfo' },
+      { label: 'Arthroscopic surgery for degenerative knee disease (Cochrane Review, 2022)', url: 'https://www.cochrane.org/evidence/CD014328_arthroscopic-surgery-degenerative-knee-disease', publisher: 'Cochrane' },
+      { label: 'Rotator cuff tears: surgical treatment options', url: 'https://www.orthoinfo.org/treatment/rotator-cuff-tears-surgical-treatment-options/', publisher: 'AAOS OrthoInfo' },
+    ],
     relatedArticles: [
-      { slug: 'acl-tear-symptoms-treatment', title: 'ACL tear — the case for keyhole surgery' },
+      { slug: 'acl-tear-symptoms-treatment', title: 'ACL tear — symptoms and treatment' },
+      { slug: 'meniscus-tear-do-i-need-surgery', title: 'Meniscus tear: do I need surgery?' },
+      { slug: 'shoulder-dislocation-will-it-happen-again', title: 'Shoulder dislocation: will it happen again?' },
+      { slug: 'rotator-cuff-tear-shoulder-pain-at-night', title: 'Rotator cuff tear' },
     ],
     sections: [
       {
         heading: 'What is arthroscopic (keyhole) surgery?',
-        body: 'Arthroscopy uses a camera inserted through a small incision to see inside a joint on a high-definition screen. Surgical instruments through 1–2 additional small incisions allow repair, reconstruction or removal of damaged tissue — without the large incision and slow recovery of traditional open surgery.',
+        body: 'A thin camera is passed into the joint through a small cut, and instruments go in through one or two more. The surgeon works while watching a screen. Because the joint is not opened, there is usually less pain and a quicker early recovery than open surgery, but what is done inside the joint — a repair, a reconstruction — still needs its own healing time.',
       },
       {
-        heading: 'Procedures performed arthroscopically',
+        heading: 'What can be treated arthroscopically?',
         bullets: [
-          'Knee: ACL reconstruction, meniscus repair/trimming, cartilage treatment, loose body removal',
-          'Shoulder: Bankart repair (instability), rotator cuff repair, SLAP repair, subacromial decompression',
-          'Ankle: cartilage lesion treatment, impingement release, loose body removal',
-          'Diagnostic arthroscopy — when imaging is inconclusive, the camera gives a definitive answer',
+          'Knee: ACL reconstruction, meniscus repair or trimming, loose bodies, some cartilage problems',
+          'Shoulder: repair after repeated dislocation (Bankart repair), rotator cuff repair, release of a stiff shoulder in selected cases',
+          'Ankle: impingement, loose bodies and some cartilage lesions',
+          'Diagnosis, occasionally, when examination and scans have not explained a mechanical problem',
         ],
       },
       {
-        heading: 'Advantages over open surgery',
-        bullets: [
-          'Smaller incisions — typically 2–3 cuts of 5 mm each',
-          'Day-care in most cases — home the same or next day',
-          'Less post-operative pain — less tissue damage',
-          'Faster rehabilitation — joints move sooner, muscles recover faster',
-          'Lower infection risk — small wounds close more quickly',
-        ],
+        heading: 'Can arthroscopy help knee arthritis?',
+        body: 'No. A 2022 Cochrane review of randomised trials found that arthroscopic surgery for degenerative knee disease, including "washout" and trimming of wear-related meniscus tears, gives little or no benefit in pain or function compared with placebo surgery. Arthroscopy is useful for specific structural problems — a torn ligament, a locked knee, a repairable meniscus tear — not for general wear.',
+      },
+      {
+        heading: 'What happens on the day, and what is recovery like?',
+        body: 'Most arthroscopic procedures are done under spinal or general anaesthesia, and many patients go home the same day or the next. Recovery depends on what was done: a simple trimming may need a few weeks, while a meniscus repair, ACL reconstruction or shoulder stabilisation needs a protected period and months of rehabilitation before sport. Your physiotherapy plan matters as much as the operation.',
+      },
+      {
+        heading: 'What are the risks?',
+        body: 'Serious complications are uncommon. The main risks are infection, blood clots, stiffness, swelling and, rarely, nerve or blood-vessel injury. Early movement, clot prevention where needed and wound care lower these risks. Any new fever, a hot swollen joint, calf pain or breathlessness after surgery needs urgent medical review.',
       },
     ],
     faqs: [
-      { q: 'Is keyhole surgery safe?', a: 'Arthroscopic surgery has a very low complication rate. Risks include infection (<0.5%), blood clots (minimised by early movement), and instrument breakage (rare).' },
-      { q: 'How long does knee arthroscopy take?', a: 'Diagnostic arthroscopy: 20–30 minutes. ACL reconstruction: 60–90 minutes. Meniscus repair: 45–60 minutes. All performed under spinal or general anaesthesia.' },
-      { q: 'Can arthroscopy treat knee arthritis?', a: 'For generalised arthritis, no — washout has not been shown to provide lasting benefit. Arthroscopy is valuable for specific structural problems: meniscus tears, ligament reconstruction, cartilage lesions.' },
+      { q: 'Is keyhole surgery safe?', a: 'Serious complications are uncommon. The main risks are infection, blood clots, stiffness and swelling.' },
+      { q: 'How long does knee arthroscopy take?', a: 'It depends on the procedure: a diagnostic look or simple trimming is short, while an ACL reconstruction or meniscus repair takes longer.' },
+      { q: 'Can arthroscopy treat knee arthritis?', a: 'No. Trials show washout and trimming give little or no lasting benefit for general wear. Arthroscopy is for specific structural problems.' },
+      { q: 'Will I go home the same day?', a: 'Many people go home the same day or the next, depending on the procedure and their health.' },
     ],
-  },
+},
 
   // ── SPINE SURGERY ────────────────────────────────────────────────────────
 
@@ -721,6 +788,74 @@ export const PROCEDURES = [
       { q: 'What is kamar dard (back pain) and when should I see a specialist?', a: 'Kamar dard (कंबरदुखी / back pain) is very common — most episodes resolve in 4–6 weeks. See a specialist if: pain shoots down the leg, you have weakness or numbness, pain started after an injury or fall, there is no improvement after 4–6 weeks of rest and basic treatment, or you are over 50 with new-onset back pain.' },
     ],
   },
+
+  {
+    slug: 'shoulder-elbow-surgery',
+    name: 'Shoulder & Elbow Treatment',
+    group: 'Sports Medicine',
+    featured: false,
+    keywordTitle: 'Shoulder & Elbow Specialist in Thane',
+    metaDescription:
+      'Shoulder and elbow problems in Thane West: frozen shoulder, rotator cuff tears, dislocation, tennis and golfer\'s elbow. What helps, and when surgery is needed.',
+    image: '/images/sports-arthroscopy.jpg',
+    hero: 'Most shoulder and elbow pain settles with the right exercises and time. Surgery is for the problems that do not.',
+    specialty: 'sports-arthroscopy',
+    reviewed: '2026-11-14',
+    sources: [
+      { label: 'Frozen shoulder (adhesive capsulitis)', url: 'https://www.orthoinfo.org/diseases--conditions/frozen-shoulder/', publisher: 'AAOS OrthoInfo' },
+      { label: 'Rotator cuff tears', url: 'https://www.orthoinfo.org/diseases--conditions/rotator-cuff-tears/', publisher: 'AAOS OrthoInfo' },
+      { label: 'Chronic shoulder instability', url: 'https://orthoinfo.aaos.org/en/diseases--conditions/chronic-shoulder-instability/', publisher: 'AAOS OrthoInfo' },
+      { label: 'Tennis elbow (lateral epicondylitis)', url: 'https://www.orthoinfo.org/diseases--conditions/tennis-elbow-lateral-epicondylitis/', publisher: 'AAOS OrthoInfo' },
+    ],
+    relatedArticles: [
+      { slug: 'frozen-shoulder-treatment', title: 'Frozen shoulder: causes and treatment' },
+      { slug: 'frozen-shoulder-exercises-what-to-do-in-each-stage', title: 'Frozen shoulder exercises' },
+      { slug: 'rotator-cuff-tear-shoulder-pain-at-night', title: 'Shoulder pain at night: rotator cuff tear?' },
+      { slug: 'shoulder-dislocation-will-it-happen-again', title: 'Shoulder dislocation: will it happen again?' },
+      { slug: 'tennis-elbow-steroid-injection-or-physiotherapy', title: 'Tennis elbow: injection or physiotherapy?' },
+      { slug: 'golfers-elbow-inner-elbow-pain-what-to-do', title: 'Golfer\'s elbow' },
+    ],
+    sections: [
+      {
+        heading: 'Which shoulder and elbow problems are treated?',
+        bullets: [
+          'Frozen shoulder — painful stiffness, more common with diabetes',
+          'Rotator cuff tears and tendon pain — night pain and weakness lifting the arm',
+          'Shoulder dislocation and instability — a shoulder that has come out or feels loose',
+          'Shoulder fractures — collarbone, upper arm and shoulder-blade injuries',
+          'Tennis elbow — pain on the outer elbow with gripping',
+          'Golfer\'s elbow — pain on the inner elbow, sometimes with tingling in the little finger',
+          'Elbow fractures and dislocations',
+        ],
+      },
+      {
+        heading: 'Is it frozen shoulder or a rotator cuff tear?',
+        body: 'The key difference is movement. In frozen shoulder the joint lining is tight, so the arm cannot be moved fully even when someone else lifts it. In a rotator cuff tear, lifting the arm yourself is weak and painful, but someone else can usually move it through its range. An examination usually separates the two; scans are chosen based on what it shows.',
+      },
+      {
+        heading: 'Does frozen shoulder need surgery?',
+        body: 'Usually not. Frozen shoulder stiffens for months before slowly freeing up, and full recovery often takes one to three years. Pain control and regular gentle stretching help most people, sometimes with an early steroid injection. Procedures such as hydrodilatation, manipulation or arthroscopic release are kept for shoulders that stay stiff and disabling despite a fair trial.',
+      },
+      {
+        heading: 'When does a rotator cuff tear need repair?',
+        body: 'A torn tendon does not reattach by itself, but AAOS reports that non-surgical treatment relieves pain and improves function in about 80–85% of patients, through months of structured strengthening. Repair is considered for acute tears in active people, large tears with significant weakness, or when rehabilitation has not helped.',
+      },
+      {
+        heading: 'Will a dislocated shoulder keep coming out?',
+        body: 'The risk is highest in people under 30 and falls after that. A short time in a sling followed by physiotherapy is the usual first step. Stabilisation surgery is advised for repeated dislocations or significant bone loss, and is worth discussing early for young contact-sport athletes.',
+      },
+      {
+        heading: 'What helps tennis and golfer\'s elbow?',
+        body: 'Most cases settle without surgery: rest from the painful activity, simple pain relief and forearm-strengthening exercises. Steroid injections can give short-term relief, but in a trial of 165 adults with tennis elbow, those given a steroid injection were less likely to be fully recovered at one year than those given a dummy injection, so they are used sparingly. Surgery is considered only after many months of good non-surgical care.',
+      },
+    ],
+    faqs: [
+      { q: 'Why does my shoulder hurt more at night?', a: 'Night pain, especially lying on that side, is typical of rotator cuff problems and of frozen shoulder. An examination usually tells which.' },
+      { q: 'Does a rotator cuff tear always need surgery?', a: 'No. Non-surgical treatment helps about 80–85% of patients, according to AAOS. Repair is considered for acute tears in active people or when rehabilitation fails.' },
+      { q: 'How long does frozen shoulder last?', a: 'Often one to three years in total, through freezing, frozen and thawing stages. Most people improve substantially with stretching and pain control.' },
+      { q: 'Should I have a steroid injection for tennis elbow?', a: 'Not as a first choice. It can ease pain briefly, but in a large trial people given a steroid injection were less likely to be fully recovered at one year than those given a dummy injection.' },
+    ],
+},
 
 ];
 

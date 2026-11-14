@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { PROCEDURES } from '../data/procedures.js';
-import { SITE, CLINIC, SPECIALTIES } from '../data/site.js';
+import { SITE, CLINICS, SPECIALTIES, slugify } from '../data/site.js';
 import Reveal from '../components/Reveal.jsx';
 import Breadcrumbs, { breadcrumbLd } from '../components/Breadcrumbs.jsx';
-import { headState } from '../components/Seo.jsx';
+import { headState, withBrand } from '../components/Seo.jsx';
 
 // Home › <specialty> › <this procedure>. There is no /procedures index route,
 // so the middle crumb points at the specialty hub the procedure belongs to —
@@ -35,6 +35,19 @@ function formatReviewed(iso) {
 
 // ── helpers ─────────────────────────────────────────────────────────────────
 
+const BODY_LOCATION = {
+  'knee-replacement': 'Knee',
+  'robotic-vs-traditional-knee-replacement': 'Knee',
+  'knee-pain': 'Knee',
+  'acl-reconstruction': 'Knee',
+  'hip-replacement': 'Hip',
+  'foot-ankle-surgery': 'Foot and ankle',
+  'heel-pain': 'Heel',
+  'hand-wrist-surgery': 'Hand and wrist',
+  'spine-surgery': 'Spine',
+  'shoulder-elbow-surgery': 'Shoulder and elbow',
+};
+
 // Pure — builds the JSON-LD object with no DOM access, so it can run during
 // SSR (`renderToString`) as well as on the client.
 function buildSchema(proc) {
@@ -49,7 +62,6 @@ function buildSchema(proc) {
         description: proc.metaDescription,
         inLanguage: 'en',
         dateModified: proc.reviewed || CONTENT_REVIEWED,
-        lastReviewed: proc.reviewed || CONTENT_REVIEWED,
         reviewedBy: {
           '@type': 'Physician',
           '@id': 'https://drniranjanghag.com/#physician',
@@ -59,11 +71,7 @@ function buildSchema(proc) {
           '@type': 'MedicalProcedure',
           name: proc.name,
           procedureType: 'https://health-lifesci.schema.org/SurgicalProcedure',
-          bodyLocation: proc.slug.includes('knee')
-            ? 'Knee'
-            : proc.slug.includes('hip')
-            ? 'Hip'
-            : 'Knee (ACL)',
+          bodyLocation: proc.bodyLocation || BODY_LOCATION[proc.slug] || undefined,
           followup: 'Physiotherapy and structured rehabilitation',
           preparation: 'Pre-operative fitness assessment and imaging',
           performer: {
@@ -71,10 +79,11 @@ function buildSchema(proc) {
             '@id': 'https://drniranjanghag.com/#physician',
             name: 'Dr. Niranjan Ghag',
           },
-          location: {
+          location: CLINICS.map((c) => ({
             '@type': 'MedicalClinic',
-            '@id': 'https://drniranjanghag.com/#joshis-neurotrauma-centre',
-          },
+            name: c.name,
+            url: `https://drniranjanghag.com/locations/${slugify(c.name)}/`,
+          })),
         },
       },
       proc.faqs && proc.faqs.length
@@ -97,7 +106,7 @@ function buildSchema(proc) {
 // the JSON-LD <script> tag. Called only from the useEffect below, so it
 // never executes during SSR.
 function applyHead(proc, schema) {
-  document.title = `${proc.keywordTitle} | ${SITE.name}`;
+  document.title = withBrand(proc.keywordTitle);
   const el = document.querySelector('meta[name="description"]');
   if (el) el.setAttribute('content', proc.metaDescription);
 
@@ -159,7 +168,7 @@ export default function Procedure() {
   // Synchronous — runs during SSR render (unlike useEffect), so the
   // prerender script can read headState right after renderToString.
   if (proc) {
-    headState.title = `${proc.keywordTitle} | ${SITE.name}`;
+    headState.title = withBrand(proc.keywordTitle);
     headState.description = proc.metaDescription;
     headState.path = `/procedures/${proc.slug}`;
     headState.jsonLd = buildSchema(proc);
@@ -207,19 +216,12 @@ export default function Procedure() {
             {proc.hero}
           </p>
           <p className="mt-4 text-sm text-slate-400">
-            Reviewed by {SITE.name} ·{' '}
+            By{' '}
+            <Link to="/about" className="underline hover:text-brand-gold">{SITE.name}</Link> ·{' '}
             <time dateTime={proc.reviewed || CONTENT_REVIEWED}>
-              Last reviewed {formatReviewed(proc.reviewed || CONTENT_REVIEWED)}
+              Last updated {formatReviewed(proc.reviewed || CONTENT_REVIEWED)}
             </time>
           </p>
-          <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <a href={waUrl} target="_blank" rel="noopener noreferrer" className="btn-gradient">
-              WhatsApp Us
-            </a>
-            <a href={`tel:+${SITE.phoneRaw}`} className="btn-outline-dark">
-              Call {SITE.phoneDisplay}
-            </a>
-          </div>
         </div>
       </section>
 
@@ -266,6 +268,21 @@ export default function Procedure() {
         </div>
       )}
 
+      {/* ── Sources ──────────────────────────────────────────────────── */}
+      {proc.sources && proc.sources.length > 0 && (
+        <div className="mx-auto max-w-3xl px-4 pt-6">
+          <h2 className="font-serif text-lg font-bold text-slate-900">Sources</h2>
+          <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-slate-600">
+            {proc.sources.map((c) => (
+              <li key={c.url}>
+                <a href={c.url} target="_blank" rel="noopener noreferrer" className="text-brand-gold underline hover:text-brand-brown">{c.label}</a>
+                {c.publisher && <span className="text-slate-500"> — {c.publisher}</span>}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
       {/* ── FAQ ────────────────────────────────────────────────────────── */}
       {proc.faqs && proc.faqs.length > 0 && (
         <section className="bg-gradient-to-b from-slate-50 to-white py-14">
@@ -286,14 +303,17 @@ export default function Procedure() {
           <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-brand-dark to-slate-900 p-8 text-white shadow-glass-lg md:flex md:items-center md:justify-between md:gap-8">
             <div className="blob -right-10 -top-10 h-44 w-44 bg-brand-gold/15" aria-hidden="true" />
             <div className="relative">
-              <p className="font-serif text-xl font-bold mb-1">Book a Consultation</p>
-              <p className="text-slate-300 text-sm leading-relaxed">
-                {CLINIC.name} · {CLINIC.address.split(',').slice(0, 3).join(', ')}
-              </p>
-              <p className="text-slate-400 text-xs mt-1">
-                {CLINIC.hours?.length > 0
-                  ? CLINIC.hours.map((h) => `${h.days}: ${h.time}`).join(' · ')
-                  : 'Appointments by prior booking'}
+              <p className="font-serif text-xl font-bold mb-1">Locations &amp; OPD hours</p>
+              <ul className="text-slate-300 text-sm leading-relaxed">
+                {CLINICS.map((c) => (
+                  <li key={c.name}>
+                    <Link to={`/locations/${slugify(c.name)}`} className="underline hover:text-brand-gold">{c.name}</Link>
+                    <span className="text-slate-400"> · {c.shortLocation}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-slate-400 text-xs mt-2">
+                Phone / WhatsApp {SITE.phoneDisplay}. Hours differ by location.
               </p>
             </div>
             <div className="relative mt-6 flex flex-col gap-3 sm:flex-row md:mt-0 md:flex-col lg:flex-row">
@@ -305,14 +325,12 @@ export default function Procedure() {
               >
                 WhatsApp Us
               </a>
-              <a
-                href={CLINIC.mapUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/contact"
                 className="rounded-full border border-white/30 bg-white/5 px-6 py-2.5 text-center text-sm font-semibold text-white backdrop-blur transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/15 whitespace-nowrap"
               >
-                Get Directions
-              </a>
+                All hours &amp; directions
+              </Link>
             </div>
           </div>
 

@@ -21,12 +21,14 @@ import { readFileSync, writeFileSync, mkdirSync, readdirSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { ROUTES } from '../src/data/routes.js';
+import { readFileSync as _rf } from 'fs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, '..');
 const distDir = resolve(root, 'dist');
 
 const SITE_URL = 'https://drniranjanghag.com';
+const TRANSLATION_INDEX = JSON.parse(_rf(new URL('../src/data/translation-index.json', import.meta.url), 'utf-8'));
 
 const template = readFileSync(resolve(distDir, 'index.html'), 'utf-8');
 const { render } = await import(resolve(root, 'dist-ssr/entry-server.js'));
@@ -60,6 +62,17 @@ function buildPage(html, head) {
 
   // Page-specific JSON-LD, added alongside (not replacing) the global
   // Physician/MedicalClinic schema already present in the template's <head>.
+  page = page.replace(/<html lang="[^"]*">/, `<html lang="${head.lang || 'en'}">`);
+  if (head.alternates?.length) {
+    const links = head.alternates
+      .map((a) => {
+        const p = a.path === '/' ? '/' : (a.path.endsWith('/') ? a.path : `${a.path}/`);
+        return `    <link rel="alternate" hreflang="${a.hreflang}" href="${SITE_URL}${p}" />`;
+      })
+      .join('\n');
+    page = page.replace('</head>', `${links}\n  </head>`);
+  }
+
   if (head.jsonLd) {
     const ldScript = `    <script type="application/ld+json" data-route-schema="true">${JSON.stringify(head.jsonLd)}</script>\n  </head>`;
     page = page.replace('</head>', ldScript);
@@ -128,6 +141,8 @@ function sitemapMeta(route) {
   if (route === '/about') return { priority: '0.8', changefreq: 'monthly' };
   if (route === '/education') return { priority: '0.7', changefreq: 'weekly' };
   if (route.startsWith('/education/')) return { priority: '0.7', changefreq: 'monthly' };
+  if (/^\/(mr|hi)\/education\//.test(route)) return { priority: '0.6', changefreq: 'monthly' };
+  if (route.startsWith('/locations/')) return { priority: '0.8', changefreq: 'monthly' };
   return { priority: '0.5', changefreq: 'monthly' };
 }
 
@@ -142,13 +157,22 @@ const sitemapRoutes = [...new Set(ROUTES)];
 
 const sitemapXml = [
   '<?xml version="1.0" encoding="UTF-8"?>',
-  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">',
   ...sitemapRoutes.map((route) => {
     const { priority, changefreq } = sitemapMeta(route);
-    const lastmod = ARTICLE_DATES[route] || BUILD_DATE;
+    const baseRoute = route.replace(/^\/(mr|hi)(?=\/education\/)/, '');
+    const lastmod = ARTICLE_DATES[baseRoute] || BUILD_DATE;
+    // hreflang alternates for articles that exist in more than one language
+    const slug = baseRoute.startsWith('/education/') ? baseRoute.slice('/education/'.length) : null;
+    const langs = slug ? ['en', ...['mr', 'hi'].filter((l) => TRANSLATION_INDEX[l].includes(slug))] : [];
+    const alts = langs.length > 1
+      ? [...langs.map((l) => [l, l === 'en' ? baseRoute : `/${l}${baseRoute}`]), ['x-default', baseRoute]]
+          .map(([l, p]) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${sitemapUrl(p)}" />`)
+      : [];
     return [
       '  <url>',
       `    <loc>${sitemapUrl(route)}</loc>`,
+      ...alts,
       `    <lastmod>${lastmod}</lastmod>`,
       `    <changefreq>${changefreq}</changefreq>`,
       `    <priority>${priority}</priority>`,
