@@ -5,6 +5,39 @@ import Reveal from '../components/Reveal.jsx';
 import Breadcrumbs, { breadcrumbLd } from '../components/Breadcrumbs.jsx';
 import { SITE, CLINICS, slugify } from '../data/site.js';
 
+// Plain clinic-information FAQ. Facts only, matching the page above; no medical
+// advice, so it can never stand in for a consultation.
+const CLINIC_FAQS = [
+  {
+    q: 'How do I book an appointment?',
+    a: 'Call or WhatsApp the clinic, or use the booking form on this website. You choose a preferred date and time, and the clinic team confirms the slot on WhatsApp.',
+  },
+  {
+    q: 'Where and when does Dr. Ghag consult?',
+    a: 'Dr. Ghag consults at the locations listed above, each with its own hours. Some locations are by appointment only, so please call or message on WhatsApp to confirm the time and place before you travel.',
+  },
+  {
+    q: 'In which languages can I consult?',
+    a: 'Consultations are available in English, Marathi and Hindi.',
+  },
+  {
+    q: 'What should I bring?',
+    a: 'Bring previous X-rays, MRI or CT scans (the films or discs, not only the reports), a list of your current medicines, any operation notes or discharge summaries, and your Mediclaim or insurance details if surgery may be discussed.',
+  },
+  {
+    q: 'What are the consultation charges?',
+    a: 'Consultation charges are explained when you book.',
+  },
+  {
+    q: 'Can I get a diagnosis over the phone or on this website?',
+    a: 'No. The guides on this website are general information. A diagnosis and treatment plan need an examination and, where needed, tests at a consultation.',
+  },
+  {
+    q: 'What should I do in an emergency?',
+    a: 'For a serious injury, a suspected fracture, or sudden severe pain, weakness or numbness, go to the nearest hospital emergency department straight away. Do not wait for a clinic appointment.',
+  },
+];
+
 const CRUMBS = [
   { name: 'Home', path: '/' },
   { name: 'Contact', path: '/contact' },
@@ -23,6 +56,15 @@ export default function Contact() {
           name: `Contact ${SITE.name}`,
           inLanguage: 'en',
           about: { '@type': 'Physician', '@id': `${SITE.url}/#physician` },
+        },
+        {
+          '@type': 'FAQPage',
+          '@id': `${SITE.url}/contact/#faq`,
+          mainEntity: CLINIC_FAQS.map((f) => ({
+            '@type': 'Question',
+            name: f.q,
+            acceptedAnswer: { '@type': 'Answer', text: f.a },
+          })),
         },
       ],
     }),
@@ -184,6 +226,21 @@ export default function Contact() {
                 </li>
               ))}
             </ul>
+          </section>
+
+          {/* Clinic information FAQ */}
+          <section className="mt-16 max-w-3xl" aria-labelledby="faq-heading">
+            <h2 id="faq-heading" className="font-serif text-2xl font-bold text-slate-900">
+              Common questions about visiting
+            </h2>
+            <div className="mt-5 space-y-3">
+              {CLINIC_FAQS.map((f) => (
+                <details key={f.q} className="glass rounded-2xl p-5">
+                  <summary className="cursor-pointer font-semibold text-slate-900">{f.q}</summary>
+                  <p className="mt-3 leading-relaxed text-slate-700">{f.a}</p>
+                </details>
+              ))}
+            </div>
           </section>
         </div>
       </section>
